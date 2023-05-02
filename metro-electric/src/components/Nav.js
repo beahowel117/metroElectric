@@ -39,7 +39,25 @@ function Nav() {
         onClick={handleClick}
         fullWidth={false}
       >
-        Services
+        SERVICES
+      </Button>
+      <Button
+        onClick={handleClick}
+        fullWidth={false}
+      >
+        FEATURED WORK
+      </Button>
+      <Button
+        onClick={handleClick}
+        fullWidth={false}
+      >
+        ABOUT
+      </Button>
+      <Button
+        onClick={handleClick}
+        fullWidth={false}
+      >
+        CONTACT
       </Button>
       <Menu
         id='basic-menu'
