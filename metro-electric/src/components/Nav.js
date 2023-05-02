@@ -3,6 +3,8 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import NavLogo from "../images/logos/NavLogo.png";
 
 function Nav() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -26,15 +28,18 @@ function Nav() {
 
   console.log({ isScrolling });
   return (
-    <div>
+    <Box display='flex'>
+      <img src={NavLogo} alt='Navigation Logo' width='300px' />
+
       <Button
         id='basic-button'
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup='true'
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        fullWidth={false}
       >
-        Dashboard
+        Services
       </Button>
       <Menu
         id='basic-menu'
@@ -51,7 +56,7 @@ function Nav() {
           <MenuItem onClick={handleClose}>Logout</MenuItem>
         </Box>
       </Menu>
-    </div>
+    </Box>
   );
 }
 
