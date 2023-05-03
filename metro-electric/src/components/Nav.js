@@ -70,9 +70,11 @@ function Nav() {
         }}
       >
         <Box display='flex'>
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
+          <MenuItem onClick={handleClose}>Power Infrastructure Construction</MenuItem>
+          <MenuItem onClick={handleClose}>Testing & Maintenance</MenuItem>
+          <MenuItem onClick={handleClose}>Emergency Response</MenuItem>
+          <MenuItem onClick={handleClose}>Controlled Environment Agriculture</MenuItem>
+          <MenuItem onClick={handleClose}>Renewable Energy</MenuItem>
         </Box>
       </Menu>
     </Box>
