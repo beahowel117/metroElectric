@@ -1,11 +1,11 @@
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-
+import Box from "@mui/material/Box";
 function App() {
   return (
-    <div>
+    <Box position='relative'>
       <Nav />
-    </div>
+    </Box>
   );
 }
 
