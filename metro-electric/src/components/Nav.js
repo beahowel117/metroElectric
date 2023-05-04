@@ -18,6 +18,7 @@ import RE from "../images/ServicesDropDown/RE(1024x768).jpg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const styles = {
@@ -106,6 +107,7 @@ const Nav = () => {
         width='100%'
       >
         <Button
+          to="/services"
           id='basic-button'
           aria-controls={open ? "basic-menu" : undefined}
           aria-haspopup='true'
@@ -117,10 +119,16 @@ const Nav = () => {
             fontWeight: "900",
           }}
         >
-          SERVICES
+          <Link
+          style={{textDecoration: "none", color: "white"}}
+          to="/services"
+          >
+            SERVICES
+          </Link>
           <KeyboardArrowDownIcon />
         </Button>
         <Button
+          to="/work"
           id='basic-button'
           aria-controls={open ? "basic-menu" : undefined}
           aria-haspopup='true'
@@ -132,7 +140,12 @@ const Nav = () => {
             fontWeight: "900",
           }}
         >
-          FEATURED WORK
+          <Link
+          style={{textDecoration: "none", color: "white"}}
+          to="/work"
+          >
+            FEATURED WORK
+          </Link>
         </Button>
         <Button
           id='basic-button'
@@ -146,7 +159,12 @@ const Nav = () => {
             fontWeight: "900",
           }}
         >
+          <Link
+          style={{textDecoration: "none", color: "white"}}
+          to="/about"
+          >
           ABOUT
+          </Link>
         </Button>
         <Button
           id='basic-button'
@@ -160,7 +178,12 @@ const Nav = () => {
             fontWeight: "900",
           }}
         >
+          <Link
+          style={{textDecoration: "none", color: "white"}}
+          to="/contact"
+          >
           CONTACT
+          </Link>
         </Button>
         <Menu
           id='basic-menu'
@@ -212,6 +235,6 @@ const Nav = () => {
       </Box>
     </Box>
   );
-};
+}
 
 export default Nav;
