@@ -13,6 +13,12 @@ function Footer() {
      height: '57px',
      align: 'center'
     },
+    navLink: {
+      fontSize: '16px',
+      "&:hover":{
+        color:'green'
+      }
+    }
   };
 
   const navButtons = [
@@ -33,7 +39,7 @@ function Footer() {
       link: "/contact",
     },
   ];
-  const [isHover, setIsHover] = useState(false)
+  
   return (
    <Box
     borderTop='14px solid blue'
@@ -58,14 +64,12 @@ function Footer() {
         justifyContent='space-around'
         marginTop='50px'
       >
-      {navButtons.map(({button, link}) => (
+      {navButtons.map(({button, link, index}) => (
         <Button
+          key={index}
           to={link}
           component={Link}
-          sx={{
-            color: isHover ? 'green':'black',
-            fontSize: '16px'
-          }}
+          sx={styles.navLink}
         >
           {button}
         </Button>
