@@ -61,6 +61,8 @@ const Nav = () => {
     },
   ];
 
+  const navButtons = ["Services", "Features Work", "About", "Contact"];
+
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -88,7 +90,12 @@ const Nav = () => {
       marginX='-50px'
       px='20px'
       maxHeight='100px'
-      position={isScrolling ? "fixed" : "relative"}
+      position='fixed'
+      top='0'
+      left='0'
+      right='0'
+      backgroundColor={isScrolling ? "white" : "transparent"}
+      pt={isScrolling ? "10px" : undefined}
     >
       <Box>
         <img
@@ -105,63 +112,28 @@ const Nav = () => {
         maxWidth='600px'
         width='100%'
       >
-        <Button
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          SERVICES
-          <KeyboardArrowDownIcon />
-        </Button>
-        <Button
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          FEATURED WORK
-        </Button>
-        <Button
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          ABOUT
-        </Button>
-        <Button
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          CONTACT
-        </Button>
+        {navButtons.map((button) => (
+          <Button
+            id='basic-button'
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-haspopup='true'
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            fullWidth={false}
+            sx={{
+              fontSize: isScrolling ? "17px" : "20px",
+              fontWeight: "900",
+            }}
+          >
+            {button}
+            {button === "Services" ? (
+              <KeyboardArrowDownIcon />
+            ) : null || (button === "Services" && isScrolling) ? (
+              <KeyboardArrowDownIcon size='small' />
+            ) : null}
+          </Button>
+        ))}
+
         <Menu
           id='basic-menu'
           anchorEl={anchorEl}
@@ -175,7 +147,6 @@ const Nav = () => {
           <Box display='flex' gap='4px'>
             {services.map(({ img, text }) => (
               <Box position='relative'>
-                {console.log({ img })}
                 <Card
                   sx={{
                     padding: 0,
