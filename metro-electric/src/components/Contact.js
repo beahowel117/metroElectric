@@ -16,7 +16,7 @@ const Contact = () => {
   };
 
   return (
-    <Box position='absolute' top='0'>
+    <Box position='absolute' top='0' className='image-wrap'>
       <img src={contact} alt='Contact' style={styles.responsiveHero} />
     </Box>
   );

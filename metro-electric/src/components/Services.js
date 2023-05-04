@@ -1,11 +1,10 @@
 import React from 'react';
-import Nav from './Nav';
 import Box from "@mui/material/Box";
-import featuredWork from '../images/FeaturedWork/featuredWork(2000X1000).jpg';
+import servicesHome from "../images/Services/servicesHome.jpg";
 import '../index.css';
 
-function FeaturedWork() {
-
+/**THis is the grey section with the 5 clickable photos used throughout the platform */
+function Services() {
   const styles = {
     responsiveHero: {
       width: '100%',
@@ -17,9 +16,9 @@ function FeaturedWork() {
   }
   return (
     <Box position='absolute' top='0' className="image-wrap">
-    <img src={featuredWork} alt='Contact' style={styles.responsiveHero}/>
+    <img src={servicesHome} alt='Contact' style={styles.responsiveHero}/>
   </Box>
   )
 }
 
-export default FeaturedWork
+export default Services
