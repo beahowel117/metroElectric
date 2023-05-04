@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import Button from "@mui/material/Button";
 import Tab, { Typography } from "@mui/material";
 import Menu from "@mui/material/Menu";
@@ -7,7 +8,6 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import NavLogo from "../images/logos/NavLogo.png";
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
-
 import { fontFamily } from "@mui/system";
 import PIC from "../images/ServicesDropDown/PIC(1024x768).jpg";
 import TandM from "../images/ServicesDropDown/T&M(1024x768).JPG";
@@ -18,7 +18,7 @@ import RE from "../images/ServicesDropDown/RE(1024x768).jpg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
-import { Link } from 'react-router-dom';
+
 
 const Nav = () => {
   const styles = {
@@ -92,11 +92,11 @@ const Nav = () => {
       position={isScrolling ? "fixed" : "relative"}
     >
       <Box>
-        <img
-          src={isScrolling ? MetroTekLogo : NavLogo}
-          alt='Navigation Logo'
-          width={isScrolling ? "200px" : "300px"}
-        />
+          <img
+            src={isScrolling ? MetroTekLogo : NavLogo}
+            alt='Navigation Logo'
+            width={isScrolling ? "200px" : "300px"}
+          />
       </Box>
 
       <Box

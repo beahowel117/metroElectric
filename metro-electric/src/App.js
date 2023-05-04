@@ -6,6 +6,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import FeaturedWork from "./components/FeaturedWork";
@@ -17,14 +18,15 @@ function App() {
   return (
 
       <Box>
-        <Nav />
+        {/* <Nav />
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/services' exact element={<Services />} />
           <Route path='/work' exact element={<FeaturedWork />} />
           <Route path='/about' exact element={<About />} />
           <Route path='/contact' exact element={<Contact />} />
-        </Routes>
+        </Routes> */}
+        <Footer />
       </Box>
 
   );
