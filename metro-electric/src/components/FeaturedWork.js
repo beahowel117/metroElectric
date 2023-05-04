@@ -1,25 +1,28 @@
-import React from 'react';
-import Nav from './Nav';
+import React from "react";
+import Nav from "./Nav";
 import Box from "@mui/material/Box";
-import featuredWork from '../images/FeaturedWork/featuredWork(2000X1000).jpg';
-import '../index.css';
+import featuredWork from "../images/FeaturedWork/featuredWork(2000X1000).jpg";
+import "../index.css";
+import Footer from './Footer';
 
 function FeaturedWork() {
-
   const styles = {
     responsiveHero: {
-      width: '100%',
-      height: 'auto',
+      width: "100%",
+      height: "auto",
       //backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-    }
-  }
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    },
+  };
   return (
-    <Box position='absolute' top='0' className="image-wrap">
-    <img src={featuredWork} alt='Contact' style={styles.responsiveHero}/>
-  </Box>
-  )
+    <>
+      <Box className='image-wrap'>
+        <img src={featuredWork} alt='Contact' style={styles.responsiveHero} />
+      </Box>
+      <Footer/>
+    </>
+  );
 }
 
-export default FeaturedWork
+export default FeaturedWork;

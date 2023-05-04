@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Tab, { Typography } from "@mui/material";
 import Menu from "@mui/material/Menu";
@@ -18,7 +18,6 @@ import RE from "../images/ServicesDropDown/RE(1024x768).jpg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
-
 
 const Nav = () => {
   const styles = {
@@ -62,6 +61,25 @@ const Nav = () => {
     },
   ];
 
+  const navButtons = [
+    {
+      button: "Services",
+      link: "/services",
+    },
+    {
+      button: "Featured Work",
+      link: "/work",
+    },
+    {
+      button: "About",
+      link: "/about",
+    },
+    {
+      button: "Contact",
+      link: "/contact",
+    },
+  ];
+
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -89,7 +107,12 @@ const Nav = () => {
       marginX='-50px'
       px='20px'
       maxHeight='100px'
-      position={isScrolling ? "fixed" : "relative"}
+      position='fixed'
+      top='0'
+      left='0'
+      right='0'
+      backgroundColor={isScrolling ? "white" : "transparent"}
+      pt={isScrolling ? "10px" : undefined}
     >
       <Box>
           <img
@@ -106,99 +129,45 @@ const Nav = () => {
         maxWidth='600px'
         width='100%'
       >
-        <Button
-          to="/services"
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          <Link
-          style={{textDecoration: "none", color: "white"}}
-          to="/services"
+        {navButtons.map(({ button, link }) => (
+          <Button
+            to={link}
+            component={RouterLink}
+            id='basic-button'
+            open={open}
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-haspopup='true'
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            fullWidth={false}
+            sx={{
+              fontSize: isScrolling ? "17px" : "20px",
+              fontWeight: "900",
+              color: isScrolling ? "#1976d2" : "white",
+            }}
           >
-            SERVICES
-          </Link>
-          <KeyboardArrowDownIcon />
-        </Button>
-        <Button
-          to="/work"
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          <Link
-          style={{textDecoration: "none", color: "white"}}
-          to="/work"
-          >
-            FEATURED WORK
-          </Link>
-        </Button>
-        <Button
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          <Link
-          style={{textDecoration: "none", color: "white"}}
-          to="/about"
-          >
-          ABOUT
-          </Link>
-        </Button>
-        <Button
-          id='basic-button'
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup='true'
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-          fullWidth={false}
-          sx={{
-            fontSize: "20px",
-            fontWeight: "900",
-          }}
-        >
-          <Link
-          style={{textDecoration: "none", color: "white"}}
-          to="/contact"
-          >
-          CONTACT
-          </Link>
-        </Button>
+            {button}
+            {button === "Services" ? (
+              <KeyboardArrowDownIcon />
+            ) : null || (button === "Services" && isScrolling) ? (
+              <KeyboardArrowDownIcon size='small' />
+            ) : null}
+          </Button>
+        ))}
+
         <Menu
           id='basic-menu'
           anchorEl={anchorEl}
-          open={open}
+          //   open={open}
           onClose={handleClose}
           MenuListProps={{
             "aria-labelledby": "basic-button",
             sx: { py: 0 },
           }}
         >
-          <Box display='flex' gap='4px'>
+          <Box display='flex' gap='2px'>
             {services.map(({ img, text }) => (
               <Box position='relative'>
-                {console.log({ img })}
                 <Card
                   sx={{
                     padding: 0,
@@ -206,15 +175,15 @@ const Nav = () => {
                   }}
                   square={true}
                 >
-                  <MenuItem onClick={handleClose} sx={styles.menuItem}>
+                  <MenuItem
+                    // onClick={handleClose}
+
+                    onClose={handleClose}
+                    sx={styles.menuItem}
+                  >
                     <>
                       <CardCover sx={{ borderRadius: "0px" }}>
-                        <img
-                          width='100%'
-                          height='100%'
-                          src={img}
-                          alt='Power Infastructure Construction'
-                        />
+                        <img width='100%' height='100%' src={img} alt='' />
                       </CardCover>
                       <CardCover
                         sx={{
@@ -235,6 +204,6 @@ const Nav = () => {
       </Box>
     </Box>
   );
-}
+};
 
 export default Nav;
