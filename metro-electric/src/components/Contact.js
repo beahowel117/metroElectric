@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import Box from "@mui/material/Box";
 import contact from '../images/Contact/contact(2000x1000).jpg';
-import '../index.css'
+import '../index.css';
 
 
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
   }
 
   return (
-    <Box position='absolute' top='0'>
+    <Box position='absolute' top='0' className="image-wrap">
       <img src={contact} alt='Contact' style={styles.responsiveHero}/>
     </Box>
   )}

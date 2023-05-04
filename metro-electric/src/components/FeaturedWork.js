@@ -1,7 +1,8 @@
 import React from 'react';
 import Nav from './Nav';
 import Box from "@mui/material/Box";
-import featuredWork from '../images/FeaturedWork/featuredWork(2000X1000).jpg'
+import featuredWork from '../images/FeaturedWork/featuredWork(2000X1000).jpg';
+import '../index.css';
 
 function FeaturedWork() {
 
@@ -15,7 +16,7 @@ function FeaturedWork() {
     }
   }
   return (
-    <Box position='absolute' top='0'>
+    <Box position='absolute' top='0' className="image-wrap">
     <img src={featuredWork} alt='Contact' style={styles.responsiveHero}/>
   </Box>
   )

@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import servicesHome from "../images/Services/servicesHome.jpg"
+import servicesHome from "../images/Services/servicesHome.jpg";
+import '../index.css';
 
 /**THis is the grey section with the 5 clickable photos used throughout the platform */
 function Services() {
@@ -14,7 +15,7 @@ function Services() {
     }
   }
   return (
-    <Box position='absolute' top='0'>
+    <Box position='absolute' top='0' className="image-wrap">
     <img src={servicesHome} alt='Contact' style={styles.responsiveHero}/>
   </Box>
   )

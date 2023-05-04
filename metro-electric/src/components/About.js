@@ -1,6 +1,8 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import aboutHome from "../images/About/AboutHome(2000X1000).jpg"
+import aboutHome from "../images/About/AboutHome(2000X1000).jpg";
+import '../index.css';
+
 
 function About() {
   const styles = {
@@ -13,7 +15,7 @@ function About() {
     }
   }
   return (
-    <Box position='absolute' top='0'>
+    <Box position='absolute' top='0' className="image-wrap">
     <img src={aboutHome} alt='Contact' style={styles.responsiveHero}/>
   </Box>
 

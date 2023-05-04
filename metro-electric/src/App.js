@@ -10,7 +10,7 @@ function App() {
   return (
     <Box>
       <Nav />
-      <Home />
+      <FeaturedWork />
     </Box>
   );
 }
