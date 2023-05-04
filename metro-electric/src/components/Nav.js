@@ -18,6 +18,7 @@ import RE from "../images/ServicesDropDown/RE(1024x768).jpg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const styles = {
@@ -61,7 +62,24 @@ const Nav = () => {
     },
   ];
 
-  const navButtons = ["Services", "Features Work", "About", "Contact"];
+  const navButtons = [
+    {
+      button: "Services",
+      link: "/services",
+    },
+    {
+      button: "Features Work",
+      link: "/work",
+    },
+    {
+      button: "About",
+      link: "/about",
+    },
+    {
+      button: "Contact",
+      link: "/contact",
+    },
+  ];
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
