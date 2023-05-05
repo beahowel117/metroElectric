@@ -78,3 +78,40 @@ code {
     /* Firefox */
   }
 }
+
+.lineUp {
+  animation: 2s anim-lineUp ease-out;
+  position: absolute;
+  bottom: 70px;
+  left: 150px;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.image-container{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.bottom-left{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
