@@ -62,9 +62,19 @@ const Contact = () => {
 
   return (
     <>
-      <Box className='image-wrap'>
-        <img src={contact} alt='Contact' style={styles.responsiveHero} />
-      </Box>
+     <Box
+      className='image-container'
+     >
+        <Box className='image-wrap'>
+          <img src={contact} alt='Contact' style={styles.responsiveHero} />
+        </Box>
+          <Typography
+            className='lineUp'
+            fontSize='40px'
+          >
+            contact metrotek
+          </Typography>
+        </Box>
 
       <Box
         display='flex'

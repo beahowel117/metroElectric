@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@mui/material/Box";
+import { Box, Typography } from "@mui/material";
 import servicesHome from "../images/Services/servicesHome.jpg";
 import "../index.css";
 import GreyGallery from "./GreyGallery";
@@ -18,8 +18,18 @@ function Services() {
   };
   return (
     <>
-      <Box className='image-wrap'>
-        <img src={servicesHome} alt='Contact' style={styles.responsiveHero} />
+      <Box
+      className='image-container'
+      >
+        <Box className='image-wrap'>
+          <img src={servicesHome} alt='Contact' style={styles.responsiveHero} />
+        </Box>
+        <Typography
+            className='lineUp'
+            fontSize='40px'
+        >
+           services
+        </Typography>
       </Box>
       <GreyGallery />
       <Footer />
