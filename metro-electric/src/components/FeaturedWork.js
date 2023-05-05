@@ -3,12 +3,12 @@ import Nav from "./Nav";
 import Box from "@mui/material/Box";
 import featuredWork from "../images/FeaturedWork/featuredWork(2000X1000).jpg";
 import "../index.css";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 function FeaturedWork() {
   const styles = {
     responsiveHero: {
-      width: "100%",
+      width: "120%",
       height: "auto",
       //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
@@ -20,7 +20,7 @@ function FeaturedWork() {
       <Box className='image-wrap'>
         <img src={featuredWork} alt='Contact' style={styles.responsiveHero} />
       </Box>
-      <Footer/>
+      <Footer />
     </>
   );
 }

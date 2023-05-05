@@ -7,7 +7,7 @@ import "../index.css";
 const Contact = () => {
   const styles = {
     responsiveHero: {
-      width: "100%",
+      width: "120%",
       height: "auto",
       //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
