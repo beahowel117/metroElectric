@@ -21,13 +21,14 @@ function Footer() {
       "&:hover":{
         color:'green'
       }
-    },
-    active: {
-      color: 'green'
     }
   };
 
   const navButtons = [
+    {
+      button: "Home",
+      link: "/",
+    },
     {
       button: "Services",
       link: "/services",
@@ -45,23 +46,18 @@ function Footer() {
       link: "/contact",
     },
   ];
+
   const matches = useMediaQuery('(max-width:600px)');
 
   const addCopyYear = (copyTxt) => {
     let currYr = new Date().getFullYear();
     return copyTxt.replace("{YYYY}", currYr);
   };
+
   const footerDisclosure = addCopyYear('@Copyright {YYYY} | Metrotek Electrical | All Rights Reserved')
-  const [isClicked, setIsClicked] = useState(2);
-  const handleClick = (index) => {
-    console.log('idex', index)
-    setIsClicked(index)
-  }
-  const buttonColor = isClicked === true ? 'green' : 'black'
+
   const location = window.location.pathname;
-  console.log('location', location)
-  console.log('nav', navButtons[0].link)
-  const currentTab = location === navButtons[0].link ? styles.active : styles.navLink
+
 
   return (
    <Box
@@ -73,13 +69,12 @@ function Footer() {
       display='flex'
       justifyContent='center'
       marginTop='20px'
+
     >
      <NavLink
          to="/"
       >
-       <a href=" " className="footer-logo">
         <img src={MetroTekLogo} alt="Footer Logo" style={styles.footerLogo}/>
-       </a>
       </NavLink>
     </Box>
       <Box
@@ -91,18 +86,14 @@ function Footer() {
           <Button
               key={index}
               to={el.link}
-              component={Link}
-             // sx={currentTab}
-              onClick={() => handleClick(index)}
-              activeClassName={styles.active}
+              component={NavLink}
               sx={{
-               color : isClicked === index ? "green" : "black",
+               color : el.link === location ? "green" : "black",
                 ":hover":{
                   color:'green'
                 }
               }}
           >
-            {console.log(isClicked, index)}
             {el.button}
           </Button>
         ))}
