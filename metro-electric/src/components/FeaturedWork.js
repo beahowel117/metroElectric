@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { Card, CardOverflow, AspectRatio } from "@mui/joy";
 import Footer from "./Footer";
 
 import featuredWork from "../images/FeaturedWork/featuredWork(2000X1000).jpg";
@@ -8,7 +9,6 @@ import controlledAgriculture from "../images/FeaturedWork/FW-CAE.JPG";
 import transformerReplacement from "../images/FeaturedWork/FW-TR.jpg";
 import renewableEnergy from "../images/FeaturedWork/FW-RE.jpg";
 import stormRestoration from "../images/FeaturedWork/FW-SR.jpg";
-
 
 import "../index.css";
 
@@ -46,7 +46,7 @@ function FeaturedWork() {
       text: "Storm Restoration"
     }
   ];
-  
+
   return (
     <>
       <Box
@@ -62,6 +62,36 @@ function FeaturedWork() {
           our featured products
         </Typography>
       </Box>
+
+      <Box
+        display='flex'
+        justifyContent='center'
+      >
+        <Box
+          display='flex'
+          flexWrap='wrap'
+          maxWidth='1100px'
+          justifyContent='center'
+          gap='10px'
+          py='40px'
+          className='fw-image-container'
+        >
+          {imageGallery.map(({img, text}) => (
+            <Card
+              variant='outlined'
+              className='fw-image-container'
+              sx={{ width: 320, backgroundColor: "#4d4d4d" }}
+            >
+              <CardOverflow>
+                <AspectRatio ratio='5/4'>
+                  <img src={img} loading='lazy' alt='' className='overlay'/>
+                </AspectRatio>
+              </CardOverflow>
+            </Card>
+          ))}
+        </Box>
+      </Box>
+
       <Footer />
     </>
   );
