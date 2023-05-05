@@ -2,12 +2,12 @@ import React from "react";
 import Box from "@mui/material/Box";
 import aboutHome from "../images/About/AboutHome(2000X1000).jpg";
 import "../index.css";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 function About() {
   const styles = {
     responsiveHero: {
-      width: "100%",
+      width: "120%",
       height: "auto",
       //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",

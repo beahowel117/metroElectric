@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import Button from "@mui/material/Button";
-import Tab, { Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import { MenuItem } from "@mui/material";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import NavLogo from "../images/logos/NavLogo.png";
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import { fontFamily } from "@mui/system";
@@ -37,6 +36,8 @@ const Nav = () => {
       padding: 0,
     },
   };
+
+  const location = window.location.pathname;
 
   const services = [
     {
@@ -114,12 +115,12 @@ const Nav = () => {
       backgroundColor={isScrolling ? "white" : "transparent"}
       pt={isScrolling ? "10px" : undefined}
     >
-      <Box>
-          <img
-            src={isScrolling ? MetroTekLogo : NavLogo}
-            alt='Navigation Logo'
-            width={isScrolling ? "200px" : "300px"}
-          />
+      <Box component={RouterLink} to='/'>
+        <img
+          src={isScrolling ? MetroTekLogo : NavLogo}
+          alt='Navigation Logo'
+          width={isScrolling ? "200px" : "300px"}
+        />
       </Box>
 
       <Box
@@ -158,7 +159,7 @@ const Nav = () => {
         <Menu
           id='basic-menu'
           anchorEl={anchorEl}
-          //   open={open}
+          open={location === "/services" ? open : undefined}
           onClose={handleClose}
           MenuListProps={{
             "aria-labelledby": "basic-button",
