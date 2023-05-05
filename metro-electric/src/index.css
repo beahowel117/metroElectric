@@ -13,15 +13,15 @@ code {
     monospace;
 }
 
-.responsiveHero {
-  width: "100%";
-  height: "auto";
+.responsiveHero img {
+  width: "120%";
+  border: 5px red solid;
 }
 
 .image-wrap {
   width: 100%;
   height: 50vw;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   overflow: hidden;
   position: relative;
   display: flex;
@@ -29,17 +29,15 @@ code {
   align-items: center;
 }
 
-.image-wrap img {
+/* .image-wrap img {
   width: 100%;
   animation: move 5s ease;
-  /* Add infinite to loop. */
-
   -ms-animation: move 5s ease;
   -webkit-animation: move 5s ease;
-  /*-0-animation: move 40s ease;*/
   -moz-animation: move 5s ease;
   position: absolute;
-}
+  animation-fill-mode: forwards;
+} */
 
 @keyframes move {
   0% {
