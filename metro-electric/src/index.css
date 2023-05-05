@@ -13,9 +13,9 @@ code {
     monospace;
 }
 
-.responsiveHero {
-  width: "100%";
-  height: "auto";
+.responsiveHero img {
+  width: "120%";
+  border: 5px red solid;
 }
 
 .image-wrap {
@@ -32,13 +32,15 @@ code {
 .image-wrap img {
   width: 100%;
   animation: move 5s ease;
-  /* Add infinite to loop. */
-
   -ms-animation: move 5s ease;
   -webkit-animation: move 5s ease;
-  /*-0-animation: move 40s ease;*/
   -moz-animation: move 5s ease;
   position: absolute;
+  animation-fill-mode: forwards;
+}
+
+.carousel.carousel-slider li.slide.selected {
+  z-index: 1 !important;
 }
 
 @keyframes move {
