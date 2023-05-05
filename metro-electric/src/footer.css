@@ -1,0 +1,19 @@
+.footerLogo{
+  width: 300px;
+  height: 57px;
+  align-items: center;
+ }
+ /* navLink{
+  fontSize: 16px;
+  color: black;
+},
+navLink :hover:{
+  color: green;
+}
+active{
+  color: green;
+} */
+
+@media screen and (max-width: 720px){
+  
+}
