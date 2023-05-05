@@ -7,6 +7,7 @@ import { MenuItem } from "@mui/material";
 import Box from "@mui/material/Box";
 import NavLogo from "../images/logos/NavLogo.png";
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
+import { fontFamily } from "@mui/system";
 import PIC from "../images/ServicesDropDown/PIC(1024x768).jpg";
 import TandM from "../images/ServicesDropDown/T&M(1024x768).JPG";
 import ER from "../images/ServicesDropDown/ER(1024x768).jpg";
@@ -67,7 +68,7 @@ const Nav = () => {
       link: "/services",
     },
     {
-      button: "Features Work",
+      button: "Featured Work",
       link: "/work",
     },
     {

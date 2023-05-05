@@ -9,6 +9,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../carousel.css";
 import GreyGallery from "./GreyGallery";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -36,6 +37,7 @@ function Home() {
         </div>
       </Carousel>
       <GreyGallery />
+      <Footer />
     </Box>
   );
 }
