@@ -20,55 +20,83 @@ function Home() {
     { img: COMMUNITY },
   ];
 
-  const fadeAnimationHandler = (state) => {
-    const transitionTime = "1s";
-    const transitionTimingFunction = "move ease forward";
+  // const fadeAnimationHandler = (state) => {
+  //   const transitionTime = "1s";
+  //   const transitionTimingFunction = "move 1s ease forward";
 
+  //   let slideStyle = {
+  //     width: "100%",
+  //     animation: "move 1s ease ",
+  //     "animation-fill-mode": "forwards",
+  //     autoPlay: true,
+  //     // transitionTimingFunction: transitionTimingFunction,
+  //     // msTransitionTimingFunction: transitionTimingFunction,
+  //     // MozTransitionTimingFunction: transitionTimingFunction,
+  //     // WebkitTransitionTimingFunction: transitionTimingFunction,
+  //     // OTransitionTimingFunction: transitionTimingFunction,
+  //   };
+
+  //   if (!state.swiping) {
+  //     slideStyle = {
+  //       ...slideStyle,
+  //       WebkitTransitionDuration: transitionTime,
+  //       MozTransitionDuration: transitionTime,
+  //       OTransitionDuration: transitionTime,
+  //       transitionDuration: transitionTime,
+  //       msTransitionDuration: transitionTime,
+  //       autoPlay: true,
+  //     };
+
+  //     return {
+  //       slideStyle,
+  //       selectedStyle: { ...slideStyle, opacity: 1, position: "relative" },
+  //       prevStyle: { ...slideStyle },
+  //     };
+  //   }
+  // };
+
+  const fadeAnimationHandler = (props, state) => {
     let slideStyle = {
-      width: "100%",
-      animation: "move 5s ease ",
-
-      // transitionTimingFunction: transitionTimingFunction,
-      // msTransitionTimingFunction: transitionTimingFunction,
-      // MozTransitionTimingFunction: transitionTimingFunction,
-      // WebkitTransitionTimingFunction: transitionTimingFunction,
-      // OTransitionTimingFunction: transitionTimingFunction,
+      // width: "100%",
     };
 
-    if (!state.swiping) {
-      slideStyle = {
-        ...slideStyle,
-        WebkitTransitionDuration: transitionTime,
-        MozTransitionDuration: transitionTime,
-        OTransitionDuration: transitionTime,
-        transitionDuration: transitionTime,
-        msTransitionDuration: transitionTime,
-      };
+    let selectedStyle = {
+      position: "absolute",
+      display: "block",
+      minHeight: "100%",
 
-      return {
-        slideStyle,
-        selectedStyle: { ...slideStyle, opacity: 1, position: "relative" },
-        prevStyle: { ...slideStyle },
-      };
-    }
+      top: -60,
+      right: -100,
+      left: -100,
+      bottom: -100,
+      animation: "move 3s ease ",
+    };
+    return {
+      slideStyle,
+      selectedStyle: {
+        ...slideStyle,
+        ...selectedStyle,
+      },
+      prevStyle: {
+        ...slideStyle,
+      },
+    };
   };
 
   return (
     <Box>
       <Carousel
-        animationHandler={fadeAnimationHandler}
         showThumbs={false}
         infiniteLoop
         autoPlay
-        display='flex'
-        justify
-        content='center'
-        alignItems='center'
+        animationHandler={fadeAnimationHandler}
       >
         {carouselContent.map(({ img }) => (
-          <div className='image-wrap'>
-            <img src={img} alt='' width='120%' />
-            <p className='home'>OVER 45 YEARS</p>
+          <div
+          // className='image-wrap'
+          >
+            <img src={img} alt='' width='120px' />
+            {/* <p className='home'>OVER 45 YEARS</p> */}
           </div>
         ))}
       </Carousel>
