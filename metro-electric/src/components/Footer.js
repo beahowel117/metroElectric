@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Button, Typography, Box } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
 import BrewLogo from "../images/logos/bew_logo.jpg";
 
 
 function Footer() {
+  const [isClicked, setIsClicked] = useState(false);
   const styles = {
     footerLogo: {
      width: '300px',
@@ -15,9 +17,13 @@ function Footer() {
     },
     navLink: {
       fontSize: '16px',
+      color: 'black',
       "&:hover":{
         color:'green'
       }
+    },
+    active: {
+      color: 'green'
     }
   };
 
@@ -39,20 +45,27 @@ function Footer() {
       link: "/contact",
     },
   ];
+  const matches = useMediaQuery('(max-width:600px)');
 
   const addCopyYear = (copyTxt) => {
     let currYr = new Date().getFullYear();
     return copyTxt.replace("{YYYY}", currYr);
   };
   const footerDisclosure = addCopyYear('@Copyright {YYYY} | Metrotek Electrical | All Rights Reserved')
-  // const location = window.location.pathname
 
-  // const currentTab = () => location
+  const handleClick = () => {
+    setIsClicked(true)
+  }
+  const buttonColor = isClicked === true ? 'green' : 'black'
+  const location = window.location.pathname;
+  console.log('location', location)
+  console.log('nav', navButtons[0].link)
+  const currentTab = location === navButtons[0].link ? styles.active : styles.navLink
 
   return (
    <Box
     borderTop='14px solid blue'
-    width='797px'
+    maxWidth='797px'
     margin='40px auto 0'
    >
     <Box
@@ -78,7 +91,15 @@ function Footer() {
               key={index}
               to={link}
               component={Link}
-              sx={styles.navLink}
+              sx={currentTab}
+              onClick={handleClick}
+              activeClassName={styles.active}
+              // sx={{
+              //  color : isClicked ? "green" : "black",
+              //   ":hover":{
+              //     color:'green'
+              //   }
+              // }}
           >
             {button}
           </Button>
@@ -87,7 +108,9 @@ function Footer() {
       <Box
         display='flex'
         justifyContent='space-around'
-        marginTop='50px'
+        marginTop={matches ? '20px' : '50px'}
+        flexWrap= {matches ? 'wrap': undefined}
+        marginBottom={matches? '25px': '5px'}
       >
          <Box
            order='1'
@@ -99,7 +122,7 @@ function Footer() {
           />
         </Box>
         <Box
-          order='2'
+          order={matches ? '1': '2'}
         >
           <Typography
             fontSize='16px'
@@ -124,7 +147,8 @@ function Footer() {
           </Typography>
         </Box>
         <Box
-         order='3'
+         order={matches ? '2': '3'}
+         marginTop='25px'
         >
           <img src={NECALogo} alt="Footer Logos"/>
         </Box>
