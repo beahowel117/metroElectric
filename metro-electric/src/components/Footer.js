@@ -8,7 +8,7 @@ import BrewLogo from "../images/logos/bew_logo.jpg";
 
 
 function Footer() {
-  const [isClicked, setIsClicked] = useState(false);
+
   const styles = {
     footerLogo: {
      width: '300px',
@@ -52,9 +52,10 @@ function Footer() {
     return copyTxt.replace("{YYYY}", currYr);
   };
   const footerDisclosure = addCopyYear('@Copyright {YYYY} | Metrotek Electrical | All Rights Reserved')
-
-  const handleClick = () => {
-    setIsClicked(true)
+  const [isClicked, setIsClicked] = useState(2);
+  const handleClick = (index) => {
+    console.log('idex', index)
+    setIsClicked(index)
   }
   const buttonColor = isClicked === true ? 'green' : 'black'
   const location = window.location.pathname;
@@ -86,22 +87,23 @@ function Footer() {
        justifyContent='space-around'
        marginTop='50px'
       >
-        {navButtons.map(({button, link, index}) => (
+        {navButtons.map((el, index) => (
           <Button
               key={index}
-              to={link}
+              to={el.link}
               component={Link}
-              sx={currentTab}
-              onClick={handleClick}
+             // sx={currentTab}
+              onClick={() => handleClick(index)}
               activeClassName={styles.active}
-              // sx={{
-              //  color : isClicked ? "green" : "black",
-              //   ":hover":{
-              //     color:'green'
-              //   }
-              // }}
+              sx={{
+               color : isClicked === index ? "green" : "black",
+                ":hover":{
+                  color:'green'
+                }
+              }}
           >
-            {button}
+            {console.log(isClicked, index)}
+            {el.button}
           </Button>
         ))}
       </Box>
