@@ -98,6 +98,7 @@ function Footer() {
           </Button>
         ))}
       </Box>
+
       <Box
         display='flex'
         justifyContent='space-around'
