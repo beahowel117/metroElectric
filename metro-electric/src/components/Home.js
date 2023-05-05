@@ -8,6 +8,7 @@ import COMMUNITY from "../images/HomeCarousel/community-5(2x1).jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../carousel.css";
+import GreyGallery from "./GreyGallery";
 
 function Home() {
   return (
@@ -34,6 +35,7 @@ function Home() {
           <p className='legend'>Legend 3</p>
         </div>
       </Carousel>
+      <GreyGallery />
     </Box>
   );
 }
