@@ -39,7 +39,16 @@ function Footer() {
       link: "/contact",
     },
   ];
-  
+
+  const addCopyYear = (copyTxt) => {
+    let currYr = new Date().getFullYear();
+    return copyTxt.replace("{YYYY}", currYr);
+  };
+  const footerDisclosure = addCopyYear('@Copyright {YYYY} | Metrotek Electrical | All Rights Reserved')
+  // const location = window.location.pathname
+
+  // const currentTab = () => location
+
   return (
    <Box
     borderTop='14px solid blue'
@@ -51,68 +60,85 @@ function Footer() {
       justifyContent='center'
       marginTop='20px'
     >
-      <NavLink
-        to="/"
+     <NavLink
+         to="/"
       >
-        <a href=" " className="footer-logo">
-         <img src={MetroTekLogo} alt="Footer Logo" style={styles.footerLogo}/>
-        </a>
+       <a href=" " className="footer-logo">
+        <img src={MetroTekLogo} alt="Footer Logo" style={styles.footerLogo}/>
+       </a>
       </NavLink>
     </Box>
+      <Box
+       display='flex'
+       justifyContent='space-around'
+       marginTop='50px'
+      >
+        {navButtons.map(({button, link, index}) => (
+          <Button
+              key={index}
+              to={link}
+              component={Link}
+              sx={styles.navLink}
+          >
+            {button}
+          </Button>
+        ))}
+      </Box>
       <Box
         display='flex'
         justifyContent='space-around'
         marginTop='50px'
       >
-      {navButtons.map(({button, link, index}) => (
-        <Button
-          key={index}
-          to={link}
-          component={Link}
-          sx={styles.navLink}
-        >
-          {button}
-        </Button>
-      ))}
-      </Box>
-      <Box
-      display='flex'
-      justifyContent='space-around'
-      marginTop='50px'
-      >
-        <Box
-          order='1'
-        >
+         <Box
+           order='1'
+         >
           <img src={BrewLogo}
-          alt="Footer Logos"
-          width='193px'
-          height='194px'/
-          >
+            alt="Footer Logos"
+            width='193px'
+            height='194px'
+          />
         </Box>
         <Box
           order='2'
         >
-          <Typography>
+          <Typography
+            fontSize='16px'
+            textAlign='center'
+          >
             MetroTek Electrical Services Company
-            <br></br>
-            2200 Northwood Avenue, Unit 2
-            <br></br>
-            Easton, PA 18045
+             <br></br>
+             2200 Northwood Avenue, Unit 2
+             <br></br>
+             Easton, PA 18045
           </Typography>
-          <br></br>
-          <Typography>
-            EMERGENCY - 888.249.4684
             <br></br>
-            OFFICE - 610.365.2390
+          <Typography
+            fontSize='16px'
+            textAlign='center'
+          >
+           EMERGENCY - 888.249.4684
             <br></br>
-            operations@metroelectrical.com
+           OFFICE - 610.365.2390
+            <br></br>
+           operations@metroelectrical.com
           </Typography>
         </Box>
         <Box
-          order='3'
+         order='3'
         >
           <img src={NECALogo} alt="Footer Logos"/>
         </Box>
+      </Box>
+
+      <Box>
+        <Typography
+          textAlign='center'
+          marginBottom='10px'
+          fontSize='11px'
+          color='#496079'
+        >
+           {footerDisclosure}
+        </Typography>
       </Box>
    </Box>
   )
