@@ -13,11 +13,11 @@ import Footer from "./Footer";
 
 function Home() {
   const carouselContent = [
-    { img: HOME },
-    { img: EIS },
-    { img: POWER },
-    { img: SOLUTIONS },
-    { img: COMMUNITY },
+    { img: HOME, text: 'OVER 45 YEARS OF EXCEPTIONAL ELECTRICAL SOLUTIONS' },
+    { img: EIS, text: 'ELECTRICAL INFRASTRUCTURE SPECIALISTS' },
+    { img: POWER, text: 'DISTRIBUTING POWER WHEREVER IT IS NEEDED' },
+    { img: SOLUTIONS, text: 'DELIVERING INFRASTRUCTURE SOLUTIONS NATIONWIDE' },
+    { img: COMMUNITY, text: 'SERVING OUR COMMUNITY WITH 24/7 EMERGENCY SERVICES' },
   ];
 
   // const fadeAnimationHandler = (state) => {
@@ -91,11 +91,11 @@ function Home() {
         autoPlay
         animationHandler={fadeAnimationHandler}
       >
-        {carouselContent.map(({ img }) => (
+        {carouselContent.map(({ img, text }) => (
           <div className='image-container'>
             <img src={img} alt='' width='120px' />
             <Typography className='lineUp' fontSize='40px'>
-              about metrotek
+              {text}
             </Typography>
             {/* <p className='home'>OVER 45 YEARS</p> */}
           </div>
