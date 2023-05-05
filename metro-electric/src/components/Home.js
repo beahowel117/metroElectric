@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Box from "@mui/material/Box";
+import { Box, Typography } from "@mui/material";
 import HOME from "../images/HomeCarousel/home-1(2x1).jpg";
 import EIS from "../images/HomeCarousel/EIS-2(2x1).jpg";
 import POWER from "../images/HomeCarousel/power-3(2x1).jpg";
@@ -92,10 +92,11 @@ function Home() {
         animationHandler={fadeAnimationHandler}
       >
         {carouselContent.map(({ img }) => (
-          <div
-          // className='image-wrap'
-          >
+          <div className='image-container'>
             <img src={img} alt='' width='120px' />
+            <Typography className='lineUp' fontSize='40px'>
+              about metrotek
+            </Typography>
             {/* <p className='home'>OVER 45 YEARS</p> */}
           </div>
         ))}
