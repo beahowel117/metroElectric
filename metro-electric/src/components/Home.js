@@ -13,47 +13,15 @@ import Footer from "./Footer";
 
 function Home() {
   const carouselContent = [
-    { img: HOME, text: 'OVER 45 YEARS OF EXCEPTIONAL ELECTRICAL SOLUTIONS' },
-    { img: EIS, text: 'ELECTRICAL INFRASTRUCTURE SPECIALISTS' },
-    { img: POWER, text: 'DISTRIBUTING POWER WHEREVER IT IS NEEDED' },
-    { img: SOLUTIONS, text: 'DELIVERING INFRASTRUCTURE SOLUTIONS NATIONWIDE' },
-    { img: COMMUNITY, text: 'SERVING OUR COMMUNITY WITH 24/7 EMERGENCY SERVICES' },
+    { img: HOME, text: "OVER 45 YEARS OF EXCEPTIONAL ELECTRICAL SOLUTIONS" },
+    { img: EIS, text: "ELECTRICAL INFRASTRUCTURE SPECIALISTS" },
+    { img: POWER, text: "DISTRIBUTING POWER WHEREVER IT IS NEEDED" },
+    { img: SOLUTIONS, text: "DELIVERING INFRASTRUCTURE SOLUTIONS NATIONWIDE" },
+    {
+      img: COMMUNITY,
+      text: "SERVING OUR COMMUNITY WITH 24/7 EMERGENCY SERVICES",
+    },
   ];
-
-  // const fadeAnimationHandler = (state) => {
-  //   const transitionTime = "1s";
-  //   const transitionTimingFunction = "move 1s ease forward";
-
-  //   let slideStyle = {
-  //     width: "100%",
-  //     animation: "move 1s ease ",
-  //     "animation-fill-mode": "forwards",
-  //     autoPlay: true,
-  //     // transitionTimingFunction: transitionTimingFunction,
-  //     // msTransitionTimingFunction: transitionTimingFunction,
-  //     // MozTransitionTimingFunction: transitionTimingFunction,
-  //     // WebkitTransitionTimingFunction: transitionTimingFunction,
-  //     // OTransitionTimingFunction: transitionTimingFunction,
-  //   };
-
-  //   if (!state.swiping) {
-  //     slideStyle = {
-  //       ...slideStyle,
-  //       WebkitTransitionDuration: transitionTime,
-  //       MozTransitionDuration: transitionTime,
-  //       OTransitionDuration: transitionTime,
-  //       transitionDuration: transitionTime,
-  //       msTransitionDuration: transitionTime,
-  //       autoPlay: true,
-  //     };
-
-  //     return {
-  //       slideStyle,
-  //       selectedStyle: { ...slideStyle, opacity: 1, position: "relative" },
-  //       prevStyle: { ...slideStyle },
-  //     };
-  //   }
-  // };
 
   const fadeAnimationHandler = (props, state) => {
     let slideStyle = {
@@ -64,11 +32,12 @@ function Home() {
       position: "absolute",
       display: "block",
       minHeight: "100%",
-
-      top: -60,
-      right: -100,
-      left: -100,
-      bottom: -100,
+      maxWidth: "150%",
+      width: "150%",
+      top: -120,
+      right: -260,
+      left: -260,
+      bottom: -50,
       animation: "move 3s ease ",
     };
     return {
@@ -84,20 +53,21 @@ function Home() {
   };
 
   return (
-    <Box>
+    <Box width='100%'>
       <Carousel
         showThumbs={false}
         infiniteLoop
         autoPlay
+        showIndicators={true}
         animationHandler={fadeAnimationHandler}
       >
         {carouselContent.map(({ img, text }) => (
           <div className='image-container'>
-            <img src={img} alt='' width='120px' />
+            <img src={img} alt='' width='100%' />
+
             <Typography className='lineUp' fontSize='40px'>
               {text}
             </Typography>
-            {/* <p className='home'>OVER 45 YEARS</p> */}
           </div>
         ))}
       </Carousel>
