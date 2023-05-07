@@ -13,19 +13,17 @@ import FeaturedWork from "./components/FeaturedWork";
 import About from "./components/About";
 import Services from "./components/Services";
 import Box from "@mui/material/Box";
-import { createTheme, colors, ThemeProvider } from "@mui/material";
+// import { ThemeProvider } from "@emotion/react";
 
-const theme = createTheme({
-  palette: {
-    primary:{
-      main: colors.blue[900]
-    }
-  }
-});
+// const theme = {
+//   colors: {
+//     primary:'#244ba6',
+
+//   }
+// };
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
       <Box>
         <Nav />
         <Routes>
@@ -35,8 +33,7 @@ function App() {
           <Route path='/about' exact element={<About />} />
           <Route path='/contact' exact element={<Contact />} />
         </Routes>
-    </Box>
-    </ThemeProvider>
+      </Box>
   );
 }
 

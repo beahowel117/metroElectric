@@ -57,7 +57,7 @@ function GreyGallery() {
               sx={{ width: 320, backgroundColor: "#aba8a7", border: "none" }}
             >
               <Typography
-                textColor='#2f2d85'
+                textColor='#244ba6'
                 fontWeight='800'
                 fontSize='30px'
                 textAlign='center'

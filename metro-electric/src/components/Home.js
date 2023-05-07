@@ -94,10 +94,15 @@ function Home() {
         {carouselContent.map(({ img, text }) => (
           <div className='image-container'>
             <img src={img} alt='' width='120px' />
-            <Typography className='lineUp' fontSize='40px'>
+            <Typography
+              className='lineUp'
+              fontSize='40px'
+             // color='#e1f5fe'
+              color='#f5f5f5'
+              fontWeight="600"
+              >
               {text}
             </Typography>
-            {/* <p className='home'>OVER 45 YEARS</p> */}
           </div>
         ))}
       </Carousel>

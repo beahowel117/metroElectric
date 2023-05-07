@@ -27,6 +27,7 @@ function Services() {
         <Typography
             className='lineUp'
             fontSize='40px'
+            fontWeight='600'
         >
            services
         </Typography>

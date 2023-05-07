@@ -58,6 +58,7 @@ function FeaturedWork() {
         <Typography
             className='lineUp'
             fontSize='40px'
+            fontWeight='600'
         >
           our featured products
         </Typography>
