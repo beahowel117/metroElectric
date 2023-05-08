@@ -7,6 +7,7 @@ import belyea_overhead from "../images/About/4.3-2 R (1024X768).jpg"
 import BrewLogo from "../images/logos/bew_logo.jpg";
 import GreenLogo from "../images/About/4.4.1.jpeg";
 import OrangeLogo from "../images/About/4.4.2.jpeg";
+import men_walking from "../images/About/about-lastImage(2000X1000).jpg";
 import "../index.css";
 import Footer from "./Footer";
 
@@ -159,12 +160,30 @@ function About() {
             A Corporate Culture of Teamwork, Responsibility and a Commitment to Safety
           </h3>
           <p>
-            Safety is our top priority. Personal injury, property damage, and adverse environmental impacts are not accetable costs of doing business. For this reason, we employ full time safety professionals, conduct weekly safety meetings, and perform ongoing site safety inspections. We strictly adhere to safety standards and meet all OSHA, MSHA, ANSI, federal, state, and local safety regulations. We are proud of our safety record and recognize that accident prevention is an integral part of our daily operation and not a seperate program. Our project foremen stress safety daily and employees are encouraged to raise safety concerns and suggest imporvements to our safety program. 
+            Safety is our top priority. Personal injury, property damage, and adverse environmental impacts are not accetable costs of doing business. For this reason, we employ full time safety professionals, conduct weekly safety meetings, and perform ongoing site safety inspections. We strictly adhere to safety standards and meet all OSHA, MSHA, ANSI, federal, state, and local safety regulations. We are proud of our safety record and recognize that accident prevention is an integral part of our daily operation and not a seperate program. Our project foremen stress safety daily and employees are encouraged to raise safety concerns and suggest imporvements to our safety program.
           </p>
         </Box>
       </Box>
 
+      <Box>
+        <img src={men_walking}
+          alt="men_walking"
+          width="1170px"
+          height="500px"
+        />
+      </Box>
 
+      <Box>
+        <h1>
+          careers
+        </h1>
+        <p>
+          We've been in continuous operation for over 45 years. We promote an exciting, challenging and safe work environment, empowering workers to grow and evolve with our business.
+        </p>
+        <p>
+          Please contact us for open employement opportunities at hr@metroelectrical.com
+        </p>
+      </Box>
       <Footer />
     </>
   );
