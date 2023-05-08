@@ -31,7 +31,7 @@ function Home() {
     let selectedStyle = {
       position: "absolute",
       display: "block",
-      minHeight: "100%",
+      minHeight: "150%",
       maxWidth: "150%",
       width: "150%",
       top: -120,
@@ -53,13 +53,88 @@ function Home() {
   };
 
   return (
-    <Box width='100%'>
+    <Box>
       <Carousel
         showThumbs={false}
         infiniteLoop
         autoPlay
         showIndicators={true}
         animationHandler={fadeAnimationHandler}
+        // renderIndicator={(onClickHandler, isSelected, index, label) => {
+        //   const defStyle = {
+        //     marginLeft: 20,
+        //     color: "white",
+        //     cursor: "pointer",
+        //     zIndex: "1000",
+        //   };
+        //   const style = isSelected
+        //     ? { ...defStyle, color: "red" }
+        //     : { ...defStyle };
+        //   return (
+        //     <Box
+        //       style={style}
+        //       onClick={onClickHandler}
+        //       onKeyDown={onClickHandler}
+        //       value={index}
+        //       key={index}
+        //       role='button'
+        //       tabIndex={0}
+        //       aria-label={`${label} ${index + 1}`}
+        //       position='absolute'
+        //       bottom='220px'
+        //       textAlign='center'
+        //       width='200px'
+        //       z-index='999'
+        //       // display='flex'
+        //     >
+        //       <span
+        //         width='100%'
+        //         height='100px'
+        //         background='black'
+        //         border='2px solid red'
+        //       >
+        //         {"cust " + index}
+        //       </span>
+        //     </Box>
+        //   );
+        // }}
+
+        renderIndicator={(onClickHandler, isSelected, index, label) => {
+          const defStyle = {
+            marginLeft: 20,
+            color: "white",
+            cursor: "pointer",
+          };
+          const style = isSelected
+            ? {
+                ...defStyle,
+                color: "white",
+                backgroundColor: "white",
+                borderRadius: "50%",
+              }
+            : { ...defStyle };
+          return (
+            <span
+              style={style}
+              onClick={onClickHandler}
+              onKeyDown={onClickHandler}
+              value={index}
+              key={index}
+              role='button'
+              tabIndex={0}
+              aria-label={`${label} ${index + 1}`}
+            >
+              <Box display='flex'>
+                <Box
+                  width='15px'
+                  height='15px'
+                  border='2px solid white'
+                  borderRadius='50%'
+                />
+              </Box>
+            </span>
+          );
+        }}
       >
         {carouselContent.map(({ img, text }) => (
           <div className='image-container'>
