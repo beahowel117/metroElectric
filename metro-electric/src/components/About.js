@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import aboutHome from "../images/About/AboutHome(2000X1000).jpg";
 import leftImage_1 from "../images/About/about-Left1(1024X768).jpg";
 import belyea_image from "../images/About/4.3-1 (2000X1000).jpg";
@@ -53,7 +53,7 @@ function About() {
       px="30px"
     >
         <Box>
-          <h1>
+          <h1 id="align_center">
             exceptional electrical solutions
           </h1>
           <Box
@@ -100,7 +100,9 @@ function About() {
           </Box>
         </Box>
 
-        <Box>
+        <Box
+          maxWidth="400px"
+        >
           <p>
             We are proud of our deep 45 year history providing value to our diverse customer base. We consider ourselves to be among the best in the business and take pride in our work product being delivered on-time, within budget and with a continuous focus on safety.
           </p>
@@ -133,11 +135,15 @@ function About() {
           height="585px"
         />
 
+
+
         <Box
           display='flex'
+          maxHeight="500px"
+          padding="10px"
         >
           <Box>
-            <h1>
+            <h1 className="divider">
               channel partner
             </h1>
             <p>
@@ -158,6 +164,8 @@ function About() {
           display="flex"
           //alignItems="center"
           width="100%"
+          maxHeight="500px"
+          padding="10px"
         >
 
           <Box
@@ -190,18 +198,27 @@ function About() {
           </Box>
           <Box
             flex='1'
+            justifyContent="center"
+            width="100%"
           >
-            <h1>
-              safety training
-            </h1>
-            <h3>
-              A Corporate Culture of Teamwork, Responsibility and a Commitment to Safety
-            </h3>
-            <p>
-              Safety is our top priority. Personal injury, property damage, and adverse environmental impacts are not accetable costs of doing business. For this reason, we employ full time safety professionals, conduct weekly safety meetings, and perform ongoing site safety inspections. We strictly adhere to safety standards and meet all OSHA, MSHA, ANSI, federal, state, and local safety regulations. We are proud of our safety record and recognize that accident prevention is an integral part of our daily operation and not a seperate program. Our project foremen stress safety daily and employees are encouraged to raise safety concerns and suggest imporvements to our safety program.
-            </p>
+            <Box
+            >
+              <h1>
+                safety training
+              </h1>
+              <h3>
+                A Corporate Culture of Teamwork, Responsibility and a Commitment to Safety
+              </h3>
+              <p>
+                Safety is our top priority. Personal injury, property damage, and adverse environmental impacts are not accetable costs of doing business. For this reason, we employ full time safety professionals, conduct weekly safety meetings, and perform ongoing site safety inspections. We strictly adhere to safety standards and meet all OSHA, MSHA, ANSI, federal, state, and local safety regulations. We are proud of our safety record and recognize that accident prevention is an integral part of our daily operation and not a seperate program. Our project foremen stress safety daily and employees are encouraged to raise safety concerns and suggest imporvements to our safety program.
+              </p>
+            </Box>
           </Box>
         </Box>
+
+
+
+
 
   {/* bottom image section */}
         <Box>
@@ -221,14 +238,9 @@ function About() {
           <Box
             width="683px"
           >
-            <Typography
-              color= '#244ba6'
-              textTransform= 'uppercase'
-              fontSize='24px'
-              textAlign='center'
-            >
+            <h1 id="align_center">
               careers
-            </Typography>
+            </h1>
             <p>
               We've been in continuous operation for over 45 years. We promote an exciting, challenging and safe work environment, empowering workers to grow and evolve with our business.
             </p>
