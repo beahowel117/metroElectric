@@ -16,6 +16,7 @@ function Services() {
       backgroundSize: "cover",
     },
   };
+
   return (
     <>
       <Box
