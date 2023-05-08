@@ -24,9 +24,7 @@ function Home() {
   ];
 
   const fadeAnimationHandler = (props, state) => {
-    let slideStyle = {
-      // width: "100%",
-    };
+    let slideStyle = {};
 
     let selectedStyle = {
       position: "absolute",
@@ -60,45 +58,6 @@ function Home() {
         autoPlay
         showIndicators={true}
         animationHandler={fadeAnimationHandler}
-        // renderIndicator={(onClickHandler, isSelected, index, label) => {
-        //   const defStyle = {
-        //     marginLeft: 20,
-        //     color: "white",
-        //     cursor: "pointer",
-        //     zIndex: "1000",
-        //   };
-        //   const style = isSelected
-        //     ? { ...defStyle, color: "red" }
-        //     : { ...defStyle };
-        //   return (
-        //     <Box
-        //       style={style}
-        //       onClick={onClickHandler}
-        //       onKeyDown={onClickHandler}
-        //       value={index}
-        //       key={index}
-        //       role='button'
-        //       tabIndex={0}
-        //       aria-label={`${label} ${index + 1}`}
-        //       position='absolute'
-        //       bottom='220px'
-        //       textAlign='center'
-        //       width='200px'
-        //       z-index='999'
-        //       // display='flex'
-        //     >
-        //       <span
-        //         width='100%'
-        //         height='100px'
-        //         background='black'
-        //         border='2px solid red'
-        //       >
-        //         {"cust " + index}
-        //       </span>
-        //     </Box>
-        //   );
-        // }}
-
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
             marginLeft: 20,
