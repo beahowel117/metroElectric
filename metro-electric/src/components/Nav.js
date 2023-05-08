@@ -143,7 +143,7 @@ const Nav = () => {
   return (
     <>
       <Box
-        display={useMobileMenu ? "none" : "flex"}
+        display='flex'
         zIndex='999'
         justifyContent='space-around'
         marginX='-50px'
@@ -171,7 +171,7 @@ const Nav = () => {
           maxWidth='600px'
           width='100%'
         >
-          {navButtons.map(({ name, link }) => (
+          {navButtons.map(({ button, link }) => (
             <Button
               to={link}
               component={RouterLink}
@@ -188,10 +188,10 @@ const Nav = () => {
                 color: isScrolling ? "#1976d2" : "white",
               }}
             >
-              {name}
-              {name === "Services" ? (
+              {button}
+              {button === "Services" ? (
                 <KeyboardArrowDownIcon />
-              ) : null || (name === "Services" && isScrolling) ? (
+              ) : null || (button === "Services" && isScrolling) ? (
                 <KeyboardArrowDownIcon size='small' />
               ) : null}
             </Button>

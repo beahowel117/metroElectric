@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { Card, CardOverflow, AspectRatio } from "@mui/joy";
+import { Card, CardOverflow, AspectRatio, CardCover } from "@mui/joy";
 import Footer from "./Footer";
 
 import featuredWork from "../images/FeaturedWork/featuredWork(2000X1000).jpg";
@@ -11,9 +11,11 @@ import renewableEnergy from "../images/FeaturedWork/FW-RE.jpg";
 import stormRestoration from "../images/FeaturedWork/FW-SR.jpg";
 
 import "../index.css";
+import "../featuredWork.css";
 
 
 function FeaturedWork() {
+
   const styles = {
     responsiveHero: {
       width: "120%",
@@ -21,7 +23,7 @@ function FeaturedWork() {
       //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
-    },
+    }
   };
 
   const imageGallery = [
@@ -44,7 +46,7 @@ function FeaturedWork() {
     {
       img: stormRestoration,
       text: "Storm Restoration"
-    }
+    },
   ];
 
   return (
@@ -58,6 +60,7 @@ function FeaturedWork() {
         <Typography
             className='lineUp'
             fontSize='40px'
+            fontWeight='600'
         >
           our featured products
         </Typography>
@@ -74,17 +77,24 @@ function FeaturedWork() {
           justifyContent='center'
           gap='10px'
           py='40px'
-          className='fw-image-container'
         >
           {imageGallery.map(({img, text}) => (
             <Card
               variant='outlined'
-              className='fw-image-container'
-              sx={{ width: 320, backgroundColor: "#4d4d4d" }}
+              className="container"
             >
               <CardOverflow>
                 <AspectRatio ratio='5/4'>
-                  <img src={img} loading='lazy' alt='' className='overlay'/>
+                  <img
+                    src={img}
+                    loading='lazy'
+                    alt=''
+                  />
+                 <div className='overlay'>
+                    <div className='imgText'>
+                      {text}
+                    </div>
+                 </div>
                 </AspectRatio>
               </CardOverflow>
             </Card>

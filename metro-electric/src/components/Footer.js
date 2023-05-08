@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link as RouterLink} from 'react-router-dom';
 import { Button, Typography, Box } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
@@ -61,7 +61,7 @@ function Footer() {
 
   return (
    <Box
-    borderTop='14px solid blue'
+    borderTop='14px solid #244ba6'
     maxWidth='797px'
     margin='40px auto 0'
    >
@@ -124,9 +124,16 @@ function Footer() {
           >
             MetroTek Electrical Services Company
              <br></br>
+            <Button
+            fontSize='16px'
+             sx={{
+              color: '#244ba6'
+             }}
+            >
              2200 Northwood Avenue, Unit 2
              <br></br>
              Easton, PA 18045
+             </Button>
           </Typography>
             <br></br>
           <Typography

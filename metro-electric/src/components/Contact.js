@@ -71,6 +71,7 @@ const Contact = () => {
           <Typography
             className='lineUp'
             fontSize='40px'
+            fontWeight='600'
           >
             contact metrotek
           </Typography>

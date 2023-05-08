@@ -23,7 +23,7 @@ function Home() {
     },
   ];
 
-  const fadeAnimationHandler = (props, state) => {
+  const zoomInOut = () => {
     let slideStyle = {};
 
     let selectedStyle = {
@@ -57,7 +57,7 @@ function Home() {
         infiniteLoop
         autoPlay
         showIndicators={true}
-        animationHandler={fadeAnimationHandler}
+        animationHandler={zoomInOut}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
             marginLeft: 20,
@@ -72,6 +72,7 @@ function Home() {
                 borderRadius: "50%",
               }
             : { ...defStyle };
+
           return (
             <span
               style={style}
@@ -97,9 +98,13 @@ function Home() {
       >
         {carouselContent.map(({ img, text }) => (
           <div className='image-container'>
-            <img src={img} alt='' width='100%' />
-
-            <Typography className='lineUp' fontSize='40px'>
+            <img src={img} alt='' width='120px' />
+            <Typography
+              className='lineUp'
+              fontSize='40px'
+              color='#f5f5f5'
+              fontWeight='600'
+            >
               {text}
             </Typography>
           </div>
