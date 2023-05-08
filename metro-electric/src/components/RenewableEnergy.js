@@ -4,10 +4,37 @@ import Footer from "./Footer";
 import { Box, Typography } from "@mui/material";
 
 import renewable_energy from "../images/Services/renewableEnergy(1024X768).jpg"
+import re_cover from "../images/Services/re_cover(2000X1000).jpg";
 
 function RenewableEnergy() {
+  const styles = {
+    responsiveHero: {
+      width: "120%",
+      height: "auto",
+      //backgroundPosition: 'center',
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    }
+  };
+
   return (
     <>
+       <Box
+      className='image-container'
+      >
+        <Box className='image-wrap'>
+          <img src={re_cover} alt='Renewable Energy' style={styles.responsiveHero} />
+        </Box>
+        <Typography
+            className='lineUp'
+            fontSize='40px'
+            fontWeight='600'
+        >
+          renewable energy
+        </Typography>
+      </Box>
+
+
      <Box>
       <img src={renewable_energy}
         alt="Renewable Energy"
