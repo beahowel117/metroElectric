@@ -113,6 +113,7 @@ function Home() {
                 borderRadius: "50%",
               }
             : { ...defStyle };
+            
           return (
             <span
               style={style}
