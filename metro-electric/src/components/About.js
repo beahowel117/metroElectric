@@ -100,33 +100,41 @@ function About() {
           </Box>
         </Box>
 
+  {/* verbiage section */}
         <Box
-          maxWidth="400px"
+          display="flex"
+          maxWidth="1200px"
+          justifyContent="center"
+          alignItems="center"
         >
-          <p>
-            We are proud of our deep 45 year history providing value to our diverse customer base. We consider ourselves to be among the best in the business and take pride in our work product being delivered on-time, within budget and with a continuous focus on safety.
-          </p>
-          <h1>
-            competitive advantages
-          </h1>
-          <h3>
-            Reputation
-          </h3>
-          <p>
-            We have provided hundreds of customers decades of consistent, reliable and responsive service that has allowed us to grow almost entirely on word-of-mouth recommentations. Most of our clients come from positive referrals and recommendations from existing clients.
-          </p>
-          <h3>
-            Customer Service
-          </h3>
-          <p>
-            The strongest component of MetroTek's reputation has been its commitment to customer service. Through its emergency responsiveness, troubleshooting abilities and on-demand service and support, MetroTek has developed a flawless reputation within the region's industrial community. Superior customer service is further enhanced by quick turnaround for price requests, quick decisions and quick reactions.
-          </p>
-          <h3>
-            Experienced Management
-          </h3>
-          <p>
-            MetroTek's management team combines generations of experience in the electrical construction industry that translates into vast technical knowledge and skill. Management continues to invest in the latest systems and innovations in the industry. Ownership works in the field with the men which renders construction and service excellence.
-          </p>
+          <Box
+            maxWidth="700px"
+          >
+            <p>
+              We are proud of our deep 45 year history providing value to our diverse customer base. We consider ourselves to be among the best in the business and take pride in our work product being delivered on-time, within budget and with a continuous focus on safety.
+            </p>
+            <h1>
+              competitive advantages
+            </h1>
+            <h3>
+              Reputation
+            </h3>
+            <p>
+              We have provided hundreds of customers decades of consistent, reliable and responsive service that has allowed us to grow almost entirely on word-of-mouth recommentations. Most of our clients come from positive referrals and recommendations from existing clients.
+            </p>
+            <h3>
+              Customer Service
+            </h3>
+            <p>
+              The strongest component of MetroTek's reputation has been its commitment to customer service. Through its emergency responsiveness, troubleshooting abilities and on-demand service and support, MetroTek has developed a flawless reputation within the region's industrial community. Superior customer service is further enhanced by quick turnaround for price requests, quick decisions and quick reactions.
+            </p>
+            <h3>
+              Experienced Management
+            </h3>
+            <p>
+              MetroTek's management team combines generations of experience in the electrical construction industry that translates into vast technical knowledge and skill. Management continues to invest in the latest systems and innovations in the industry. Ownership works in the field with the men which renders construction and service excellence.
+            </p>
+          </Box>
         </Box>
 
         <img src={belyea_image}
