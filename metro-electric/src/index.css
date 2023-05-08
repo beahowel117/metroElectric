@@ -40,7 +40,7 @@ code {
 }
 
 .carousel.carousel-slider li.slide.selected {
-  z-index: 1 !important;
+  /* z-index: 1 !important; */
 }
 
 @keyframes move {
@@ -103,14 +103,14 @@ code {
   }
 }
 
-.image-container{
+.image-container {
   position: relative;
   text-align: center;
   color: white;
   text-transform: uppercase;
 }
 
-.bottom-left{
+.bottom-left {
   position: absolute;
   bottom: 8px;
   left: 16px;
