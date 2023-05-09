@@ -6,7 +6,7 @@ import { Box, Typography } from "@mui/material";
 import ca_pipes from "../images/Services/ca_pipes.jpeg";
 import ca_cover from "../images/Services/ca_cover.jpg";
 import ca_slider_1 from "../images/Services/ca_slider1.jpg";
-import ca_slider_2 from "../images/Services/ca_slider2.jpg";
+
 import ca_slider_3 from "../images/Services/ca_slider3.jpeg";
 import ca_slider_4 from "../images/Services/ca_slider4.jpeg";
 
