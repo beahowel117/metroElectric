@@ -49,7 +49,8 @@ function Home() {
       },
     };
   };
-
+  const src =
+    "https://metroelectrical.com/wp-content/uploads/2022/12/Metrotek-Promo.mov";
   return (
     <Box>
       <Carousel
@@ -110,7 +111,92 @@ function Home() {
           </div>
         ))}
       </Carousel>
+      <Box
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
+        flexDirection='column'
+        maxWidth='800px'
+        margin='0 auto'
+      >
+        <Box position='relative' mb='50px'>
+          <Typography
+            fontSize='22px'
+            color='#244ba6'
+            fontWeight='900'
+            fontFamily='Lato'
+            textAlign='center'
+            mt='50px'
+          >
+            WE DESIGN, CONSTRUCT, TEST AND MAINTAIN THE ELECTRICAL
+            INFRASTRUCTURE THAT POWERS AMERICA’S ECONOMY.
+          </Typography>
 
+          <Box
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
+            flexDirection='column'
+            padding='20px'
+            mb='40px'
+          >
+            <Box
+              height='3px'
+              backgroundColor='#244ba6'
+              width='60%'
+              borderRadius='10px'
+              mb='15px'
+            />
+            <Typography
+              fontSize='19px'
+              fontFamily='Lato'
+              textAlign='center'
+              mb='50px'
+            >
+              For over four decades, MetroTek has delivered electricity
+              infrastructure solutions to hundreds of industrial, commercial &
+              utility clients of all sizes.
+            </Typography>
+            <Typography
+              fontSize='19px'
+              fontFamily='Lato'
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <div>
+                High Voltage divower Systems ● Interconnect ● Equidivment Design
+              </div>
+              <div>Engineering ● Construction ● Maintenance ● Redivair</div>
+              <div>Testing ● Monitoring ● Emergency Service</div>
+            </Typography>
+            <Box
+              height='3px'
+              backgroundColor='#244ba6'
+              width='60%'
+              borderRadius='10px'
+              mt='15px'
+            />
+          </Box>
+
+          <Box padding='10px'>
+            <video
+              controls
+              width='100%'
+              autoplay='true'
+              muted
+              loop='true'
+              preload='auto'
+              playsInline='true'
+            >
+              <source src={src} type='video/mp4' />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </Box>
+        </Box>
+      </Box>
       <GreyGallery />
       <Footer />
     </Box>
