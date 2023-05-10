@@ -2,9 +2,12 @@ import React from 'react';
 import GreyGallery from "./GreyGallery";
 import Footer from "./Footer";
 import { Box, Typography } from "@mui/material";
+import { AspectRatio } from "@mui/joy";
 
 import renewable_energy from "../images/Services/renewableEnergy(1024X768).jpg"
 import re_cover from "../images/Services/re_cover(2000X1000).jpg";
+import re_last from "../images/Services/re-last.jpg";
+
 
 function RenewableEnergy() {
   const styles = {
@@ -75,6 +78,22 @@ function RenewableEnergy() {
         </Typography>
         </Box>
      </Box>
+
+      <Box
+        maxWidth="1160px"
+        margin="0 auto 50px auto"
+      >
+          <AspectRatio
+          //maxHeight="566px"
+          objectFit="cover"
+            //ratio="3/4"
+          >
+            <img src={re_last}
+              alt="renewable energy"
+            />
+          </AspectRatio>
+        </Box>
+
       <GreyGallery />
       <Footer />
     </>
