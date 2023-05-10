@@ -1,5 +1,7 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { NavLink ,Link as RouterLink } from "react-router-dom";
+
+import { Box, Typography, Button } from "@mui/material";
 import { Card, CardOverflow, AspectRatio, CardCover } from "@mui/joy";
 import Footer from "./Footer";
 
@@ -29,23 +31,28 @@ function FeaturedWork() {
   const imageGallery = [
     {
       img: overHeadConstruction,
-      text: "Overhead Construction"
+      text: "Overhead Construction",
+      link: "/portfolio-items/overhead-construction"
     },
     {
       img: controlledAgriculture,
-      text: "Controlled Environment Agriculture"
+      text: "Controlled Environment Agriculture",
+      link: "/portfolio-items/controlled-environment-agriculture"
     },
     {
       img: transformerReplacement,
-      text: "Transformer Replacements"
+      text: "Transformer Replacements",
+      link: "/portfolio-items/transformer"
     },
     {
       img: renewableEnergy,
-      text: "Renewable Energy"
+      text: "Renewable Energy",
+      link: "/portfolio-items/renewable"
     },
     {
       img: stormRestoration,
-      text: "Storm Restoration"
+      text: "Storm Restoration",
+      link: "/portfolio-items/storm"
     },
   ];
 
@@ -78,7 +85,7 @@ function FeaturedWork() {
           gap='10px'
           py='40px'
         >
-          {imageGallery.map(({img, text}) => (
+          {imageGallery.map(({img, text, link}) => (
             <Card
               variant='outlined'
               className="container"
@@ -91,9 +98,14 @@ function FeaturedWork() {
                     alt=''
                   />
                  <div className='overlay'>
-                    <div className='imgText'>
+                    <Typography
+                      className='imgText'
+                      component={NavLink}
+                      to={link}
+                      sx={{ textDecoration: "none" }}
+                    >
                       {text}
-                    </div>
+                    </Typography>
                  </div>
                 </AspectRatio>
               </CardOverflow>

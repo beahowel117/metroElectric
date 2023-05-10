@@ -40,8 +40,6 @@ function About() {
       </Box>
 
 
-
-
   <Box
     display="flex"
     justifyContent="center"

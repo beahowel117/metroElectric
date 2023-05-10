@@ -2,9 +2,12 @@ import React from 'react';
 import GreyGallery from "./GreyGallery";
 import Footer from "./Footer";
 import { Box, Typography } from "@mui/material";
+import { AspectRatio } from "@mui/joy";
 
 import renewable_energy from "../images/Services/renewableEnergy(1024X768).jpg"
 import re_cover from "../images/Services/re_cover(2000X1000).jpg";
+import re_last from "../images/Services/re-last.jpg";
+
 
 function RenewableEnergy() {
   const styles = {
@@ -35,18 +38,62 @@ function RenewableEnergy() {
       </Box>
 
 
-     <Box>
-      <img src={renewable_energy}
-        alt="Renewable Energy"
-        width="600px"
-      />
-      <Typography>
-      We assist clients to deploy a wide range of renewable energy options with services that include construction, inspection, installation, maintenance, repair, and removal of renewable energy power distribution systems.
-      </Typography>
-      <Typography>
-      Our renewable energy support services include engineering, procurement, construction, lightning protection, underground cable, SCADA systems, substations, switchgear, inverters, utility grid interconnection &amp; optimization, testing &amp; commissioning, and quality control &amp; assurance.
-      </Typography>
+     <Box
+      display="flex"
+      padding="45px"
+      maxWidth="900px"
+      margin="0 auto"
+      flexWrap="wrap"
+     >
+        <Box
+          maxWidth="590px"
+          minWidth="400px"
+          flex='1'
+        >
+        <img src={renewable_energy}
+          alt="Renewable Energy"
+          width="100%"
+
+        />
+        </Box>
+        <Box
+         display="flex"
+         flexDirection="column"
+         padding="0 50px 0 70px"
+         flex='1'
+        >
+        <h1>
+          renewable energy
+        </h1>
+        <h3>
+          Serving the renewable future of power systems
+        </h3>
+        <Typography
+          margin='0 50px 0 0'
+        >
+        We assist clients to deploy a wide range of renewable energy options with services that include construction, inspection, installation, maintenance, repair, and removal of renewable energy power distribution systems.
+        <br></br>
+        <br></br>
+        Our renewable energy support services include engineering, procurement, construction, lightning protection, underground cable, SCADA systems, substations, switchgear, inverters, utility grid interconnection &amp; optimization, testing &amp; commissioning, and quality control &amp; assurance.
+        </Typography>
+        </Box>
      </Box>
+
+      <Box
+        maxWidth="1160px"
+        margin="0 auto 50px auto"
+      >
+          <AspectRatio
+          //maxHeight="566px"
+          objectFit="cover"
+            //ratio="3/4"
+          >
+            <img src={re_last}
+              alt="renewable energy"
+            />
+          </AspectRatio>
+        </Box>
+
       <GreyGallery />
       <Footer />
     </>
