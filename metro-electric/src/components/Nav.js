@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { NavLink ,Link as RouterLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Button from "@mui/material/Button";
 import {
+  Button,
   Typography,
   AppBar,
   Toolbar,
@@ -68,6 +68,9 @@ const Nav = () => {
       color: "white",
       fontSize: "20px",
       fontWeight: "900",
+      textDecoration:"none",
+      boxShadow:"none",
+      underline: "none"
     },
     menuItem: {
       width: "190px",
@@ -83,22 +86,27 @@ const Nav = () => {
     {
       img: PIC,
       text: "Power Infrastructure Construction",
+      link: "/services/power-infrastructure"
     },
     {
       img: TandM,
       text: "Testing & Maintenance",
+      link: "/services/testing-maintenance"
     },
     {
       img: ER,
       text: "Emergency Response",
+      link: "/services/emergency-response"
     },
     {
       img: CEA,
       text: "Controlled Environment Agriculture",
+      link: "/services/controlled-environment-agriculture"
     },
     {
       img: RE,
       text: "Renewable Energy",
+      link: "/services/renewable-energy"
     },
   ];
 
@@ -208,7 +216,7 @@ const Nav = () => {
             }}
           >
             <Box display='flex' gap='2px'>
-              {services.map(({ img, text }) => (
+              {services.map(({ img, text, link }) => (
                 <Box position='relative'>
                   <Card
                     sx={{
@@ -235,8 +243,29 @@ const Nav = () => {
                           }}
                         />
                       </>
-
-                      <Typography {...styles.imgText}>{text}</Typography>
+                      {/*
+                      <Button
+                         sx={{
+                        position: "absolute",
+                        top: "20%",
+                        //left: "15%",
+                       // transform: "translate(50%, 50%)",
+                        color: "white",
+                        fontSize: "20px",
+                        fontWeight: "900",
+                      }}
+                      component={NavLink}
+                      to={link}
+                      >
+                      {text}
+                      </Button> */}
+                      <Typography
+                      {...styles.imgText}
+                      component={NavLink}
+                      to={link}
+                      >
+                        {text}
+                      </Typography>
                     </MenuItem>
                   </Card>
                 </Box>
