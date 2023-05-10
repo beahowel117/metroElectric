@@ -243,26 +243,14 @@ const Nav = () => {
                           }}
                         />
                       </>
-                      {/*
-                      <Button
-                         sx={{
-                        position: "absolute",
-                        top: "20%",
-                        //left: "15%",
-                       // transform: "translate(50%, 50%)",
-                        color: "white",
-                        fontSize: "20px",
-                        fontWeight: "900",
-                      }}
-                      component={NavLink}
-                      to={link}
-                      >
-                      {text}
-                      </Button> */}
+
                       <Typography
                       {...styles.imgText}
                       component={NavLink}
                       to={link}
+                      sx={{
+                        textDecoration: "none"
+                      }}
                       >
                         {text}
                       </Typography>

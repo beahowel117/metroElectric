@@ -7,7 +7,7 @@
  bottom: 0;
  left: 100%;
  right: 0;
- background-color: rgba(0, 0, 0, 0.75);
+ background-color: rgba(0, 0, 0, 0.50);
  overflow: hidden;
  width: 0;
  height: 100%;
@@ -30,4 +30,8 @@
   transform: tanslate(-50%, -50%);
   white-space: wrap;
   text-align: center;
+}
+
+.imgText:hover {
+  color: blue;
 }
