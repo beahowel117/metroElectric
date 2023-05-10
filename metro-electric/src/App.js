@@ -6,15 +6,15 @@ import {
   Redirect,
 } from "react-router-dom";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import FeaturedWork from "./components/FeaturedWork";
 import About from "./components/About";
 import Services from "./components/Services";
 import RenewableEnergy from "./components/RenewableEnergy";
-import Box from "@mui/material/Box";
 import ControlledAgriculture from "./components/ControlledAgriculture";
+import Box from "@mui/material/Box";
+
 
 // import { ThemeProvider } from "@emotion/react";
 
