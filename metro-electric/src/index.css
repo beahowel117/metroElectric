@@ -115,3 +115,8 @@ code {
   bottom: 8px;
   left: 16px;
 }
+
+.control-dots {
+  display: flex;
+  justify-content: center;
+}

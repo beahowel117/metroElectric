@@ -23,10 +23,8 @@ function Home() {
     },
   ];
 
-  const fadeAnimationHandler = (props, state) => {
-    let slideStyle = {
-      // width: "100%",
-    };
+  const zoomInOut = () => {
+    let slideStyle = {};
 
     let selectedStyle = {
       position: "absolute",
@@ -59,46 +57,7 @@ function Home() {
         infiniteLoop
         autoPlay
         showIndicators={true}
-        animationHandler={fadeAnimationHandler}
-        // renderIndicator={(onClickHandler, isSelected, index, label) => {
-        //   const defStyle = {
-        //     marginLeft: 20,
-        //     color: "white",
-        //     cursor: "pointer",
-        //     zIndex: "1000",
-        //   };
-        //   const style = isSelected
-        //     ? { ...defStyle, color: "red" }
-        //     : { ...defStyle };
-        //   return (
-        //     <Box
-        //       style={style}
-        //       onClick={onClickHandler}
-        //       onKeyDown={onClickHandler}
-        //       value={index}
-        //       key={index}
-        //       role='button'
-        //       tabIndex={0}
-        //       aria-label={`${label} ${index + 1}`}
-        //       position='absolute'
-        //       bottom='220px'
-        //       textAlign='center'
-        //       width='200px'
-        //       z-index='999'
-        //       // display='flex'
-        //     >
-        //       <span
-        //         width='100%'
-        //         height='100px'
-        //         background='black'
-        //         border='2px solid red'
-        //       >
-        //         {"cust " + index}
-        //       </span>
-        //     </Box>
-        //   );
-        // }}
-
+        animationHandler={zoomInOut}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
             marginLeft: 20,
@@ -113,7 +72,7 @@ function Home() {
                 borderRadius: "50%",
               }
             : { ...defStyle };
-            
+
           return (
             <span
               style={style}
@@ -143,10 +102,9 @@ function Home() {
             <Typography
               className='lineUp'
               fontSize='40px'
-             // color='#e1f5fe'
               color='#f5f5f5'
-              fontWeight="600"
-              >
+              fontWeight='600'
+            >
               {text}
             </Typography>
           </div>
