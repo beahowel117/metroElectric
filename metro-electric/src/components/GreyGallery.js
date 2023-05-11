@@ -43,7 +43,7 @@ function GreyGallery() {
     {
       img: RE,
       text: "Renewable Energy",
-      link: "/services/renewable-energy"
+      link: "/services/emergency-response"
     },
   ];
 
@@ -113,3 +113,8 @@ function GreyGallery() {
 }
 
 export default GreyGallery;
+
+/**
+ *box-shadow: 5px 10px 8px #888888;
+ *
+ */
