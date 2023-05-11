@@ -1,7 +1,10 @@
 import React from "react";
+import { Box, Typography, imageListItemClasses } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import GreyGallery from "./GreyGallery";
 import Footer from "./Footer";
-import { Box, Typography } from "@mui/material";
 
 import ca_pipes from "../images/Services/ca_pipes.jpeg";
 import ca_cover from "../images/Services/ca_cover.jpg";
@@ -21,6 +24,11 @@ function ControlledAgriculture() {
     },
   };
 
+  const carousel_1_Content = [
+    { img: ca_slider_1},
+    { img: ca_slider_2 }
+  ];
+
   return (
     <>
       <Box className='image-container'>
@@ -37,7 +45,18 @@ function ControlledAgriculture() {
       </Box>
 
       <Box>
-        <img src={ca_slider_1} alt='controlled agriculture' />
+        <Carousel
+          showThumbs={false}
+          infiniteLoop
+          autoPlay
+          showIndicators
+        >
+          {carousel_1_Content.map(({img}) => (
+            <div>
+              <img src={img} alt='controlled agriculture' />
+            </div>
+          ))}
+        </Carousel>
       </Box>
 
       <Box>
