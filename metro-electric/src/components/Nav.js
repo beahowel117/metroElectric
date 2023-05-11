@@ -193,7 +193,7 @@ const Nav = () => {
               sx={{
                 fontSize: isScrolling ? "17px" : "20px",
                 fontWeight: "900",
-                color: isScrolling ? "#1976d2" : "white",
+                color: isScrolling ? "#244ba6" : "white",
               }}
             >
               {name}
