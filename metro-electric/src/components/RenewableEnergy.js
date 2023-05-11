@@ -76,9 +76,7 @@ function RenewableEnergy() {
           Serving the renewable future of power systems
         </h3>
         </Box>
-        <p
-          // margin='0 50px 0 0'
-        >
+        <p>
         We assist clients to deploy a wide range of renewable energy options with services that include construction, inspection, installation, maintenance, repair, and removal of renewable energy power distribution systems.
         <br></br>
         <br></br>
@@ -92,9 +90,7 @@ function RenewableEnergy() {
         margin="0 auto 50px auto"
       >
           <AspectRatio
-          //maxHeight="566px"
-          objectFit="cover"
-            //ratio="3/4"
+            objectFit="cover"
           >
             <img src={re_last}
               alt="renewable energy"
