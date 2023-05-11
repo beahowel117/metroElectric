@@ -121,19 +121,7 @@ code {
   justify-content: center;
 }
 
-.bulletPointsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.bulletPointDiv {
-  flex-grow: 1;
-  flex-basis: 50%;
-}
-
-.bulletPointDiv::after {
-  content: "";
-  flex: auto;
+.mobileLists li {
+  text-indent: -23px;
+  margin-top: 3px;
 }

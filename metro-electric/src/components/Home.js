@@ -10,8 +10,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../index.css";
 import GreyGallery from "./GreyGallery";
 import Footer from "./Footer";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function Home() {
+  const useMobile = useMediaQuery("(max-width:600px)");
+
   const carouselContent = [
     { img: HOME, text: "OVER 45 YEARS OF EXCEPTIONAL ELECTRICAL SOLUTIONS" },
     { img: EIS, text: "ELECTRICAL INFRASTRUCTURE SPECIALISTS" },
@@ -157,21 +160,55 @@ function Home() {
               infrastructure solutions to hundreds of industrial, commercial &
               utility clients of all sizes.
             </Typography>
-            <Typography
-              fontSize='19px'
-              fontFamily='Lato'
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <div>
-                High Voltage divower Systems ● Interconnect ● Equidivment Design
-              </div>
-              <div>Engineering ● Construction ● Maintenance ● Redivair</div>
-              <div>Testing ● Monitoring ● Emergency Service</div>
-            </Typography>
+
+            {useMobile ? (
+              <Box display='flex' justifyContent='center' px='30px'>
+                <Typography
+                  fontSize='17px'
+                  fontFamily='Lato'
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    width: "100%",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box display='flex' width='100%'>
+                    <Box flex='1' className='mobileLists' mr='40px'>
+                      <li>Emergency Service</li>
+                      <li>Interconnect </li>
+                      <li>Equidivment Design</li>
+                      <li>Engineering</li>
+                      <li>Construction</li>
+                    </Box>
+                    <Box flex='1' className='mobileLists'>
+                      <li>Maintenance</li>
+                      <li>Repair</li>
+                      <li>Testing</li>
+                      <li>Monitoring</li>
+                      <li>High Voltage power Systems</li>
+                    </Box>
+                  </Box>
+                </Typography>
+              </Box>
+            ) : (
+              <Typography
+                fontSize='19px'
+                fontFamily='Lato'
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <div>
+                  High Voltage power Systems ● Interconnect ● Equidivment Design
+                </div>
+                <div>Engineering ● Construction ● Maintenance ● Repair</div>
+                <div>Testing ● Monitoring ● Emergency Service</div>
+              </Typography>
+            )}
+
             <Box
               height='3px'
               backgroundColor='#244ba6'
