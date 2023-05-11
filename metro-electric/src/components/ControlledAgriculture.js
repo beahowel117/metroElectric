@@ -49,11 +49,52 @@ function ControlledAgriculture() {
           showThumbs={false}
           infiniteLoop
           autoPlay
-          showIndicators
+          showIndicators={true}
+          maxWidth="600px"
+          renderIndicator={(onClickHandler, isSelected, index, label) => {
+            const defStyle = {
+              marginLeft: 20,
+              color: "white",
+              cursor:"pointer"
+            }
+            const style = isSelected
+              ? {
+                ...defStyle,
+                color: "white",
+                backgroundColor: "white",
+                borderRadius: "50%"
+              }
+              : {...defStyle};
+
+              return (
+                <span
+                style={style}
+                onClick={onClickHandler}
+                onKeyDown={onClickHandler}
+                value={index}
+                key={index}
+                role='button'
+                tabIndex={0}
+                aria-label={`${label} ${index + 1}`}
+              >
+                <Box display='flex'>
+                  <Box
+                    width='15px'
+                    height='15px'
+                    border='2px solid white'
+                    borderRadius='50%'
+                  />
+                </Box>
+              </span>
+              )
+          }}
         >
           {carousel_1_Content.map(({img}) => (
             <div>
-              <img src={img} alt='controlled agriculture' />
+              <img src={img}
+              alt='controlled agriculture'
+              width='90px'
+              />
             </div>
           ))}
         </Carousel>
