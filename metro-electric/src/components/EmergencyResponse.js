@@ -51,9 +51,12 @@ function EmergencyResponse() {
      <Box
       display="flex"
       flexDirection="column"
+      justifyContent="center"
+      alignItems='center'
       flex="1"
-      padding="40px"
-      margin="auto"
+      maxWidth="800px"
+      //padding="40px"
+      margin="0 auto"
      >
         <h1>24/7 emergency response</h1>
         <Typography>
@@ -67,20 +70,22 @@ function EmergencyResponse() {
      <Box
       display="flex"
       padding="40px"
-      maxWidth="900px"
+      maxWidth="1000px"
       margin="auto"
       flexWrap="wrap"
+      justifyContent='space-between'
      >
       <Box
         flex="1"
       >
         <img src={er_image_2}
           alt="emergency vehicles"
-          width="600px"
+          width="500px"
         />
       </Box>
       <Box
         flex="1"
+        margin="90px 80px 0 0"
       >
         <p>
           Our fleet is equipped with the most advanced equipment and our staff is expertly prepared to assess the situation, prioritize actions and strategically deploy resources for rapid restoration to prevent further damage and to save lives.
