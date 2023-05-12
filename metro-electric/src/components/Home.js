@@ -235,7 +235,6 @@ function Home() {
         </Box>
       </Box>
       <GreyGallery />
-      <Footer />
     </Box>
   );
 }

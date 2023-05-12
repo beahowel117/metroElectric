@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Box, Typography } from "@mui/material";
 
 import GreyGallery from "./GreyGallery";
@@ -12,8 +12,6 @@ import fourth_image from "../images/Services/tm-4(1024X768).jpg";
 import fifth_image from "../images/Services/tm-5(1024X768).jpg";
 import sixth_image from "../images/Services/tm-6(2000x1000).jpg";
 
-
-
 function TestingMaintenance() {
   const styles = {
     responsiveHero: {
@@ -22,29 +20,26 @@ function TestingMaintenance() {
       //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
-    }
+    },
   };
 
   return (
     <>
-     <Box
-      className='image-container'
-      >
-      <Box className='image-wrap'>
-          <img src={testing_cover} alt='Testing Maintenance' style={styles.responsiveHero} />
-      </Box>
-      <Typography
-          className='lineUp'
-          fontSize='40px'
-          fontWeight='600'
-      >
+      <Box className='image-container'>
+        <Box className='image-wrap'>
+          <img
+            src={testing_cover}
+            alt='Testing Maintenance'
+            style={styles.responsiveHero}
+          />
+        </Box>
+        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
           testing & maintenance
-      </Typography>
+        </Typography>
       </Box>
       <GreyGallery />
-      <Footer />
-  </>
-  )
+    </>
+  );
 }
 
-export default TestingMaintenance
+export default TestingMaintenance;

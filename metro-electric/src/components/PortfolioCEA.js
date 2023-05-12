@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Box, Typography } from "@mui/material";
-import Footer from './Footer';
+import Footer from "./Footer";
 import cea_cover from "../images/Portfolio/cea-cover.PNG";
 
 function PortfolioCEA() {
@@ -16,24 +16,16 @@ function PortfolioCEA() {
 
   return (
     <>
-       <Box
-      className='image-container'
-      >
+      <Box className='image-container'>
         <Box className='image-wrap'>
           <img src={cea_cover} alt='Contact' style={styles.responsiveHero} />
         </Box>
-        <Typography
-          className='lineUp'
-          fontSize='40px'
-          fontWeight='600'
-        >
-            controlled environment agriculture
+        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
+          controlled environment agriculture
         </Typography>
       </Box>
-
-      <Footer />
     </>
-  )
+  );
 }
 
-export default PortfolioCEA
+export default PortfolioCEA;

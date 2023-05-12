@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Box, Typography } from "@mui/material";
-import Footer from './Footer';
+import Footer from "./Footer";
 import overHead_cover from "../images/Portfolio/overHead-cover.jpg";
 
 function PortfolioOverHeadConstruction() {
@@ -16,23 +16,20 @@ function PortfolioOverHeadConstruction() {
 
   return (
     <>
-      <Box
-      className='image-container'
-      >
+      <Box className='image-container'>
         <Box className='image-wrap'>
-          <img src={overHead_cover} alt='Over Head Construction' style={styles.responsiveHero} />
+          <img
+            src={overHead_cover}
+            alt='Over Head Construction'
+            style={styles.responsiveHero}
+          />
         </Box>
-        <Typography
-          className='lineUp'
-          fontSize='40px'
-          fontWeight='600'
-        >
-            overhead construction
+        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
+          overhead construction
         </Typography>
       </Box>
-      <Footer />
     </>
-  )
+  );
 }
 
-export default PortfolioOverHeadConstruction
+export default PortfolioOverHeadConstruction;

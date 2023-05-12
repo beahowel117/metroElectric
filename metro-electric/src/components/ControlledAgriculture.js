@@ -56,7 +56,6 @@ function ControlledAgriculture() {
         <img src={ca_pipes} alt='pipes' width='600px' />
       </Box>
       <GreyGallery />
-      <Footer />
     </>
   );
 }

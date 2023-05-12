@@ -19,22 +19,15 @@ function Services() {
 
   return (
     <>
-      <Box
-      className='image-container'
-      >
+      <Box className='image-container'>
         <Box className='image-wrap'>
           <img src={servicesHome} alt='Contact' style={styles.responsiveHero} />
         </Box>
-        <Typography
-            className='lineUp'
-            fontSize='40px'
-            fontWeight='600'
-        >
-           services
+        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
+          services
         </Typography>
       </Box>
       <GreyGallery />
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink ,Link as RouterLink } from "react-router-dom";
+import { NavLink, Link as RouterLink } from "react-router-dom";
 
 import { Box, Typography, Button } from "@mui/material";
 import { Card, CardOverflow, AspectRatio, CardCover } from "@mui/joy";
@@ -15,9 +15,7 @@ import stormRestoration from "../images/FeaturedWork/FW-SR.jpg";
 import "../index.css";
 import "../featuredWork.css";
 
-
 function FeaturedWork() {
-
   const styles = {
     responsiveHero: {
       width: "120%",
@@ -25,58 +23,49 @@ function FeaturedWork() {
       //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
-    }
+    },
   };
 
   const imageGallery = [
     {
       img: overHeadConstruction,
       text: "Overhead Construction",
-      link: "/portfolio-items/overhead-construction"
+      link: "/portfolio-items/overhead-construction",
     },
     {
       img: controlledAgriculture,
       text: "Controlled Environment Agriculture",
-      link: "/portfolio-items/controlled-environment-agriculture"
+      link: "/portfolio-items/controlled-environment-agriculture",
     },
     {
       img: transformerReplacement,
       text: "Transformer Replacements",
-      link: "/portfolio-items/transformer"
+      link: "/portfolio-items/transformer",
     },
     {
       img: renewableEnergy,
       text: "Renewable Energy",
-      link: "/portfolio-items/renewable"
+      link: "/portfolio-items/renewable",
     },
     {
       img: stormRestoration,
       text: "Storm Restoration",
-      link: "/portfolio-items/storm"
+      link: "/portfolio-items/storm",
     },
   ];
 
   return (
     <>
-      <Box
-      className='image-container'
-      >
+      <Box className='image-container'>
         <Box className='image-wrap'>
           <img src={featuredWork} alt='Contact' style={styles.responsiveHero} />
         </Box>
-        <Typography
-            className='lineUp'
-            fontSize='40px'
-            fontWeight='600'
-        >
+        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
           our featured products
         </Typography>
       </Box>
 
-      <Box
-        display='flex'
-        justifyContent='center'
-      >
+      <Box display='flex' justifyContent='center'>
         <Box
           display='flex'
           flexWrap='wrap'
@@ -85,19 +74,12 @@ function FeaturedWork() {
           gap='10px'
           py='40px'
         >
-          {imageGallery.map(({img, text, link}) => (
-            <Card
-              variant='outlined'
-              className="container"
-            >
+          {imageGallery.map(({ img, text, link }) => (
+            <Card variant='outlined' className='container'>
               <CardOverflow>
                 <AspectRatio ratio='5/4'>
-                  <img
-                    src={img}
-                    loading='lazy'
-                    alt=''
-                  />
-                 <div className='overlay'>
+                  <img src={img} loading='lazy' alt='' />
+                  <div className='overlay'>
                     <Typography
                       className='imgText'
                       component={NavLink}
@@ -106,15 +88,13 @@ function FeaturedWork() {
                     >
                       {text}
                     </Typography>
-                 </div>
+                  </div>
                 </AspectRatio>
               </CardOverflow>
             </Card>
           ))}
         </Box>
       </Box>
-
-      <Footer />
     </>
   );
 }

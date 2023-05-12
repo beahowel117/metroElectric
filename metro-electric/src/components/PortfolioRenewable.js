@@ -1,5 +1,5 @@
-import React from 'react';
-import Footer from './Footer';
+import React from "react";
+import Footer from "./Footer";
 import { Box, Typography } from "@mui/material";
 
 import renewableEnergy_cover from "../images/Portfolio/renewableEnergy-cover.jpg";
@@ -17,23 +17,20 @@ function PortfolioRenewable() {
 
   return (
     <>
-      <Box
-      className='image-container'
-      >
+      <Box className='image-container'>
         <Box className='image-wrap'>
-          <img src={renewableEnergy_cover} alt='Renewable Energy' style={styles.responsiveHero} />
+          <img
+            src={renewableEnergy_cover}
+            alt='Renewable Energy'
+            style={styles.responsiveHero}
+          />
         </Box>
-        <Typography
-          className='lineUp'
-          fontSize='40px'
-          fontWeight='600'
-        >
-            renewable energy
+        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
+          renewable energy
         </Typography>
       </Box>
-      <Footer />
     </>
-  )
+  );
 }
 
-export default PortfolioRenewable
+export default PortfolioRenewable;
