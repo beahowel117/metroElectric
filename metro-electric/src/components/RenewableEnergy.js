@@ -36,23 +36,27 @@ function RenewableEnergy() {
 
       <Box
         display='flex'
-        padding='45px'
-        maxWidth='900px'
-        margin='0 auto'
+        padding='40px'
+        maxWidth='1000px'
+        margin='auto'
         flexWrap='wrap'
       >
-        <Box maxWidth='590px' minWidth='400px' flex='1'>
+        <Box maxWidth='600px' minWidth='400px' flex='1' paddingTop='auto'>
           <img src={renewable_energy} alt='Renewable Energy' width='100%' />
         </Box>
         <Box
           display='flex'
           flexDirection='column'
-          padding='0 50px 0 70px'
+          padding='20px 0px 0 50px'
           flex='1'
         >
-          <h1>renewable energy</h1>
-          <h3>Serving the renewable future of power systems</h3>
-          <Typography margin='0 50px 0 0'>
+          <Box marginBottom='-16px'>
+            <h1>renewable energy</h1>
+          </Box>
+          <Box marginBottom='-10px'>
+            <h3>Serving the renewable future of power systems</h3>
+          </Box>
+          <p>
             We assist clients to deploy a wide range of renewable energy options
             with services that include construction, inspection, installation,
             maintenance, repair, and removal of renewable energy power
@@ -64,16 +68,12 @@ function RenewableEnergy() {
             SCADA systems, substations, switchgear, inverters, utility grid
             interconnection &amp; optimization, testing &amp; commissioning, and
             quality control &amp; assurance.
-          </Typography>
+          </p>
         </Box>
       </Box>
 
       <Box maxWidth='1160px' margin='0 auto 50px auto'>
-        <AspectRatio
-          //maxHeight="566px"
-          objectFit='cover'
-          //ratio="3/4"
-        >
+        <AspectRatio objectFit='cover'>
           <img src={re_last} alt='renewable energy' />
         </AspectRatio>
       </Box>

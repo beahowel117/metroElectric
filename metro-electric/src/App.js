@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Redirect,
+  useLocation,
 } from "react-router-dom";
 import Box from "@mui/material/Box";
 
@@ -35,6 +35,8 @@ import PortfolioStormRestoration from "./components/PortfolioStormRestoration";
 // };
 
 function App() {
+  let location = useLocation();
+
   return (
     <Box>
       <Nav />
@@ -96,7 +98,7 @@ function App() {
           element={<PortfolioStormRestoration />}
         />
       </Routes>
-      <Footer />
+      {location.pathname !== "/contact" && <Footer />}
     </Box>
   );
 }

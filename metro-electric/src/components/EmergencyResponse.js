@@ -7,6 +7,7 @@ import er_cover from "../images/Services/er_cover(2000x1000).jpg";
 import er_image_1 from "../images/Services/er_image_1(2000X1000).jpg";
 import er_image_2 from "../images/Services/er_image_2.jpg";
 import er_image_3 from "../images/Services/er_image_3(2000X1000).jpg";
+import { AspectRatio } from "@mui/joy";
 
 function EmergencyResponse() {
   const styles = {
@@ -34,11 +35,22 @@ function EmergencyResponse() {
         </Typography>
       </Box>
 
-      <Box>
-        <img src={er_image_1} alt='emergency response' />
+      <Box maxWidth='1160px' margin='50px auto 50px auto'>
+        <AspectRatio objectFit='cover'>
+          <img src={er_image_1} alt='emergency response' />
+        </AspectRatio>
       </Box>
 
-      <Box>
+      <Box
+        display='flex'
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'
+        flex='1'
+        maxWidth='800px'
+        //padding="40px"
+        margin='0 auto'
+      >
         <h1>24/7 emergency response</h1>
         <Typography>
           When disaster strikes, a time-critical response is essential. Our
@@ -51,27 +63,46 @@ function EmergencyResponse() {
           quickly and safely.
         </Typography>
       </Box>
-      <Box>
-        <img src={er_image_2} alt='emergency vehicles' width='600px' />
-        <Typography>
-          Our fleet is equipped with the most advanced equipment and our staff
-          is expertly prepared to assess the situation, prioritize actions and
-          strategically deploy resources for rapid restoration to prevent
-          further damage and to save lives.
-        </Typography>
-        <Typography>
-          We understand the importance of our clients’ power systems and we work
-          hard to keep our clients operational while maintaining the highest
-          standards of safety and quality.
-        </Typography>
-        <Typography>
-          If you need emergency service for your commercial or industrial
-          facility, please do not hesitate to call us at 888.249.4684 and follow
-          the prompts.
-        </Typography>
+
+      <Box
+        display='flex'
+        padding='40px'
+        maxWidth='1000px'
+        margin='auto'
+        flexWrap='wrap'
+        justifyContent='space-between'
+      >
+        <Box flex='1'>
+          <img src={er_image_2} alt='emergency vehicles' width='500px' />
+        </Box>
+        <Box flex='1' margin='90px 80px 0 0'>
+          <p>
+            Our fleet is equipped with the most advanced equipment and our staff
+            is expertly prepared to assess the situation, prioritize actions and
+            strategically deploy resources for rapid restoration to prevent
+            further damage and to save lives.
+          </p>
+          <Typography>
+            We understand the importance of our clients’ power systems and we
+            work hard to keep our clients operational while maintaining the
+            highest standards of safety and quality.
+          </Typography>
+          <p>
+            If you need emergency service for your commercial or industrial
+            facility, please do not hesitate to call us at 888.249.4684 and
+            follow the prompts.
+          </p>
+        </Box>
       </Box>
-      <Box>
-        <img src={er_image_3} alt='emergency response' width='930px' />
+
+      <Box maxWidth='1160px' margin='50px auto 50px auto'>
+        <AspectRatio objectFit='cover'>
+          <img
+            src={er_image_3}
+            alt='emergency response'
+            //width="930px"
+          />
+        </AspectRatio>
       </Box>
       <GreyGallery />
     </>
