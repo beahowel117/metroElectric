@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import overHead_cover from "../images/Portfolio/overHead-cover.jpg";
-import Overhead from "./Overhead";
+import Overhead from "./P-Overhead";
 
 function PortfolioOverHeadConstruction() {
   const styles = {
