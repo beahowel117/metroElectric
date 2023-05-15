@@ -1,7 +1,10 @@
 import React from "react";
 import GreyGallery from "./GreyGallery";
+import MainContainer from "./MainContainer";
+import InnerContainer from "./InnerContainer";
 import Footer from "./Footer";
 import { Box, Typography } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import er_cover from "../images/Services/er_cover(2000x1000).jpg";
 import er_image_1 from "../images/Services/er_image_1(2000X1000).jpg";
@@ -14,12 +17,11 @@ function EmergencyResponse() {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
   };
-
+  const useMobile = useMediaQuery("(max-width:780px)");
   return (
     <>
       <Box className='image-container'>
@@ -35,75 +37,128 @@ function EmergencyResponse() {
         </Typography>
       </Box>
 
-      <Box maxWidth='1160px' margin='50px auto 50px auto'>
-        <AspectRatio objectFit='cover'>
-          <img src={er_image_1} alt='emergency response' />
-        </AspectRatio>
-      </Box>
-
-      <Box
-        display='flex'
-        flexDirection='column'
-        justifyContent='center'
-        alignItems='center'
-        flex='1'
-        maxWidth='800px'
-        //padding="40px"
-        margin='0 auto'
-      >
-        <h1>24/7 emergency response</h1>
-        <Typography>
-          When disaster strikes, a time-critical response is essential. Our
-          on-call emergency power and restoration teams are available are
-          available 24 hours a day, 7 days a week.
-        </Typography>
-        <Typography>
-          We perform all forms of circuit, substation and distribution line
-          restoration and rebuild services. Get your company back on-line
-          quickly and safely.
-        </Typography>
-      </Box>
-
-      <Box
-        display='flex'
-        padding='40px'
-        maxWidth='1000px'
-        margin='auto'
-        flexWrap='wrap'
-        justifyContent='space-between'
-      >
-        <Box flex='1'>
-          <img src={er_image_2} alt='emergency vehicles' width='500px' />
+      <MainContainer>
+        <Box
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
+          flexDirection='column'
+          width='100%'
+        >
+          <InnerContainer
+            display='flex'
+            justifyContent='center'
+            flexDirection='column'
+          >
+          <Box maxWidth='1160px' margin='50px auto 50px auto'>
+          <AspectRatio objectFit='cover'>
+            <img src={er_image_1} alt='emergency response' />
+          </AspectRatio>
         </Box>
-        <Box flex='1' margin='90px 80px 0 0'>
-          <p>
-            Our fleet is equipped with the most advanced equipment and our staff
-            is expertly prepared to assess the situation, prioritize actions and
-            strategically deploy resources for rapid restoration to prevent
-            further damage and to save lives.
-          </p>
-          <Typography>
-            We understand the importance of our clients’ power systems and we
-            work hard to keep our clients operational while maintaining the
-            highest standards of safety and quality.
+
+        <Box
+              display='flex'
+              flexDirection='column'
+              alignItems='center'
+              mb='20px'
+            >
+              <Typography
+                color='#244ba6'
+                textAlign='center'
+                fontSize='25px'
+                fontFamily='Lato'
+                fontWeight='900'
+                mt='55px'
+                maxWidth='500px'
+              >
+                24/7 EMERGENCY RESPONSE
+              </Typography>
+
+              <Box
+                height='3px'
+                backgroundColor='#244ba6'
+                maxWidth='420px'
+                width='100%'
+                borderRadius='10px'
+                mt='15px'
+              />
+            </Box>
+            <Typography
+              fontSize='17px'
+              fontWeight='700'
+              fontFamily='Lato'
+              maxWidth='800px'
+              mb='45px'
+            >
+            When disaster strikes, a time-critical response is essential. Our
+            on-call emergency power and restoration teams are available are
+            available 24 hours a day, 7 days a week.
+            <br />
+            <br />
+            We perform all forms of circuit, substation and distribution line
+            restoration and rebuild services. Get your company back on-line
+            quickly and safely.
           </Typography>
-          <p>
-            If you need emergency service for your commercial or industrial
-            facility, please do not hesitate to call us at 888.249.4684 and
-            follow the prompts.
-          </p>
-        </Box>
-      </Box>
 
-      <Box maxWidth='1160px' margin='50px auto 50px auto'>
-        <AspectRatio objectFit='cover'>
-          <img
-            src={er_image_3}
-            alt='emergency response'
-            //width="930px"
-          />
-        </AspectRatio>
-      </Box>
+          </InnerContainer>
+        </Box>
+
+
+        {/* <Box
+          display='flex'
+          flexDirection='column'
+          justifyContent='center'
+          alignItems='center'
+          flex='1'
+          maxWidth='800px'
+          //padding="40px"
+          margin='0 auto'
+        >
+
+
+        </Box> */}
+
+        <Box
+          display='flex'
+          padding='40px'
+          maxWidth='1000px'
+          margin='auto'
+          flexWrap='wrap'
+          justifyContent='space-between'
+        >
+          <Box flex='1'>
+            <img src={er_image_2} alt='emergency vehicles' width='500px' />
+          </Box>
+          <Box flex='1' margin='90px 80px 0 0'>
+            <p>
+              Our fleet is equipped with the most advanced equipment and our staff
+              is expertly prepared to assess the situation, prioritize actions and
+              strategically deploy resources for rapid restoration to prevent
+              further damage and to save lives.
+            </p>
+            <Typography>
+              We understand the importance of our clients’ power systems and we
+              work hard to keep our clients operational while maintaining the
+              highest standards of safety and quality.
+            </Typography>
+            <p>
+              If you need emergency service for your commercial or industrial
+              facility, please do not hesitate to call us at 888.249.4684 and
+              follow the prompts.
+            </p>
+          </Box>
+        </Box>
+
+        <Box maxWidth='1160px' margin='50px auto 50px auto'>
+          <AspectRatio objectFit='cover'>
+            <img
+              src={er_image_3}
+              alt='emergency response'
+              //width="930px"
+            />
+          </AspectRatio>
+        </Box>
+        </MainContainer>
       <GreyGallery />
     </>
   );
