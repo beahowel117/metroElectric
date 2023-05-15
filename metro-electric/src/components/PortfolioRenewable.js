@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./Footer";
+import PRenewable from "./P_Renewable";
 import { Box, Typography } from "@mui/material";
 
 import renewableEnergy_cover from "../images/Portfolio/renewableEnergy-cover.jpg";
@@ -9,7 +9,6 @@ function PortfolioRenewable() {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
@@ -29,6 +28,7 @@ function PortfolioRenewable() {
           renewable energy
         </Typography>
       </Box>
+      <PRenewable />
     </>
   );
 }

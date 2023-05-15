@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Footer from "./Footer";
 import overHead_cover from "../images/Portfolio/overHead-cover.jpg";
 import Overhead from "./Overhead";
 
@@ -9,7 +8,6 @@ function PortfolioOverHeadConstruction() {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
