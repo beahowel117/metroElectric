@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Footer from "./Footer";
-
+import PStorm from "./P_Storm";
 import stormRestoration_cover from "../images/Portfolio/stormRestoration-cover.JPG";
 
 function PortfolioStormRestoration() {
@@ -9,7 +8,6 @@ function PortfolioStormRestoration() {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
@@ -29,6 +27,7 @@ function PortfolioStormRestoration() {
           storm restoration
         </Typography>
       </Box>
+      <PStorm />
     </>
   );
 }
