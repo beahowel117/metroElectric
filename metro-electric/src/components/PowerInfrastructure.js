@@ -22,6 +22,7 @@ import mini_slider2_3 from "../images/Services/pi-minislider2.3(1024x768).jpg";
 import mini_slider2_4 from "../images/Services/pi-minislider2.4(1024x768).jpg";
 import mini_slider2_5 from "../images/Services/pi-minislider2.5(1024x768).jpg";
 import pi_slider2 from "../images/Services/pi-slider2(2000x1000).jpg";
+import "../index.css";
 
 function PowerInfrastructure() {
   const styles = {
@@ -34,6 +35,7 @@ function PowerInfrastructure() {
     },
   };
   const useMobile = useMediaQuery("(max-width:780px)");
+  const forceWrap = useMediaQuery("(max-width:900px)");
   return (
     <>
       <Box className='image-container'>
@@ -44,9 +46,9 @@ function PowerInfrastructure() {
             style={styles.responsiveHero}
           />
         </Box>
-        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
+        {/* <Typography className='lineUp' fontSize='40px' fontWeight='600'>
           power infrastructure
-        </Typography>
+        </Typography> */}
       </Box>
       <MainContainer>
         <Box
@@ -118,7 +120,7 @@ function PowerInfrastructure() {
           </InnerContainer>
           <InnerContainer>
             <Box display='flex' flexWrap='wrap' my='40px'>
-              <Box flex='1' minWidth='480px' order={useMobile ? "2" : "1"}>
+              <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
                 <Carousel
                   autoPlay
                   infiniteLoop
@@ -137,6 +139,7 @@ function PowerInfrastructure() {
                 ml='40px'
                 py='20px'
                 order={useMobile ? "1" : "2"}
+                minWidth='350px'
               >
                 <Typography
                   color='#244ba6'
@@ -161,8 +164,19 @@ function PowerInfrastructure() {
             <img src={pi_slider2} alt='wirring' width='100%' />
           </InnerContainer>
           <InnerContainer>
-            <Box display='flex' flexWrap='wrap' my='40px'>
-              <Box flex='1' alignSelf='center' mr='10px' py='20px'>
+            <Box
+              display='flex'
+              flexWrap='wrap'
+              my='40px'
+              justifyContent='center'
+            >
+              <Box
+                flex='1'
+                alignSelf='center'
+                mr='10px'
+                py='20px'
+                minWidth='350px'
+              >
                 <Typography
                   color='#244ba6'
                   textAlign='left'
@@ -181,7 +195,7 @@ function PowerInfrastructure() {
                 </Typography>
               </Box>
 
-              <Box flex='1' minWidth='480px'>
+              <Box flex='1' width='100%' minWidth='350px'>
                 <Carousel
                   autoPlay
                   infiniteLoop
@@ -200,6 +214,105 @@ function PowerInfrastructure() {
           </InnerContainer>
           <InnerContainer>
             <img src={third_image} alt='electric transformers' width='100%' />
+          </InnerContainer>
+          <InnerContainer>
+            <Box
+              display='flex'
+              flexWrap='wrap'
+              my='40px'
+              justifyContent='center'
+            >
+              <Box flex='1' order={useMobile ? "2" : "1"} maxWidth='500px'>
+                {console.log({ forceWrap })}
+                <Carousel
+                  autoPlay
+                  infiniteLoop
+                  showArrows
+                  showThumbs={false}
+                  showIndicators={false}
+                >
+                  <img
+                    src={mini_slider2_1}
+                    alt='large spools of wire'
+                    width='100%'
+                  />
+
+                  <img
+                    src={mini_slider2_2}
+                    alt='towers of electrical equipment'
+                    width='100%'
+                  />
+
+                  <img
+                    src={mini_slider2_3}
+                    alt='dirt road with electrical equipment'
+                    width='100%'
+                  />
+
+                  <img
+                    src={mini_slider2_4}
+                    alt='18 wheeler unloading'
+                    width='100%'
+                  />
+                </Carousel>
+              </Box>
+              <Box
+                flex={!forceWrap ? "1" : "100%"}
+                ml='40px'
+                py='20px'
+                order={useMobile ? "1" : "2"}
+                textAlign='justify'
+              >
+                <Typography
+                  color='#244ba6'
+                  textAlign={forceWrap ? "center" : "left"}
+                  fontSize='25px'
+                  fontFamily='Lato'
+                  fontWeight='900'
+                  mb='15px'
+                >
+                  SUBSTATIONS
+                </Typography>
+                <Typography
+                  fontSize='17px'
+                  fontWeight='700'
+                  fontFamily='Lato'
+                  lineHeight='1.4'
+                >
+                  MetroTek’s team has extensive hands-on experience designing,
+                  constructing, renovating and upgrading high-voltage
+                  substations and power systems including related foundation
+                  work, equipment selection and procurement, and plant or line
+                  connections.
+                  <br />
+                  <br />
+                  Power system services include turn-key substation
+                  installations, pole line construction, primary distribution
+                  transformer replacements, insulator repair, and specialty
+                  primary cable splicing.
+                </Typography>
+                <Typography
+                  fontSize='17px'
+                  fontWeight='700'
+                  fontFamily='Lato'
+                  lineHeight='1.4'
+                >
+                  <ul>
+                    <li>
+                      Substation design, construction, upgrades, maintenance
+                    </li>
+                    <li>Substations & power systems to 345KV</li>
+                    <li>Turn-key substation installations</li>
+                    <li>Pole line construction</li>
+                    <li>
+                      Primary distribution transformer replacements &
+                      maintenance
+                    </li>
+                    <li>Specialty primary cable splicing & terminations</li>
+                  </ul>
+                </Typography>
+              </Box>
+            </Box>
           </InnerContainer>
         </Box>
       </MainContainer>
