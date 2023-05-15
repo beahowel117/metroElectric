@@ -51,270 +51,249 @@ function PowerInfrastructure() {
         </Typography> */}
       </Box>
       <MainContainer>
-        <Box
+        <InnerContainer
           display='flex'
           justifyContent='center'
-          alignItems='center'
           flexDirection='column'
-          width='100%'
-          // px='45px'
         >
-          <InnerContainer
+          <Box
             display='flex'
-            justifyContent='center'
             flexDirection='column'
+            alignItems='center'
+            mb='20px'
           >
+            <Typography
+              color='#244ba6'
+              textAlign='center'
+              fontSize='25px'
+              fontFamily='Lato'
+              fontWeight='900'
+              mt='55px'
+              maxWidth='500px'
+            >
+              ELECTRICAL INFRASTRUCTURE
+            </Typography>
+
             <Box
-              display='flex'
-              flexDirection='column'
-              alignItems='center'
-              mb='20px'
+              height='3px'
+              backgroundColor='#244ba6'
+              maxWidth='420px'
+              width='100%'
+              borderRadius='10px'
+              mt='15px'
+            />
+          </Box>
+          <Typography
+            fontSize='17px'
+            fontWeight='700'
+            fontFamily='Lato'
+            maxWidth='800px'
+            mb='45px'
+          >
+            MetroTek provides electrical infrastructure construction services to
+            commercial, industrial, municipal, and utility clients.
+            <br />
+            <br />
+            As a full service electrical contractor, our diverse and scalable
+            workforce of electrical professionals and engineers enables us to
+            support a wide range of specialized services that includes all
+            facets of electrical construction, maintenance, renovation, and
+            repair in accordance with our clients’ intensive scheduling and
+            budget requirements.
+            <br />
+            <br />
+            Contact us to find out how MetroTek can provide your next electrical
+            project with management, design/build, engineering, and construction
+            services.
+          </Typography>
+        </InnerContainer>
+        <InnerContainer>
+          <img src={first_image} alt='Electrical Truck' width='100%' />
+        </InnerContainer>
+        <InnerContainer>
+          <Box display='flex' flexWrap='wrap' my='40px'>
+            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
+              <Carousel
+                autoPlay
+                infiniteLoop
+                showArrows
+                showThumbs={false}
+                showIndicators={false}
+              >
+                <img src={second_image} alt='three trucks' width='100%' />
+
+                <img src={mini_slider2_5} alt='three trucks' width='100%' />
+              </Carousel>
+            </Box>
+            <Box
+              flex='1'
+              alignSelf='center'
+              ml='40px'
+              py='20px'
+              order={useMobile ? "1" : "2"}
+              minWidth='350px'
             >
               <Typography
                 color='#244ba6'
-                textAlign='center'
+                textAlign='left'
                 fontSize='25px'
                 fontFamily='Lato'
                 fontWeight='900'
-                mt='55px'
-                maxWidth='500px'
+                mb='15px'
               >
-                ELECTRICAL INFRASTRUCTURE
+                OVERHEAD POWER DISTRIBUTION
               </Typography>
-
-              <Box
-                height='3px'
-                backgroundColor='#244ba6'
-                maxWidth='420px'
-                width='100%'
-                borderRadius='10px'
-                mt='15px'
-              />
+              <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
+                MetroTek’s overhead line division specializes in pole
+                installation, line siting and staking, wire stringing,
+                reconductoring, emergency repair, live maintenance and all
+                related services.
+              </Typography>
             </Box>
-            <Typography
-              fontSize='17px'
-              fontWeight='700'
-              fontFamily='Lato'
-              maxWidth='800px'
-              mb='45px'
-            >
-              MetroTek provides electrical infrastructure construction services
-              to commercial, industrial, municipal, and utility clients.
-              <br />
-              <br />
-              As a full service electrical contractor, our diverse and scalable
-              workforce of electrical professionals and engineers enables us to
-              support a wide range of specialized services that includes all
-              facets of electrical construction, maintenance, renovation, and
-              repair in accordance with our clients’ intensive scheduling and
-              budget requirements.
-              <br />
-              <br />
-              Contact us to find out how MetroTek can provide your next
-              electrical project with management, design/build, engineering, and
-              construction services.
-            </Typography>
-          </InnerContainer>
-          <InnerContainer>
-            <img src={first_image} alt='Electrical Truck' width='100%' />
-          </InnerContainer>
-          <InnerContainer>
-            <Box display='flex' flexWrap='wrap' my='40px'>
-              <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
-                <Carousel
-                  autoPlay
-                  infiniteLoop
-                  showArrows
-                  showThumbs={false}
-                  showIndicators={false}
-                >
-                  <img src={second_image} alt='three trucks' width='100%' />
-
-                  <img src={mini_slider2_5} alt='three trucks' width='100%' />
-                </Carousel>
-              </Box>
-              <Box
-                flex='1'
-                alignSelf='center'
-                ml='40px'
-                py='20px'
-                order={useMobile ? "1" : "2"}
-                minWidth='350px'
-              >
-                <Typography
-                  color='#244ba6'
-                  textAlign='left'
-                  fontSize='25px'
-                  fontFamily='Lato'
-                  fontWeight='900'
-                  mb='15px'
-                >
-                  OVERHEAD POWER DISTRIBUTION
-                </Typography>
-                <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
-                  MetroTek’s overhead line division specializes in pole
-                  installation, line siting and staking, wire stringing,
-                  reconductoring, emergency repair, live maintenance and all
-                  related services.
-                </Typography>
-              </Box>
-            </Box>
-          </InnerContainer>
-          <InnerContainer>
-            <img src={pi_slider2} alt='wirring' width='100%' />
-          </InnerContainer>
-          <InnerContainer>
+          </Box>
+        </InnerContainer>
+        <InnerContainer>
+          <img src={pi_slider2} alt='wirring' width='100%' />
+        </InnerContainer>
+        <InnerContainer>
+          <Box display='flex' flexWrap='wrap' my='40px' justifyContent='center'>
             <Box
-              display='flex'
-              flexWrap='wrap'
-              my='40px'
-              justifyContent='center'
+              flex='1'
+              alignSelf='center'
+              mr='10px'
+              py='20px'
+              minWidth='350px'
             >
-              <Box
-                flex='1'
-                alignSelf='center'
-                mr='10px'
-                py='20px'
-                minWidth='350px'
+              <Typography
+                color='#244ba6'
+                textAlign='left'
+                fontSize='25px'
+                fontFamily='Lato'
+                fontWeight='900'
+                mb='15px'
               >
-                <Typography
-                  color='#244ba6'
-                  textAlign='left'
-                  fontSize='25px'
-                  fontFamily='Lato'
-                  fontWeight='900'
-                  mb='15px'
-                >
-                  UNDERGROUND POWER DISTRIBUTION
-                </Typography>
-                <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
-                  MetroTek’s underground electrical distribution expertise
-                  includes fault location & repair, directional drilling,
-                  trenching, manhole & conduit installation, cable pulling,
-                  splicing & termination and all related services.
-                </Typography>
-              </Box>
-
-              <Box flex='1' width='100%' minWidth='350px'>
-                <Carousel
-                  autoPlay
-                  infiniteLoop
-                  showArrows
-                  showThumbs={false}
-                  showIndicators={false}
-                >
-                  <img src={mini_slider1_2} alt='pvc pipes' width='100%' />
-
-                  <img src={mini_slider1_3} alt='tracktor' width='100%' />
-
-                  <img src={mini_slider1_1} alt='open sewer' width='100%' />
-                </Carousel>
-              </Box>
+                UNDERGROUND POWER DISTRIBUTION
+              </Typography>
+              <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
+                MetroTek’s underground electrical distribution expertise
+                includes fault location & repair, directional drilling,
+                trenching, manhole & conduit installation, cable pulling,
+                splicing & termination and all related services.
+              </Typography>
             </Box>
-          </InnerContainer>
-          <InnerContainer>
-            <img src={third_image} alt='electric transformers' width='100%' />
-          </InnerContainer>
-          <InnerContainer>
+
+            <Box flex='1' width='100%' minWidth='350px'>
+              <Carousel
+                autoPlay
+                infiniteLoop
+                showArrows
+                showThumbs={false}
+                showIndicators={false}
+              >
+                <img src={mini_slider1_2} alt='pvc pipes' width='100%' />
+
+                <img src={mini_slider1_3} alt='tracktor' width='100%' />
+
+                <img src={mini_slider1_1} alt='open sewer' width='100%' />
+              </Carousel>
+            </Box>
+          </Box>
+        </InnerContainer>
+        <InnerContainer>
+          <img src={third_image} alt='electric transformers' width='100%' />
+        </InnerContainer>
+        <InnerContainer>
+          <Box display='flex' flexWrap='wrap' my='40px' justifyContent='center'>
+            <Box flex='1' order={useMobile ? "2" : "1"} maxWidth='500px'>
+              {console.log({ forceWrap })}
+              <Carousel
+                autoPlay
+                infiniteLoop
+                showArrows
+                showThumbs={false}
+                showIndicators={false}
+              >
+                <img
+                  src={mini_slider2_1}
+                  alt='large spools of wire'
+                  width='100%'
+                />
+
+                <img
+                  src={mini_slider2_2}
+                  alt='towers of electrical equipment'
+                  width='100%'
+                />
+
+                <img
+                  src={mini_slider2_3}
+                  alt='dirt road with electrical equipment'
+                  width='100%'
+                />
+
+                <img
+                  src={mini_slider2_4}
+                  alt='18 wheeler unloading'
+                  width='100%'
+                />
+              </Carousel>
+            </Box>
             <Box
-              display='flex'
-              flexWrap='wrap'
-              my='40px'
-              justifyContent='center'
+              flex={!forceWrap ? "1" : "100%"}
+              ml='40px'
+              py='20px'
+              order={useMobile ? "1" : "2"}
+              textAlign='justify'
             >
-              <Box flex='1' order={useMobile ? "2" : "1"} maxWidth='500px'>
-                {console.log({ forceWrap })}
-                <Carousel
-                  autoPlay
-                  infiniteLoop
-                  showArrows
-                  showThumbs={false}
-                  showIndicators={false}
-                >
-                  <img
-                    src={mini_slider2_1}
-                    alt='large spools of wire'
-                    width='100%'
-                  />
-
-                  <img
-                    src={mini_slider2_2}
-                    alt='towers of electrical equipment'
-                    width='100%'
-                  />
-
-                  <img
-                    src={mini_slider2_3}
-                    alt='dirt road with electrical equipment'
-                    width='100%'
-                  />
-
-                  <img
-                    src={mini_slider2_4}
-                    alt='18 wheeler unloading'
-                    width='100%'
-                  />
-                </Carousel>
-              </Box>
-              <Box
-                flex={!forceWrap ? "1" : "100%"}
-                ml='40px'
-                py='20px'
-                order={useMobile ? "1" : "2"}
-                textAlign='justify'
+              <Typography
+                color='#244ba6'
+                textAlign={forceWrap ? "center" : "left"}
+                fontSize='25px'
+                fontFamily='Lato'
+                fontWeight='900'
+                mb='15px'
               >
-                <Typography
-                  color='#244ba6'
-                  textAlign={forceWrap ? "center" : "left"}
-                  fontSize='25px'
-                  fontFamily='Lato'
-                  fontWeight='900'
-                  mb='15px'
-                >
-                  SUBSTATIONS
-                </Typography>
-                <Typography
-                  fontSize='17px'
-                  fontWeight='700'
-                  fontFamily='Lato'
-                  lineHeight='1.4'
-                >
-                  MetroTek’s team has extensive hands-on experience designing,
-                  constructing, renovating and upgrading high-voltage
-                  substations and power systems including related foundation
-                  work, equipment selection and procurement, and plant or line
-                  connections.
-                  <br />
-                  <br />
-                  Power system services include turn-key substation
-                  installations, pole line construction, primary distribution
-                  transformer replacements, insulator repair, and specialty
-                  primary cable splicing.
-                </Typography>
-                <Typography
-                  fontSize='17px'
-                  fontWeight='700'
-                  fontFamily='Lato'
-                  lineHeight='1.4'
-                >
-                  <ul>
-                    <li>
-                      Substation design, construction, upgrades, maintenance
-                    </li>
-                    <li>Substations & power systems to 345KV</li>
-                    <li>Turn-key substation installations</li>
-                    <li>Pole line construction</li>
-                    <li>
-                      Primary distribution transformer replacements &
-                      maintenance
-                    </li>
-                    <li>Specialty primary cable splicing & terminations</li>
-                  </ul>
-                </Typography>
-              </Box>
+                SUBSTATIONS
+              </Typography>
+              <Typography
+                fontSize='17px'
+                fontWeight='700'
+                fontFamily='Lato'
+                lineHeight='1.4'
+              >
+                MetroTek’s team has extensive hands-on experience designing,
+                constructing, renovating and upgrading high-voltage substations
+                and power systems including related foundation work, equipment
+                selection and procurement, and plant or line connections.
+                <br />
+                <br />
+                Power system services include turn-key substation installations,
+                pole line construction, primary distribution transformer
+                replacements, insulator repair, and specialty primary cable
+                splicing.
+              </Typography>
+              <Typography
+                fontSize='17px'
+                fontWeight='700'
+                fontFamily='Lato'
+                lineHeight='1.4'
+              >
+                <ul>
+                  <li>
+                    Substation design, construction, upgrades, maintenance
+                  </li>
+                  <li>Substations & power systems to 345KV</li>
+                  <li>Turn-key substation installations</li>
+                  <li>Pole line construction</li>
+                  <li>
+                    Primary distribution transformer replacements & maintenance
+                  </li>
+                  <li>Specialty primary cable splicing & terminations</li>
+                </ul>
+              </Typography>
             </Box>
-          </InnerContainer>
-        </Box>
+          </Box>
+        </InnerContainer>
       </MainContainer>
       <GreyGallery />
     </>
