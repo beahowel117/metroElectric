@@ -2,13 +2,13 @@ import React from 'react';
 import MainContainer from './MainContainer';
 import InnerContainer from './InnerContainer';
 import { ImageList, ImageListItem, Box } from "@mui/material";
-import img1 from "../images/Portfolio/RenewableEnergy.js/img1.jpg";
-import img2 from "../images/Portfolio/RenewableEnergy.js/img2.jpg";
-import img3 from "../images/Portfolio/RenewableEnergy.js/img3.jpg";
-import img4 from "../images/Portfolio/RenewableEnergy.js/img4.jpg";
-import img5 from "../images/Portfolio/RenewableEnergy.js/img5.jpg";
-import img6 from "../images/Portfolio/RenewableEnergy.js/img6.jpg";
-import img7 from "../images/Portfolio/RenewableEnergy.js/img7.jpg";
+import img1 from "../images/Portfolio/RenewableEnergy/img1.jpg";
+import img2 from "../images/Portfolio/RenewableEnergy/img2.jpg";
+import img3 from "../images/Portfolio/RenewableEnergy/img3.jpg";
+import img4 from "../images/Portfolio/RenewableEnergy/img4.jpg";
+import img5 from "../images/Portfolio/RenewableEnergy/img5.jpg";
+import img6 from "../images/Portfolio/RenewableEnergy/img6.jpg";
+import img7 from "../images/Portfolio/RenewableEnergy/img7.jpg";
 
 
 function PRenewable() {

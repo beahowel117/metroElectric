@@ -38,68 +38,70 @@ function App() {
   let location = useLocation();
 
   return (
-    <Box>
-      <Nav />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/services' exact element={<Services />} />
-        <Route path='/work' exact element={<FeaturedWork />} />
-        <Route path='/about' exact element={<About />} />
-        <Route path='/contact' exact element={<Contact />} />
-        <Route
-          path='/services/power-infrastructure'
-          exact
-          element={<PowerInfrastructure />}
-        />
-        <Route
-          path='/services/testing-maintenance'
-          exact
-          element={<TestingMaintenance />}
-        />
-        <Route
-          path='/services/renewable-energy'
-          exact
-          element={<RenewableEnergy />}
-        />
-        <Route
-          path='/services/emergency-response'
-          exact
-          element={<EmergencyResponse />}
-        />
-        <Route
-          path='/services/controlled-environment-agriculture'
-          exact
-          element={<ControlledAgriculture />}
-        />
+    <>
+      <Box>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/services' exact element={<Services />} />
+          <Route path='/work' exact element={<FeaturedWork />} />
+          <Route path='/about' exact element={<About />} />
+          <Route path='/contact' exact element={<Contact />} />
+          <Route
+            path='/services/power-infrastructure'
+            exact
+            element={<PowerInfrastructure />}
+          />
+          <Route
+            path='/services/testing-maintenance'
+            exact
+            element={<TestingMaintenance />}
+          />
+          <Route
+            path='/services/renewable-energy'
+            exact
+            element={<RenewableEnergy />}
+          />
+          <Route
+            path='/services/emergency-response'
+            exact
+            element={<EmergencyResponse />}
+          />
+          <Route
+            path='/services/controlled-environment-agriculture'
+            exact
+            element={<ControlledAgriculture />}
+          />
 
-        <Route
-          path='/portfolio-items/overhead-construction'
-          exact
-          element={<PortfolioOverHeadConstruction />}
-        />
-        <Route
-          path='/portfolio-items/transformer'
-          exact
-          element={<PortfolioTransformer />}
-        />
-        <Route
-          path='/portfolio-items/controlled-environment-agriculture'
-          exact
-          element={<PortfolioCEA />}
-        />
-        <Route
-          path='/portfolio-items/renewable'
-          exact
-          element={<PortfolioRenewable />}
-        />
-        <Route
-          path='/portfolio-items/storm'
-          exact
-          element={<PortfolioStormRestoration />}
-        />
-      </Routes>
-      {location.pathname !== "/contact" && <Footer />}
-    </Box>
+          <Route
+            path='/portfolio-items/overhead-construction'
+            exact
+            element={<PortfolioOverHeadConstruction />}
+          />
+          <Route
+            path='/portfolio-items/transformer'
+            exact
+            element={<PortfolioTransformer />}
+          />
+          <Route
+            path='/portfolio-items/controlled-environment-agriculture'
+            exact
+            element={<PortfolioCEA />}
+          />
+          <Route
+            path='/portfolio-items/renewable'
+            exact
+            element={<PortfolioRenewable />}
+          />
+          <Route
+            path='/portfolio-items/storm'
+            exact
+            element={<PortfolioStormRestoration />}
+          />
+        </Routes>
+        {location.pathname !== "/contact" && <Footer />}
+      </Box>
+    </>
   );
 }
 

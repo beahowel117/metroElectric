@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./Footer";
+import PTransformer from "./P_Transformer";
 import { Box, Typography } from "@mui/material";
 import transformer_cover from "../images/Portfolio/transformerReplacement-cover.jpg";
 
@@ -8,7 +8,6 @@ function PortfolioTransformer() {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
@@ -28,6 +27,7 @@ function PortfolioTransformer() {
           transformer replacements
         </Typography>
       </Box>
+      <PTransformer />
     </>
   );
 }
