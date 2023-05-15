@@ -120,7 +120,7 @@ function PowerInfrastructure() {
           </InnerContainer>
           <InnerContainer>
             <Box display='flex' flexWrap='wrap' my='40px'>
-              <Box flex='1' order={useMobile ? "2" : "1"} minWidth='390px'>
+              <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
                 <Carousel
                   autoPlay
                   infiniteLoop
@@ -139,7 +139,7 @@ function PowerInfrastructure() {
                 ml='40px'
                 py='20px'
                 order={useMobile ? "1" : "2"}
-                minWidth='390px'
+                minWidth='350px'
               >
                 <Typography
                   color='#244ba6'
@@ -175,7 +175,7 @@ function PowerInfrastructure() {
                 alignSelf='center'
                 mr='10px'
                 py='20px'
-                minWidth='390px'
+                minWidth='350px'
               >
                 <Typography
                   color='#244ba6'
@@ -195,7 +195,7 @@ function PowerInfrastructure() {
                 </Typography>
               </Box>
 
-              <Box flex='1' width='100%' minWidth='390px'>
+              <Box flex='1' width='100%' minWidth='350px'>
                 <Carousel
                   autoPlay
                   infiniteLoop

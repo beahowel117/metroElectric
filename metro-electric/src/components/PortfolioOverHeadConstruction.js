@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import Footer from "./Footer";
 import overHead_cover from "../images/Portfolio/overHead-cover.jpg";
+import Overhead from "./Overhead";
 
 function PortfolioOverHeadConstruction() {
   const styles = {
@@ -28,6 +29,7 @@ function PortfolioOverHeadConstruction() {
           overhead construction
         </Typography>
       </Box>
+      <Overhead />
     </>
   );
 }
