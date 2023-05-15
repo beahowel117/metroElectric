@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import Footer from "./Footer";
+import CEA from "./P-CEA";
 import cea_cover from "../images/Portfolio/cea-cover.PNG";
 
 function PortfolioCEA() {
@@ -24,6 +25,7 @@ function PortfolioCEA() {
           controlled environment agriculture
         </Typography>
       </Box>
+      <CEA />
     </>
   );
 }
