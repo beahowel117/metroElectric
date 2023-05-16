@@ -82,10 +82,17 @@ function Footer() {
 
   return (
    <Box
-    borderTop='14px solid #244ba6'
+    // borderTop='14px solid #244ba6'
     maxWidth='797px'
     margin='40px auto 0'
    >
+    <Box
+      height='14px'
+      backgroundColor='#244ba6'
+      maxWidth='100%'
+      borderRadius='5px'
+      margin='40px auto 0'
+    />
     <Box
       display='flex'
       justifyContent='center'
