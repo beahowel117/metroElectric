@@ -101,8 +101,8 @@ code {
 }
 
 .lineUp {
-  animation: 4.9s anim-lineUp ease-out infinite;
-  /* animation-fill-mode: backward; */
+  animation: 3s anim-lineUp ease infinite;
+  animation-fill-mode: backward;
   position: absolute;
   bottom: 30%;
   left: 150px;
