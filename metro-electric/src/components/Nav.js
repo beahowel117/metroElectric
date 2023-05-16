@@ -167,6 +167,7 @@ const Nav = () => {
         <Box component={RouterLink} to='/'>
           <img
             src={isScrolling ? MetroTekLogo : NavLogo}
+            boxShadow={isScrolling? "none" : '10px 10px #244ba6'}
             alt='Navigation Logo'
             width={isScrolling ? "200px" : "300px"}
           />
@@ -175,6 +176,7 @@ const Nav = () => {
         <Box
           display='flex'
           alignItems='center'
+          justifyContent='space-around'
           // mb='10px'
           maxWidth='600px'
           width='100%'
@@ -194,13 +196,14 @@ const Nav = () => {
                 fontSize: isScrolling ? "17px" : "20px",
                 fontWeight: "900",
                 color: isScrolling ? "#244ba6" : "white",
+                textShadow: isScrolling? "none" : '0px 1px 2px black'
               }}
             >
               {name}
               {name === "Services" ? (
-                <KeyboardArrowDownIcon />
+                <KeyboardArrowDownIcon className="shadow"/>
               ) : null || (name === "Services" && isScrolling) ? (
-                <KeyboardArrowDownIcon size='small' />
+                <KeyboardArrowDownIcon size='small' className="noShadow"/>
               ) : null}
             </Button>
           ))}
