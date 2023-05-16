@@ -28,28 +28,19 @@ function Home() {
   ];
 
   const zoomInOut = () => {
-    let slideStyle = {};
-
     let selectedStyle = {
       position: "absolute",
       display: "block",
-      minHeight: "150%",
+      minHeight: "135%",
       maxWidth: "150%",
-      width: "150%",
-      top: -120,
-      right: -260,
-      left: -260,
-      bottom: -50,
-      animation: "move 3s ease ",
+      width: "135%",
+      right: "-25%",
+      bottom: "-25%",
+      animation: "move 3.5s ease ",
     };
     return {
-      slideStyle,
       selectedStyle: {
-        ...slideStyle,
         ...selectedStyle,
-      },
-      prevStyle: {
-        ...slideStyle,
       },
     };
   };
@@ -103,10 +94,10 @@ function Home() {
       >
         {carouselContent.map(({ img, text }) => (
           <div className='image-container'>
-            <img src={img} alt='' width='120px' />
+            <img src={img} alt='carousel images' width='100px' />
             <Typography
               className='lineUp'
-              fontSize='40px'
+              fontSize='30px'
               color='#f5f5f5'
               fontWeight='600'
             >

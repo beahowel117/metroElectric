@@ -205,7 +205,6 @@ function PowerInfrastructure() {
         <InnerContainer>
           <Box display='flex' flexWrap='wrap' my='40px' justifyContent='center'>
             <Box flex='1' order={useMobile ? "2" : "1"} maxWidth='500px'>
-              {console.log({ forceWrap })}
               <Carousel
                 autoPlay
                 infiniteLoop

@@ -8,9 +8,6 @@ body {
   background-color: white;
 }
 
-#root {
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -40,10 +37,6 @@ code {
   -moz-animation: move 5s ease;
   position: absolute;
   animation-fill-mode: forwards;
-}
-
-.carousel.carousel-slider li.slide.selected {
-  /* z-index: 1 !important; */
 }
 
 @keyframes move {
@@ -82,12 +75,6 @@ code {
   }
 }
 
-.lineUp {
-  animation: 2s anim-lineUp ease-out;
-  position: absolute;
-  bottom: 70px;
-  left: 150px;
-}
 @keyframes anim-lineUp {
   0% {
     opacity: 0;
@@ -111,6 +98,14 @@ code {
   text-align: center;
   color: white;
   text-transform: uppercase;
+}
+
+.lineUp {
+  animation: 4.9s anim-lineUp ease-out infinite;
+  /* animation-fill-mode: backward; */
+  position: absolute;
+  bottom: 30%;
+  left: 150px;
 }
 
 .bottom-left {
