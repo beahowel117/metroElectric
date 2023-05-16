@@ -5,6 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
 import BrewLogo from "../images/logos/bew_logo.jpg";
+import ScrollToTop from './ScrollToTop';
 
 
 function Footer() {
@@ -89,7 +90,6 @@ function Footer() {
       display='flex'
       justifyContent='center'
       marginTop='20px'
-
     >
      <NavLink
          to="/"
@@ -100,6 +100,7 @@ function Footer() {
 
 {useMobile ? (
   <>
+  {/* <ScrollToTop /> */}
     <Box
       display='flex'
       marginTop='30px'
