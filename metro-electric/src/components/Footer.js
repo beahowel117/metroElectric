@@ -8,6 +8,7 @@ import BrewLogo from "../images/logos/bew_logo.jpg";
 
 
 function Footer() {
+  const useMobile = useMediaQuery("(max-width:600px)");
 
   const styles = {
     footerLogo: {
@@ -29,6 +30,25 @@ function Footer() {
       button: "Home",
       link: "/",
     },
+    {
+      button: "Services",
+      link: "/services",
+    },
+    {
+      button: "Featured Work",
+      link: "/work",
+    },
+    {
+      button: "About",
+      link: "/about",
+    },
+    {
+      button: "Contact",
+      link: "/contact",
+    },
+  ];
+
+  const navButtonsMobile = [
     {
       button: "Services",
       link: "/services",
@@ -77,28 +97,52 @@ function Footer() {
         <img src={MetroTekLogo} alt="Footer Logo" style={styles.footerLogo}/>
       </NavLink>
     </Box>
-      <Box
+
+{useMobile ? (
+  <>
+    <Box
+      display='flex'
+      marginTop='30px'
+    >
+      {navButtonsMobile.map((el, index) => (
+            <Button
+                key={index}
+                to={el.link}
+                component={NavLink}
+                sx={{
+                color :'blue'
+                }}
+            >
+              {el.button}
+            </Button>
+          ))}
+    </Box>
+  </>
+  ):(
+  <>
+    <Box
        display='flex'
        justifyContent='space-around'
        marginTop='50px'
-      >
-        {navButtons.map((el, index) => (
-          <Button
-              key={index}
-              to={el.link}
-              component={NavLink}
-              sx={{
-               color : el.link === location ? "green" : "black",
-                ":hover":{
-                  color:'green'
-                }
-              }}
-          >
-            {el.button}
-          </Button>
-        ))}
+    >
+      {navButtons.map((el, index) => (
+              <Button
+                  key={index}
+                  to={el.link}
+                  component={NavLink}
+                  sx={{
+                  color : el.link === location ? "green" : "black",
+                    ":hover":{
+                      color:'green'
+                    }
+                  }}
+              >
+                {el.button}
+              </Button>
+            ))}
       </Box>
-
+      </>
+  )}
       <Box
         display='flex'
         justifyContent='space-around'
