@@ -10,8 +10,6 @@ function Services() {
   const styles = {
     responsiveHero: {
       width: "120%",
-
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },

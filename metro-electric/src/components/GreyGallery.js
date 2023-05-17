@@ -54,6 +54,7 @@ function GreyGallery() {
       display='flex'
       justifyContent='center'
       width='100%'
+      boxShadow='5px 10px 8px #888888'
     >
       <InnerContainer>
         <Box
