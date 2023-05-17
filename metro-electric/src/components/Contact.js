@@ -77,7 +77,6 @@ const Contact = () => {
 
   const location = window.location.pathname;
 
-
   return (
     <>
      <Box
@@ -86,19 +85,21 @@ const Contact = () => {
         <Box className='image-wrap'>
           <img src={contact} alt='Contact' style={styles.responsiveHero} />
         </Box>
-          {/* <Typography
+        {useMobile ? ''
+         : <Typography
             className='lineUp'
             fontSize='40px'
             fontWeight='600'
           >
             contact metrotek
-          </Typography> */}
+          </Typography>
+        }
         </Box>
 
       <Box
         display='flex'
         justifyContent='space-around'
-        marginTop= '50px'
+        marginTop={matches? '30px': '50px'}
         flexWrap= {matches ? 'wrap': undefined}
         marginBottom={matches? '25px': '5px'}
       >
