@@ -1,5 +1,8 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
+import MainContainer from "./MainContainer";
+import InnerContainer from "./InnerContainer";
+
 import aboutHome from "../images/About/AboutHome(2000X1000).jpg";
 import leftImage_1 from "../images/About/about-Left1(1024X768).jpg";
 import belyea_image from "../images/About/4.3-1 (2000X1000).jpg";
@@ -10,14 +13,12 @@ import OrangeLogo from "../images/About/4.4.2.jpeg";
 import men_walking from "../images/About/about-lastImage(2000X1000).jpg";
 import "../index.css";
 import "../about.css";
-import Footer from "./Footer";
 
 function About() {
   const styles = {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
@@ -33,24 +34,60 @@ function About() {
         </Typography>
       </Box>
 
-      <Box display='flex' justifyContent='center' width='100%'>
-        <Box border='2px solid red' maxWidth='1280px' px='30px'>
-          <Box>
-            <h1 id='align_center'>exceptional electrical solutions</h1>
+      <MainContainer>
+        <InnerContainer
+          display='flex'
+          justifyContent='center'
+          flexDirection='column'
+        >
+          <Box
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            mb='20px'
+          >
+            {/* <h1 id='align_center'>exceptional electrical solutions</h1> */}
+            <Typography
+              color='#244ba6'
+              textAlign='center'
+              fontSize='25px'
+              fontFamily='Lato'
+              fontWeight='900'
+              mt='55px'
+              maxWidth='500px'
+            >
+              exceptional electrical solutions
+            </Typography>
             <Box
-              borderTop='5px solid #244ba6'
+              height='3px'
+              backgroundColor='#244ba6'
+              maxWidth='420px'
+              width='100%'
+              borderRadius='10px'
+              mt='15px'
+            />
+            </Box>
+            {/* <Box
+              // borderTop='5px solid #244ba6'
               maxWidth='30%'
               margin='40px auto 0'
-            />
-            <p>
+            /> */}
+            <Typography
+               fontSize='17px'
+               fontWeight='700'
+               fontFamily='Lato'
+               maxWidth='800px'
+               mb='45px'
+            >
               Founded in 1974, MetroTek is a privately owned full service
               industrial, commercial & utility-scale power infrastructure
               solutions specialist capable of providing critical electrical
               services involving engineering, installation, repair, maintenance
               and testing of all types of electrical infrastructure up through
               345kV.
-            </p>
-          </Box>
+            </Typography>
+        </InnerContainer>
+
           {/* top image section */}
           <Box
             display='flex'
@@ -244,69 +281,10 @@ function About() {
               </p>
             </Box>
           </Box>
-        </Box>
-      </Box>
+    </MainContainer>
     </>
   );
 }
 
 export default About;
-
-
-    //   <Box
-    //     display='flex'
-    //     justifyContent='center'
-    //     alignItems='center'
-    //     flexDirection='column'
-    //     maxWidth='800px'
-    //     margin='0 auto'
-    //   >
-    //     <Box position='relative' mb='50px'>
-    //       <Typography
-    //         fontSize='22px'
-    //         color='#244ba6'
-    //         fontWeight='900'
-    //         fontFamily='Lato'
-    //         textAlign='center'
-    //         mt='50px'
-    //       >
-    //        exceptional electrical solutions
-    //       </Typography>
-
-    //       <Box
-    //         display='flex'
-    //         justifyContent='center'
-    //         alignItems='center'
-    //         flexDirection='column'
-    //         padding='20px'
-    //         mb='40px'
-    //       >
-    //         <Box
-    //           height='3px'
-    //           backgroundColor='#244ba6'
-    //           width='60%'
-    //           borderRadius='10px'
-    //           mb='15px'
-    //         />
-    //         <Typography
-    //           fontSize='19px'
-    //           fontFamily='Lato'
-    //           textAlign='center'
-    //           mb='50px'
-    //         >
-    //           Founded in 1974, MetroTek is a privately owned full service
-    //           industrial, commercial & utility-scale power infrastructure
-    //           solutions specialist capable of providing critical electrical
-    //           services involving engineering, installation, repair, maintenance
-    //           and testing of all types of electrical infrastructure up through
-    //           345kV.
-    //         </Typography>
-
-
-
-
-
-    //     </Box>
-    //   </Box>
-    // </>
 

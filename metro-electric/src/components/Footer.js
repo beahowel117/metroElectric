@@ -9,8 +9,6 @@ import ScrollToTop from './ScrollToTop';
 
 
 function Footer() {
-  const useMobile = useMediaQuery("(max-width:600px)");
-
   const styles = {
     footerLogo: {
      width: '300px',
@@ -67,7 +65,7 @@ function Footer() {
       link: "/contact",
     },
   ];
-
+  const useMobile = useMediaQuery("(max-width:550px)");
   const matches = useMediaQuery('(max-width:600px)');
 
   const addCopyYear = (copyTxt) => {
