@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Box from "@mui/material/Box";
+// import { ThemeProvider } from "@material-ui/styles";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";

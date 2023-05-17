@@ -51,7 +51,9 @@ function TestingMaintenance() {
           Testing & Maintenance
         </Typography>
       </Box>
-      <GreyGallery />
+      <Box marginTop='50px'>
+        <GreyGallery />
+      </Box>
     </>
   );
 }

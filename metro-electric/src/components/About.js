@@ -1,5 +1,8 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
+import MainContainer from "./MainContainer";
+import InnerContainer from "./InnerContainer";
+
 import aboutHome from "../images/About/AboutHome(2000X1000).jpg";
 import leftImage_1 from "../images/About/about-Left1(1024X768).jpg";
 import belyea_image from "../images/About/4.3-1 (2000X1000).jpg";
@@ -8,20 +11,23 @@ import BrewLogo from "../images/logos/bew_logo.jpg";
 import GreenLogo from "../images/About/4.4.1.jpeg";
 import OrangeLogo from "../images/About/4.4.2.jpeg";
 import men_walking from "../images/About/about-lastImage(2000X1000).jpg";
+
+import useMediaQuery from '@mui/material/useMediaQuery';
 import "../index.css";
 import "../about.css";
-import Footer from "./Footer";
 
 function About() {
   const styles = {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
   };
+
+  const matches = useMediaQuery('(max-width:600px)');
+  const useMobile = useMediaQuery("(max-width:600px)");
   return (
     <>
       <Box className='image-container'>
@@ -33,24 +39,61 @@ function About() {
         </Typography>
       </Box>
 
-      <Box display='flex' justifyContent='center' width='100%'>
-        <Box border='2px solid red' maxWidth='1280px' px='30px'>
-          <Box>
-            <h1 id='align_center'>exceptional electrical solutions</h1>
+      <MainContainer>
+        <InnerContainer
+          display='flex'
+          justifyContent='center'
+          flexDirection='column'
+        >
+          <Box
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            mb='20px'
+          >
+            {/* <h1 id='align_center'>exceptional electrical solutions</h1> */}
+            <Typography
+              color='#244ba6'
+              textAlign='center'
+              fontSize='25px'
+              fontFamily='Lato'
+              fontWeight='900'
+              mt='55px'
+              maxWidth='500px'
+              textTransform='uppercase'
+            >
+              exceptional electrical solutions
+            </Typography>
             <Box
-              borderTop='5px solid #244ba6'
+              height='3px'
+              backgroundColor='#244ba6'
+              maxWidth='420px'
+              width='100%'
+              borderRadius='10px'
+              mt='15px'
+            />
+            </Box>
+            {/* <Box
+              // borderTop='5px solid #244ba6'
               maxWidth='30%'
               margin='40px auto 0'
-            />
-            <p>
+            /> */}
+            <Typography
+               fontSize='17px'
+               fontWeight='300'
+               fontFamily='Lato'
+               maxWidth='800px'
+               mb='45px'
+            >
               Founded in 1974, MetroTek is a privately owned full service
               industrial, commercial & utility-scale power infrastructure
               solutions specialist capable of providing critical electrical
               services involving engineering, installation, repair, maintenance
               and testing of all types of electrical infrastructure up through
               345kV.
-            </p>
-          </Box>
+            </Typography>
+        </InnerContainer>
+
           {/* top image section */}
           <Box
             display='flex'
@@ -78,8 +121,6 @@ function About() {
                 src={BrewLogo}
                 alt='brew logo'
                 width='100%'
-                //width='438px'
-                // height='442px'
               />
             </Box>
           </Box>
@@ -129,14 +170,17 @@ function About() {
               </p>
             </Box>
           </Box>
-
+        <InnerContainer>
           <img
             src={belyea_image}
             alt='belyea_image'
-            width='1170px'
-            height='585px'
+            // width='1170px'
+            // height='585px'
+            width='100%'
+            margin='50px auto'
           />
-
+        </InnerContainer>
+        <InnerContainer>
           <Box display='flex' maxHeight='500px' padding='10px'>
             <Box>
               <h1 className='divider'>channel partner</h1>
@@ -159,20 +203,22 @@ function About() {
               />
             </Box>
           </Box>
-
+        </InnerContainer>
           {/* logo section  */}
+        <InnerContainer>
           <Box
             display='flex'
             //alignItems="center"
             width='100%'
             maxHeight='500px'
             padding='10px'
+            flexWrap= {matches ? 'wrap': undefined}
           >
             <Box
               flex='1'
               flexDirection='column'
               textAlign='center'
-              //margin='0 auto'
+
               width='100%'
             >
               <Box>
@@ -218,20 +264,31 @@ function About() {
               </Box>
             </Box>
           </Box>
-
+        </InnerContainer>
           {/* bottom image section */}
-          <Box>
-            <img
-              src={men_walking}
-              alt='men_walking'
-              width='1170px'
-              height='500px'
-            />
-          </Box>
-
+          <InnerContainer>
+            <Box>
+              <img
+                src={men_walking}
+                alt='men_walking'
+                width='1170px'
+                height='500px'
+              />
+            </Box>
+          </InnerContainer>
           {/* bottom section */}
-          <Box display='flex' flexDirection='column' alignItems='center'>
-            <Box width='683px'>
+          <InnerContainer
+          display='flex'
+          justifyContent='center'
+          flexDirection='column'
+        >
+          <Box
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            mb='20px'
+          >
+            {/* <Box width='683px'> */}
               <h1 id='align_center'>careers</h1>
               <p>
                 We've been in continuous operation for over 45 years. We promote
@@ -240,73 +297,15 @@ function About() {
               </p>
               <p>
                 Please contact us for open employement opportunities at:
-                hr@metroelectrical.com
+                 <strong>hr@metroelectrical.com</strong>
               </p>
-            </Box>
+            {/* </Box> */}
           </Box>
-        </Box>
-      </Box>
+          </InnerContainer>
+    </MainContainer>
     </>
   );
 }
 
 export default About;
-
-
-    //   <Box
-    //     display='flex'
-    //     justifyContent='center'
-    //     alignItems='center'
-    //     flexDirection='column'
-    //     maxWidth='800px'
-    //     margin='0 auto'
-    //   >
-    //     <Box position='relative' mb='50px'>
-    //       <Typography
-    //         fontSize='22px'
-    //         color='#244ba6'
-    //         fontWeight='900'
-    //         fontFamily='Lato'
-    //         textAlign='center'
-    //         mt='50px'
-    //       >
-    //        exceptional electrical solutions
-    //       </Typography>
-
-    //       <Box
-    //         display='flex'
-    //         justifyContent='center'
-    //         alignItems='center'
-    //         flexDirection='column'
-    //         padding='20px'
-    //         mb='40px'
-    //       >
-    //         <Box
-    //           height='3px'
-    //           backgroundColor='#244ba6'
-    //           width='60%'
-    //           borderRadius='10px'
-    //           mb='15px'
-    //         />
-    //         <Typography
-    //           fontSize='19px'
-    //           fontFamily='Lato'
-    //           textAlign='center'
-    //           mb='50px'
-    //         >
-    //           Founded in 1974, MetroTek is a privately owned full service
-    //           industrial, commercial & utility-scale power infrastructure
-    //           solutions specialist capable of providing critical electrical
-    //           services involving engineering, installation, repair, maintenance
-    //           and testing of all types of electrical infrastructure up through
-    //           345kV.
-    //         </Typography>
-
-
-
-
-
-    //     </Box>
-    //   </Box>
-    // </>
 
