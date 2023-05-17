@@ -73,10 +73,14 @@ function FeaturedWork() {
           py='40px'
         >
           {imageGallery.map(({ img, text, link }) => (
-            <Card variant='outlined' className='container'>
+            <Card
+              variant='outlined'
+              className='container'
+              sx={{ minWidth: { xs: "85%", md: "" } }}
+            >
               <CardOverflow>
                 <AspectRatio ratio='5/4'>
-                  <img src={img} loading='lazy' alt='' />
+                  <img src={img} loading='lazy' alt='' width='100%' />
                   <div className='overlay'>
                     <Typography
                       className='imgText'
