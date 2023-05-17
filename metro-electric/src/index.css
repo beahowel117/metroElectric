@@ -97,7 +97,8 @@ code {
   position: relative;
   text-align: center;
   color: white;
-  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black;
+  /* text-transform: uppercase; */
 }
 
 .lineUp {
@@ -105,7 +106,7 @@ code {
   animation-fill-mode: backward;
   position: absolute;
   bottom: 30%;
-  left: 150px;
+  left: 10%;
 }
 
 .bottom-left {

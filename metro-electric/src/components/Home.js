@@ -17,13 +17,13 @@ function Home() {
   const useMobile = useMediaQuery("(max-width:600px)");
 
   const carouselContent = [
-    { img: HOME, text: "OVER 45 YEARS OF EXCEPTIONAL ELECTRICAL SOLUTIONS" },
-    { img: EIS, text: "ELECTRICAL INFRASTRUCTURE SPECIALISTS" },
-    { img: POWER, text: "DISTRIBUTING POWER WHEREVER IT IS NEEDED" },
-    { img: SOLUTIONS, text: "DELIVERING INFRASTRUCTURE SOLUTIONS NATIONWIDE" },
+    { img: HOME, text: "Over 45 Years of Exceptional Electrical Solutions" },
+    { img: EIS, text: "Electrical Infrastructure Specialists" },
+    { img: POWER, text: "Distributing Power Wherever It Is Needed" },
+    { img: SOLUTIONS, text: "Delivering Infrastructure Solutions Nationwide" },
     {
       img: COMMUNITY,
-      text: "SERVING OUR COMMUNITY WITH 24/7 EMERGENCY SERVICES",
+      text: "Serving Our Community With 24/7 Emergency Services",
     },
   ];
 
@@ -36,7 +36,7 @@ function Home() {
       width: "135%",
       right: "-25%",
       bottom: "-25%",
-      animation: "move 4s ease ",
+      animation: "move 3s ease ",
     };
     return {
       selectedStyle: {
@@ -97,9 +97,15 @@ function Home() {
             <img src={img} alt='carousel images' width='100px' />
             <Typography
               className='lineUp'
-              fontSize='30px'
               color='#f5f5f5'
               fontWeight='600'
+              fontSize={{
+                lg: 35,
+                md: 30,
+                sm: 25,
+                xs: 0,
+              }}
+              maxWidth={{ sm: "580px", md: "900px" }}
             >
               {text}
             </Typography>
