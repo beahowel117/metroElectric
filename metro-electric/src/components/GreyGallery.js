@@ -63,7 +63,7 @@ function GreyGallery() {
           gap='10px'
           py='40px'
         >
-          {/* {services.map(({ img, text, link }) =>
+          {services.map(({ img, text, link }) =>
             !img ? (
               <Card
                 variant='outlined'
@@ -106,7 +106,7 @@ function GreyGallery() {
                 </Button>
               </Card>
             )
-          )} */}
+          )}
         </Box>
       </InnerContainer>
     </Box>
