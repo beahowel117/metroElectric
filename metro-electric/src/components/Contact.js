@@ -19,7 +19,6 @@ const Contact = () => {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
@@ -48,7 +47,26 @@ const Contact = () => {
     },
   ];
 
+  const navButtonsMobile = [
+    {
+      button: "Services",
+      link: "/services",
+    },
+    {
+      button: "Featured Work",
+      link: "/work",
+    },
+    {
+      button: "About",
+      link: "/about",
+    },
+    {
+      button: "Contact",
+      link: "/contact",
+    },
+  ];
   const matches = useMediaQuery('(max-width:600px)');
+  const useMobile = useMediaQuery("(max-width:600px)");
 
   const addCopyYear = (copyTxt) => {
     let currYr = new Date().getFullYear();
@@ -68,21 +86,21 @@ const Contact = () => {
         <Box className='image-wrap'>
           <img src={contact} alt='Contact' style={styles.responsiveHero} />
         </Box>
-          <Typography
+          {/* <Typography
             className='lineUp'
             fontSize='40px'
             fontWeight='600'
           >
             contact metrotek
-          </Typography>
+          </Typography> */}
         </Box>
 
       <Box
         display='flex'
         justifyContent='space-around'
         marginTop= '50px'
-       // flexWrap= {matches ? 'wrap': undefined}
-        //marginBottom={matches? '25px': '5px'}
+        flexWrap= {matches ? 'wrap': undefined}
+        marginBottom={matches? '25px': '5px'}
       >
          <Box
            order='1'
@@ -94,7 +112,7 @@ const Contact = () => {
           />
         </Box>
         <Box
-          order='2'
+          order={matches ? '1': '2'}
         >
           <Typography
             fontSize='24px'
@@ -119,7 +137,7 @@ const Contact = () => {
           </Typography>
         </Box>
         <Box
-         order='3'
+         order={matches ? '2': '3'}
          marginTop='25px'
         >
           <img src={NECALogo} alt="Footer Logos"/>
@@ -147,7 +165,52 @@ const Contact = () => {
             </NavLink>
           </Box>
         </Box>
+        {useMobile ? (
+      <>
         <Box
+          display='flex'
+          margin='10px 0 30px'
+        >
+          {navButtonsMobile.map((el, index) => (
+            <Button
+                key={index}
+                to={el.link}
+                component={NavLink}
+                sx={{
+                color :'blue'
+                }}
+            >
+              {el.button}
+            </Button>
+          ))}
+        </Box>
+      </>
+      ):(
+      <>
+        <Box
+          display='flex'
+          justifyContent='space-around'
+          marginTop='50px'
+        >
+          {navButtons.map((el, index) => (
+              <Button
+                  key={index}
+                  to={el.link}
+                  component={NavLink}
+                  sx={{
+                  color : el.link === location ? "green" : "black",
+                    ":hover":{
+                      color:'green'
+                    }
+                  }}
+              >
+                {el.button}
+              </Button>
+            ))}
+          </Box>
+          </>
+       )}
+        {/* <Box
           display='flex'
           justifyContent='center'
           marginTop='10px'
@@ -167,7 +230,7 @@ const Contact = () => {
               {el.button}
             </Button>
           ))}
-        </Box>
+        </Box> */}
 
         <Box>
         <Typography
