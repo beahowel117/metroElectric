@@ -63,7 +63,7 @@ function GreyGallery() {
           gap='10px'
           py='40px'
         >
-          {services.map(({ img, text, link }) =>
+          {/* {services.map(({ img, text, link }) =>
             !img ? (
               <Card
                 variant='outlined'
@@ -99,12 +99,6 @@ function GreyGallery() {
                     margin: "auto",
                     padding: "5px",
                   }}
-                  // textColor='white'
-                  // fontWeight='800'
-                  // fontSize='20px'
-                  //textAlign='center'
-                  // margin='auto'
-                  // padding='5px'
                   component={NavLink}
                   to={link}
                 >
@@ -112,7 +106,7 @@ function GreyGallery() {
                 </Button>
               </Card>
             )
-          )}
+          )} */}
         </Box>
       </InnerContainer>
     </Box>

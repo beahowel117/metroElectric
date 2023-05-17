@@ -11,6 +11,7 @@ import third_image from "../images/Services/tm-3(1024X768).jpg";
 import fourth_image from "../images/Services/tm-4(1024X768).jpg";
 import fifth_image from "../images/Services/tm-5(1024X768).jpg";
 import sixth_image from "../images/Services/tm-6(2000x1000).jpg";
+import "../index.css";
 
 function TestingMaintenance() {
   const styles = {
@@ -33,8 +34,21 @@ function TestingMaintenance() {
             style={styles.responsiveHero}
           />
         </Box>
-        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
-          testing & maintenance
+        <Typography
+          className='lineUp'
+          fontFamily='Lato'
+          // fontWeight='600'
+          color='#f5f5f5'
+          sx={{ animationIterationCount: "1" }}
+          fontSize={{
+            lg: 35,
+            md: 30,
+            sm: 25,
+            xs: 0,
+          }}
+          maxWidth={{ sm: "580px", md: "900px" }}
+        >
+          Testing & Maintenance
         </Typography>
       </Box>
       <GreyGallery />
