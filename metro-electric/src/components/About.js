@@ -11,6 +11,8 @@ import BrewLogo from "../images/logos/bew_logo.jpg";
 import GreenLogo from "../images/About/4.4.1.jpeg";
 import OrangeLogo from "../images/About/4.4.2.jpeg";
 import men_walking from "../images/About/about-lastImage(2000X1000).jpg";
+
+import useMediaQuery from '@mui/material/useMediaQuery';
 import "../index.css";
 import "../about.css";
 
@@ -23,6 +25,9 @@ function About() {
       backgroundSize: "cover",
     },
   };
+
+  const matches = useMediaQuery('(max-width:600px)');
+  const useMobile = useMediaQuery("(max-width:600px)");
   return (
     <>
       <Box className='image-container'>
@@ -55,6 +60,7 @@ function About() {
               fontWeight='900'
               mt='55px'
               maxWidth='500px'
+              textTransform='uppercase'
             >
               exceptional electrical solutions
             </Typography>
@@ -74,7 +80,7 @@ function About() {
             /> */}
             <Typography
                fontSize='17px'
-               fontWeight='700'
+               fontWeight='300'
                fontFamily='Lato'
                maxWidth='800px'
                mb='45px'
@@ -115,8 +121,6 @@ function About() {
                 src={BrewLogo}
                 alt='brew logo'
                 width='100%'
-                //width='438px'
-                // height='442px'
               />
             </Box>
           </Box>
@@ -166,14 +170,17 @@ function About() {
               </p>
             </Box>
           </Box>
-
+        <InnerContainer>
           <img
             src={belyea_image}
             alt='belyea_image'
-            width='1170px'
-            height='585px'
+            // width='1170px'
+            // height='585px'
+            width='100%'
+            margin='50px auto'
           />
-
+        </InnerContainer>
+        <InnerContainer>
           <Box display='flex' maxHeight='500px' padding='10px'>
             <Box>
               <h1 className='divider'>channel partner</h1>
@@ -196,20 +203,22 @@ function About() {
               />
             </Box>
           </Box>
-
+        </InnerContainer>
           {/* logo section  */}
+        <InnerContainer>
           <Box
             display='flex'
             //alignItems="center"
             width='100%'
             maxHeight='500px'
             padding='10px'
+            flexWrap= {matches ? 'wrap': undefined}
           >
             <Box
               flex='1'
               flexDirection='column'
               textAlign='center'
-              //margin='0 auto'
+
               width='100%'
             >
               <Box>
@@ -255,20 +264,31 @@ function About() {
               </Box>
             </Box>
           </Box>
-
+        </InnerContainer>
           {/* bottom image section */}
-          <Box>
-            <img
-              src={men_walking}
-              alt='men_walking'
-              width='1170px'
-              height='500px'
-            />
-          </Box>
-
+          <InnerContainer>
+            <Box>
+              <img
+                src={men_walking}
+                alt='men_walking'
+                width='1170px'
+                height='500px'
+              />
+            </Box>
+          </InnerContainer>
           {/* bottom section */}
-          <Box display='flex' flexDirection='column' alignItems='center'>
-            <Box width='683px'>
+          <InnerContainer
+          display='flex'
+          justifyContent='center'
+          flexDirection='column'
+        >
+          <Box
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            mb='20px'
+          >
+            {/* <Box width='683px'> */}
               <h1 id='align_center'>careers</h1>
               <p>
                 We've been in continuous operation for over 45 years. We promote
@@ -277,10 +297,11 @@ function About() {
               </p>
               <p>
                 Please contact us for open employement opportunities at:
-                hr@metroelectrical.com
+                 <strong>hr@metroelectrical.com</strong>
               </p>
-            </Box>
+            {/* </Box> */}
           </Box>
+          </InnerContainer>
     </MainContainer>
     </>
   );
