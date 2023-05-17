@@ -24,6 +24,7 @@ import PortfolioCEA from "./components/PortfolioCEA";
 import PortfolioOverHeadConstruction from "./components/PortfolioOverHeadConstruction";
 import PortfolioTransformer from "./components/PortfolioTransformer";
 import PortfolioStormRestoration from "./components/PortfolioStormRestoration";
+import ScrollToTop from "./components/ScrollToTop";
 
 // import { ThemeProvider } from "@emotion/react";
 
@@ -41,6 +42,7 @@ function App() {
     <>
       <Box>
         <Nav />
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/services' exact element={<Services />} />

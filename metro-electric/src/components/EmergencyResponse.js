@@ -85,14 +85,14 @@ function EmergencyResponse() {
             </Box>
             <Typography
               fontSize='17px'
-              fontWeight='700'
+              fontWeight='500'
               fontFamily='Lato'
               maxWidth='800px'
               mb='45px'
             >
             When disaster strikes, a time-critical response is essential. Our
             on-call emergency power and restoration teams are available are
-            available 24 hours a day, 7 days a week.
+            available <strong>24 hours a day, 7 days a week.</strong>
             <br />
             <br />
             We perform all forms of circuit, substation and distribution line
@@ -145,7 +145,7 @@ function EmergencyResponse() {
             >
             <Typography
               fontSize='17px'
-              fontWeight='700'
+              fontWeight='500'
               fontFamily='Lato'
               maxWidth='800px'
               mb='45px'
@@ -162,7 +162,7 @@ function EmergencyResponse() {
 
 
               If you need emergency service for your commercial or industrial
-              facility, please do not hesitate to call us at 888.249.4684 and
+              facility, please do not hesitate to call us at <strong>888.249.4684 </strong>and
               follow the prompts.
             </Typography>
           </Box>

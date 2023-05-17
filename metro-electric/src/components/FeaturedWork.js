@@ -3,7 +3,6 @@ import { NavLink, Link as RouterLink } from "react-router-dom";
 
 import { Box, Typography, Button } from "@mui/material";
 import { Card, CardOverflow, AspectRatio, CardCover } from "@mui/joy";
-import Footer from "./Footer";
 
 import featuredWork from "../images/FeaturedWork/featuredWork(2000X1000).jpg";
 import overHeadConstruction from "../images/FeaturedWork/FW-OC.JPG";
@@ -20,7 +19,6 @@ function FeaturedWork() {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },

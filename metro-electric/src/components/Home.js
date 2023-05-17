@@ -9,7 +9,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../index.css";
 import GreyGallery from "./GreyGallery";
-import Footer from "./Footer";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 

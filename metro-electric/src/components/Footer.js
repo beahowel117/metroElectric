@@ -5,9 +5,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
 import BrewLogo from "../images/logos/bew_logo.jpg";
+import ScrollToTop from './ScrollToTop';
 
 
 function Footer() {
+  const useMobile = useMediaQuery("(max-width:600px)");
 
   const styles = {
     footerLogo: {
@@ -47,6 +49,25 @@ function Footer() {
     },
   ];
 
+  const navButtonsMobile = [
+    {
+      button: "Services",
+      link: "/services",
+    },
+    {
+      button: "Featured Work",
+      link: "/work",
+    },
+    {
+      button: "About",
+      link: "/about",
+    },
+    {
+      button: "Contact",
+      link: "/contact",
+    },
+  ];
+
   const matches = useMediaQuery('(max-width:600px)');
 
   const addCopyYear = (copyTxt) => {
@@ -61,15 +82,21 @@ function Footer() {
 
   return (
    <Box
-    borderTop='14px solid #244ba6'
+    // borderTop='14px solid #244ba6'
     maxWidth='797px'
     margin='40px auto 0'
    >
     <Box
+      height='14px'
+      backgroundColor='#244ba6'
+      maxWidth='100%'
+      borderRadius='5px'
+      margin='40px auto 0'
+    />
+    <Box
       display='flex'
       justifyContent='center'
       marginTop='20px'
-
     >
      <NavLink
          to="/"
@@ -77,28 +104,53 @@ function Footer() {
         <img src={MetroTekLogo} alt="Footer Logo" style={styles.footerLogo}/>
       </NavLink>
     </Box>
-      <Box
+
+{useMobile ? (
+  <>
+  {/* <ScrollToTop /> */}
+    <Box
+      display='flex'
+      marginTop='30px'
+    >
+      {navButtonsMobile.map((el, index) => (
+            <Button
+                key={index}
+                to={el.link}
+                component={NavLink}
+                sx={{
+                color :'blue'
+                }}
+            >
+              {el.button}
+            </Button>
+          ))}
+    </Box>
+  </>
+  ):(
+  <>
+    <Box
        display='flex'
        justifyContent='space-around'
        marginTop='50px'
-      >
-        {navButtons.map((el, index) => (
-          <Button
-              key={index}
-              to={el.link}
-              component={NavLink}
-              sx={{
-               color : el.link === location ? "green" : "black",
-                ":hover":{
-                  color:'green'
-                }
-              }}
-          >
-            {el.button}
-          </Button>
-        ))}
+    >
+      {navButtons.map((el, index) => (
+              <Button
+                  key={index}
+                  to={el.link}
+                  component={NavLink}
+                  sx={{
+                  color : el.link === location ? "green" : "black",
+                    ":hover":{
+                      color:'green'
+                    }
+                  }}
+              >
+                {el.button}
+              </Button>
+            ))}
       </Box>
-
+      </>
+  )}
       <Box
         display='flex'
         justifyContent='space-around'

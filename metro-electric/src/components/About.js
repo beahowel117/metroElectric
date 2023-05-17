@@ -251,3 +251,62 @@ function About() {
 }
 
 export default About;
+
+
+    //   <Box
+    //     display='flex'
+    //     justifyContent='center'
+    //     alignItems='center'
+    //     flexDirection='column'
+    //     maxWidth='800px'
+    //     margin='0 auto'
+    //   >
+    //     <Box position='relative' mb='50px'>
+    //       <Typography
+    //         fontSize='22px'
+    //         color='#244ba6'
+    //         fontWeight='900'
+    //         fontFamily='Lato'
+    //         textAlign='center'
+    //         mt='50px'
+    //       >
+    //        exceptional electrical solutions
+    //       </Typography>
+
+    //       <Box
+    //         display='flex'
+    //         justifyContent='center'
+    //         alignItems='center'
+    //         flexDirection='column'
+    //         padding='20px'
+    //         mb='40px'
+    //       >
+    //         <Box
+    //           height='3px'
+    //           backgroundColor='#244ba6'
+    //           width='60%'
+    //           borderRadius='10px'
+    //           mb='15px'
+    //         />
+    //         <Typography
+    //           fontSize='19px'
+    //           fontFamily='Lato'
+    //           textAlign='center'
+    //           mb='50px'
+    //         >
+    //           Founded in 1974, MetroTek is a privately owned full service
+    //           industrial, commercial & utility-scale power infrastructure
+    //           solutions specialist capable of providing critical electrical
+    //           services involving engineering, installation, repair, maintenance
+    //           and testing of all types of electrical infrastructure up through
+    //           345kV.
+    //         </Typography>
+
+
+
+
+
+    //     </Box>
+    //   </Box>
+    // </>
+
