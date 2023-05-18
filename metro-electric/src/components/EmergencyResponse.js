@@ -56,13 +56,11 @@ function EmergencyResponse() {
           alignItems='center'
           flexDirection='column'
           width='100%'
+          mt='55px'
+          mb='30px'
         >
-          <InnerContainer
-            display='flex'
-            justifyContent='center'
-            flexDirection='column'
-          >
-            <Box maxWidth='1160px' margin='50px auto 50px auto'>
+          <InnerContainer>
+            <Box>
               <AspectRatio objectFit='cover'>
                 <img src={er_image_1} alt='emergency response' />
               </AspectRatio>
@@ -127,31 +125,17 @@ function EmergencyResponse() {
 
         </Box> */}
           <InnerContainer>
-            <Box
-              display='flex'
-              my='40px'
-              // padding='40px'
-              // maxWidth='1000px'
-              // margin='auto'
-              flexWrap='wrap'
-              // justifyContent='space-between'
-            >
-              <Box display='1' minWidth='480px' order={useMobile ? "2" : "1"}>
+            <Box display='flex' my='40px' flexWrap='wrap' columnGap='30px'>
+              <Box flex='1' minWidth='350px' order={useMobile ? "2" : "1"}>
                 {/* <Box flex='1'> */}
-                <img
-                  src={er_image_2}
-                  alt='emergency vehicles'
-                  // width='500px'
-                  width='100px'
-                />
+                <img src={er_image_2} alt='emergency vehicles' width='100%' />
               </Box>
               <Box
                 flex='1'
-                // margin='90px 80px 0 0'
                 alignSelf='center'
-                ml='40px'
                 py='20px'
                 order={useMobile ? "1" : "2"}
+                minWidth='350px'
               >
                 <Typography
                   fontSize='17px'
