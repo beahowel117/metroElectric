@@ -47,7 +47,6 @@ function About() {
             alignItems='center'
             mb='20px'
           >
-            {/* <h1 id='align_center'>exceptional electrical solutions</h1> */}
             <Typography
               color='#244ba6'
               textAlign='center'
@@ -190,7 +189,12 @@ function About() {
           />
         </InnerContainer>
         <InnerContainer>
-          <Box display='flex' flexWrap='wrap' columnGap='15px' margin='25px 0'>
+          <Box
+            display='flex'
+            flexWrap='wrap'
+            columnGap='15px'
+            margin='25px 0'
+          >
             <Box flex='1' minWidth='350px'>
               <h1 className='divider'>channel partner</h1>
               <Typography fontWeight='700' fontFamily='Lato' fontSize='17px'>

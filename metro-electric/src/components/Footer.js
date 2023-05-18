@@ -132,7 +132,11 @@ function Footer() {
         </>
       ) : (
         <>
-          <Box display='flex' justifyContent='space-around' marginTop='50px'>
+          <Box
+            display='flex'
+            justifyContent='space-around'
+            marginTop='50px'
+          >
             {navButtons.map((el, index) => (
               <Button
                 key={index}
