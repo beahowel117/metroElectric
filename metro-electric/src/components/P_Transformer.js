@@ -1,5 +1,6 @@
 import React from 'react';
 import { ImageList, ImageListItem, Box } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import MainContainer from "./MainContainer";
 import InnerContainer from "./InnerContainer";
 import img1 from "../images/Portfolio/Transformer/1.jpg";
@@ -16,12 +17,17 @@ import img9 from "../images/Portfolio/Transformer/9.jpg";
 function PTransformer() {
   const imageData = [
     img1, img2, img3, img4, img5, img6, img7, img8, img9
-  ]
+  ];
+  const matches = useMediaQuery("(max-width:600px)")
   return (
     <MainContainer>
       <InnerContainer>
         <Box>
-          <ImageList variant='masonry' cols={3} gap={8}>
+        <ImageList
+            variant='masonry'
+            cols={matches ? 1: 3}
+            gap={8}
+          >
             {imageData.map((item) => (
               <ImageListItem>
                 <img src={item} alt='transformers' loading='lazy' />

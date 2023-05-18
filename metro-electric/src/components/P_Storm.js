@@ -1,7 +1,9 @@
 import React from 'react';
 import MainContainer from "./MainContainer";
 import InnerContainer from "./InnerContainer";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { ImageList, ImageListItem, Box } from "@mui/material";
+
 import img1 from "../images/Portfolio/StormRestoration/1.jpg";
 import img2 from "../images/Portfolio/StormRestoration/2.jpg";
 import img3 from "../images/Portfolio/StormRestoration/3.jpg";
@@ -32,12 +34,17 @@ import img25 from "../images/Portfolio/StormRestoration/25.jpg";
 function PStorm() {
   const imageData = [
     img1, img2 , img3,img4, img5, img6, img7, img8, img9,img10, img11, img12,img13, img14, img15, img16, img17,img18, img19, img20, img21, img22, img23, img24, img25
-  ]
+  ];
+  const matches = useMediaQuery("(max-width:600px)")
   return (
     <MainContainer>
       <InnerContainer>
         <Box>
-          <ImageList variant='masonry' cols={3} gap={8}>
+        <ImageList
+            variant='masonry'
+            cols={matches ? 1: 3}
+            gap={8}
+          >
             {imageData.map((item) => (
               <ImageListItem>
                 <img src={item} alt='storm' loading='lazy' />
