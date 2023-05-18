@@ -26,7 +26,7 @@ function About() {
     },
   };
 
-  const matches = useMediaQuery("(max-width:600px)");
+  const lessThan400 = useMediaQuery("(max-width:400px)");
   const lessThan780 = useMediaQuery("(max-width:780px)");
   return (
     <>
@@ -69,14 +69,10 @@ function About() {
               mt='15px'
             />
           </Box>
-          {/* <Box
-              // borderTop='5px solid #244ba6'
-              maxWidth='30%'
-              margin='40px auto 0'
-            /> */}
+
           <Typography
             fontSize='17px'
-            fontWeight='300'
+            fontWeight='700'
             fontFamily='Lato'
             maxWidth='800px'
             mb='45px'
@@ -121,23 +117,44 @@ function About() {
           alignItems='center'
         >
           <Box maxWidth='700px'>
-            <p>
+            <Typography fontWeight='900' margin='50px 0'>
               We are proud of our deep 45 year history providing value to our
               diverse customer base. We consider ourselves to be among the best
               in the business and take pride in our work product being delivered
               on-time, within budget and with a continuous focus on safety.
-            </p>
-            <h1>competitive advantages</h1>
-            <h3>Reputation</h3>
-            <p>
+            </Typography>
+            <Typography
+              fontSize='25px'
+              fontFamily='Lato'
+              fontWeight='900'
+              color='#244ba6'
+            >
+              Competitive Advantages
+            </Typography>
+            <Typography fontWeight='900' fontFamily='Lato' fontSize='18px'>
+              Reputation
+            </Typography>
+            <Typography
+              fontWeight='700'
+              fontFamily='Lato'
+              fontSize='17px'
+              mb='15px'
+            >
               We have provided hundreds of customers decades of consistent,
               reliable and responsive service that has allowed us to grow almost
               entirely on word-of-mouth recommentations. Most of our clients
               come from positive referrals and recommendations from existing
               clients.
-            </p>
-            <h3>Customer Service</h3>
-            <p>
+            </Typography>
+            <Typography fontWeight='900' fontFamily='Lato' fontSize='18px'>
+              Customer Service
+            </Typography>
+            <Typography
+              fontWeight='700'
+              fontFamily='Lato'
+              fontSize='17px'
+              mb='15px'
+            >
               The strongest component of MetroTek's reputation has been its
               commitment to customer service. Through its emergency
               responsiveness, troubleshooting abilities and on-demand service
@@ -145,16 +162,23 @@ function About() {
               the region's industrial community. Superior customer service is
               further enhanced by quick turnaround for price requests, quick
               decisions and quick reactions.
-            </p>
-            <h3>Experienced Management</h3>
-            <p>
+            </Typography>
+            <Typography fontWeight='900' fontFamily='Lato' fontSize='18px'>
+              Experienced Management
+            </Typography>
+            <Typography
+              fontWeight='700'
+              fontFamily='Lato'
+              fontSize='17px'
+              mb='15px'
+            >
               MetroTek's management team combines generations of experience in
               the electrical construction industry that translates into vast
               technical knowledge and skill. Management continues to invest in
               the latest systems and innovations in the industry. Ownership
               works in the field with the men which renders construction and
               service excellence.
-            </p>
+            </Typography>
           </Box>
         </Box>
         <InnerContainer>
@@ -162,23 +186,24 @@ function About() {
             src={belyea_image}
             alt='belyea_image'
             width='100%'
-            margin='50px auto'
-            style={{ "border-radius": "5px" }}
+            style={{ "border-radius": "3px" }}
           />
         </InnerContainer>
         <InnerContainer>
           <Box display='flex' flexWrap='wrap' columnGap='15px' margin='25px 0'>
             <Box flex='1' minWidth='350px'>
               <h1 className='divider'>channel partner</h1>
-              <p>
-                We're co-located in Easton, PA at the headquarters of Belyea
-                Electrical Power Systems. Founded in 1908, Belyea stocks one of
-                the largest inventories of re-manufactured electrical power
-                equipment in the country at its 150,000 square foot facility
-                including: Substation, Padmount & Dry Type Transformers, Circuit
-                Breakers, Turbines & Generators, Switchgear, Relays and Metering
-                Equipment.
-              </p>
+              <Typography fontWeight='700' fontFamily='Lato' fontSize='17px'>
+                We're co-located in Easton, PA at the headquarters of{" "}
+                <span style={{ "font-weight": "900", "font-size": "18px" }}>
+                  Belyea Electrical Power Systems.
+                </span>{" "}
+                Founded in 1908, Belyea stocks one of the largest inventories of
+                re-manufactured electrical power equipment in the country at its
+                150,000 square foot facility including: Substation, Padmount &
+                Dry Type Transformers, Circuit Breakers, Turbines & Generators,
+                Switchgear, Relays and Metering Equipment.
+              </Typography>
             </Box>
             <Box flex='1' minWidth='350px'>
               <img
@@ -210,33 +235,48 @@ function About() {
                 flexDirection={lessThan780 ? "row" : "column"}
                 alignItems='center'
                 justifyContent='center'
+                pt='15px'
+                columnGap='15px'
               >
                 <Box>
                   <img
                     src={GreenLogo}
                     alt='green_logo'
-                    width='184px'
-                    height='184px'
+                    width={lessThan400 ? "155px" : "184px"}
+                    height={lessThan400 ? "155px" : "184px"}
                   />
                 </Box>
-                <Box padding='20px'>
+                <Box>
                   <img
                     src={OrangeLogo}
                     alt='orange_logo'
-                    width='184px'
-                    height='184px'
+                    width={lessThan400 ? "155px" : "184px"}
+                    height={lessThan400 ? "155px" : "184px"}
                   />
                 </Box>
               </Box>
             </Box>
             <Box flex='1' minWidth='350px' justifyContent='center'>
               <Box>
-                <h1>safety training</h1>
-                <h3>
+                <Typography
+                  fontWeight='900'
+                  fontFamily='Lato'
+                  fontSize='25px'
+                  color='#244ba6'
+                  my='15px'
+                >
+                  Safety Training
+                </Typography>
+                <Typography
+                  fontWeight='900'
+                  fontFamily='Lato'
+                  fontSize='16px'
+                  my='10px'
+                >
                   A Corporate Culture of Teamwork, Responsibility and a
                   Commitment to Safety
-                </h3>
-                <p>
+                </Typography>
+                <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
                   Safety is our top priority. Personal injury, property damage,
                   and adverse environmental impacts are not accetable costs of
                   doing business. For this reason, we employ full time safety
@@ -249,7 +289,7 @@ function About() {
                   foremen stress safety daily and employees are encouraged to
                   raise safety concerns and suggest imporvements to our safety
                   program.
-                </p>
+                </Typography>
               </Box>
             </Box>
           </Box>
@@ -271,18 +311,26 @@ function About() {
             flexDirection='column'
             alignItems='center'
             mb='20px'
+            maxWidth='600px'
           >
             {/* <Box width='683px'> */}
             <h1 id='align_center'>careers</h1>
-            <p>
+            <Typography fontWeight='700' fontFamily='Lato' fontSize='17px'>
               We've been in continuous operation for over 45 years. We promote
               an exciting, challenging and safe work environment, empowering
               workers to grow and evolve with our business.
-            </p>
-            <p>
+            </Typography>
+            <Typography
+              fontWeight='700'
+              fontFamily='Lato'
+              fontSize='17px'
+              my='10px'
+            >
               Please contact us for open employement opportunities at:
-              <strong>hr@metroelectrical.com</strong>
-            </p>
+              <span style={{ "font-weight": "900", "font-size": "18px" }}>
+                hr@metroelectrical.com
+              </span>
+            </Typography>
             {/* </Box> */}
           </Box>
         </InnerContainer>

@@ -27,15 +27,6 @@ import PortfolioTransformer from "./components/PortfolioTransformer";
 import PortfolioStormRestoration from "./components/PortfolioStormRestoration";
 import ScrollToTop from "./components/ScrollToTop";
 
-// import { ThemeProvider } from "@emotion/react";
-
-// const theme = {
-//   colors: {
-//     primary:'#244ba6',
-
-//   }
-// };
-
 function App() {
   let location = useLocation();
 

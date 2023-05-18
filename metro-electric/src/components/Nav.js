@@ -224,7 +224,7 @@ const Nav = () => {
                   <Card
                     sx={{
                       padding: 0,
-                      "--Card-radius": 0,
+                      "--Card-radius": "0px",
                     }}
                     square={true}
                   >

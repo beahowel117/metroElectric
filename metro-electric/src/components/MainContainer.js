@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 function MainContainer({ children }) {
   return (
@@ -10,7 +10,6 @@ function MainContainer({ children }) {
       display='flex'
       flexDirection='column'
       alignItems='center'
-      fontFamily='Lato'
     >
       {children}
     </Box>
