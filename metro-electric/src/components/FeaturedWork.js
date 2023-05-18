@@ -51,7 +51,7 @@ function FeaturedWork() {
       link: "/portfolio-items/storm",
     },
   ];
-
+  
   return (
     <>
       <Box className='image-container'>
