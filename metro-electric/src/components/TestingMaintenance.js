@@ -23,6 +23,12 @@ function TestingMaintenance() {
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
+    circle: {
+      listStyleType: "circle",
+    },
+    mobileLists: {
+      textIndent: "-23px",
+    },
   };
   const useMobile = useMediaQuery("(max-width:780px)");
 
@@ -209,7 +215,7 @@ function TestingMaintenance() {
             mb='30px'
           >
             Commissioning & Maintenance Testing:
-            <ul list-style-type='circle'>
+            <ul style={styles.circle}>
               <li>Very Low Frequency (VLF)</li>
               <li>Tan-Delta</li>
               <li>Turns Ratio</li>
@@ -217,15 +223,17 @@ function TestingMaintenance() {
               <li>Insulation Resistance</li>
               <li>Contact Resistance</li>
             </ul>
-            <li>
-              Protective Relay Calibration, Metering, Testing & Programming
-            </li>
-            <li>Grounding & Bonding Testing - Commercial Pools</li>
-            <li>Circuit Breaker Testing, Repair & Retrofit</li>
-            <li>Motor Testing</li>
-            <li>Motor Control (MMC) Boards</li>
-            <li>Switch Boards</li>
-            <li>Battery Testing and Maintenance</li>
+            <div style={styles.mobileLists}>
+              <li>
+                Protective Relay Calibration, Metering, Testing & Programming
+              </li>
+              <li>Grounding & Bonding Testing - Commercial Pools</li>
+              <li>Circuit Breaker Testing, Repair & Retrofit</li>
+              <li>Motor Testing</li>
+              <li>Motor Control (MMC) Boards</li>
+              <li>Switch Boards</li>
+              <li>Battery Testing and Maintenance</li>
+            </div>
           </Typography>
         </InnerContainer>
         {/* section one of double feature */}
