@@ -24,11 +24,11 @@ function TestingMaintenance() {
       backgroundSize: "cover",
     },
     circle: {
-      listStyleType: 'circle',
+      listStyleType: "circle",
     },
-    mobileLists:{
-      textIndent: '-23px',
-    }
+    mobileLists: {
+      textIndent: "-23px",
+    },
   };
   const useMobile = useMediaQuery("(max-width:780px)");
 
@@ -115,25 +115,46 @@ function TestingMaintenance() {
             maxWidth='800px'
             mb='30px'
           >
-            Our commercial and industrial clients depend on the performance of their electricity delivery systems. Our preventative maintenance programs allow our clients to reduce energy costs, increase the lifespan of power systems and ensure the safe and continuous operation of their electrical equipment. By reducing or eliminating unexpected electrical outages and increasing power system efficiency, our clients find our scheduled service and maintenance programs indispensable.
+            Our commercial and industrial clients depend on the performance of
+            their electricity delivery systems. Our preventative maintenance
+            programs allow our clients to reduce energy costs, increase the
+            lifespan of power systems and ensure the safe and continuous
+            operation of their electrical equipment. By reducing or eliminating
+            unexpected electrical outages and increasing power system
+            efficiency, our clients find our scheduled service and maintenance
+            programs indispensable.
             <br></br>
             <br></br>
-            We provide electrical testing, inspection, and validation services to ensure the continued safety, reliability, and operation of industrial power systems. In addition to using expertly trained testing professionals and the latest tools and equipment, our services meet or exceed all specifications set by the International Electrical Testing Association (NETA).
+            We provide electrical testing, inspection, and validation services
+            to ensure the continued safety, reliability, and operation of
+            industrial power systems. In addition to using expertly trained
+            testing professionals and the latest tools and equipment, our
+            services meet or exceed all specifications set by the International
+            Electrical Testing Association (NETA).
             <br></br>
-            <ul
-              list-style-position='outside'
-            >
+            <ul list-style-position='outside'>
               <li>
-                <strong>Acceptance Testing: </strong>Testing of new electrical equipment to guarantee performance and installation in accordance with manufacturer’s specifications.
+                <strong>Acceptance Testing: </strong>Testing of new electrical
+                equipment to guarantee performance and installation in
+                accordance with manufacturer’s specifications.
               </li>
               <li>
-                <strong>Predictive Maintenance Testing: </strong>Electrical testing for all power system components including transformers, switchgear, grounding, cables, and protective relays. Testing services include power factor, harmonic, insulation resistance and more.
+                <strong>Predictive Maintenance Testing: </strong>Electrical
+                testing for all power system components including transformers,
+                switchgear, grounding, cables, and protective relays. Testing
+                services include power factor, harmonic, insulation resistance
+                and more.
               </li>
               <li>
-                <strong>Power Systems Analysis: </strong>Performance of power quality and reliability studies including load flow, harmonics, transient stability, faults, arc flash and protective devices.
+                <strong>Power Systems Analysis: </strong>Performance of power
+                quality and reliability studies including load flow, harmonics,
+                transient stability, faults, arc flash and protective devices.
               </li>
               <li>
-                <strong>Infrared Thermography: </strong>Infrared testing to identify high resistance and fault prone areas, making it possible to minimize downtime and perform preventive maintenance as quickly and efficiently as possible.
+                <strong>Infrared Thermography: </strong>Infrared testing to
+                identify high resistance and fault prone areas, making it
+                possible to minimize downtime and perform preventive maintenance
+                as quickly and efficiently as possible.
               </li>
             </ul>
           </Typography>
@@ -159,7 +180,7 @@ function TestingMaintenance() {
           justifyContent='center'
           flexDirection='column'
         >
-           <Box
+          <Box
             display='flex'
             flexDirection='column'
             alignItems='center'
@@ -203,7 +224,9 @@ function TestingMaintenance() {
               <li>Contact Resistance</li>
             </ul>
             <div style={styles.mobileLists}>
-              <li>Protective Relay Calibration, Metering, Testing & Programming</li>
+              <li>
+                Protective Relay Calibration, Metering, Testing & Programming
+              </li>
               <li>Grounding & Bonding Testing - Commercial Pools</li>
               <li>Circuit Breaker Testing, Repair & Retrofit</li>
               <li>Motor Testing</li>
@@ -218,15 +241,17 @@ function TestingMaintenance() {
           <Box
             display='flex'
             flexWrap='wrap'
+            justifyContent='center'
+            columnGap='20px'
             // my='40px'
           >
-            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px' width='100%'>
-                <img src={third_image} alt='three trucks' width='100%' />
+            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
+              <img src={third_image} alt='three trucks' width='100%' />
             </Box>
             <Box
               flex='1'
               alignSelf='center'
-              ml='40px'
+              // ml='40px'
               py='20px'
               order={useMobile ? "1" : "2"}
               minWidth='350px'
@@ -257,16 +282,16 @@ function TestingMaintenance() {
         </InnerContainer>
         {/* second double feature section */}
         <InnerContainer>
-        <Box
-          display='flex'
-          flexWrap='wrap'
-          // my='40px'
-          justifyContent='center'
-        >
+          <Box
+            display='flex'
+            flexWrap='wrap'
+            // my='40px'
+            justifyContent='center'
+          >
             <Box
               flex='1'
               alignSelf='center'
-              mr='10px'
+              // mr='10px'
               py='20px'
               minWidth='350px'
             >
@@ -294,7 +319,7 @@ function TestingMaintenance() {
             </Box>
 
             <Box flex='1' width='100%' minWidth='350px'>
-                <img src={fourth_image} alt='men working' width='100%' />
+              <img src={fourth_image} alt='men working' width='100%' />
             </Box>
           </Box>
         </InnerContainer>
@@ -307,12 +332,12 @@ function TestingMaintenance() {
             // my='40px'
           >
             <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
-                <img src={fifth_image} alt='red hose' width='100%' />
+              <img src={fifth_image} alt='red hose' width='100%' />
             </Box>
             <Box
               flex='1'
               alignSelf='center'
-              ml='40px'
+              // ml='40px'
               py='20px'
               order={useMobile ? "1" : "2"}
               minWidth='350px'
@@ -329,7 +354,10 @@ function TestingMaintenance() {
                 mobile transformer oil processing
               </Typography>
               <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
-                MetroTek provides mobile transformer oil processing services using high-performance insulating oil processing machines to restore the performance and extend the service life of any make of oil-filled transformer.
+                MetroTek provides mobile transformer oil processing services
+                using high-performance insulating oil processing machines to
+                restore the performance and extend the service life of any make
+                of oil-filled transformer.
               </Typography>
             </Box>
           </Box>
@@ -350,7 +378,6 @@ function TestingMaintenance() {
             <img src={sixth_image} alt='testing truck' width='100%' />
           </Box>
         </InnerContainer>
-
       </MainContainer>
       <GreyGallery />
     </>

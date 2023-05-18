@@ -7,12 +7,12 @@ import aboutHome from "../images/About/AboutHome(2000X1000).jpg";
 import leftImage_1 from "../images/About/about-Left1(1024X768).jpg";
 import belyea_image from "../images/About/4.3-1 (2000X1000).jpg";
 import belyea_overhead from "../images/About/4.3-2 R (1024X768).jpg";
-import BrewLogo from "../images/logos/bew_logo.jpg";
+import BrewLogo from "../images/logos/Bew2_logo.png";
 import GreenLogo from "../images/About/4.4.1.jpeg";
 import OrangeLogo from "../images/About/4.4.2.jpeg";
 import men_walking from "../images/About/about-lastImage(2000X1000).jpg";
 
-import useMediaQuery from '@mui/material/useMediaQuery';
+import useMediaQuery from "@mui/material/useMediaQuery";
 import "../index.css";
 import "../about.css";
 
@@ -26,8 +26,8 @@ function About() {
     },
   };
 
-  const matches = useMediaQuery('(max-width:600px)');
-  const useMobile = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery("(max-width:600px)");
+  const lessThan780 = useMediaQuery("(max-width:780px)");
   return (
     <>
       <Box className='image-container'>
@@ -40,11 +40,7 @@ function About() {
       </Box>
 
       <MainContainer>
-        <InnerContainer
-          display='flex'
-          justifyContent='center'
-          flexDirection='column'
-        >
+        <InnerContainer>
           <Box
             display='flex'
             flexDirection='column'
@@ -72,117 +68,107 @@ function About() {
               borderRadius='10px'
               mt='15px'
             />
-            </Box>
-            {/* <Box
+          </Box>
+          {/* <Box
               // borderTop='5px solid #244ba6'
               maxWidth='30%'
               margin='40px auto 0'
             /> */}
-            <Typography
-               fontSize='17px'
-               fontWeight='300'
-               fontFamily='Lato'
-               maxWidth='800px'
-               mb='45px'
-            >
-              Founded in 1974, MetroTek is a privately owned full service
-              industrial, commercial & utility-scale power infrastructure
-              solutions specialist capable of providing critical electrical
-              services involving engineering, installation, repair, maintenance
-              and testing of all types of electrical infrastructure up through
-              345kV.
-            </Typography>
+          <Typography
+            fontSize='17px'
+            fontWeight='300'
+            fontFamily='Lato'
+            maxWidth='800px'
+            mb='45px'
+          >
+            Founded in 1974, MetroTek is a privately owned full service
+            industrial, commercial & utility-scale power infrastructure
+            solutions specialist capable of providing critical electrical
+            services involving engineering, installation, repair, maintenance
+            and testing of all types of electrical infrastructure up through
+            345kV.
+          </Typography>
         </InnerContainer>
 
-          {/* top image section */}
+        {/* top image section */}
+        <InnerContainer>
           <Box
             display='flex'
             flexWrap='wrap'
-            //width="100%"
-            maxWidth='1200px'
+            width='100%'
             justifyContent='center'
-            alignItems='center'
+            columnGap='25px'
           >
-            <Box maxWidth='500px' minWidth='300px'>
+            <Box minWidth='350px' maxWidth='500px'>
               <img
                 src={leftImage_1}
                 alt='leftImg_1'
                 width='100%'
-                //width='585px'
-                // height='483px'
+                style={{ "border-radius": "5px" }}
               />
             </Box>
-            <Box
-              maxWidth='500px'
-              minWidth='300px'
-              //paddingTop="10px"
-            >
-              <img
-                src={BrewLogo}
-                alt='brew logo'
-                width='100%'
-              />
+            <Box minWidth='350px' maxWidth='350px'>
+              <img src={BrewLogo} alt='brew logo' width='100%' />
             </Box>
           </Box>
+        </InnerContainer>
 
-          {/* verbiage section */}
-          <Box
-            display='flex'
-            maxWidth='1200px'
-            justifyContent='center'
-            alignItems='center'
-          >
-            <Box maxWidth='700px'>
-              <p>
-                We are proud of our deep 45 year history providing value to our
-                diverse customer base. We consider ourselves to be among the
-                best in the business and take pride in our work product being
-                delivered on-time, within budget and with a continuous focus on
-                safety.
-              </p>
-              <h1>competitive advantages</h1>
-              <h3>Reputation</h3>
-              <p>
-                We have provided hundreds of customers decades of consistent,
-                reliable and responsive service that has allowed us to grow
-                almost entirely on word-of-mouth recommentations. Most of our
-                clients come from positive referrals and recommendations from
-                existing clients.
-              </p>
-              <h3>Customer Service</h3>
-              <p>
-                The strongest component of MetroTek's reputation has been its
-                commitment to customer service. Through its emergency
-                responsiveness, troubleshooting abilities and on-demand service
-                and support, MetroTek has developed a flawless reputation within
-                the region's industrial community. Superior customer service is
-                further enhanced by quick turnaround for price requests, quick
-                decisions and quick reactions.
-              </p>
-              <h3>Experienced Management</h3>
-              <p>
-                MetroTek's management team combines generations of experience in
-                the electrical construction industry that translates into vast
-                technical knowledge and skill. Management continues to invest in
-                the latest systems and innovations in the industry. Ownership
-                works in the field with the men which renders construction and
-                service excellence.
-              </p>
-            </Box>
+        {/* verbiage section */}
+        <Box
+          display='flex'
+          maxWidth='1200px'
+          justifyContent='center'
+          alignItems='center'
+        >
+          <Box maxWidth='700px'>
+            <p>
+              We are proud of our deep 45 year history providing value to our
+              diverse customer base. We consider ourselves to be among the best
+              in the business and take pride in our work product being delivered
+              on-time, within budget and with a continuous focus on safety.
+            </p>
+            <h1>competitive advantages</h1>
+            <h3>Reputation</h3>
+            <p>
+              We have provided hundreds of customers decades of consistent,
+              reliable and responsive service that has allowed us to grow almost
+              entirely on word-of-mouth recommentations. Most of our clients
+              come from positive referrals and recommendations from existing
+              clients.
+            </p>
+            <h3>Customer Service</h3>
+            <p>
+              The strongest component of MetroTek's reputation has been its
+              commitment to customer service. Through its emergency
+              responsiveness, troubleshooting abilities and on-demand service
+              and support, MetroTek has developed a flawless reputation within
+              the region's industrial community. Superior customer service is
+              further enhanced by quick turnaround for price requests, quick
+              decisions and quick reactions.
+            </p>
+            <h3>Experienced Management</h3>
+            <p>
+              MetroTek's management team combines generations of experience in
+              the electrical construction industry that translates into vast
+              technical knowledge and skill. Management continues to invest in
+              the latest systems and innovations in the industry. Ownership
+              works in the field with the men which renders construction and
+              service excellence.
+            </p>
           </Box>
+        </Box>
         <InnerContainer>
           <img
             src={belyea_image}
             alt='belyea_image'
-            // width='1170px'
-            // height='585px'
             width='100%'
             margin='50px auto'
+            style={{ "border-radius": "5px" }}
           />
         </InnerContainer>
         <InnerContainer>
-          <Box display='flex' maxHeight='500px' padding='10px'>
-            <Box>
+          <Box display='flex' flexWrap='wrap' columnGap='15px' margin='25px 0'>
+            <Box flex='1' minWidth='350px'>
               <h1 className='divider'>channel partner</h1>
               <p>
                 We're co-located in Easton, PA at the headquarters of Belyea
@@ -194,35 +180,38 @@ function About() {
                 Equipment.
               </p>
             </Box>
-            <Box>
+            <Box flex='1' minWidth='350px'>
               <img
                 src={belyea_overhead}
                 alt='belyea_overhead'
-                width='608px'
-                height='460px'
+                width='100%'
+                style={{ "border-radius": "5px" }}
               />
             </Box>
           </Box>
         </InnerContainer>
-          {/* logo section  */}
+        {/* logo section  */}
         <InnerContainer>
           <Box
             display='flex'
-            //alignItems="center"
-            width='100%'
-            maxHeight='500px'
-            padding='10px'
-            flexWrap= {matches ? 'wrap': undefined}
+            flexWrap='wrap'
+            justifyContent='center'
+            alignItems='center'
+            margin='25px 0'
           >
             <Box
               flex='1'
               flexDirection='column'
               textAlign='center'
-
-              width='100%'
+              minWidth='350px'
             >
-              <Box>
-                <Box padding='20px'>
+              <Box
+                display='flex'
+                flexDirection={lessThan780 ? "row" : "column"}
+                alignItems='center'
+                justifyContent='center'
+              >
+                <Box>
                   <img
                     src={GreenLogo}
                     alt='green_logo'
@@ -240,7 +229,7 @@ function About() {
                 </Box>
               </Box>
             </Box>
-            <Box flex='1' justifyContent='center' width='100%'>
+            <Box flex='1' minWidth='350px' justifyContent='center'>
               <Box>
                 <h1>safety training</h1>
                 <h3>
@@ -265,19 +254,14 @@ function About() {
             </Box>
           </Box>
         </InnerContainer>
-          {/* bottom image section */}
-          <InnerContainer>
-            <Box>
-              <img
-                src={men_walking}
-                alt='men_walking'
-                width='1170px'
-                height='500px'
-              />
-            </Box>
-          </InnerContainer>
-          {/* bottom section */}
-          <InnerContainer
+        {/* bottom image section */}
+        <InnerContainer>
+          <Box>
+            <img src={men_walking} alt='men_walking' width='100%' />
+          </Box>
+        </InnerContainer>
+        {/* bottom section */}
+        <InnerContainer
           display='flex'
           justifyContent='center'
           flexDirection='column'
@@ -289,23 +273,22 @@ function About() {
             mb='20px'
           >
             {/* <Box width='683px'> */}
-              <h1 id='align_center'>careers</h1>
-              <p>
-                We've been in continuous operation for over 45 years. We promote
-                an exciting, challenging and safe work environment, empowering
-                workers to grow and evolve with our business.
-              </p>
-              <p>
-                Please contact us for open employement opportunities at:
-                 <strong>hr@metroelectrical.com</strong>
-              </p>
+            <h1 id='align_center'>careers</h1>
+            <p>
+              We've been in continuous operation for over 45 years. We promote
+              an exciting, challenging and safe work environment, empowering
+              workers to grow and evolve with our business.
+            </p>
+            <p>
+              Please contact us for open employement opportunities at:
+              <strong>hr@metroelectrical.com</strong>
+            </p>
             {/* </Box> */}
           </Box>
-          </InnerContainer>
-    </MainContainer>
+        </InnerContainer>
+      </MainContainer>
     </>
   );
 }
 
 export default About;
-
