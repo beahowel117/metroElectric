@@ -53,6 +53,7 @@ function TestingMaintenance() {
           Testing & Maintenance
         </Typography>
       </Box>
+
       <MainContainer>
         <InnerContainer
           display='flex'
@@ -63,7 +64,7 @@ function TestingMaintenance() {
             display='flex'
             flexDirection='column'
             alignItems='center'
-            mt='20px'
+            mt='30px'
           >
             <img src={first_image} alt='testing' width='100%' />
           </Box>
@@ -106,26 +107,29 @@ function TestingMaintenance() {
             fontWeight='300'
             fontFamily='Lato'
             maxWidth='800px'
-            mb='45px'
+            mb='30px'
           >
             Our commercial and industrial clients depend on the performance of their electricity delivery systems. Our preventative maintenance programs allow our clients to reduce energy costs, increase the lifespan of power systems and ensure the safe and continuous operation of their electrical equipment. By reducing or eliminating unexpected electrical outages and increasing power system efficiency, our clients find our scheduled service and maintenance programs indispensable.
             <br></br>
             <br></br>
             We provide electrical testing, inspection, and validation services to ensure the continued safety, reliability, and operation of industrial power systems. In addition to using expertly trained testing professionals and the latest tools and equipment, our services meet or exceed all specifications set by the International Electrical Testing Association (NETA).
             <br></br>
-            <br></br>
-            <li>
-              <strong>Acceptance Testing: </strong>Testing of new electrical equipment to guarantee performance and installation in accordance with manufacturer’s specifications.
-            </li>
-            <li>
-              <strong>Predictive Maintenance Testing: </strong>Electrical testing for all power system components including transformers, switchgear, grounding, cables, and protective relays. Testing services include power factor, harmonic, insulation resistance and more.
-            </li>
-            <li>
-              <strong>Power Systems Analysis: </strong>Performance of power quality and reliability studies including load flow, harmonics, transient stability, faults, arc flash and protective devices.
-            </li>
-            <li>
-              <strong>Infrared Thermography: </strong>Infrared testing to identify high resistance and fault prone areas, making it possible to minimize downtime and perform preventive maintenance as quickly and efficiently as possible.
-            </li>
+            <ul
+              list-style-position='outside'
+            >
+              <li>
+                <strong>Acceptance Testing: </strong>Testing of new electrical equipment to guarantee performance and installation in accordance with manufacturer’s specifications.
+              </li>
+              <li>
+                <strong>Predictive Maintenance Testing: </strong>Electrical testing for all power system components including transformers, switchgear, grounding, cables, and protective relays. Testing services include power factor, harmonic, insulation resistance and more.
+              </li>
+              <li>
+                <strong>Power Systems Analysis: </strong>Performance of power quality and reliability studies including load flow, harmonics, transient stability, faults, arc flash and protective devices.
+              </li>
+              <li>
+                <strong>Infrared Thermography: </strong>Infrared testing to identify high resistance and fault prone areas, making it possible to minimize downtime and perform preventive maintenance as quickly and efficiently as possible.
+              </li>
+            </ul>
           </Typography>
         </InnerContainer>
         {/* second image container */}
@@ -138,7 +142,7 @@ function TestingMaintenance() {
             display='flex'
             flexDirection='column'
             alignItems='center'
-            mt='20px'
+            // mt='20px'
           >
             <img src={second_image} alt='testing' width='100%' />
           </Box>
@@ -181,10 +185,10 @@ function TestingMaintenance() {
             fontWeight='300'
             fontFamily='Lato'
             maxWidth='800px'
-            // mb='45px'
+            mb='30px'
           >
             Commissioning & Maintenance Testing:
-            <ul>
+            <ul list-style-type='circle'>
               <li>Very Low Frequency (VLF)</li>
               <li>Tan-Delta</li>
               <li>Turns Ratio</li>
@@ -209,7 +213,7 @@ function TestingMaintenance() {
             flexWrap='wrap'
             // my='40px'
           >
-            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
+            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px' width='100%'>
                 <img src={third_image} alt='three trucks' width='100%' />
             </Box>
             <Box
@@ -292,6 +296,7 @@ function TestingMaintenance() {
           <Box
             display='flex'
             flexWrap='wrap'
+            ustifyContent='center'
             // my='40px'
           >
             <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
@@ -340,8 +345,7 @@ function TestingMaintenance() {
         </InnerContainer>
 
       </MainContainer>
-        <GreyGallery />
-
+      <GreyGallery />
     </>
   );
 }
