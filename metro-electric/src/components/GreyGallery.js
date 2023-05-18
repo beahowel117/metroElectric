@@ -67,7 +67,7 @@ function GreyGallery() {
           {services.map(({ img, text, link }) =>
             !img ? (
               <Card
-                variant='outlined'
+                // variant='outlined'
                 sx={{ width: 320, backgroundColor: "#aba8a7", border: "none" }}
               >
                 <Typography
