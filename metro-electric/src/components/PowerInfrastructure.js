@@ -165,17 +165,25 @@ function PowerInfrastructure() {
           </Box>
         </InnerContainer>
         <InnerContainer>
-          <img src={pi_slider2} alt='wirring' width='100%' />
+          <Box display='flex' flexWrap='wrap' my='40px'>
+            <Box flex='1' minWidth='350px'>
+              <Carousel
+                autoPlay
+                infiniteLoop
+                showArrows
+                showThumbs={false}
+                showIndicators={false}
+              >
+                <img src={slider_1} alt='slider 1' width='100%' />
+
+                <img src={slider_2} alt='slider 2' width='100%' />
+              </Carousel>
+            </Box>
+          </Box>
         </InnerContainer>
         <InnerContainer>
           <Box display='flex' flexWrap='wrap' my='40px' justifyContent='center'>
-            <Box
-              flex='1'
-              alignSelf='center'
-              mr='10px'
-              py='20px'
-              minWidth='350px'
-            >
+            <Box flex='1' alignSelf='center' py='20px' minWidth='350px'>
               <Typography
                 color='#244ba6'
                 textAlign='left'
