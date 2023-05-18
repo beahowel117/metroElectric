@@ -6,8 +6,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
 import BrewLogo from "../images/logos/bew_logo.jpg";
+import BrewLogo2 from "../images/logos/Bew2_logo.png";
 import contact from "../images/Contact/contact(2000x1000).jpg";
 import "../index.css";
+import MainContainer from "./MainContainer";
+import InnerContainer from "./InnerContainer";
 
 const Contact = () => {
   const styles = {
@@ -96,24 +99,28 @@ const Contact = () => {
         }
         </Box>
 
+    <MainContainer>
       <Box
         display='flex'
         justifyContent='space-around'
-        marginTop={matches? '30px': '50px'}
+        marginTop={matches? '20px': '50px'}
         flexWrap= {matches ? 'wrap': undefined}
         marginBottom={matches? '25px': '5px'}
       >
          <Box
            order='1'
          >
-          <img src={BrewLogo}
+          <img src={BrewLogo2}
             alt="Footer Logos"
             width='193px'
             height='194px'
+            // marginRight='20px'
           />
         </Box>
         <Box
           order={matches ? '1': '2'}
+          minWidth={matches ? "100%" : undefined}
+          px='15px'
         >
           <Typography
             fontSize='24px'
@@ -140,50 +147,66 @@ const Contact = () => {
         <Box
          order={matches ? '2': '3'}
          marginTop='25px'
+         marginLeft='10px'
         >
-          <img src={NECALogo} alt="Footer Logos"/>
+          <img src={NECALogo} alt="Footer Logos" />
         </Box>
       </Box>
 
+    <Box
+      maxWidth='797px'
+      margin='40px auto 0'
+      px='20px'
+    >
       <Box
-         borderTop='14px solid blue'
-         maxWidth='982px'
-         margin='40px auto 0'
-      >
+        backgroundColor='#244ba6'
+        height='14px'
+        maxWidth='100%'
+        margin='10px auto 0'
+        borderRadius='5px'
+      />
           <Box
           display='flex'
           justifyContent='center'
           marginTop='20px'
           >
-          <NavLink
-              to="/"
-            >
-              <img
+          <NavLink to="/" >
+            <img
               src={MetroTekLogo}
               alt="Footer Logo"
               style={styles.footerLogo}
-              />
+            />
             </NavLink>
           </Box>
-        </Box>
-        {useMobile ? (
+
+    {useMobile ? (
       <>
         <Box
+          marginTop='10px'
           display='flex'
-          margin='10px 0 30px'
+          justifyContent='center'
+           height='86px'
         >
-          {navButtonsMobile.map((el, index) => (
-            <Button
-                key={index}
-                to={el.link}
-                component={NavLink}
-                sx={{
-                color :'blue'
-                }}
+          {navButtonsMobile.map((el, index) => {
+            const isFeaturedWork = el.button === "Feature Work";
+            return (
+            <Box
+              textAlign={isFeaturedWork ? "center" : undefined}
+              alignSelf={isFeaturedWork ? "start" : undefined}
             >
-              {el.button}
-            </Button>
-          ))}
+              <Button
+                  key={index}
+                  to={el.link}
+                  component={NavLink}
+                  sx={{
+                  color :'blue'
+                  }}
+              >
+                {el.button}
+              </Button>
+            </Box>
+            );
+            })}
         </Box>
       </>
       ):(
@@ -191,7 +214,7 @@ const Contact = () => {
         <Box
           display='flex'
           justifyContent='space-around'
-          marginTop='50px'
+          margin='10px 0 30px'
         >
           {navButtons.map((el, index) => (
               <Button
@@ -211,27 +234,6 @@ const Contact = () => {
           </Box>
           </>
        )}
-        {/* <Box
-          display='flex'
-          justifyContent='center'
-          marginTop='10px'
-        >
-          {navButtons.map((el, index) => (
-            <Button
-                key={index}
-                to={el.link}
-                component={NavLink}
-                sx={{
-                color : el.link === location ? "green" : "black",
-                  ":hover":{
-                    color:'green'
-                  }
-                }}
-            >
-              {el.button}
-            </Button>
-          ))}
-        </Box> */}
 
         <Box>
         <Typography
@@ -243,6 +245,11 @@ const Contact = () => {
            {footerDisclosure}
         </Typography>
       </Box>
+      </Box>
+
+
+
+      </MainContainer>
     </>
   );
 };

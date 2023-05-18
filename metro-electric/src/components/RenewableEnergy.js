@@ -38,58 +38,63 @@ function RenewableEnergy() {
 
 
       <MainContainer>
-        <Box
-          display='flex'
-          padding='40px'
-          maxWidth='1000px'
-          margin='auto'
-          flexWrap='wrap'
-        >
-          <Box
-            maxWidth='600px'
-            minWidth='400px'
-            marginTop='45px'
-            flex='1'
-            paddingTop='auto'
-          >
-            <img src={renewable_energy} alt='Renewable Energy' width='100%' />
-          </Box>
+        <InnerContainer>
           <Box
             display='flex'
-            flexDirection='column'
-            padding='20px 0px 0 50px'
-            flex='1'
+            flexWrap='wrap'
+            columnGap='30px'
+            alignItems='center'
           >
-            <Box marginBottom='-16px'>
-              <h1>renewable energy</h1>
+            <Box
+              display='flex'
+              justifyContent='center'
+              minWidth='350px'
+              marginTop='40px'
+              flex='1'
+              paddingTop='auto'
+            >
+              <img src={renewable_energy} alt='Renewable Energy' width='100%' />
             </Box>
-            <Box marginBottom='-10px'>
-              <h3>Serving the renewable future of power systems</h3>
+            <Box
+              display='flex'
+              flexDirection='column'
+              flex='1'
+              minWidth='350px'
+              width={{
+                      xs:'100%',
+                      md:''
+              }}
+            >
+              <Box marginBottom='-16px'>
+                <h1>renewable energy</h1>
+              </Box>
+              <Box marginBottom='-10px'>
+                <Typography>Serving the renewable future of power systems</Typography>
+              </Box>
+              <p>
+                We assist clients to deploy a wide range of renewable energy options
+                with services that include construction, inspection, installation,
+                maintenance, repair, and removal of renewable energy power
+                distribution systems.
+                <br></br>
+                <br></br>
+                Our renewable energy support services include engineering,
+                procurement, construction, lightning protection, underground cable,
+                SCADA systems, substations, switchgear, inverters, utility grid
+                interconnection &amp; optimization, testing &amp; commissioning, and
+                quality control &amp; assurance.
+              </p>
             </Box>
-            <p>
-              We assist clients to deploy a wide range of renewable energy options
-              with services that include construction, inspection, installation,
-              maintenance, repair, and removal of renewable energy power
-              distribution systems.
-              <br></br>
-              <br></br>
-              Our renewable energy support services include engineering,
-              procurement, construction, lightning protection, underground cable,
-              SCADA systems, substations, switchgear, inverters, utility grid
-              interconnection &amp; optimization, testing &amp; commissioning, and
-              quality control &amp; assurance.
-            </p>
           </Box>
-        </Box>
+        </InnerContainer>
 
         <Box
           display='flex'
           flexDirection='column'
-          // justifyContent='center'
-          // alignItems='center'
-          maxWidth='1160px'
+          justifyContent='center'
+          maxWidth='1150px'
           width='100%'
-          margin='0 50px 50px 50px'
+          margin='30px 50px 50px 50px'
         >
           <AspectRatio objectFit='cover'>
             <img src={re_last} alt='renewable energy' />
