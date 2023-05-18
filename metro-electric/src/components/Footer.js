@@ -102,19 +102,32 @@ function Footer() {
       {useMobile ? (
         <>
           {/* <ScrollToTop /> */}
-          <Box display='flex' justifyContent='center' marginTop='30px'>
-            {navButtonsMobile.map((el, index) => (
-              <Button
-                key={index}
-                to={el.link}
-                component={NavLink}
-                sx={{
-                  color: "blue",
-                }}
-              >
-                {el.button}
-              </Button>
-            ))}
+          <Box
+            display='flex'
+            justifyContent='center'
+            marginTop='30px'
+            height='86px'
+          >
+            {navButtonsMobile.map((el, index) => {
+              const isFeaturedWork = el.button === "Featured Work";
+              return (
+                <Box
+                  textAlign={isFeaturedWork ? "center" : undefined}
+                  alignSelf={isFeaturedWork ? "start" : undefined}
+                >
+                  <Button
+                    key={index}
+                    to={el.link}
+                    component={NavLink}
+                    sx={{
+                      color: "blue",
+                    }}
+                  >
+                    {el.button}
+                  </Button>
+                </Box>
+              );
+            })}
           </Box>
         </>
       ) : (
