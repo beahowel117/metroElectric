@@ -121,6 +121,7 @@ function PowerInfrastructure() {
         <InnerContainer>
           <img src={first_image} alt='Electrical Truck' width='100%' />
         </InnerContainer>
+
         <InnerContainer>
           <Box display='flex' flexWrap='wrap' my='40px'>
             <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
