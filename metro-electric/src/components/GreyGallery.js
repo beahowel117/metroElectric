@@ -100,12 +100,6 @@ function GreyGallery() {
                     margin: "auto",
                     padding: "5px",
                   }}
-                  // textColor='white'
-                  // fontWeight='800'
-                  // fontSize='20px'
-                  //textAlign='center'
-                  // margin='auto'
-                  // padding='5px'
                   component={NavLink}
                   to={link}
                 >

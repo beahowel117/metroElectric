@@ -45,9 +45,21 @@ function PowerInfrastructure() {
             style={styles.responsiveHero}
           />
         </Box>
-        {/* <Typography className='lineUp' fontSize='40px' fontWeight='600'>
-          power infrastructure
-        </Typography> */}
+        <Typography
+          className='lineUp'
+          color='#f5f5f5'
+          fontWeight='600'
+          sx={{ animationIterationCount: "1" }}
+          fontSize={{
+            lg: 35,
+            md: 30,
+            sm: 25,
+            xs: 0,
+          }}
+          maxWidth={{ sm: "580px", md: "900px" }}
+        >
+          Power Infrastructure
+        </Typography>
       </Box>
       <MainContainer>
         <InnerContainer

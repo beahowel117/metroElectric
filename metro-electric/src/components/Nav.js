@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink ,Link as RouterLink } from "react-router-dom";
+import { NavLink, Link as RouterLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   Button,
@@ -68,9 +68,9 @@ const Nav = () => {
       color: "white",
       fontSize: "20px",
       fontWeight: "900",
-      textDecoration:"none",
-      boxShadow:"none",
-      underline: "none"
+      textDecoration: "none",
+      boxShadow: "none",
+      underline: "none",
     },
     menuItem: {
       width: "190px",
@@ -86,27 +86,27 @@ const Nav = () => {
     {
       img: PIC,
       text: "Power Infrastructure Construction",
-      link: "/services/power-infrastructure"
+      link: "/services/power-infrastructure",
     },
     {
       img: TandM,
       text: "Testing & Maintenance",
-      link: "/services/testing-maintenance"
+      link: "/services/testing-maintenance",
     },
     {
       img: ER,
       text: "Emergency Response",
-      link: "/services/emergency-response"
+      link: "/services/emergency-response",
     },
     {
       img: CEA,
       text: "Controlled Environment Agriculture",
-      link: "/services/controlled-environment-agriculture"
+      link: "/services/controlled-environment-agriculture",
     },
     {
       img: RE,
       text: "Renewable Energy",
-      link: "/services/renewable-energy"
+      link: "/services/renewable-energy",
     },
   ];
 
@@ -167,7 +167,7 @@ const Nav = () => {
         <Box component={RouterLink} to='/'>
           <img
             src={isScrolling ? MetroTekLogo : NavLogo}
-            boxShadow={isScrolling? "none" : '10px 10px #244ba6'}
+            boxShadow={isScrolling ? "none" : "10px 10px #244ba6"}
             alt='Navigation Logo'
             width={isScrolling ? "200px" : "300px"}
           />
@@ -196,14 +196,14 @@ const Nav = () => {
                 fontSize: isScrolling ? "17px" : "20px",
                 fontWeight: "900",
                 color: isScrolling ? "#244ba6" : "white",
-                textShadow: isScrolling? "none" : '0px 1px 2px black'
+                textShadow: isScrolling ? "none" : "0px 1px 2px black",
               }}
             >
               {name}
               {name === "Services" ? (
-                <KeyboardArrowDownIcon className="shadow"/>
+                <KeyboardArrowDownIcon className='shadow' />
               ) : null || (name === "Services" && isScrolling) ? (
-                <KeyboardArrowDownIcon size='small' className="noShadow"/>
+                <KeyboardArrowDownIcon size='small' className='noShadow' />
               ) : null}
             </Button>
           ))}
@@ -235,7 +235,11 @@ const Nav = () => {
                       sx={styles.menuItem}
                     >
                       <>
-                        <CardCover sx={{ borderRadius: "0px" }}>
+                        <CardCover
+                          sx={{
+                            borderRadius: "0px",
+                          }}
+                        >
                           <img width='100%' height='100%' src={img} alt='' />
                         </CardCover>
                         <CardCover
@@ -248,12 +252,12 @@ const Nav = () => {
                       </>
 
                       <Typography
-                      {...styles.imgText}
-                      component={NavLink}
-                      to={link}
-                      sx={{
-                        textDecoration: "none"
-                      }}
+                        {...styles.imgText}
+                        component={NavLink}
+                        to={link}
+                        sx={{
+                          textDecoration: "none",
+                        }}
                       >
                         {text}
                       </Typography>
