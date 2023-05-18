@@ -176,7 +176,7 @@ const Nav = () => {
         <Box
           display='flex'
           alignItems='center'
-          justifyContent='space-around'
+          // justifyContent='space-around'
           // mb='10px'
           maxWidth='600px'
           width='100%'
