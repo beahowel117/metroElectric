@@ -10,6 +10,7 @@ function MainContainer({ children }) {
       display='flex'
       flexDirection='column'
       alignItems='center'
+      fontFamily='Lato'
     >
       {children}
     </Box>
