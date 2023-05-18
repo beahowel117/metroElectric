@@ -2,6 +2,8 @@ import React from "react";
 import MainContainer from "./MainContainer";
 import InnerContainer from "./InnerContainer";
 import { ImageList, ImageListItem, Box } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import img1 from "../images/Portfolio/CEA/1.09.JPG";
 import img2 from "../images/Portfolio/CEA/1.10.jpg";
 import img3 from "../images/Portfolio/CEA/1.11.JPG";
@@ -100,12 +102,18 @@ const imgArray = [
   img46,
 ];
 
+
 function CEA() {
+  const matches = useMediaQuery("(max-width:600px)");
   return (
     <MainContainer>
       <InnerContainer>
         <Box>
-          <ImageList variant='masonry' cols={3} gap={8}>
+        <ImageList
+            variant='masonry'
+            cols={matches ? 1: 3}
+            gap={8}
+          >
             {imgArray.map((item) => (
               <ImageListItem>
                 <img src={item} alt='electric overhead' loading='lazy' />

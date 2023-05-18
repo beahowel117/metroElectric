@@ -1,5 +1,6 @@
 import React from "react";
 import { ImageList, ImageListItem, Box } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import img1s from "../images/OverheadConstruction/01s.JPG";
 import img2s from "../images/OverheadConstruction/02s.jpg";
 import img3 from "../images/OverheadConstruction/03.jpg";
@@ -29,11 +30,16 @@ function Overhead() {
     img10s,
     img11,
   ];
+  const matches = useMediaQuery("(max-width:600px)")
   return (
     <MainContainer>
       <InnerContainer>
         <Box>
-          <ImageList variant='masonry' cols={3} gap={8}>
+        <ImageList
+            variant='masonry'
+            cols={matches ? 1: 3}
+            gap={8}
+          >
             {imgArray.map((item) => (
               <ImageListItem>
                 <img src={item} alt='electric overhead' loading='lazy' />
