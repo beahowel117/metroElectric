@@ -7,12 +7,15 @@ import GreyGallery from "./GreyGallery";
 import MainContainer from "./MainContainer";
 import InnerContainer from "./InnerContainer";
 
-import ca_pipes from "../images/Services/ca_pipes.jpeg";
 import ca_cover from "../images/Services/ca_cover.jpg";
 import ca_slider_1 from "../images/Services/ca_slider1.jpg";
 import ca_slider_2 from "../images/Services/ca_slider2.jpeg";
 import ca_slider_3 from "../images/Services/ca_slider3.jpeg";
 import ca_slider_4 from "../images/Services/ca_slider4.jpeg";
+import mini_slider_1 from "../images/Services/ca_minislider_1.jpg";
+import mini_slider_2 from "../images/Services/ca_minislider_2.jpg";
+import mini_slider_3 from "../images/Services/ca_minislider_3.jpg";
+import mini_slider_4 from "../images/Services/ca_minislider_4.jpg";
 
 function ControlledAgriculture() {
   const styles = {
@@ -49,46 +52,34 @@ function ControlledAgriculture() {
           justifyContent='center'
           alignItems='center'
           flexDirection='column'
-          width='100%'
-          // px='45px'
         >
-          <InnerContainer
-            display='flex'
-            justifyContent='center'
-            flexDirection='column'
-          >
+          <InnerContainer>
             <Box
               display='flex'
               justifyContent='center'
               flexDirection='column'
               mb='20px'
-              marginTop='30px'
+              marginTop='40px'
             >
               <Carousel
                 showThumbs={false}
                 infiniteLoop
                 autoPlay
                 showIndicators={true}
-                // maxWidth="600px"
                 width='100%'
               >
                 {carousel_1_Content.map(({ img }) => (
-                  <div>
-                    <img
-                      src={img}
-                      alt='controlled agriculture'
-                      // width='90px'
-                      width='100%'
-                    />
-                  </div>
+                  <Box>
+                    <img src={img} alt='controlled agriculture' width='100%' />
+                  </Box>
                 ))}
               </Carousel>
             </Box>
           </InnerContainer>
 
           <InnerContainer>
-            <Box display='flex' flexWrap='wrap' my='40px'>
-              <Box flex='1' alignSelf='center' mr='10px' py='20px'>
+            <Box display='flex' flexWrap='wrap' my='40px' columnGap='15px'>
+              <Box flex='1' alignSelf='center' py='20px' minWidth='350px'>
                 <h1 textAlign='left'>controlled environment agriculture</h1>
                 <h3>Design-Build Services</h3>
                 <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
@@ -102,7 +93,23 @@ function ControlledAgriculture() {
                   size with electrical loads in excess of 50 Megawatts.
                 </Typography>
               </Box>
-              <img src={ca_pipes} alt='pipes' width='600px' />
+              <Box flex='1' width='100%' minWidth='350px'>
+                <Carousel
+                  autoPlay
+                  infiniteLoop
+                  showArrows
+                  showThumbs={false}
+                  showIndicators={false}
+                >
+                  <img src={mini_slider_1} alt='slide 1 ' width='100%' />
+
+                  <img src={mini_slider_2} alt='slide 2' width='100%' />
+
+                  <img src={mini_slider_3} alt='slide 3' width='100%' />
+
+                  <img src={mini_slider_4} alt='slide 4' width='100%' />
+                </Carousel>
+              </Box>
             </Box>
           </InnerContainer>
 
