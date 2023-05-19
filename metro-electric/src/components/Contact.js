@@ -1,16 +1,13 @@
 import React from "react";
 import { NavLink, Link } from 'react-router-dom';
-import Nav from "./Nav";
 import { Typography, Button, Box } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
-import BrewLogo from "../images/logos/bew_logo.jpg";
 import BrewLogo2 from "../images/logos/Bew2_logo.png";
 import contact from "../images/Contact/contact(2000x1000).jpg";
 import "../index.css";
 import MainContainer from "./MainContainer";
-import InnerContainer from "./InnerContainer";
 
 const Contact = () => {
   const styles = {
@@ -88,15 +85,13 @@ const Contact = () => {
         <Box className='image-wrap'>
           <img src={contact} alt='Contact' style={styles.responsiveHero} />
         </Box>
-        {useMobile ? ''
-         : <Typography
+        <Typography
             className='lineUp'
             fontSize='40px'
             fontWeight='600'
           >
             contact metrotek
           </Typography>
-        }
         </Box>
 
     <MainContainer>

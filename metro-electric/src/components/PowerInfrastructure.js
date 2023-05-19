@@ -21,7 +21,6 @@ import mini_slider2_2 from "../images/Services/pi-minislider2.2(1024x768).jpg";
 import mini_slider2_3 from "../images/Services/pi-minislider2.3(1024x768).jpg";
 import mini_slider2_4 from "../images/Services/pi-minislider2.4(1024x768).jpg";
 import mini_slider2_5 from "../images/Services/pi-minislider2.5(1024x768).jpg";
-import pi_slider2 from "../images/Services/pi-slider2(2000x1000).jpg";
 import "../index.css";
 
 function PowerInfrastructure() {
@@ -54,7 +53,7 @@ function PowerInfrastructure() {
             lg: 35,
             md: 30,
             sm: 25,
-            xs: 0,
+            // xs: 0,
           }}
           maxWidth={{ sm: "580px", md: "900px" }}
         >

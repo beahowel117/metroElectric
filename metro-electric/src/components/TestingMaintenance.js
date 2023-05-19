@@ -52,7 +52,7 @@ function TestingMaintenance() {
             lg: 35,
             md: 30,
             sm: 25,
-            xs: 0,
+            // xs: 0,
           }}
           maxWidth={{ sm: "580px", md: "900px" }}
         >

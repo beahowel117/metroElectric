@@ -93,11 +93,14 @@ function FeaturedWork() {
                           sx={{
                             color:"white",
                             fontSize:{xs: "30px", md: "50px"},
+                            right: "15%",
                             fontWeight: "900",
                             position:'absolute',
-                            left: "20%",
+                            textAlign: 'center',
+                            left: "15%",
                             ...(text === "Controlled Environment Agriculture" && {
                               right:'18%',
+                              textAlign: 'center'
                             }),
                           }
                         }
