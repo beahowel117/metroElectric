@@ -89,9 +89,10 @@ function FeaturedWork() {
                     >
                       <img src={img} loading='lazy' alt='' width='100%' />
                       {/* <div className='overlayMobile'> */}
-                        <ButtonBase
+                        <Button
                           sx={{
-                            color:"white",
+                            color:"#FFFFFF",
+                            border: "2px #FFFFFF solid",
                             fontSize:{xs: "30px", md: "50px"},
                             right: "15%",
                             fontWeight: "900",
@@ -104,11 +105,12 @@ function FeaturedWork() {
                             }),
                           }
                         }
+                          variant="outline"
                           component={NavLink}
                           to={link}
                         >
                           {text}
-                        </ButtonBase>
+                        </Button>
                       </Box>
                     {/* </div> */}
                   </AspectRatio>
