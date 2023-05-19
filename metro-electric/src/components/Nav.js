@@ -342,31 +342,43 @@ const Nav = () => {
                 <List component='div' disablePadding>
                   <ListItemButton
                     sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/power-infrastructure'
                     onClick={handleDrawerClose}
                   >
                     <ListItemText primary='Power Infrastructure Construction' />
                   </ListItemButton>
                   <ListItemButton
                     sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/testing-maintenance'
                     onClick={handleDrawerClose}
                   >
                     <ListItemText primary='Testing & Maintenance' />
                   </ListItemButton>
                   <ListItemButton
                     sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/emergency-response'
                     onClick={handleDrawerClose}
                   >
                     <ListItemText primary='Emergency Response' />
                   </ListItemButton>
                   <ListItemButton
                     sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/renewable-energy'
                     onClick={handleDrawerClose}
                   >
                     <ListItemText primary='Renewable Energy' />
                   </ListItemButton>
                 </List>
               </Collapse>
-              <ListItemButton component={RouterLink} to='/work' onClick={handleDrawerClose}>
+              <ListItemButton
+                component={RouterLink}
+                to='/work'
+                onClick={handleDrawerClose}
+              >
                 <ListItemText primary='Featured Work' />
               </ListItemButton>
               <ListItemButton component={RouterLink} to='/about' onClick={handleDrawerClose}>
