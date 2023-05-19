@@ -33,9 +33,11 @@
 .imgText {
   color: white;
   font-size: 20px;
+  font-weight: 900;
   position: absolute;
   top: 50%;
-  left: 21%;
+  left: 15%;
+  right: 15%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: tanslate(-50%, -50%);
@@ -44,7 +46,7 @@
 }
 
 .imgText:hover {
-  color: blue;
-  text-shadow: 1px .5px 2px white;
+  color:#7480CB;
+  /* text-shadow: 1px .5px 2px white; */
 }
 
