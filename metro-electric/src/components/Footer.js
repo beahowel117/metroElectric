@@ -132,11 +132,7 @@ function Footer() {
         </>
       ) : (
         <>
-          <Box
-            display='flex'
-            justifyContent='space-around'
-            marginTop='50px'
-          >
+          <Box display='flex' justifyContent='space-around' marginTop='50px'>
             {navButtons.map((el, index) => (
               <Button
                 key={index}
@@ -161,6 +157,7 @@ function Footer() {
         marginTop={matches ? "20px" : "50px"}
         flexWrap={matches ? "wrap" : undefined}
         marginBottom={matches ? "25px" : "5px"}
+        alignItems='center'
       >
         <Box order='1'>
           <img

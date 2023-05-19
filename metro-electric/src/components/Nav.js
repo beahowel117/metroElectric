@@ -162,14 +162,14 @@ const Nav = () => {
         left='0'
         right='0'
         backgroundColor={isScrolling ? "white" : "transparent"}
-        pt={isScrolling ? "10px" : undefined}
+        pt='15px'
       >
-        <Box component={RouterLink} to='/'>
+        <Box component={RouterLink} to='/' px='30px'>
           <img
             src={isScrolling ? MetroTekLogo : NavLogo}
             boxShadow={isScrolling ? "none" : "10px 10px #244ba6"}
             alt='Navigation Logo'
-            width={isScrolling ? "200px" : "300px"}
+            width={isScrolling ? "200px" : "240px"}
           />
         </Box>
 
