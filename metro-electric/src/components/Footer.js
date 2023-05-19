@@ -187,11 +187,19 @@ function Footer() {
           </Typography>
           <br></br>
           <Typography fontSize='16px' textAlign='center'>
-            EMERGENCY - 888.249.4684
+            EMERGENCY - <a href='tel:8882494684'>888.249.4684</a>
             <br></br>
-            OFFICE - 610.365.2390
+            OFFICE - <a href='tel:6103652390'>610.365.2390</a>
             <br></br>
-            operations@metroelectrical.com
+            <Box
+              onClick={(e) =>
+                (window.location = "mailto:operations@metroelectrical.com")
+              }
+            >
+              <RouterLink to='mailto:operations@metroelectrical.com'>
+                operations@metroelectrical.com
+              </RouterLink>
+            </Box>
           </Typography>
         </Box>
         <Box order={matches ? "2" : "3"} marginTop='25px'>
