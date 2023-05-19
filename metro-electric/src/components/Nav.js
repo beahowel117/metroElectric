@@ -43,22 +43,25 @@ import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 
 const Nav = () => {
+  const [openMobile, setOpenMobile] = useState(false);
+  const [openServices, setOpenServices] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
+    console.log('hello!!!!!!', anchorEl)
+    if(event !== event.currentTarget){
     setAnchorEl(event.currentTarget);
+    }
+    console.log('hello', anchorEl)
   };
 
- console.log({anchorEl})
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
-  const handleHover = (event) => {
-    if(event === window.event)
-    setAnchorEl(event.currentTarget);
-  }
 
   const [isScrolling, setIsScrolling] = useState(false);
   const changeNavbar = () => {
@@ -70,15 +73,10 @@ const Nav = () => {
   };
   window.addEventListener("scroll", changeNavbar);
 
-  const [openMobile, setOpenMobile] = useState(false);
-  const [openServices, setOpenServices] = useState(false);
-
 
   const handleOpenServices = () => {
     setOpenServices(!openServices);
   };
-  // window.addEventListener("mouseover", setOpenServices(true));
-  // window.addEventListener("mouseout", handleOpenServices);
 
   const handleDrawerOpen = () => {
     setOpenMobile(true);
@@ -164,18 +162,6 @@ const Nav = () => {
     },
   ];
 
-
-  // const handleOpenServices = () => {
-  //  const isServices = navButtons.map((el) => el.name === 'Services');
-  //  if(isServices){
-  //   setOpenServices(true);
-  //  }
-  // }
-
-  // };
-
-
-
   return (
     <>
       <Box
@@ -212,33 +198,33 @@ const Nav = () => {
           {navButtons.map(({ name, link }) => {
             const isServices = name === 'Services';
             return (
-            isServices ?
-            <Button
-              to={link}
-              component={RouterLink}
-              id='basic-button'
-              open={open}
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup='true'
-              aria-expanded={open ? "true" : undefined}
-              // onClick={handleClick}
-              fullWidth={false}
-              onMouseOver={handleClick}
-              sx={{
-                fontSize: isScrolling ? "17px" : "20px",
-                fontWeight: "900",
-                color: isScrolling ? "#244ba6" : "white",
-                textShadow: isScrolling ? "none" : "0px 1px 2px black",
-              }}
-            >
-              {name}
-              {name === "Services" ? (
-                <KeyboardArrowDownIcon className='shadow' />
-              ) : null || (name === "Services" && isScrolling) ? (
-                <KeyboardArrowDownIcon size='small' className='noShadow' />
-              ) : null}
-            </Button>
-            :
+            // isServices ?
+            //   <Button
+            //     to={link}
+            //     component={RouterLink}
+            //     id='basic-button'
+            //     open={open}
+            //     aria-controls={open ? "basic-menu" : undefined}
+            //     aria-haspopup='true'
+            //     aria-expanded={open ? "true" : undefined}
+            //     onMouseOver={handleClick}
+            //     onClick={() => console.log('clicked')}
+            //     fullWidth={false}
+            //     sx={{
+            //       fontSize: isScrolling ? "17px" : "20px",
+            //       fontWeight: "900",
+            //       color: isScrolling ? "#244ba6" : "white",
+            //       textShadow: isScrolling ? "none" : "0px 1px 2px black",
+            //     }}
+            //   >
+            //     {name}
+            //     {name === "Services" ? (
+            //       <KeyboardArrowDownIcon className='shadow' />
+            //     ) : null || (name === "Services" && isScrolling) ? (
+            //       <KeyboardArrowDownIcon size='small' className='noShadow' />
+            //     ) : null}
+            //   </Button>
+            // :
             <Button
               to={link}
               component={RouterLink}
@@ -248,6 +234,7 @@ const Nav = () => {
               aria-haspopup='true'
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
+              onMouseOver={isServices ? handleClick : undefined}
               fullWidth={false}
               sx={{
                 fontSize: isScrolling ? "17px" : "20px",
@@ -269,7 +256,7 @@ const Nav = () => {
           <Menu
             id='basic-menu'
             anchorEl={anchorEl}
-            open={location === "/services" ? open : undefined}
+            open={anchorEl?.innerText === 'SERVICES' ? open : null}
             onClose={handleClose}
             MenuListProps={{
               "aria-labelledby": "basic-button",
