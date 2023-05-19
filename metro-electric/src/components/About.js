@@ -71,7 +71,7 @@ function About() {
 
           <Typography
             fontSize='17px'
-            fontWeight='700'
+            fontWeight='500'
             fontFamily='Lato'
             maxWidth='800px'
             mb='45px'
@@ -134,7 +134,7 @@ function About() {
               Reputation
             </Typography>
             <Typography
-              fontWeight='700'
+              fontWeight='500'
               fontFamily='Lato'
               fontSize='17px'
               mb='15px'
@@ -149,7 +149,7 @@ function About() {
               Customer Service
             </Typography>
             <Typography
-              fontWeight='700'
+              fontWeight='500'
               fontFamily='Lato'
               fontSize='17px'
               mb='15px'
@@ -166,7 +166,7 @@ function About() {
               Experienced Management
             </Typography>
             <Typography
-              fontWeight='700'
+              fontWeight='500'
               fontFamily='Lato'
               fontSize='17px'
               mb='15px'
@@ -197,7 +197,7 @@ function About() {
           >
             <Box flex='1' minWidth='350px'>
               <h1 className='divider'>channel partner</h1>
-              <Typography fontWeight='700' fontFamily='Lato' fontSize='17px'>
+              <Typography fontWeight='500' fontFamily='Lato' fontSize='17px'>
                 We're co-located in Easton, PA at the headquarters of{" "}
                 <span style={{ "font-weight": "900", "font-size": "18px" }}>
                   Belyea Electrical Power Systems.
@@ -280,7 +280,7 @@ function About() {
                   A Corporate Culture of Teamwork, Responsibility and a
                   Commitment to Safety
                 </Typography>
-                <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
+                <Typography fontSize='17px' fontWeight='500' fontFamily='Lato'>
                   Safety is our top priority. Personal injury, property damage,
                   and adverse environmental impacts are not accetable costs of
                   doing business. For this reason, we employ full time safety
@@ -319,21 +319,21 @@ function About() {
           >
             {/* <Box width='683px'> */}
             <h1 id='align_center'>careers</h1>
-            <Typography fontWeight='700' fontFamily='Lato' fontSize='17px'>
+            <Typography fontWeight='500' fontFamily='Lato' fontSize='17px'>
               We've been in continuous operation for over 45 years. We promote
               an exciting, challenging and safe work environment, empowering
               workers to grow and evolve with our business.
             </Typography>
             <Typography
-              fontWeight='700'
+              fontWeight='500'
               fontFamily='Lato'
               fontSize='17px'
               my='10px'
             >
-              Please contact us for open employement opportunities at:
-              <span style={{ "font-weight": "900", "font-size": "18px" }}>
+              Please contact us for open employement opportunities at: <strong style={{"font-weight" : "900", "font-size": "18px"}}>hr@metroelectrical.com</strong>
+              {/* <span style={{ "font-weight": "900", "font-size": "18px" }}>
                 hr@metroelectrical.com
-              </span>
+              </span> */}
             </Typography>
             {/* </Box> */}
           </Box>

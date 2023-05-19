@@ -13,6 +13,7 @@ import {
   Divider,
   Collapse,
 } from "@mui/material";
+import Popover from '@mui/material/Popover';
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ExpandLess from "@mui/icons-material/ExpandLess";
@@ -42,23 +43,52 @@ import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 
 const Nav = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+ console.log({anchorEl})
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleHover = (event) => {
+    if(event === window.event)
+    setAnchorEl(event.currentTarget);
+  }
+
+  const [isScrolling, setIsScrolling] = useState(false);
+  const changeNavbar = () => {
+    if (window.scrollY >= 5) {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbar);
+
   const [openMobile, setOpenMobile] = useState(false);
   const [openServices, setOpenServices] = useState(false);
 
-  const useMobileMenu = useMediaQuery("(max-width:820px)");
 
   const handleOpenServices = () => {
     setOpenServices(!openServices);
   };
+  // window.addEventListener("mouseover", setOpenServices(true));
+  // window.addEventListener("mouseout", handleOpenServices);
 
   const handleDrawerOpen = () => {
     setOpenMobile(true);
   };
-  console.log({openMobile})
+
   const handleDrawerClose = () => {
     setOpenMobile(false);
   };
 
+  const useMobileMenu = useMediaQuery("(max-width:820px)");
   const styles = {
     imgText: {
       position: "absolute",
@@ -78,6 +108,11 @@ const Nav = () => {
       whiteSpace: "normal",
       padding: 0,
     },
+    navHover:{
+      '&:hover':{
+
+      }
+    }
   };
 
   const location = window.location.pathname;
@@ -129,24 +164,17 @@ const Nav = () => {
     },
   ];
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
-  const [isScrolling, setIsScrolling] = useState(false);
-  const changeNavbar = () => {
-    if (window.scrollY >= 5) {
-      setIsScrolling(true);
-    } else {
-      setIsScrolling(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbar);
+  // const handleOpenServices = () => {
+  //  const isServices = navButtons.map((el) => el.name === 'Services');
+  //  if(isServices){
+  //   setOpenServices(true);
+  //  }
+  // }
+
+  // };
+
+
 
   return (
     <>
@@ -181,7 +209,36 @@ const Nav = () => {
           maxWidth='600px'
           width='100%'
         >
-          {navButtons.map(({ name, link }) => (
+          {navButtons.map(({ name, link }) => {
+            const isServices = name === 'Services';
+            return (
+            isServices ?
+            <Button
+              to={link}
+              component={RouterLink}
+              id='basic-button'
+              open={open}
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup='true'
+              aria-expanded={open ? "true" : undefined}
+              // onClick={handleClick}
+              fullWidth={false}
+              onMouseOver={handleClick}
+              sx={{
+                fontSize: isScrolling ? "17px" : "20px",
+                fontWeight: "900",
+                color: isScrolling ? "#244ba6" : "white",
+                textShadow: isScrolling ? "none" : "0px 1px 2px black",
+              }}
+            >
+              {name}
+              {name === "Services" ? (
+                <KeyboardArrowDownIcon className='shadow' />
+              ) : null || (name === "Services" && isScrolling) ? (
+                <KeyboardArrowDownIcon size='small' className='noShadow' />
+              ) : null}
+            </Button>
+            :
             <Button
               to={link}
               component={RouterLink}
@@ -205,8 +262,9 @@ const Nav = () => {
               ) : null || (name === "Services" && isScrolling) ? (
                 <KeyboardArrowDownIcon size='small' className='noShadow' />
               ) : null}
-            </Button>
-          ))}
+            </Button>)
+          })}
+
 
           <Menu
             id='basic-menu'

@@ -95,7 +95,7 @@ function PowerInfrastructure() {
           </Box>
           <Typography
             fontSize='17px'
-            fontWeight='700'
+            fontWeight='500'
             fontFamily='Lato'
             maxWidth='800px'
             mb='45px'
