@@ -54,7 +54,7 @@ const Nav = () => {
   const handleDrawerOpen = () => {
     setOpenMobile(true);
   };
-
+  console.log({openMobile})
   const handleDrawerClose = () => {
     setOpenMobile(false);
   };
@@ -229,8 +229,6 @@ const Nav = () => {
                     square={true}
                   >
                     <MenuItem
-                      // onClick={handleClose}
-
                       onClose={handleClose}
                       sx={styles.menuItem}
                     >
@@ -280,13 +278,16 @@ const Nav = () => {
 
             <IconButton
               // size='large'
-              onClick={handleDrawerOpen}
+              // onClick={() => setOpenMobile(!openMobile)}
               edge='start'
               color='inherit'
               aria-label='menu'
               sx={{ mr: 2 }}
             >
-              <MenuIcon sx={{ height: "35px", width: "35px" }} />
+              <MenuIcon
+                sx={{ height: "35px", width: "35px" }}
+                onClick={() => setOpenMobile(!openMobile)}
+              />
             </IconButton>
           </Toolbar>
           <Drawer
@@ -303,20 +304,16 @@ const Nav = () => {
             variant='persistent'
             anchor='right'
             open={openMobile}
+            onClose={() => setOpenMobile(false)}
           >
             <Box
               display='flex'
               alignItems='center'
               // necessary for content to be below app bar
-
-              justifyContent='flex-end'
+              justifyContent='flex-start'
             >
               <IconButton onClick={handleDrawerClose}>
-                {/* {theme.direction === "ltr" ? (
-                // <ChevronLeftIcon />
-              ) : ( */}
                 <ChevronRightIcon />
-                {/* )} */}
               </IconButton>
             </Box>
             <Divider />
@@ -343,27 +340,51 @@ const Nav = () => {
               </ListItemButton>
               <Collapse in={openServices} timeout='auto' unmountOnExit>
                 <List component='div' disablePadding>
-                  <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemButton
+                    sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/power-infrastructure'
+                    onClick={handleDrawerClose}
+                  >
                     <ListItemText primary='Power Infrastructure Construction' />
                   </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemButton
+                    sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/testing-maintenance'
+                    onClick={handleDrawerClose}
+                  >
                     <ListItemText primary='Testing & Maintenance' />
                   </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemButton
+                    sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/emergency-response'
+                    onClick={handleDrawerClose}
+                  >
                     <ListItemText primary='Emergency Response' />
                   </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemButton
+                    sx={{ pl: 4 }}
+                    component={RouterLink}
+                    to='/services/renewable-energy'
+                    onClick={handleDrawerClose}
+                  >
                     <ListItemText primary='Renewable Energy' />
                   </ListItemButton>
                 </List>
               </Collapse>
-              <ListItemButton component={RouterLink} to='/work'>
+              <ListItemButton
+                component={RouterLink}
+                to='/work'
+                onClick={handleDrawerClose}
+              >
                 <ListItemText primary='Featured Work' />
               </ListItemButton>
-              <ListItemButton component={RouterLink} to='/about'>
+              <ListItemButton component={RouterLink} to='/about' onClick={handleDrawerClose}>
                 <ListItemText primary='About' />
               </ListItemButton>
-              <ListItemButton component={RouterLink} to='/contact'>
+              <ListItemButton component={RouterLink} to='/contact' onClick={handleDrawerClose}>
                 <ListItemText primary='Contact' />
               </ListItemButton>
             </List>
