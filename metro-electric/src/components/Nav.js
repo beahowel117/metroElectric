@@ -330,6 +330,7 @@ const Nav = () => {
                 <RouterLink
                   to='/services'
                   style={{ textDecoration: "none", color: "#244BA6" }}
+                  onClick={handleDrawerClose}
                 >
                   <ListItemText primary='Services' sx={{ flex: "0 1 auto" }} />
                 </RouterLink>
