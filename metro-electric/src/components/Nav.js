@@ -50,11 +50,10 @@ const Nav = () => {
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
-    console.log('hello!!!!!!', anchorEl)
-    if(event !== event.currentTarget){
+    console.log({event})
+    // if(event !== event.currentTarget){
     setAnchorEl(event.currentTarget);
-    }
-    console.log('hello', anchorEl)
+    // }
   };
 
 
@@ -113,7 +112,7 @@ const Nav = () => {
     }
   };
 
-  const location = window.location.pathname;
+  const path = window.location.pathname;
 
   const services = [
     {
@@ -198,69 +197,45 @@ const Nav = () => {
           {navButtons.map(({ name, link }) => {
             const isServices = name === 'Services';
             return (
-            // isServices ?
-            //   <Button
-            //     to={link}
-            //     component={RouterLink}
-            //     id='basic-button'
-            //     open={open}
-            //     aria-controls={open ? "basic-menu" : undefined}
-            //     aria-haspopup='true'
-            //     aria-expanded={open ? "true" : undefined}
-            //     onMouseOver={handleClick}
-            //     onClick={() => console.log('clicked')}
-            //     fullWidth={false}
-            //     sx={{
-            //       fontSize: isScrolling ? "17px" : "20px",
-            //       fontWeight: "900",
-            //       color: isScrolling ? "#244ba6" : "white",
-            //       textShadow: isScrolling ? "none" : "0px 1px 2px black",
-            //     }}
-            //   >
-            //     {name}
-            //     {name === "Services" ? (
-            //       <KeyboardArrowDownIcon className='shadow' />
-            //     ) : null || (name === "Services" && isScrolling) ? (
-            //       <KeyboardArrowDownIcon size='small' className='noShadow' />
-            //     ) : null}
-            //   </Button>
-            // :
-            <Button
-              to={link}
-              component={RouterLink}
-              id='basic-button'
-              open={open}
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup='true'
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-              onMouseOver={isServices ? handleClick : undefined}
-              fullWidth={false}
-              sx={{
-                fontSize: isScrolling ? "17px" : "20px",
-                fontWeight: "900",
-                color: isScrolling ? "#244ba6" : "white",
-                textShadow: isScrolling ? "none" : "0px 1px 2px black",
-              }}
-            >
-              {name}
-              {name === "Services" ? (
-                <KeyboardArrowDownIcon className='shadow' />
-              ) : null || (name === "Services" && isScrolling) ? (
-                <KeyboardArrowDownIcon size='small' className='noShadow' />
-              ) : null}
-            </Button>)
+              <Button
+                to={link}
+                component={RouterLink}
+                id='basic-button'
+                open={open}
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup='true'
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+                // onMouseOver={isServices ? handleClick : undefined}
+                fullWidth={false}
+                sx={{
+                  fontSize: isScrolling ? "17px" : "20px",
+                  fontWeight: "900",
+                  color: isScrolling ? "#244ba6" : "white",
+                  textShadow: isScrolling ? "none" : "0px 1px 2px black",
+                }}
+              >
+                {name}
+                {name === "Services" ? (
+                  <KeyboardArrowDownIcon className='shadow' onMouseOver={handleClick}/>
+                ) : null || (name === "Services" && isScrolling) ? (
+                  <KeyboardArrowDownIcon size='small' className='noShadow' onMouseOver={handleClick}/>
+                ) : null}
+              </Button>)
           })}
 
 
           <Menu
             id='basic-menu'
             anchorEl={anchorEl}
-            open={anchorEl?.innerText === 'SERVICES' ? open : null}
+            open={open}
+            // open={anchorEl?.innerText === 'SERVICES'  ? open : null}
             onClose={handleClose}
+            onMouseLeave={handleClose}
             MenuListProps={{
               "aria-labelledby": "basic-button",
               sx: { py: 0 },
+              // onMouseLeave: handleClose
             }}
           >
             <Box display='flex' gap='2px'>
