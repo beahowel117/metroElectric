@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { NavLink, Link as RouterLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ClickAwayListener from "@mui/base/ClickAwayListener";
 import {
   Button,
   Typography,
@@ -13,7 +14,7 @@ import {
   Divider,
   Collapse,
 } from "@mui/material";
-import Popover from '@mui/material/Popover';
+import Popover from "@mui/material/Popover";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ExpandLess from "@mui/icons-material/ExpandLess";
@@ -45,22 +46,21 @@ import CardCover from "@mui/joy/CardCover";
 const Nav = () => {
   const [openMobile, setOpenMobile] = useState(false);
   const [openServices, setOpenServices] = useState(false);
+  const [openServicesMobile, setOpenServicesMobile] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
-    console.log({event})
+    console.log({ event });
     // if(event !== event.currentTarget){
     setAnchorEl(event.currentTarget);
     // }
   };
 
-
   const handleClose = () => {
     setAnchorEl(null);
   };
-
 
   const [isScrolling, setIsScrolling] = useState(false);
   const changeNavbar = () => {
@@ -72,9 +72,18 @@ const Nav = () => {
   };
   window.addEventListener("scroll", changeNavbar);
 
+  const handleOpenServicesMobile = () => {
+    setOpenServicesMobile(!openServicesMobile);
+  };
 
   const handleOpenServices = () => {
-    setOpenServices(!openServices);
+    setOpenServices(true);
+  };
+
+  const handleCloseServices = () => {
+    setTimeout(() => {
+      setOpenServices(false);
+    }, 300);
   };
 
   const handleDrawerOpen = () => {
@@ -105,11 +114,9 @@ const Nav = () => {
       whiteSpace: "normal",
       padding: 0,
     },
-    navHover:{
-      '&:hover':{
-
-      }
-    }
+    navHover: {
+      "&:hover": {},
+    },
   };
 
   const path = window.location.pathname;
@@ -195,7 +202,6 @@ const Nav = () => {
           width='100%'
         >
           {navButtons.map(({ name, link }) => {
-            const isServices = name === 'Services';
             return (
               <Button
                 to={link}
@@ -217,71 +223,86 @@ const Nav = () => {
               >
                 {name}
                 {name === "Services" ? (
-                  <KeyboardArrowDownIcon className='shadow' onMouseOver={handleClick}/>
+                  <KeyboardArrowDownIcon
+                    className='shadow'
+                    onMouseEnter={handleOpenServices}
+                  />
                 ) : null || (name === "Services" && isScrolling) ? (
-                  <KeyboardArrowDownIcon size='small' className='noShadow' onMouseOver={handleClick}/>
+                  <KeyboardArrowDownIcon
+                    size='small'
+                    className='noShadow'
+                    onMouseOver={handleClick}
+                  />
                 ) : null}
-              </Button>)
+              </Button>
+            );
           })}
-
 
           <Menu
             id='basic-menu'
             anchorEl={anchorEl}
-            open={open}
-            // open={anchorEl?.innerText === 'SERVICES'  ? open : null}
+            open={openServices}
+            // open={anchorEl?.innerText === "SERVICES" ? open : null}
             onClose={handleClose}
-            onMouseLeave={handleClose}
+            // onMouseLeave={handleClose}
+            getContentAnchorEl={null}
+            anchorOrigin={{ vertical: "top", horizontal: "center" }}
+            transformOrigin={{ vertical: "top", horizontal: "center" }}
+            sx={{
+              display: "flex",
+              alignSelf: "flex-start",
+              marginTop: "60px",
+            }}
             MenuListProps={{
               "aria-labelledby": "basic-button",
               sx: { py: 0 },
-              // onMouseLeave: handleClose
+              onMouseLeave: handleCloseServices,
             }}
           >
+            {console.log("handleOpenServicesMobile", openServices)}
             <Box display='flex' gap='2px'>
               {services.map(({ img, text, link }) => (
-                <Box position='relative'>
-                  <Card
-                    sx={{
-                      padding: 0,
-                      "--Card-radius": "0px",
-                    }}
-                    square={true}
-                  >
-                    <MenuItem
-                      onClose={handleClose}
-                      sx={styles.menuItem}
+                <ClickAwayListener onClickAway={handleCloseServices}>
+                  <Box position='relative'>
+                    <Card
+                      sx={{
+                        padding: 0,
+                        "--Card-radius": "0px",
+                      }}
+                      square={true}
                     >
-                      <>
-                        <CardCover
+                      <MenuItem onClose={handleClose} sx={styles.menuItem}>
+                        <>
+                          <CardCover
+                            sx={{
+                              borderRadius: "0px",
+                            }}
+                          >
+                            <img width='100%' height='100%' src={img} alt='' />
+                          </CardCover>
+                          <CardCover
+                            sx={{
+                              background:
+                                "linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0) 300px)",
+                              borderRadius: "0px",
+                            }}
+                          />
+                        </>
+
+                        <Typography
+                          {...styles.imgText}
+                          component={NavLink}
+                          to={link}
                           sx={{
-                            borderRadius: "0px",
+                            textDecoration: "none",
                           }}
                         >
-                          <img width='100%' height='100%' src={img} alt='' />
-                        </CardCover>
-                        <CardCover
-                          sx={{
-                            background:
-                              "linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0) 300px)",
-                            borderRadius: "0px",
-                          }}
-                        />
-                      </>
-
-                      <Typography
-                        {...styles.imgText}
-                        component={NavLink}
-                        to={link}
-                        sx={{
-                          textDecoration: "none",
-                        }}
-                      >
-                        {text}
-                      </Typography>
-                    </MenuItem>
-                  </Card>
-                </Box>
+                          {text}
+                        </Typography>
+                      </MenuItem>
+                    </Card>
+                  </Box>
+                </ClickAwayListener>
               ))}
             </Box>
           </Menu>
@@ -346,7 +367,7 @@ const Nav = () => {
               }}
               component='nav'
             >
-              <ListItemButton onClick={handleOpenServices}>
+              <ListItemButton onClick={handleOpenServicesMobile}>
                 <RouterLink
                   to='/services'
                   style={{ textDecoration: "none", color: "#244BA6" }}
@@ -356,10 +377,10 @@ const Nav = () => {
                 </RouterLink>
 
                 <span style={{ marginLeft: "10px" }}>
-                  {openServices ? <ExpandLess /> : <ExpandMore />}
+                  {openServicesMobile ? <ExpandLess /> : <ExpandMore />}
                 </span>
               </ListItemButton>
-              <Collapse in={openServices} timeout='auto' unmountOnExit>
+              <Collapse in={openServicesMobile} timeout='auto' unmountOnExit>
                 <List component='div' disablePadding>
                   <ListItemButton
                     sx={{ pl: 4 }}
@@ -402,10 +423,18 @@ const Nav = () => {
               >
                 <ListItemText primary='Featured Work' />
               </ListItemButton>
-              <ListItemButton component={RouterLink} to='/about' onClick={handleDrawerClose}>
+              <ListItemButton
+                component={RouterLink}
+                to='/about'
+                onClick={handleDrawerClose}
+              >
                 <ListItemText primary='About' />
               </ListItemButton>
-              <ListItemButton component={RouterLink} to='/contact' onClick={handleDrawerClose}>
+              <ListItemButton
+                component={RouterLink}
+                to='/contact'
+                onClick={handleDrawerClose}
+              >
                 <ListItemText primary='Contact' />
               </ListItemButton>
             </List>
