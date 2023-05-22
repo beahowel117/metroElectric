@@ -53,6 +53,8 @@ function Home() {
         infiniteLoop
         autoPlay
         showIndicators={true}
+        transitionTime='5000'
+        interval='5000'
         animationHandler={zoomInOut}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
@@ -92,19 +94,22 @@ function Home() {
           );
         }}
       >
-        {carouselContent.map(({ img, text }) => (
+        {carouselContent.map(({ img, text, idx }) => (
           <div className='image-container'>
             <img src={img} alt='carousel images' width='100px' />
+
             <Typography
-              className='lineUp'
               color='#f5f5f5'
               fontWeight='600'
+              className='lineUpCarousel'
+              key={idx}
               fontSize={{
                 lg: 35,
                 md: 30,
                 sm: 25,
                 xs: 0,
               }}
+              // sx={{ animationIterationCount: "1" }}
               maxWidth={{ sm: "580px", md: "900px" }}
             >
               {text}

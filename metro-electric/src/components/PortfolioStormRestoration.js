@@ -32,6 +32,7 @@ function PortfolioStormRestoration() {
             sm: 25,
             xs: 25,
           }}
+          sx={{ animationIterationCount: "1" }}
         >
           storm restoration
         </Typography>

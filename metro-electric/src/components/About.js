@@ -43,7 +43,8 @@ function About() {
             sm: 25,
             xs: 25,
           }}
-          >
+          sx={{ animationIterationCount: "1" }}
+        >
           about metrotek
         </Typography>
       </Box>
@@ -198,12 +199,7 @@ function About() {
           />
         </InnerContainer>
         <InnerContainer>
-          <Box
-            display='flex'
-            flexWrap='wrap'
-            columnGap='15px'
-            margin='25px 0'
-          >
+          <Box display='flex' flexWrap='wrap' columnGap='15px' margin='25px 0'>
             <Box flex='1' minWidth='350px'>
               <h1 className='divider'>channel partner</h1>
               <Typography fontWeight='600' fontFamily='Lato' fontSize='17px'>
@@ -339,7 +335,10 @@ function About() {
               fontSize='17px'
               my='10px'
             >
-              Please contact us for open employement opportunities at: <strong style={{"font-weight" : "900", "font-size": "18px"}}>hr@metroelectrical.com</strong>
+              Please contact us for open employement opportunities at:{" "}
+              <strong style={{ "font-weight": "900", "font-size": "18px" }}>
+                hr@metroelectrical.com
+              </strong>
               {/* <span style={{ "font-weight": "900", "font-size": "18px" }}>
                 hr@metroelectrical.com
               </span> */}

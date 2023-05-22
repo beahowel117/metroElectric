@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState } from "react";
 import { NavLink, Link as RouterLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ClickAwayListener from "@mui/base/ClickAwayListener";
@@ -9,13 +9,9 @@ import {
   Toolbar,
   IconButton,
   List,
-  ListItem,
-  SwipeableDrawer,
   Divider,
   Collapse,
 } from "@mui/material";
-import Popover from "@mui/material/Popover";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -25,20 +21,14 @@ import { MenuItem } from "@mui/material";
 import Box from "@mui/material/Box";
 import NavLogo from "../images/logos/NavLogo.png";
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
-import { fontFamily } from "@mui/system";
 import PIC from "../images/ServicesDropDown/PIC(1024x768).jpg";
 import TandM from "../images/ServicesDropDown/T&M(1024x768).JPG";
 import ER from "../images/ServicesDropDown/ER(1024x768).jpg";
 import CEA from "../images/ServicesDropDown/CEA(1024x768).JPG";
 import RE from "../images/ServicesDropDown/RE(1024x768).jpg";
-import MuiAppBar from "@mui/material/AppBar";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import Drawer from "@mui/material/Drawer";
-
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
@@ -84,10 +74,6 @@ const Nav = () => {
     setTimeout(() => {
       setOpenServices(false);
     }, 300);
-  };
-
-  const handleDrawerOpen = () => {
-    setOpenMobile(true);
   };
 
   const handleDrawerClose = () => {
@@ -311,135 +297,138 @@ const Nav = () => {
 
       {/* Mobile Menu */}
       <Box sx={{ flexGrow: 1 }} display={useMobileMenu ? "block" : "none"}>
-        <AppBar position='static' color='transparent'>
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Box component={RouterLink} to='/'>
-              <img src={MetroTekLogo} alt='Navigation Logo' width='175px' />
-            </Box>
+        <ClickAwayListener onClickAway={handleDrawerClose}>
+          <AppBar position='static' color='transparent'>
+            <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Box component={RouterLink} to='/'>
+                <img src={MetroTekLogo} alt='Navigation Logo' width='175px' />
+              </Box>
 
-            <IconButton
-              // size='large'
-              // onClick={() => setOpenMobile(!openMobile)}
-              edge='start'
-              color='inherit'
-              aria-label='menu'
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon
-                sx={{ height: "35px", width: "35px" }}
-                onClick={() => setOpenMobile(!openMobile)}
-              />
-            </IconButton>
-          </Toolbar>
-          <Drawer
-            sx={{
-              width: "200px",
-              flexShrink: 0,
-
-              "& .MuiDrawer-paper": {
-                width: "200px",
-                height: "auto",
-                boxSizing: "border-box",
-              },
-            }}
-            variant='persistent'
-            anchor='right'
-            open={openMobile}
-            onClose={() => setOpenMobile(false)}
-          >
-            <Box
-              display='flex'
-              alignItems='center'
-              // necessary for content to be below app bar
-              justifyContent='flex-start'
-            >
-              <IconButton onClick={handleDrawerClose}>
-                <ChevronRightIcon />
+              <IconButton
+                edge='start'
+                color='inherit'
+                aria-label='menu'
+                sx={{ mr: 2 }}
+              >
+                <MenuIcon
+                  sx={{ height: "35px", width: "35px" }}
+                  onClick={() => setOpenMobile(!openMobile)}
+                />
               </IconButton>
-            </Box>
-            <Divider />
-            <List
+            </Toolbar>
+            <Drawer
               sx={{
-                width: "100%",
-                maxWidth: 360,
-                bgcolor: "background.paper",
-                color: "#244BA6",
+                width: "200px",
+                flexShrink: 0,
+
+                "& .MuiDrawer-paper": {
+                  width: "200px",
+                  height: "auto",
+                  boxSizing: "border-box",
+                },
               }}
-              component='nav'
+              variant='persistent'
+              anchor='right'
+              open={openMobile}
+              onClose={() => setOpenMobile(false)}
             >
-              <ListItemButton onClick={handleOpenServicesMobile}>
-                <RouterLink
-                  to='/services'
-                  style={{ textDecoration: "none", color: "#244BA6" }}
+              <Box
+                display='flex'
+                alignItems='center'
+                // necessary for content to be below app bar
+                justifyContent='flex-start'
+              >
+                <IconButton onClick={handleDrawerClose}>
+                  <ChevronRightIcon />
+                </IconButton>
+              </Box>
+              <Divider />
+              <List
+                sx={{
+                  width: "100%",
+                  maxWidth: 360,
+                  bgcolor: "background.paper",
+                  color: "#244BA6",
+                }}
+                component='nav'
+              >
+                <ListItemButton onClick={handleOpenServicesMobile}>
+                  <RouterLink
+                    to='/services'
+                    style={{ textDecoration: "none", color: "#244BA6" }}
+                    onClick={handleDrawerClose}
+                  >
+                    <ListItemText
+                      primary='Services'
+                      sx={{ flex: "0 1 auto" }}
+                    />
+                  </RouterLink>
+
+                  <span style={{ marginLeft: "10px" }}>
+                    {openServicesMobile ? <ExpandLess /> : <ExpandMore />}
+                  </span>
+                </ListItemButton>
+                <Collapse in={openServicesMobile} timeout='auto' unmountOnExit>
+                  <List component='div' disablePadding>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
+                      to='/services/power-infrastructure'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Power Infrastructure Construction' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
+                      to='/services/testing-maintenance'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Testing & Maintenance' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
+                      to='/services/emergency-response'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Emergency Response' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
+                      to='/services/renewable-energy'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Renewable Energy' />
+                    </ListItemButton>
+                  </List>
+                </Collapse>
+                <ListItemButton
+                  component={RouterLink}
+                  to='/work'
                   onClick={handleDrawerClose}
                 >
-                  <ListItemText primary='Services' sx={{ flex: "0 1 auto" }} />
-                </RouterLink>
-
-                <span style={{ marginLeft: "10px" }}>
-                  {openServicesMobile ? <ExpandLess /> : <ExpandMore />}
-                </span>
-              </ListItemButton>
-              <Collapse in={openServicesMobile} timeout='auto' unmountOnExit>
-                <List component='div' disablePadding>
-                  <ListItemButton
-                    sx={{ pl: 4 }}
-                    component={RouterLink}
-                    to='/services/power-infrastructure'
-                    onClick={handleDrawerClose}
-                  >
-                    <ListItemText primary='Power Infrastructure Construction' />
-                  </ListItemButton>
-                  <ListItemButton
-                    sx={{ pl: 4 }}
-                    component={RouterLink}
-                    to='/services/testing-maintenance'
-                    onClick={handleDrawerClose}
-                  >
-                    <ListItemText primary='Testing & Maintenance' />
-                  </ListItemButton>
-                  <ListItemButton
-                    sx={{ pl: 4 }}
-                    component={RouterLink}
-                    to='/services/emergency-response'
-                    onClick={handleDrawerClose}
-                  >
-                    <ListItemText primary='Emergency Response' />
-                  </ListItemButton>
-                  <ListItemButton
-                    sx={{ pl: 4 }}
-                    component={RouterLink}
-                    to='/services/renewable-energy'
-                    onClick={handleDrawerClose}
-                  >
-                    <ListItemText primary='Renewable Energy' />
-                  </ListItemButton>
-                </List>
-              </Collapse>
-              <ListItemButton
-                component={RouterLink}
-                to='/work'
-                onClick={handleDrawerClose}
-              >
-                <ListItemText primary='Featured Work' />
-              </ListItemButton>
-              <ListItemButton
-                component={RouterLink}
-                to='/about'
-                onClick={handleDrawerClose}
-              >
-                <ListItemText primary='About' />
-              </ListItemButton>
-              <ListItemButton
-                component={RouterLink}
-                to='/contact'
-                onClick={handleDrawerClose}
-              >
-                <ListItemText primary='Contact' />
-              </ListItemButton>
-            </List>
-          </Drawer>
-        </AppBar>
+                  <ListItemText primary='Featured Work' />
+                </ListItemButton>
+                <ListItemButton
+                  component={RouterLink}
+                  to='/about'
+                  onClick={handleDrawerClose}
+                >
+                  <ListItemText primary='About' />
+                </ListItemButton>
+                <ListItemButton
+                  component={RouterLink}
+                  to='/contact'
+                  onClick={handleDrawerClose}
+                >
+                  <ListItemText primary='Contact' />
+                </ListItemButton>
+              </List>
+            </Drawer>
+          </AppBar>
+        </ClickAwayListener>
       </Box>
     </>
   );

@@ -19,7 +19,6 @@ function RenewableEnergy() {
       backgroundSize: "cover",
     },
   };
-  const useMobile = useMediaQuery("(max-width:780px)");
 
   return (
     <>
@@ -40,11 +39,11 @@ function RenewableEnergy() {
             sm: 25,
             xs: 25,
           }}
+          sx={{ animationIterationCount: "1" }}
         >
           renewable energy
         </Typography>
       </Box>
-
 
       <MainContainer>
         <InnerContainer>
@@ -70,30 +69,32 @@ function RenewableEnergy() {
               flex='1'
               minWidth='350px'
               width={{
-                      xs:'100%',
-                      md:''
+                xs: "100%",
+                md: "",
               }}
             >
               <Box
-                // marginBottom='-16px'
+              // marginBottom='-16px'
               >
                 <h1>renewable energy</h1>
               </Box>
               <Box marginBottom='-10px'>
-                <Typography fontSize='18px' fontWeight='900'>Serving the renewable future of power systems</Typography>
+                <Typography fontSize='18px' fontWeight='900'>
+                  Serving the renewable future of power systems
+                </Typography>
               </Box>
               <p>
-                We assist clients to deploy a wide range of renewable energy options
-                with services that include construction, inspection, installation,
-                maintenance, repair, and removal of renewable energy power
-                distribution systems.
+                We assist clients to deploy a wide range of renewable energy
+                options with services that include construction, inspection,
+                installation, maintenance, repair, and removal of renewable
+                energy power distribution systems.
                 <br></br>
                 <br></br>
                 Our renewable energy support services include engineering,
-                procurement, construction, lightning protection, underground cable,
-                SCADA systems, substations, switchgear, inverters, utility grid
-                interconnection &amp; optimization, testing &amp; commissioning, and
-                quality control &amp; assurance.
+                procurement, construction, lightning protection, underground
+                cable, SCADA systems, substations, switchgear, inverters,
+                utility grid interconnection &amp; optimization, testing &amp;
+                commissioning, and quality control &amp; assurance.
               </p>
             </Box>
           </Box>
@@ -118,6 +119,3 @@ function RenewableEnergy() {
 }
 
 export default RenewableEnergy;
-
-
-

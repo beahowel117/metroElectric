@@ -121,11 +121,21 @@ p {
   font-weight: 600;
 }
 
+.lineUpCarousel {
+  animation: 5s anim-lineUp ease infinite;
+  /* animation-iteration-count: 1; */
+  /* animation-fill-mode: backward; */
+  position: absolute;
+  bottom: 27%;
+  left: 10%;
+  text-transform: uppercase;
+}
+
 .lineUp {
-  animation: 3s anim-lineUp ease infinite;
+  animation: 5s anim-lineUp ease infinite;
   animation-fill-mode: backward;
   position: absolute;
-  bottom: 25%;
+  bottom: 15%;
   left: 10%;
   text-transform: uppercase;
 }

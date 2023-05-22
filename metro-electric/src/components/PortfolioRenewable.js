@@ -33,6 +33,7 @@ function PortfolioRenewable() {
             sm: 25,
             xs: 25,
           }}
+          sx={{ animationIterationCount: "1" }}
         >
           renewable energy
         </Typography>

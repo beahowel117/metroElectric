@@ -30,7 +30,8 @@ function Services() {
             sm: 25,
             xs: 25,
           }}
-          >
+          sx={{ animationIterationCount: "1" }}
+        >
           services
         </Typography>
       </Box>

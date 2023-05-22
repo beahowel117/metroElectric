@@ -32,6 +32,7 @@ function PortfolioOverHeadConstruction() {
             sm: 25,
             xs: 25,
           }}
+          sx={{ animationIterationCount: "1" }}
         >
           overhead construction
         </Typography>
