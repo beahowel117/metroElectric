@@ -175,15 +175,21 @@ function Footer() {
           <Typography fontSize='16px' textAlign='center'>
             MetroTek Electrical Services Company
             <br></br>
-            <Button
+            <Box
               fontSize='16px'
               sx={{
                 color: "#244ba6",
               }}
             >
-              2200 Northwood Avenue, Unit 2<br></br>
-              Easton, PA 18045
-            </Button>
+              <a
+                href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
+                target='_blank'
+                rel='noreferrer'
+              >
+                2200 Northwood Avenue, Unit 2<br></br>
+                Easton, PA 18045
+              </a>
+            </Box>
           </Typography>
           <br></br>
           <Typography fontSize='16px' textAlign='center'>
