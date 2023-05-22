@@ -90,7 +90,7 @@ function TestingMaintenance() {
             <Typography
               color='#244ba6'
               textAlign='center'
-              fontSize='25px'
+              fontSize='27px'
               fontFamily='Lato'
               fontWeight='900'
               mt='20px'
@@ -110,7 +110,7 @@ function TestingMaintenance() {
           </Box>
           <Typography
             fontSize='17px'
-            fontWeight='300'
+            fontWeight='600'
             fontFamily='Lato'
             maxWidth='800px'
             mb='30px'
@@ -134,24 +134,24 @@ function TestingMaintenance() {
             <br></br>
             <ul list-style-position='outside'>
               <li>
-                <strong>Acceptance Testing: </strong>Testing of new electrical
+              <span style={{ "font-weight": "900", "font-size": "18px" }}>Acceptance Testing: </span>Testing of new electrical
                 equipment to guarantee performance and installation in
                 accordance with manufacturer’s specifications.
               </li>
               <li>
-                <strong>Predictive Maintenance Testing: </strong>Electrical
+              <span style={{ "font-weight": "900", "font-size": "18px" }}>Predictive Maintenance Testing: </span>Electrical
                 testing for all power system components including transformers,
                 switchgear, grounding, cables, and protective relays. Testing
                 services include power factor, harmonic, insulation resistance
                 and more.
               </li>
               <li>
-                <strong>Power Systems Analysis: </strong>Performance of power
+              <span style={{ "font-weight": "900", "font-size": "18px" }}>Power Systems Analysis: </span>Performance of power
                 quality and reliability studies including load flow, harmonics,
                 transient stability, faults, arc flash and protective devices.
               </li>
               <li>
-                <strong>Infrared Thermography: </strong>Infrared testing to
+              <span style={{ "font-weight": "900", "font-size": "18px" }}>Infrared Thermography: </span>Infrared testing to
                 identify high resistance and fault prone areas, making it
                 possible to minimize downtime and perform preventive maintenance
                 as quickly and efficiently as possible.
@@ -189,7 +189,7 @@ function TestingMaintenance() {
             <Typography
               color='#244ba6'
               textAlign='center'
-              fontSize='25px'
+              fontSize='27px'
               fontFamily='Lato'
               fontWeight='900'
               mt='20px'
@@ -209,7 +209,7 @@ function TestingMaintenance() {
           </Box>
           <Typography
             fontSize='17px'
-            fontWeight='300'
+            fontWeight='600'
             fontFamily='Lato'
             maxWidth='800px'
             mb='30px'
@@ -259,7 +259,7 @@ function TestingMaintenance() {
               <Typography
                 color='#244ba6'
                 textAlign='left'
-                fontSize='25px'
+                fontSize='27px'
                 fontFamily='Lato'
                 fontWeight='900'
                 mb='15px'
@@ -267,16 +267,20 @@ function TestingMaintenance() {
               >
                 engineering services
               </Typography>
-              <ul>
-                <li>Power Quality Testing</li>
-                <li>Short Circuit & Coordination Studies</li>
-                <li>Arc Flash Analysis</li>
-                <li>Substation & Pole Line Evaluation</li>
-                <li>Cable Termination & Splicing</li>
-                <li>Underground Fault Locating Primary & Secondary</li>
-                <li>Underground Cable/Pipe Locating Marketing & Mapping</li>
-                <li>Infrared Inspections</li>
-              </ul>
+              <Typography
+                fontWeight='600'
+              >
+                <ul>
+                  <li>Power Quality Testing</li>
+                  <li>Short Circuit & Coordination Studies</li>
+                  <li>Arc Flash Analysis</li>
+                  <li>Substation & Pole Line Evaluation</li>
+                  <li>Cable Termination & Splicing</li>
+                  <li>Underground Fault Locating Primary & Secondary</li>
+                  <li>Underground Cable/Pipe Locating Marketing & Mapping</li>
+                  <li>Infrared Inspections</li>
+                </ul>
+              </Typography>
             </Box>
           </Box>
         </InnerContainer>
@@ -298,7 +302,7 @@ function TestingMaintenance() {
               <Typography
                 color='#244ba6'
                 textAlign='left'
-                fontSize='25px'
+                fontSize='27px'
                 fontFamily='Lato'
                 fontWeight='900'
                 mb='15px'
@@ -306,16 +310,20 @@ function TestingMaintenance() {
               >
                 transformer maintenance & repair
               </Typography>
-              <ul>
-                <li>Transformer Maintenance</li>
-                <li>Transformer Assembly/Decommission/Relocate</li>
-                <li>Recieving Inspections</li>
-                <li>Oil Diagnosis Analysis, Reclamation & Filtration</li>
-                <li>Vacuum Fill and Transformer Dry Out</li>
-                <li>Leak & Gasket Repair</li>
-                <li>Bushing Replacement</li>
-                <li>LTC Inspection</li>
-              </ul>
+              <Typography
+                fontWeight='600'
+              >
+                <ul>
+                  <li>Transformer Maintenance</li>
+                  <li>Transformer Assembly/Decommission/Relocate</li>
+                  <li>Recieving Inspections</li>
+                  <li>Oil Diagnosis Analysis, Reclamation & Filtration</li>
+                  <li>Vacuum Fill and Transformer Dry Out</li>
+                  <li>Leak & Gasket Repair</li>
+                  <li>Bushing Replacement</li>
+                  <li>LTC Inspection</li>
+                </ul>
+              </Typography>
             </Box>
 
             <Box flex='1' width='100%' minWidth='350px'>
@@ -330,6 +338,7 @@ function TestingMaintenance() {
             flexWrap='wrap'
             ustifyContent='center'
             // my='40px'
+            columnGap='30px'
           >
             <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
               <img src={fifth_image} alt='red hose' width='100%' />
@@ -350,10 +359,11 @@ function TestingMaintenance() {
                 fontWeight='900'
                 mb='15px'
                 textTransform='uppercase'
+
               >
                 mobile transformer oil processing
               </Typography>
-              <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
+              <Typography fontSize='17px' fontWeight='600' fontFamily='Lato'>
                 MetroTek provides mobile transformer oil processing services
                 using high-performance insulating oil processing machines to
                 restore the performance and extend the service life of any make

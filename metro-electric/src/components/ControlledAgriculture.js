@@ -22,7 +22,6 @@ function ControlledAgriculture() {
     responsiveHero: {
       width: "120%",
       height: "auto",
-      //backgroundPosition: 'center',
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
@@ -79,15 +78,15 @@ function ControlledAgriculture() {
 
           <InnerContainer>
             <Box display='flex' flexWrap='wrap' my='40px' columnGap='15px'>
-              <Box flex='1' alignSelf='center' py='20px' minWidth='350px'>
+              <Box flex='1' alignSelf='center' py='20px' minWidth='350px' >
                 <h1 textAlign='left'>controlled environment agriculture</h1>
-                <h3>Design-Build Services</h3>
-                <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
+                <Typography fontSize='18px' fontWeight='900'>Design-Build Services</Typography>
+                <Typography fontSize='17px' fontWeight='600' fontFamily='Lato'>
                   We have designed, engineered, built and tested energy delivery
                   systems for some of the largest controlled environment
                   agriculture facilities in North America.
                 </Typography>
-                <Typography>
+                <Typography fontSize='17px' fontWeight='600' fontFamily='Lato'>
                   Our portfolio of work is second to none and has included
                   individual facilities in excess of 3 million square feet in
                   size with electrical loads in excess of 50 Megawatts.

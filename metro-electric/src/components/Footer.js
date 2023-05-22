@@ -173,7 +173,7 @@ function Footer() {
           px='15px'
         >
           <Typography fontSize='16px' textAlign='center'>
-            MetroTek Electrical Services Company
+            <strong>MetroTek Electrical Services Company</strong>
             <br></br>
             <Button
               fontSize='16px'
@@ -202,7 +202,7 @@ function Footer() {
             </Box>
           </Typography>
         </Box>
-        <Box order={matches ? "2" : "3"} marginTop='25px'>
+        <Box order={matches ? "2" : "3"} marginTop='15px'>
           <img src={NECALogo} alt='Footer Logos' />
         </Box>
       </Box>

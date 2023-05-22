@@ -65,11 +65,13 @@ function RenewableEnergy() {
                       md:''
               }}
             >
-              <Box marginBottom='-16px'>
+              <Box
+                // marginBottom='-16px'
+              >
                 <h1>renewable energy</h1>
               </Box>
               <Box marginBottom='-10px'>
-                <Typography>Serving the renewable future of power systems</Typography>
+                <Typography fontSize='18px' fontWeight='900'>Serving the renewable future of power systems</Typography>
               </Box>
               <p>
                 We assist clients to deploy a wide range of renewable energy options
