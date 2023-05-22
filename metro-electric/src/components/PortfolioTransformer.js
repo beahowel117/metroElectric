@@ -32,6 +32,7 @@ function PortfolioTransformer() {
             sm: 25,
             xs: 25,
           }}
+          sx={{ animationIterationCount: "1" }}
         >
           transformer replacements
         </Typography>

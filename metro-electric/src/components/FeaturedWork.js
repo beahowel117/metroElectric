@@ -68,7 +68,8 @@ function FeaturedWork() {
             sm: 25,
             xs: 25,
           }}
-          >
+          sx={{ animationIterationCount: "1" }}
+        >
           our featured products
         </Typography>
       </Box>

@@ -50,6 +50,7 @@ function ControlledAgriculture() {
             sm: 25,
             xs: 25,
           }}
+          sx={{ animationIterationCount: "1" }}
         >
           controlled environmental agriculture
         </Typography>
@@ -87,9 +88,11 @@ function ControlledAgriculture() {
 
           <InnerContainer>
             <Box display='flex' flexWrap='wrap' my='40px' columnGap='15px'>
-              <Box flex='1' alignSelf='center' py='20px' minWidth='350px' >
+              <Box flex='1' alignSelf='center' py='20px' minWidth='350px'>
                 <h1 textAlign='left'>controlled environment agriculture</h1>
-                <Typography fontSize='18px' fontWeight='900'>Design-Build Services</Typography>
+                <Typography fontSize='18px' fontWeight='900'>
+                  Design-Build Services
+                </Typography>
                 <Typography fontSize='17px' fontWeight='600' fontFamily='Lato'>
                   We have designed, engineered, built and tested energy delivery
                   systems for some of the largest controlled environment

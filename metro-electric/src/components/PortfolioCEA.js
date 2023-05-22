@@ -30,6 +30,7 @@ function PortfolioCEA() {
             sm: 25,
             xs: 25,
           }}
+          sx={{ animationIterationCount: "1" }}
         >
           controlled environment agriculture
         </Typography>

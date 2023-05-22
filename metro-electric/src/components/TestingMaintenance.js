@@ -45,7 +45,7 @@ function TestingMaintenance() {
         <Typography
           className='lineUp'
           fontFamily='Lato'
-          // fontWeight='600'
+          fontWeight='600'
           color='#f5f5f5'
           sx={{ animationIterationCount: "1" }}
           fontSize={{
@@ -134,27 +134,36 @@ function TestingMaintenance() {
             <br></br>
             <ul list-style-position='outside'>
               <li>
-              <span style={{ "font-weight": "900", "font-size": "18px" }}>Acceptance Testing: </span>Testing of new electrical
-                equipment to guarantee performance and installation in
-                accordance with manufacturer’s specifications.
+                <span style={{ "font-weight": "900", "font-size": "18px" }}>
+                  Acceptance Testing:{" "}
+                </span>
+                Testing of new electrical equipment to guarantee performance and
+                installation in accordance with manufacturer’s specifications.
               </li>
               <li>
-              <span style={{ "font-weight": "900", "font-size": "18px" }}>Predictive Maintenance Testing: </span>Electrical
-                testing for all power system components including transformers,
-                switchgear, grounding, cables, and protective relays. Testing
-                services include power factor, harmonic, insulation resistance
-                and more.
+                <span style={{ "font-weight": "900", "font-size": "18px" }}>
+                  Predictive Maintenance Testing:{" "}
+                </span>
+                Electrical testing for all power system components including
+                transformers, switchgear, grounding, cables, and protective
+                relays. Testing services include power factor, harmonic,
+                insulation resistance and more.
               </li>
               <li>
-              <span style={{ "font-weight": "900", "font-size": "18px" }}>Power Systems Analysis: </span>Performance of power
-                quality and reliability studies including load flow, harmonics,
-                transient stability, faults, arc flash and protective devices.
+                <span style={{ "font-weight": "900", "font-size": "18px" }}>
+                  Power Systems Analysis:{" "}
+                </span>
+                Performance of power quality and reliability studies including
+                load flow, harmonics, transient stability, faults, arc flash and
+                protective devices.
               </li>
               <li>
-              <span style={{ "font-weight": "900", "font-size": "18px" }}>Infrared Thermography: </span>Infrared testing to
-                identify high resistance and fault prone areas, making it
-                possible to minimize downtime and perform preventive maintenance
-                as quickly and efficiently as possible.
+                <span style={{ "font-weight": "900", "font-size": "18px" }}>
+                  Infrared Thermography:{" "}
+                </span>
+                Infrared testing to identify high resistance and fault prone
+                areas, making it possible to minimize downtime and perform
+                preventive maintenance as quickly and efficiently as possible.
               </li>
             </ul>
           </Typography>
@@ -267,9 +276,7 @@ function TestingMaintenance() {
               >
                 engineering services
               </Typography>
-              <Typography
-                fontWeight='600'
-              >
+              <Typography fontWeight='600'>
                 <ul>
                   <li>Power Quality Testing</li>
                   <li>Short Circuit & Coordination Studies</li>
@@ -310,9 +317,7 @@ function TestingMaintenance() {
               >
                 transformer maintenance & repair
               </Typography>
-              <Typography
-                fontWeight='600'
-              >
+              <Typography fontWeight='600'>
                 <ul>
                   <li>Transformer Maintenance</li>
                   <li>Transformer Assembly/Decommission/Relocate</li>
@@ -359,7 +364,6 @@ function TestingMaintenance() {
                 fontWeight='900'
                 mb='15px'
                 textTransform='uppercase'
-
               >
                 mobile transformer oil processing
               </Typography>
