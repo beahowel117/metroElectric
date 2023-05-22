@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link as RouterLink } from "react-router-dom";
 import { Typography, Button, Box } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
@@ -8,6 +8,8 @@ import BrewLogo2 from "../images/logos/Bew2_logo.png";
 import contact from "../images/Contact/contact(2000x1000).jpg";
 import "../index.css";
 import MainContainer from "./MainContainer";
+import MailOutlineTwoToneIcon from "@mui/icons-material/MailOutlineTwoTone";
+import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
 
 const Contact = () => {
   const styles = {
@@ -136,11 +138,40 @@ const Contact = () => {
             </Typography>
             <br></br>
             <Typography fontSize='24px' textAlign='center'>
-              EMERGENCY - <a href='tel:8882494684'>888.249.4684</a>
-              <br></br>
-              OFFICE - <a href='tel:6103652390'>610.365.2390</a>
-              <br></br>
-              operations@metroelectrical.com
+              <Box
+                display='flex'
+                alignItems='center'
+                justifyContent='center'
+                mt='6px'
+              >
+                <PhoneIphoneRoundedIcon sx={{ color: "#244BA6" }} /> EMERGENCY -
+                <a href='tel:8882494684'>888.249.4684</a>
+              </Box>
+              <Box
+                display='flex'
+                alignItems='center'
+                justifyContent='center'
+                mt='6px'
+              >
+                <PhoneIphoneRoundedIcon sx={{ color: "#244BA6" }} /> OFFICE -
+                <a href='tel:6103652390'>610.365.2390</a>
+              </Box>
+              <Box
+                mt='6px'
+                display='flex'
+                alignItems='center'
+                justifyContent='center'
+                onClick={(e) =>
+                  (window.location = "mailto:operations@metroelectrical.com")
+                }
+              >
+                <MailOutlineTwoToneIcon
+                  sx={{ color: "#244BA6", "margin-right": "3px" }}
+                />
+                <RouterLink to='mailto:operations@metroelectrical.com'>
+                  operations@metroelectrical.com
+                </RouterLink>
+              </Box>
             </Typography>
           </Box>
           <Box order={matches ? "2" : "3"} marginTop='25px' marginLeft='10px'>

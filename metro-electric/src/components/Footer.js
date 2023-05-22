@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, Link as RouterLink } from "react-router-dom";
 import { Button, Typography, Box } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
-
 import BrewLogo2 from "../images/logos/Bew2_logo.png";
 import ScrollToTop from "./ScrollToTop";
+import MailOutlineTwoToneIcon from "@mui/icons-material/MailOutlineTwoTone";
+import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
 
 function Footer() {
   const styles = {
@@ -191,17 +192,40 @@ function Footer() {
               </a>
             </Box>
           </Typography>
-          <br></br>
+
           <Typography fontSize='16px' textAlign='center'>
-            EMERGENCY - <a href='tel:8882494684'>888.249.4684</a>
-            <br></br>
-            OFFICE - <a href='tel:6103652390'>610.365.2390</a>
-            <br></br>
             <Box
+              display='flex'
+              alignItems='center'
+              justifyContent='center'
+              mt='6px'
+            >
+              <PhoneIphoneRoundedIcon sx={{ color: "#244BA6" }} /> EMERGENCY -
+              <a href='tel:8882494684'>888.249.4684</a>
+            </Box>
+
+            <Box
+              display='flex'
+              alignItems='center'
+              justifyContent='center'
+              mt='6px'
+            >
+              <PhoneIphoneRoundedIcon sx={{ color: "#244BA6" }} /> OFFICE -
+              <a href='tel:6103652390'>610.365.2390</a>
+            </Box>
+
+            <Box
+              mt='6px'
+              display='flex'
+              alignItems='center'
+              justifyContent='center'
               onClick={(e) =>
                 (window.location = "mailto:operations@metroelectrical.com")
               }
             >
+              <MailOutlineTwoToneIcon
+                sx={{ color: "#244BA6", "margin-right": "4px" }}
+              />
               <RouterLink to='mailto:operations@metroelectrical.com'>
                 operations@metroelectrical.com
               </RouterLink>
