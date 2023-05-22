@@ -75,7 +75,7 @@ function EmergencyResponse() {
               <Typography
                 color='#244ba6'
                 textAlign='center'
-                fontSize='25px'
+                fontSize='27px'
                 fontFamily='Lato'
                 fontWeight='900'
                 mt='55px'
@@ -95,7 +95,7 @@ function EmergencyResponse() {
             </Box>
             <Typography
               fontSize='17px'
-              fontWeight='500'
+              fontWeight='600'
               fontFamily='Lato'
               maxWidth='800px'
               mb='45px'
@@ -125,7 +125,7 @@ function EmergencyResponse() {
               >
                 <Typography
                   fontSize='17px'
-                  fontWeight='500'
+                  fontWeight='600'
                   fontFamily='Lato'
                   maxWidth='800px'
                   mb='45px'
@@ -139,7 +139,7 @@ function EmergencyResponse() {
                   the highest standards of safety and quality. If you need
                   emergency service for your commercial or industrial facility,
                   please do not hesitate to call us at{" "}
-                  <strong>888.249.4684 </strong>and follow the prompts.
+                  <span style={{ "font-weight": "900", "font-size": "18px" }}>888.249.4684</span> and follow the prompts.
                 </Typography>
               </Box>
             </Box>

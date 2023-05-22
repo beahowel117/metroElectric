@@ -34,7 +34,7 @@ const Contact = () => {
       link: "/services",
     },
     {
-      button: "Featured Work",
+      button: "Work",
       link: "/work",
     },
     {
@@ -53,7 +53,7 @@ const Contact = () => {
       link: "/services",
     },
     {
-      button: "Featured Work",
+      button: "Work",
       link: "/work",
     },
     {
@@ -121,7 +121,7 @@ const Contact = () => {
             fontSize='24px'
             textAlign='center'
           >
-            MetroTek Electrical Services Company
+           <strong>MetroTek Electrical Services Company</strong>
              <br></br>
              2200 Northwood Avenue, Unit 2
              <br></br>

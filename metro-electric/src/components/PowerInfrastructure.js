@@ -75,7 +75,7 @@ function PowerInfrastructure() {
             <Typography
               color='#244ba6'
               textAlign='center'
-              fontSize='25px'
+              fontSize='27px'
               fontFamily='Lato'
               fontWeight='900'
               mt='55px'
@@ -95,7 +95,7 @@ function PowerInfrastructure() {
           </Box>
           <Typography
             fontSize='17px'
-            fontWeight='500'
+            fontWeight='600'
             fontFamily='Lato'
             maxWidth='800px'
             mb='45px'
@@ -147,14 +147,14 @@ function PowerInfrastructure() {
               <Typography
                 color='#244ba6'
                 textAlign='left'
-                fontSize='25px'
+                fontSize='27px'
                 fontFamily='Lato'
                 fontWeight='900'
                 mb='15px'
               >
                 OVERHEAD POWER DISTRIBUTION
               </Typography>
-              <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
+              <Typography fontSize='17px' fontWeight='600' fontFamily='Lato'>
                 MetroTek’s overhead line division specializes in pole
                 installation, line siting and staking, wire stringing,
                 reconductoring, emergency repair, live maintenance and all
@@ -186,14 +186,14 @@ function PowerInfrastructure() {
               <Typography
                 color='#244ba6'
                 textAlign='left'
-                fontSize='25px'
+                fontSize='27px'
                 fontFamily='Lato'
                 fontWeight='900'
                 mb='15px'
               >
                 UNDERGROUND POWER DISTRIBUTION
               </Typography>
-              <Typography fontSize='17px' fontWeight='700' fontFamily='Lato'>
+              <Typography fontSize='17px' fontWeight='600' fontFamily='Lato'>
                 MetroTek’s underground electrical distribution expertise
                 includes fault location & repair, directional drilling,
                 trenching, manhole & conduit installation, cable pulling,
@@ -266,7 +266,7 @@ function PowerInfrastructure() {
               <Typography
                 color='#244ba6'
                 textAlign={forceWrap ? "center" : "left"}
-                fontSize='25px'
+                fontSize='27px'
                 fontFamily='Lato'
                 fontWeight='900'
                 mb='15px'
@@ -275,7 +275,7 @@ function PowerInfrastructure() {
               </Typography>
               <Typography
                 fontSize='17px'
-                fontWeight='700'
+                fontWeight='600'
                 fontFamily='Lato'
                 lineHeight='1.4'
               >

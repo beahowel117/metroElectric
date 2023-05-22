@@ -50,11 +50,11 @@ function About() {
             <Typography
               color='#244ba6'
               textAlign='center'
-              fontSize='25px'
+              fontSize='27px'
               fontFamily='Lato'
               fontWeight='900'
               mt='55px'
-              maxWidth='500px'
+              maxWidth='600px'
               textTransform='uppercase'
             >
               exceptional electrical solutions
@@ -71,7 +71,7 @@ function About() {
 
           <Typography
             fontSize='17px'
-            fontWeight='500'
+            fontWeight='600'
             fontFamily='Lato'
             maxWidth='800px'
             mb='45px'
@@ -123,7 +123,7 @@ function About() {
               on-time, within budget and with a continuous focus on safety.
             </Typography>
             <Typography
-              fontSize='25px'
+              fontSize='27px'
               fontFamily='Lato'
               fontWeight='900'
               color='#244ba6'
@@ -134,7 +134,7 @@ function About() {
               Reputation
             </Typography>
             <Typography
-              fontWeight='500'
+              fontWeight='600'
               fontFamily='Lato'
               fontSize='17px'
               mb='15px'
@@ -149,7 +149,7 @@ function About() {
               Customer Service
             </Typography>
             <Typography
-              fontWeight='500'
+              fontWeight='600'
               fontFamily='Lato'
               fontSize='17px'
               mb='15px'
@@ -166,7 +166,7 @@ function About() {
               Experienced Management
             </Typography>
             <Typography
-              fontWeight='500'
+              fontWeight='600'
               fontFamily='Lato'
               fontSize='17px'
               mb='15px'
@@ -197,7 +197,7 @@ function About() {
           >
             <Box flex='1' minWidth='350px'>
               <h1 className='divider'>channel partner</h1>
-              <Typography fontWeight='500' fontFamily='Lato' fontSize='17px'>
+              <Typography fontWeight='600' fontFamily='Lato' fontSize='17px'>
                 We're co-located in Easton, PA at the headquarters of{" "}
                 <span style={{ "font-weight": "900", "font-size": "18px" }}>
                   Belyea Electrical Power Systems.
@@ -226,7 +226,7 @@ function About() {
             flexWrap='wrap'
             justifyContent='center'
             alignItems='center'
-            margin='25px 0'
+            margin='0 0 25px'
           >
             <Box
               flex='1'
@@ -265,7 +265,7 @@ function About() {
                 <Typography
                   fontWeight='900'
                   fontFamily='Lato'
-                  fontSize='25px'
+                  fontSize='27px'
                   color='#244ba6'
                   my='15px'
                 >
@@ -274,13 +274,13 @@ function About() {
                 <Typography
                   fontWeight='900'
                   fontFamily='Lato'
-                  fontSize='16px'
+                  fontSize='17px'
                   my='10px'
                 >
                   A Corporate Culture of Teamwork, Responsibility and a
                   Commitment to Safety
                 </Typography>
-                <Typography fontSize='17px' fontWeight='500' fontFamily='Lato'>
+                <Typography fontSize='17px' fontWeight='600' fontFamily='Lato'>
                   Safety is our top priority. Personal injury, property damage,
                   and adverse environmental impacts are not accetable costs of
                   doing business. For this reason, we employ full time safety
@@ -319,13 +319,13 @@ function About() {
           >
             {/* <Box width='683px'> */}
             <h1 id='align_center'>careers</h1>
-            <Typography fontWeight='500' fontFamily='Lato' fontSize='17px'>
+            <Typography fontWeight='600' fontFamily='Lato' fontSize='17px'>
               We've been in continuous operation for over 45 years. We promote
               an exciting, challenging and safe work environment, empowering
               workers to grow and evolve with our business.
             </Typography>
             <Typography
-              fontWeight='500'
+              fontWeight='600'
               fontFamily='Lato'
               fontSize='17px'
               my='10px'
