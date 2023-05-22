@@ -49,10 +49,10 @@ function TestingMaintenance() {
           color='#f5f5f5'
           sx={{ animationIterationCount: "1" }}
           fontSize={{
-            lg: 35,
+            lg: 40,
             md: 30,
             sm: 25,
-            // xs: 0,
+            xs: 25,
           }}
           maxWidth={{ sm: "580px", md: "900px" }}
         >

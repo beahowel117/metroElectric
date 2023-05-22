@@ -85,10 +85,19 @@ const Contact = () => {
         <Box className='image-wrap'>
           <img src={contact} alt='Contact' style={styles.responsiveHero} />
         </Box>
-        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
-          contact metrotek
-        </Typography>
-      </Box>
+        <Typography
+            className='lineUp'
+            fontWeight='600'
+            fontSize={{
+              lg: 40,
+              md: 30,
+              sm: 25,
+              xs: 25,
+            }}
+          >
+            contact metrotek
+          </Typography>
+        </Box>
 
       <MainContainer>
         <Box

@@ -125,7 +125,7 @@ p {
   animation: 3s anim-lineUp ease infinite;
   animation-fill-mode: backward;
   position: absolute;
-  bottom: 30%;
+  bottom: 25%;
   left: 10%;
   text-transform: uppercase;
 }

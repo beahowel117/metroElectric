@@ -92,6 +92,14 @@ function App() {
             exact
             element={<PortfolioStormRestoration />}
           />
+           <Route
+            path='/items/work'
+            exact
+          />
+           <Route
+            path='/items/equipsales'
+            exact
+          />
         </Routes>
         {location.pathname !== "/contact" && <Footer />}
       </Box>
