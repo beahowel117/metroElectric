@@ -26,6 +26,8 @@ import PortfolioOverHeadConstruction from "./components/PortfolioOverHeadConstru
 import PortfolioTransformer from "./components/PortfolioTransformer";
 import PortfolioStormRestoration from "./components/PortfolioStormRestoration";
 import ScrollToTop from "./components/ScrollToTop";
+import TermsWorkPDF from "./components/pdf/TermsWorkPDF";
+import TermsSalesPDF from "./components/pdf/TermsSalesPDF";
 
 function App() {
   let location = useLocation();
@@ -33,7 +35,11 @@ function App() {
   return (
     <>
       <Box>
-        <Nav />
+        {location.pathname === "/items/equipsales" ||
+        location.pathname === "/items/work" ? null : (
+          <Nav />
+        )}
+
         <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -92,16 +98,14 @@ function App() {
             exact
             element={<PortfolioStormRestoration />}
           />
-           <Route
-            path='/items/work'
-            exact
-          />
-           <Route
-            path='/items/equipsales'
-            exact
-          />
+          <Route path='/items/work' exact element={<TermsWorkPDF />} />
+          <Route path='/items/equipsales' exact element={<TermsSalesPDF />} />
         </Routes>
-        {location.pathname !== "/contact" && <Footer />}
+        {location.pathname === "/items/equipsales" ||
+        location.pathname === "/items/work" ||
+        location.pathname === "/contact" ? null : (
+          <Footer />
+        )}
       </Box>
     </>
   );

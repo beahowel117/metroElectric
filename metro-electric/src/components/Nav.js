@@ -43,9 +43,8 @@ const Nav = () => {
 
   const handleClick = (event) => {
     console.log({ event });
-    // if(event !== event.currentTarget){
+
     setAnchorEl(event.currentTarget);
-    // }
   };
 
   const handleClose = () => {
@@ -80,7 +79,7 @@ const Nav = () => {
     setOpenMobile(false);
   };
 
-  const useMobileMenu = useMediaQuery("(max-width:820px)");
+  const useMobileMenu = useMediaQuery("(max-width:1044px)");
   const styles = {
     imgText: {
       position: "absolute",
@@ -104,8 +103,6 @@ const Nav = () => {
       "&:hover": {},
     },
   };
-
-  const path = window.location.pathname;
 
   const services = [
     {
