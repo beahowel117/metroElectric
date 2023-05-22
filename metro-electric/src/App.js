@@ -101,7 +101,7 @@ function App() {
             exact
           />
         </Routes>
-        {(location.pathname !== "/contact" || location.pathname !== 'items/work' || location.pathname !== 'items/equipsales') && <Footer />}
+        {location.pathname !== "/contact"  && <Footer />}
       </Box>
     </>
   );
