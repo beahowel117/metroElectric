@@ -34,7 +34,7 @@ const Contact = () => {
       link: "/services",
     },
     {
-      button: "Featured Work",
+      button: "Work",
       link: "/work",
     },
     {
@@ -53,7 +53,7 @@ const Contact = () => {
       link: "/services",
     },
     {
-      button: "Featured Work",
+      button: "Work",
       link: "/work",
     },
     {

@@ -34,7 +34,7 @@ function Footer() {
       link: "/services",
     },
     {
-      button: "Featured Work",
+      button: "Work",
       link: "/work",
     },
     {
@@ -53,7 +53,7 @@ function Footer() {
       link: "/services",
     },
     {
-      button: "Featured Work",
+      button: "Work",
       link: "/work",
     },
     {
