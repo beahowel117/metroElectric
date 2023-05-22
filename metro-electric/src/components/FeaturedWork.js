@@ -74,76 +74,71 @@ function FeaturedWork() {
           py='40px'
         >
           {imageGallery.map(({ img, text, link }) => {
-            const isCEA = text === "Controlled Environment Agriculture";
-            return (
-            lessThan900 ?
-             <Card
+            return lessThan900 ? (
+              <Card
+                variant='outlined'
+                className='container'
+                sx={{
+                  minWidth: { xs: "85%", md: "" },
+                }}
+              >
+                <CardOverflow>
+                  <AspectRatio ratio='5/4' sx={{ borderRadius: "7px" }}>
+                    <Box position='relative'>
+                      <img src={img} loading='lazy' alt='' width='100%' />
+                      {/* <div className='overlayMobile'> */}
+                      <Button
+                        sx={{
+                          color: "#FFFFFF",
+                          border: "2px #FFFFFF solid",
+                          fontSize: { xs: "30px", md: "50px" },
+                          right: "15%",
+                          fontWeight: "900",
+                          position: "absolute",
+                          textAlign: "center",
+                          left: "15%",
+                          ...(text === "Controlled Environment Agriculture" && {
+                            right: "18%",
+                            textAlign: "center",
+                          }),
+                        }}
+                        variant='outline'
+                        component={NavLink}
+                        to={link}
+                      >
+                        {text}
+                      </Button>
+                    </Box>
+                    {/* </div> */}
+                  </AspectRatio>
+                </CardOverflow>
+              </Card>
+            ) : (
+              <Card
                 variant='outlined'
                 className='container'
                 sx={{ minWidth: { xs: "85%", md: "" } }}
               >
                 <CardOverflow>
-                  <AspectRatio ratio='5/4'>
-                    <Box
-                      position="relative"
-                    >
-                      <img src={img} loading='lazy' alt='' width='100%' />
-                      {/* <div className='overlayMobile'> */}
-                        <Button
-                          sx={{
-                            color:"#FFFFFF",
-                            border: "2px #FFFFFF solid",
-                            fontSize:{xs: "30px", md: "50px"},
-                            right: "15%",
-                            fontWeight: "900",
-                            position:'absolute',
-                            textAlign: 'center',
-                            left: "15%",
-                            ...(text === "Controlled Environment Agriculture" && {
-                              right:'18%',
-                              textAlign: 'center'
-                            }),
-                          }
-                        }
-                          variant="outline"
-                          component={NavLink}
-                          to={link}
-                        >
-                          {text}
-                        </Button>
-                      </Box>
-                    {/* </div> */}
+                  <AspectRatio ratio='5/4' sx={{ borderRadius: "7px" }}>
+                    <img src={img} loading='lazy' alt='' width='100%' />
+                    <div className='overlay'>
+                      <Typography
+                        className='imgText'
+                        // fontSize={{xs: "17px",sm:"30px", md: "20px"}}
+                        fontWeight='900'
+                        component={NavLink}
+                        to={link}
+                        sx={{ textDecoration: "none" }}
+                      >
+                        {text}
+                      </Typography>
+                    </div>
                   </AspectRatio>
                 </CardOverflow>
               </Card>
-
-             :
-
-            <Card
-              variant='outlined'
-              className='container'
-              sx={{ minWidth: { xs: "85%", md: "" } }}
-            >
-              <CardOverflow>
-                <AspectRatio ratio='5/4'>
-                  <img src={img} loading='lazy' alt='' width='100%' />
-                  <div className='overlay'>
-                    <Typography
-                      className='imgText'
-                      // fontSize={{xs: "17px",sm:"30px", md: "20px"}}
-                      fontWeight="900"
-                      component={NavLink}
-                      to={link}
-                      sx={{ textDecoration: "none" }}
-                    >
-                      {text}
-                    </Typography>
-                  </div>
-                </AspectRatio>
-              </CardOverflow>
-            </Card>
-            )
-            })}
+            );
+          })}
         </Box>
       </Box>
     </>
