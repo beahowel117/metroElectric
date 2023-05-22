@@ -21,7 +21,16 @@ function PortfolioCEA() {
         <Box className='image-wrap'>
           <img src={cea_cover} alt='Contact' style={styles.responsiveHero} />
         </Box>
-        <Typography className='lineUp' fontSize='40px' fontWeight='600'>
+        <Typography
+          className='lineUp'
+          fontWeight='600'
+          fontSize={{
+            lg: 40,
+            md: 30,
+            sm: 25,
+            xs: 25,
+          }}
+        >
           controlled environment agriculture
         </Typography>
       </Box>

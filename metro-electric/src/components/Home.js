@@ -36,7 +36,7 @@ function Home() {
       width: "135%",
       right: "-25%",
       bottom: "-25%",
-      animation: "move 3s ease ",
+      animation: "move 5s ease ",
     };
     return {
       selectedStyle: {
