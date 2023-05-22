@@ -204,9 +204,19 @@ function About() {
               <h1 className='divider'>channel partner</h1>
               <Typography fontWeight='600' fontFamily='Lato' fontSize='17px'>
                 We're co-located in Easton, PA at the headquarters of{" "}
-                <span style={{ "font-weight": "900", "font-size": "18px" }}>
-                  Belyea Electrical Power Systems.
-                </span>{" "}
+                {/* <span style={{ "font-weight": "900", "font-size": "18px" }}> */}
+                 <a
+                  href="https://www.belyeapower.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                      "font-weight": "900",
+                      "font-size": "18px",
+                      "color":"black",
+                      "textDecoration":"none"
+                    }}
+                  > Belyea Electrical Power Systems.</a>
+                {/* </span>{" "} */}
                 Founded in 1908, Belyea stocks one of the largest inventories of
                 re-manufactured electrical power equipment in the country at its
                 150,000 square foot facility including: Substation, Padmount &
