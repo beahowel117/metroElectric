@@ -5,11 +5,12 @@ import EIS from "../images/HomeCarousel/EIS-2(2x1).jpg";
 import POWER from "../images/HomeCarousel/power-3(2x1).jpg";
 import SOLUTIONS from "../images/HomeCarousel/solutions-4 (2x1).jpg";
 import COMMUNITY from "../images/HomeCarousel/community-5(2x1).jpg";
+import Video from "../images/Videos/Metrotek.mov";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../index.css";
 import GreyGallery from "./GreyGallery";
-import Footer from "./Footer";
+
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -44,8 +45,7 @@ function Home() {
       },
     };
   };
-  const src =
-    "https://metroelectrical.com/wp-content/uploads/2022/12/Metrotek-Promo.mov";
+  const src = {Video};
   return (
     <Box>
       <Carousel
