@@ -5,7 +5,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
 import BrewLogo2 from "../images/logos/Bew2_logo.png";
-import ScrollToTop from "./ScrollToTop";
 import MailOutlineTwoToneIcon from "@mui/icons-material/MailOutlineTwoTone";
 import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
 
@@ -81,12 +80,7 @@ function Footer() {
   const location = window.location.pathname;
 
   return (
-    <Box
-      // borderTop='14px solid #244ba6'
-      maxWidth='797px'
-      margin='40px auto 0'
-      px='20px'
-    >
+    <Box maxWidth='797px' margin='40px auto 0' px='20px'>
       <Box
         height='14px'
         backgroundColor='#244ba6'

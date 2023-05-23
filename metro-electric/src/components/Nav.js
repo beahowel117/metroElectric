@@ -79,7 +79,7 @@ const Nav = () => {
     setOpenMobile(false);
   };
 
-  const useMobileMenu = useMediaQuery("(max-width:1044px)");
+  const useMobileMenu = useMediaQuery("(max-width:900px)");
   const styles = {
     imgText: {
       position: "absolute",
@@ -176,14 +176,7 @@ const Nav = () => {
           />
         </Box>
 
-        <Box
-          display='flex'
-          alignItems='center'
-          // justifyContent='space-around'
-          // mb='10px'
-          maxWidth='600px'
-          width='100%'
-        >
+        <Box display='flex' alignItems='center' maxWidth='600px' width='100%'>
           {navButtons.map(({ name, link }) => {
             return (
               <Button
@@ -195,7 +188,6 @@ const Nav = () => {
                 aria-haspopup='true'
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
-                // onMouseOver={isServices ? handleClick : undefined}
                 fullWidth={false}
                 sx={{
                   fontSize: isScrolling ? "17px" : "20px",
@@ -293,7 +285,14 @@ const Nav = () => {
       </Box>
 
       {/* Mobile Menu */}
-      <Box sx={{ flexGrow: 1 }} display={useMobileMenu ? "block" : "none"}>
+      <Box
+        sx={{ flexGrow: 1 }}
+        display={useMobileMenu ? "block" : "none"}
+        position='fixed'
+        zIndex='999'
+        backgroundColor='white'
+        width='100%'
+      >
         <ClickAwayListener onClickAway={handleDrawerClose}>
           <AppBar position='static' color='transparent'>
             <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>

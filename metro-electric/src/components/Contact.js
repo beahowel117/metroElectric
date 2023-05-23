@@ -67,7 +67,7 @@ const Contact = () => {
       link: "/contact",
     },
   ];
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery("(max-width:800px)");
   const useMobile = useMediaQuery("(max-width:600px)");
 
   const addCopyYear = (copyTxt) => {
@@ -106,6 +106,7 @@ const Contact = () => {
         <Box
           display='flex'
           justifyContent='space-around'
+          alignItems='center'
           marginTop={matches ? "20px" : "50px"}
           flexWrap={matches ? "wrap" : undefined}
           marginBottom={matches ? "25px" : "5px"}
@@ -122,7 +123,7 @@ const Contact = () => {
           <Box
             order={matches ? "1" : "2"}
             minWidth={matches ? "100%" : undefined}
-            px='15px'
+            px={matches ? undefined : "15px"}
           >
             <Typography fontSize='24px' textAlign='center'>
               <strong>MetroTek Electrical Services Company</strong>
@@ -137,7 +138,10 @@ const Contact = () => {
               </a>
             </Typography>
             <br></br>
-            <Typography fontSize='24px' textAlign='center'>
+            <Typography
+              fontSize={{ xs: "20px", sm: "24px" }}
+              textAlign='center'
+            >
               <Box
                 display='flex'
                 alignItems='center'
@@ -175,18 +179,18 @@ const Contact = () => {
             </Typography>
           </Box>
           <Box order={matches ? "2" : "3"} marginTop='25px' marginLeft='10px'>
-            <img src={NECALogo} alt='Footer Logos' />
+            <img src={NECALogo} alt='Footer Logos' width='140px' />
           </Box>
         </Box>
-
-        <Box maxWidth='797px' margin='40px auto 0' px='20px'>
-          <Box
-            backgroundColor='#244ba6'
-            height='14px'
-            maxWidth='100%'
-            margin='10px auto 0'
-            borderRadius='5px'
-          />
+        <Box
+          backgroundColor='#244ba6'
+          height='14px'
+          margin='10px auto 0'
+          borderRadius='5px'
+          width='100%'
+          mt='80px'
+        />
+        <Box maxWidth='797px' margin='0 auto '>
           <Box display='flex' justifyContent='center' marginTop='20px'>
             <NavLink to='/'>
               <img
