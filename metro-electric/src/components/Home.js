@@ -11,7 +11,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../index.css";
 import GreyGallery from "./GreyGallery";
 
-
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 function Home() {
@@ -45,7 +44,7 @@ function Home() {
       },
     };
   };
-  const src = {Video};
+
   return (
     <Box>
       <Carousel
@@ -231,7 +230,7 @@ function Home() {
               preload='auto'
               playsInline='true'
             >
-              <source src={src} type='video/mp4' />
+              <source src={Video} type='video/mp4' />
               Sorry, your browser doesn't support embedded videos.
             </video>
           </Box>
