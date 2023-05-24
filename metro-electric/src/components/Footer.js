@@ -148,11 +148,13 @@ function Footer() {
       )}
       <Box
         display='flex'
-        justifyContent='space-around'
+        // justifyContent='space-around'
+        justifyContent='space-evenly'
         marginTop={matches ? "20px" : "50px"}
         flexWrap={matches ? "wrap" : undefined}
         marginBottom={matches ? "25px" : "5px"}
         alignItems='center'
+        marginLeft={matches ? "0" : "-35px"}
       >
         <Box order='1'>
           <img
@@ -165,7 +167,8 @@ function Footer() {
         <Box
           order={matches ? "1" : "2"}
           minWidth={matches ? "100%" : undefined}
-          px='15px'
+          paddingRight='15px'
+          paddingLeft={matches ? "15px": "10px"}
         >
           <Typography fontSize='16px' textAlign='center'>
             <strong>MetroTek Electrical Services Company</strong>
@@ -226,7 +229,7 @@ function Footer() {
             </Box>
           </Typography>
         </Box>
-        <Box order={matches ? "2" : "3"} marginTop='15px'>
+        <Box order={matches ? "2" : "3"} marginTop='10px'>
           <img src={NECALogo} alt='Footer Logos' />
         </Box>
       </Box>
