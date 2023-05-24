@@ -198,7 +198,7 @@ function Footer() {
               mt='6px'
             >
               EMERGENCY:
-              <a href='tel:8882494684'>888.249.4684</a>
+              <a href='tel:8882494684'> 888.249.4684</a>
             </Box>
 
             <Box
@@ -208,7 +208,7 @@ function Footer() {
               mt='6px'
             >
               OFFICE:
-              <a href='tel:6103652390'>610.365.2390</a>
+              <a href='tel:6103652390'> 610.365.2390</a>
             </Box>
 
             <Box
