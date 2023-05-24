@@ -204,7 +204,7 @@ function Home() {
                 }}
               >
                 <div>
-                  High Voltage power Systems ● Interconnect ● Equidivment Design
+                  High Voltage Power Systems ● Interconnect ● Equipment Design
                 </div>
                 <div>Engineering ● Construction ● Maintenance ● Repair</div>
                 <div>Testing ● Monitoring ● Emergency Service</div>
