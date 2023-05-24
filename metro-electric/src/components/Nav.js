@@ -94,8 +94,8 @@ const Nav = () => {
       underline: "none",
     },
     menuItem: {
-      width: "190px",
-      height: "154px",
+      width: "178px",
+      height: "145px",
       whiteSpace: "normal",
       padding: 0,
     },
