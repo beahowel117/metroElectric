@@ -52,8 +52,8 @@ function Home() {
         infiniteLoop
         autoPlay
         showIndicators={true}
-        transitionTime='5000'
-        interval='5000'
+        transitionTime='4000'
+        interval='4000'
         animationHandler={zoomInOut}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
@@ -109,7 +109,7 @@ function Home() {
                 xs: 0,
               }}
               // sx={{ animationIterationCount: "1" }}
-              maxWidth={{ sm: "580px", md: "900px" }}
+              maxWidth={{ sm: "580px", md:"100%" }}
             >
               {text}
             </Typography>
