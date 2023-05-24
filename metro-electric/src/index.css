@@ -122,13 +122,14 @@ p {
 }
 
 .lineUpCarousel {
-  animation: 5s anim-lineUp ease infinite;
+  /* animation: 5s anim-lineUp ease infinite; */
   /* animation-iteration-count: 1; */
   /* animation-fill-mode: backward; */
   position: absolute;
   bottom: 27%;
   left: 10%;
   text-transform: uppercase;
+  animation-iteration-count: 1;
 }
 
 .lineUp {
