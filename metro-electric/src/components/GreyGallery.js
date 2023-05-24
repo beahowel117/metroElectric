@@ -87,7 +87,7 @@ function GreyGallery() {
               >
                 <CardOverflow>
                   <AspectRatio ratio='5/4'>
-                    <img src={img} loading='lazy' alt='' />
+                   <NavLink to={link}><img src={img} loading='lazy' alt='' /></NavLink>
                   </AspectRatio>
                 </CardOverflow>
 
