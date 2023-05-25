@@ -36,7 +36,7 @@ function Home() {
       width: "135%",
       right: "-25%",
       bottom: "-25%",
-      animation: "move 5s ease ",
+      animation: "move 7s ease-out ",
     };
     return {
       selectedStyle: {
@@ -52,8 +52,8 @@ function Home() {
         infiniteLoop
         autoPlay
         showIndicators={true}
-        transitionTime='4000'
-        interval='4000'
+        transitionTime='5000'
+        interval='5000'
         animationHandler={zoomInOut}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
