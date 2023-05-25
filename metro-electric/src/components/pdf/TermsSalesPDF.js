@@ -11,7 +11,6 @@ function TermsSalesPDF() {
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
-  console.log({ numPages });
   return (
     <Box display='flex' justifyContent='center'>
       <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>

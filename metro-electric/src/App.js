@@ -28,14 +28,14 @@ import PortfolioStormRestoration from "./components/PortfolioStormRestoration";
 import ScrollToTop from "./components/ScrollToTop";
 import TermsWorkPDF from "./components/pdf/TermsWorkPDF";
 import TermsSalesPDF from "./components/pdf/TermsSalesPDF";
-
+import Terms from "./components/pdf/Terms";
 function App() {
   let location = useLocation();
 
   return (
     <>
       <Box>
-        {location.pathname === "/items/equipsales" ||
+        {location.pathname === "/terms" || location.pathname === "/items/equipsales" ||
         location.pathname === "/items/work" ? null : (
           <Nav />
         )}
@@ -100,8 +100,9 @@ function App() {
           />
           <Route path='/items/work' exact element={<TermsWorkPDF />} />
           <Route path='/items/equipsales' exact element={<TermsSalesPDF />} />
+          <Route path='/terms' exact element={<Terms />} />
         </Routes>
-        {location.pathname === "/items/equipsales" ||
+        {location.pathname === "/terms" || location.pathname === "/items/equipsales" ||
         location.pathname === "/items/work" ||
         location.pathname === "/contact" ? null : (
           <Footer />
