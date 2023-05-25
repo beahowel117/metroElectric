@@ -36,12 +36,8 @@ function Home() {
       width: "135%",
       right: "-25%",
       bottom: "-25%",
-<<<<<<< HEAD
-      animation: "move 7s ease-out ",
-=======
       animation: "move 5s ease ",
       animationFillMode: "backward",
->>>>>>> ff67404b0a027dbd3db5dae31fcddfbe1d55e250
     };
     return {
       selectedStyle: {
