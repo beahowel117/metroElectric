@@ -223,7 +223,7 @@ function TestingMaintenance() {
             maxWidth='800px'
             mb='30px'
           >
-            Commissioning & Maintenance Testing:
+           <li>Commissioning & Maintenance Testing:</li>
             <ul style={styles.circle}>
               <li>Very Low Frequency (VLF)</li>
               <li>Tan-Delta</li>

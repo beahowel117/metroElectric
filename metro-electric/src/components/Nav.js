@@ -393,6 +393,14 @@ const Nav = () => {
                     <ListItemButton
                       sx={{ pl: 4 }}
                       component={RouterLink}
+                      to='/services/controlled-environment-agriculture'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Controlled Environment Agriculture' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
                       to='/services/renewable-energy'
                       onClick={handleDrawerClose}
                     >

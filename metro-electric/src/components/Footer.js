@@ -197,8 +197,8 @@ function Footer() {
               justifyContent='center'
               mt='6px'
             >
-              <PhoneIphoneRoundedIcon sx={{ color: "#244BA6" }} /> EMERGENCY -
-              <a href='tel:8882494684'>888.249.4684</a>
+              EMERGENCY:
+              <a href='tel:8882494684'> 888.249.4684</a>
             </Box>
 
             <Box
@@ -207,8 +207,8 @@ function Footer() {
               justifyContent='center'
               mt='6px'
             >
-              <PhoneIphoneRoundedIcon sx={{ color: "#244BA6" }} /> OFFICE -
-              <a href='tel:6103652390'>610.365.2390</a>
+              OFFICE:
+              <a href='tel:6103652390'> 610.365.2390</a>
             </Box>
 
             <Box
@@ -220,9 +220,6 @@ function Footer() {
                 (window.location = "mailto:operations@metroelectrical.com")
               }
             >
-              <MailOutlineTwoToneIcon
-                sx={{ color: "#244BA6", "margin-right": "4px" }}
-              />
               <RouterLink to='mailto:operations@metroelectrical.com'>
                 operations@metroelectrical.com
               </RouterLink>
