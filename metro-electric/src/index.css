@@ -112,17 +112,24 @@ p {
   }
 }
 
-
-
 .lineUpCarousel {
-  /* animation: 5s anim-lineUp ease infinite; */
+  animation: 5s anim-lineUp ease infinite;
   /* animation-iteration-count: 1; */
-  /* animation-fill-mode: backward; */
+  animation-fill-mode: backward;
   position: absolute;
   bottom: 27%;
   left: 10%;
   text-transform: uppercase;
-  animation-iteration-count: 1;
+  /* animation-iteration-count: 1; */
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  /* text-transform: uppercase; */
+  font-weight: 600;
 }
 
 .lineUp {
@@ -188,12 +195,4 @@ p {
   animation: kenburns 20s infinite;
 } */
 
-.image-container {
-  position: relative;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 2px black;
-  /* text-transform: uppercase; */
-  font-weight: 600;
-  /* animation: kenburns 30s infinite; */
-}
+

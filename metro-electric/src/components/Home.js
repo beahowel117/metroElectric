@@ -36,7 +36,12 @@ function Home() {
       width: "135%",
       right: "-25%",
       bottom: "-25%",
+<<<<<<< HEAD
       animation: "move 7s ease-out ",
+=======
+      animation: "move 5s ease ",
+      animationFillMode: "backward",
+>>>>>>> ff67404b0a027dbd3db5dae31fcddfbe1d55e250
     };
     return {
       selectedStyle: {
@@ -109,7 +114,7 @@ function Home() {
                 xs: 0,
               }}
               // sx={{ animationIterationCount: "1" }}
-              maxWidth={{ sm: "580px", md:"100%" }}
+              maxWidth={{ sm: "580px", md: "100%" }}
             >
               {text}
             </Typography>
