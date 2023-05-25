@@ -134,7 +134,6 @@ p {
 
 .lineUp {
   animation: 5s anim-lineUp ease infinite;
-  animation-fill-mode: backward;
   position: absolute;
   bottom: 15%;
   left: 10%;
