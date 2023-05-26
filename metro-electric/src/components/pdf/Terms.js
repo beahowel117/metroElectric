@@ -51,7 +51,7 @@ function Terms() {
           fontSize='30px'
           fontWeight='900'
         >
-          Download Terms and Services:
+          Download Terms and Services!!!!!:
         </Typography>
         </Box>
         <Box
