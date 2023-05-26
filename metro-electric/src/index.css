@@ -1,8 +1,5 @@
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
@@ -15,7 +12,7 @@ code {
 }
 
 #root {
-  font-family: "Lato";
+  font-family: "Lato", "Roboto";
 }
 
 h1 {
@@ -114,13 +111,11 @@ p {
 
 .lineUpCarousel {
   animation: 5s anim-lineUp ease infinite;
-  /* animation-iteration-count: 1; */
   animation-fill-mode: backward;
   position: absolute;
   bottom: 27%;
   left: 10%;
   text-transform: uppercase;
-  /* animation-iteration-count: 1; */
 }
 
 .image-container {
@@ -128,7 +123,6 @@ p {
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px black;
-  /* text-transform: uppercase; */
   font-weight: 600;
 }
 

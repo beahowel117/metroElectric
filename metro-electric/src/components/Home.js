@@ -5,7 +5,7 @@ import EIS from "../images/HomeCarousel/EIS-2(2x1).jpg";
 import POWER from "../images/HomeCarousel/power-3(2x1).jpg";
 import SOLUTIONS from "../images/HomeCarousel/solutions-4 (2x1).jpg";
 import COMMUNITY from "../images/HomeCarousel/community-5(2x1).jpg";
-import Video from "../images/Videos/Metrotek.mov";
+import Video from "../../public/Videos/Metrotek.mov";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../index.css";
@@ -225,11 +225,11 @@ function Home() {
             <video
               controls
               width='100%'
-              autoplay='true'
-              muted
-              loop='true'
+              autoplay={false}
+              // muted
+              loop={true}
               preload='auto'
-              playsInline='true'
+              playsInline={true}
             >
               <source src={Video} type='video/mp4' />
               Sorry, your browser doesn't support embedded videos.
