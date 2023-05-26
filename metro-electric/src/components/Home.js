@@ -225,8 +225,8 @@ function Home() {
             <video
               controls
               width='100%'
-              autoplay={false}
-              // muted
+              autoplay={true}
+              muted
               loop={true}
               preload='auto'
               playsInline={true}
