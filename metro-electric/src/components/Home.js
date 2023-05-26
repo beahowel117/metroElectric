@@ -225,11 +225,11 @@ function Home() {
             <video
               controls
               width='100%'
-              autoplay={true}
+              autoplay='true'
               muted
-              loop={true}
+              loop='false'
               preload='auto'
-              playsInline={true}
+              playsInline='true'
             >
               <source src={Video} type='video/mp4' />
               Sorry, your browser doesn't support embedded videos.
