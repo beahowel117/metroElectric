@@ -110,12 +110,17 @@ p {
 }
 
 .lineUpCarousel {
-  animation: 5s anim-lineUp ease infinite;
-  animation-fill-mode: backward;
+  animation: 5s anim-lineUp ease-out forwards infinite;
   position: absolute;
-  bottom: 27%;
+  bottom: 35%;
   left: 10%;
   text-transform: uppercase;
+}
+
+.slide-up {
+  top: 140px;
+  left: 10px;
+  animation: slideUp ease 0.5s forwards 1.2s infinite;
 }
 
 .image-container {
@@ -168,7 +173,7 @@ p {
 }
 
 /* ken burns effect */
-@keyframes kenburns {
+/* @keyframes kenburns {
   0% {
     opacity: 0;
   }
@@ -187,8 +192,4 @@ p {
     transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
     opacity: 0;
   }
-}
-
-/* #imageContainer img {
-  animation: kenburns 20s infinite;
 } */

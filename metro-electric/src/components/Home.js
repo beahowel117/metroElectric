@@ -6,7 +6,8 @@ import POWER from "../images/HomeCarousel/power-3(2x1).jpg";
 import SOLUTIONS from "../images/HomeCarousel/solutions-4 (2x1).jpg";
 import COMMUNITY from "../images/HomeCarousel/community-5(2x1).jpg";
 import Video from "../Videos/Metrotek.mov";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../index.css";
 import GreyGallery from "./GreyGallery";
@@ -36,8 +37,7 @@ function Home() {
       width: "135%",
       right: "-25%",
       bottom: "-25%",
-      animation: "move 5s ease ",
-      animationFillMode: "backward",
+      animation: "move 5s ease-in",
     };
     return {
       selectedStyle: {
@@ -49,13 +49,13 @@ function Home() {
   return (
     <Box>
       <Carousel
+        animationHandler={zoomInOut}
         showThumbs={false}
-        infiniteLoop
-        autoPlay
+        infiniteLoop={true}
+        autoPlay={true}
         showIndicators={true}
         transitionTime='5000'
         interval='5000'
-        animationHandler={zoomInOut}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
             marginLeft: 20,
@@ -95,21 +95,25 @@ function Home() {
         }}
       >
         {carouselContent.map(({ img, text, idx }) => (
-          <div className='image-container'>
-            <img src={img} alt='carousel images' width='100px' />
+          <div className='image-container' key={idx}>
+            <img
+              src={img}
+              alt='carousel images'
+              width='100px'
+              key={text.length}
+            />
 
             <Typography
               color='#f5f5f5'
               fontWeight='600'
               className='lineUpCarousel'
-              key={idx}
+              key={text.length}
               fontSize={{
                 lg: 35,
                 md: 30,
                 sm: 25,
                 xs: 0,
               }}
-              // sx={{ animationIterationCount: "1" }}
               maxWidth={{ sm: "580px", md: "100%" }}
             >
               {text}
