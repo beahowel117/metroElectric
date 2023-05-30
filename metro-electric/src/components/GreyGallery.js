@@ -44,7 +44,7 @@ function GreyGallery() {
     {
       img: RE,
       text: "Renewable Energy",
-      link: "/services/emergency-response",
+      link: "/services/renewable-energy",
     },
   ];
 
@@ -87,7 +87,9 @@ function GreyGallery() {
               >
                 <CardOverflow>
                   <AspectRatio ratio='5/4'>
-                   <NavLink to={link}><img src={img} loading='lazy' alt='' /></NavLink>
+                    <NavLink to={link}>
+                      <img src={img} loading='lazy' alt='' />
+                    </NavLink>
                   </AspectRatio>
                 </CardOverflow>
 

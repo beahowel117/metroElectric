@@ -16,6 +16,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 function Home() {
   const useMobile = useMediaQuery("(max-width:600px)");
+  const moveDots = useMediaQuery("(min-width:1100px)");
 
   const carouselContent = [
     { img: HOME, text: "Over 45 Years of Exceptional Electrical Solutions" },
@@ -61,6 +62,7 @@ function Home() {
             marginLeft: 20,
             color: "white",
             cursor: "pointer",
+            marginBottom: moveDots ? "40px" : undefined,
           };
           const style = isSelected
             ? {

@@ -149,11 +149,7 @@ p {
   display: flex;
   justify-content: center;
 }
-@media (min-width: 959px) {
-  .carousel .control-dots {
-    bottom: "40px" !important;
-  }
-}
+
 .mobileLists li {
   text-indent: -23px;
   margin-top: 3px;

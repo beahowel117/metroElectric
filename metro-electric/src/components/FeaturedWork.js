@@ -97,6 +97,7 @@ function FeaturedWork() {
                     <Box position='relative'>
                       <img src={img} loading='lazy' alt='' width='100%' />
                       {/* <div className='overlayMobile'> */}
+
                       <Button
                         sx={{
                           color: "#FFFFFF",
@@ -116,7 +117,12 @@ function FeaturedWork() {
                         component={NavLink}
                         to={link}
                       >
-                        {text}
+                        <Box
+                          backgroundColor='rgba(0,0,0,.3)'
+                          borderRadius='5px'
+                        >
+                          {text}
+                        </Box>
                       </Button>
                     </Box>
                     {/* </div> */}
