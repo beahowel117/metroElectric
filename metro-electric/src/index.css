@@ -45,7 +45,7 @@ p {
   align-items: center;
 }
 
-.image-wrap img {
+/* .image-wrap img {
   width: 100%;
   animation: move 5s ease;
   -ms-animation: move 5s ease;
@@ -53,7 +53,7 @@ p {
   -moz-animation: move 5s ease;
   position: absolute;
   animation-fill-mode: forwards;
-}
+} */
 
 @keyframes move {
   0% {
