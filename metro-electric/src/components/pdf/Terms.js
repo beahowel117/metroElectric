@@ -45,19 +45,43 @@ function Terms() {
           <img src={MetroTekLogo} alt='Footer Logo' style={styles.footerLogo} />
         </NavLink>
       </Box>
-      <Box mt='50px'>
+      <Box mt='50px'display='flex' justifyContent='center'>
         <Typography fontSize='30px' fontWeight='900'>
-          Download Terms and Services!!!!!:
+          Download Terms and Services:
         </Typography>
       </Box>
-      <Box display='flex' alignItems='center' flexDirection='column' mt='20px'>
-        <Box mb='20px'>
-          <button onClick={onButtonDownloadWork}>
+      <Box display='flex' alignItems='center' flexDirection='column' mt='20px' >
+        <Box mb='20px' background='#FFFFFF'>
+          <button
+            onClick={onButtonDownloadWork}
+            style={{
+              backgroundColor: '#244ba6',
+              color:'#FFFFFF',
+              height: "60px",
+              border: "none",
+              borderRadius: "5px",
+              fontSize: "13px",
+              fontWeight: "600",
+              textTransform: "uppercase",
+            }}
+          >
             Standard Terms and Conditions for Work
           </button>
         </Box>
         <Box>
-          <button onClick={onButtonDownloadSales}>
+          <button
+            onClick={onButtonDownloadSales}
+            style={{
+              backgroundColor: '#244ba6',
+              color:'#FFFFFF',
+              height: "60px",
+              border: "none",
+              borderRadius: "5px",
+              fontSize: "13px",
+              fontWeight: "600",
+              textTransform: "uppercase",
+            }}
+            >
             Standard Terms and Conditions for the Sale of Equipment
           </button>
         </Box>
