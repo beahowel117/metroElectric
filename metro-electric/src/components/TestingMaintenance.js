@@ -232,7 +232,7 @@ function TestingMaintenance() {
               <li>Insulation Resistance</li>
               <li>Contact Resistance</li>
             </ul>
-            <div style={styles.mobileLists}>
+
               <li>
                 Protective Relay Calibration, Metering, Testing & Programming
               </li>
@@ -242,10 +242,10 @@ function TestingMaintenance() {
               <li>Motor Control (MMC) Boards</li>
               <li>Switch Boards</li>
               <li>Battery Testing and Maintenance</li>
-            </div>
+       
           </Typography>
         </InnerContainer>
-        {/* section one of double feature */}
+
         <InnerContainer>
           <Box
             display='flex'
