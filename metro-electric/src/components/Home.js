@@ -141,7 +141,7 @@ function Home() {
                     <Box flex='1' className='mobileLists' mr='40px'>
                       <li>Emergency Service</li>
                       <li>Interconnect </li>
-                      <li>Equidivment Design</li>
+                      <li>Equipment Design</li>
                       <li>Engineering</li>
                       <li>Construction</li>
                     </Box>
@@ -150,7 +150,7 @@ function Home() {
                       <li>Repair</li>
                       <li>Testing</li>
                       <li>Monitoring</li>
-                      <li>High Voltage power Systems</li>
+                      <li>High Voltage Power Systems</li>
                     </Box>
                   </Box>
                 </Typography>
