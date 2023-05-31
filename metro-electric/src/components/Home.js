@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 import HOME from "../images/HomeCarousel/home-1(2x1).jpg";
 import EIS from "../images/HomeCarousel/EIS-2(2x1).jpg";
@@ -7,10 +7,13 @@ import SOLUTIONS from "../images/HomeCarousel/solutions-4 (2x1).jpg";
 import COMMUNITY from "../images/HomeCarousel/community-5(2x1).jpg";
 import Video from "../Videos/Metrotek.mov";
 // import { Carousel } from "react-responsive-carousel";
-import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
+// import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../index.css";
 import GreyGallery from "./GreyGallery";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -29,100 +32,52 @@ function Home() {
     },
   ];
 
-  const zoomInOut = () => {
-    let selectedStyle = {
-      position: "absolute",
-      display: "block",
-      minHeight: "135%",
-      maxWidth: "150%",
-      width: "135%",
-      right: "-25%",
-      bottom: "-25%",
-      animation: "move 5s ease-in",
-    };
-    return {
-      selectedStyle: {
-        ...selectedStyle,
-      },
-    };
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    useTransform: true,
+    useCSS: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
 
   return (
     <Box>
-      <Carousel
-        animationHandler={zoomInOut}
-        showThumbs={false}
-        infiniteLoop={true}
-        autoPlay={true}
-        showIndicators={true}
-        transitionTime='5000'
-        interval='5000'
-        renderIndicator={(onClickHandler, isSelected, index, label) => {
-          const defStyle = {
-            marginLeft: 20,
-            color: "white",
-            cursor: "pointer",
-            marginBottom: moveDots ? "40px" : undefined,
-          };
-          const style = isSelected
-            ? {
-                ...defStyle,
-                color: "white",
-                backgroundColor: "white",
-                borderRadius: "50%",
-              }
-            : { ...defStyle };
+      <Box>
+        <Slider {...settings}>
+          {carouselContent.map(({ img, text, idx }) => (
+            <Box className='image-container' key={Math.random()}>
+              <img
+                src={img}
+                alt='carousel images'
+                width='100%'
+                key={Math.random()}
+              />
 
-          return (
-            <span
-              style={style}
-              onClick={onClickHandler}
-              onKeyDown={onClickHandler}
-              value={index}
-              key={index}
-              role='button'
-              tabIndex={0}
-              aria-label={`${label} ${index + 1}`}
-            >
-              <Box display='flex'>
-                <Box
-                  width='15px'
-                  height='15px'
-                  border='2px solid white'
-                  borderRadius='50%'
-                />
-              </Box>
-            </span>
-          );
-        }}
-      >
-        {carouselContent.map(({ img, text, idx }) => (
-          <div className='image-container' key={idx}>
-            <img
-              src={img}
-              alt='carousel images'
-              width='100px'
-              key={text.length}
-            />
+              <Typography
+                color='#f5f5f5'
+                fontWeight='600'
+                className='lineUpCarousel'
+                key={Math.random()}
+                fontSize={{
+                  lg: 35,
+                  md: 30,
+                  sm: 25,
+                  xs: 0,
+                }}
+                maxWidth={{ sm: "580px", md: "100%" }}
+              >
+                {text}
+              </Typography>
+            </Box>
+          ))}
+        </Slider>
+      </Box>
 
-            <Typography
-              color='#f5f5f5'
-              fontWeight='600'
-              className='lineUpCarousel'
-              key={text.length}
-              fontSize={{
-                lg: 35,
-                md: 30,
-                sm: 25,
-                xs: 0,
-              }}
-              maxWidth={{ sm: "580px", md: "100%" }}
-            >
-              {text}
-            </Typography>
-          </div>
-        ))}
-      </Carousel>
       <Box
         display='flex'
         justifyContent='center'
