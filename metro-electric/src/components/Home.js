@@ -181,7 +181,7 @@ function Home() {
                     <Box flex='1' className='mobileLists' mr='40px'>
                       <li>Emergency Service</li>
                       <li>Interconnect </li>
-                      <li>Equidivment Design</li>
+                      <li>Equipment Design</li>
                       <li>Engineering</li>
                       <li>Construction</li>
                     </Box>
@@ -190,7 +190,7 @@ function Home() {
                       <li>Repair</li>
                       <li>Testing</li>
                       <li>Monitoring</li>
-                      <li>High Voltage power Systems</li>
+                      <li>High Voltage Power Systems</li>
                     </Box>
                   </Box>
                 </Typography>
@@ -226,11 +226,11 @@ function Home() {
             <video
               controls
               width='100%'
-              autoplay='true'
+              autoplay={false}
               muted
-              loop='false'
-              preload='auto'
-              playsInline='true'
+              loop={true}
+              preload={true}
+              playsInline={true}
             >
               <source src={Video} type='video/mp4' />
               Sorry, your browser doesn't support embedded videos.
