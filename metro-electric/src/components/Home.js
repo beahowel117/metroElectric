@@ -229,10 +229,10 @@ function Home() {
               autoplay={false}
               muted
               loop={true}
-              preload={true}
+              preload='metadata'
               playsInline={true}
             >
-              <source src={Video} type='video/mp4' />
+              <source src={Video + "#t=2"} type='video/mp4' />
               Sorry, your browser doesn't support embedded videos.
             </video>
           </Box>
