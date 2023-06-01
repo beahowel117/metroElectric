@@ -105,7 +105,7 @@ function Home() {
               className='lineUpCarousel'
               key={text.length}
               fontSize={{
-                xl: 48,
+                xl: 45,
                 lg: 35,
                 md: 30,
                 sm: 25,
