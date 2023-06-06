@@ -50,6 +50,7 @@ function Home() {
         infiniteLoop={true}
         autoPlay={true}
         showIndicators={true}
+        stopOnHover={false}
         interval='7000'
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
