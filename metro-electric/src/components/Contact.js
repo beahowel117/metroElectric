@@ -125,24 +125,38 @@ const Contact = () => {
             minWidth={matches ? "100%" : undefined}
             px={matches ? undefined : "15px"}
           >
-            <Typography>
+            <Typography color="#4666F1" fontSize="20px" paddingBottom="15px">
             <strong>MetroTek Electrical Services Company</strong>
             </Typography>
-            <Typography fontSize='24px' textAlign='center'>
-              <strong>Headquarters</strong>
+            <Typography fontSize='20px' textAlign='center' paddingBottom="15px">
+              <strong><em>Headquarters:</em></strong>
               <br></br>
               <a
                 href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
                 target='_blank'
                 rel='noreferrer'
+                style={{ color: 'inherit', textDecoration: 'none' }}
               >
                 2200 Northwood Avenue, Unit 2<br></br>
                 Easton, PA 18045
               </a>
             </Typography>
+            <Typography fontSize='20px' textAlign='center'>
+              <strong><em>Logistics / Operations:</em></strong>
+              <br></br>
+              <a
+                href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
+                target='_blank'
+                rel='noreferrer'
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                164 State Route 173<br></br>
+                Stewartsville, NJ 08886
+              </a>
+            </Typography>
             <br></br>
             <Typography
-              fontSize={{ xs: "20px", sm: "24px" }}
+              fontSize={{ xs: "20px", sm: "20px" }}
               textAlign='center'
             >
               <Box
@@ -151,8 +165,10 @@ const Contact = () => {
                 justifyContent='center'
                 mt='6px'
               >
-               EMERGENCY:
-                <a href='tel:8882494684'> 888.249.4684</a>
+               <Box width='100px'>
+                   Toll Free:
+               </Box>
+                <a href='tel:8882494684' style={{ color: 'inherit', textDecoration: 'none', marginLeft: '5px' }}> 888.249.4684</a>
               </Box>
               <Box
                 display='flex'
@@ -160,8 +176,10 @@ const Contact = () => {
                 justifyContent='center'
                 mt='6px'
               >
-                OFFICE:
-                <a href='tel:6103652390'> 610.365.2390</a>
+                <Box width='100px'>
+                   Office:
+               </Box>
+                <a href='tel:6103652390' style={{ color: 'inherit', textDecoration: 'none', marginLeft: '7px' }}> 610.365.2390</a>
               </Box>
               <Box
                 mt='6px'
@@ -172,7 +190,8 @@ const Contact = () => {
                   (window.location = "mailto:operations@metroelectrical.com")
                 }
               >
-                <RouterLink to='mailto:operations@metroelectrical.com'>
+                Email:
+                <RouterLink to='mailto:operations@metroelectrical.com' style={{ color: 'inherit', textDecoration: 'none', marginLeft: '5px' }}>
                   operations@metroelectrical.com
                 </RouterLink>
               </Box>
