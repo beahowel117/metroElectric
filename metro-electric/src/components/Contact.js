@@ -125,8 +125,11 @@ const Contact = () => {
             minWidth={matches ? "100%" : undefined}
             px={matches ? undefined : "15px"}
           >
+            <Typography>
+            <strong>MetroTek Electrical Services Company</strong>
+            </Typography>
             <Typography fontSize='24px' textAlign='center'>
-              <strong>MetroTek Electrical Services Company</strong>
+              <strong>Headquarters</strong>
               <br></br>
               <a
                 href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
