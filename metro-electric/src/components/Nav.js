@@ -126,6 +126,11 @@ const Nav = () => {
       link: "/services/controlled-environment-agriculture",
     },
     {
+      // img: BAT,
+      text: "Energy Storage",
+      link: '/services/energy-storage',
+    },
+    {
       img: RE,
       text: "Renewable Energy",
       link: "/services/renewable-energy",

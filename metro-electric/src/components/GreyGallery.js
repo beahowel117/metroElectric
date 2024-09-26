@@ -54,7 +54,8 @@ function GreyGallery() {
     },
     {
       img: BAT,
-      text: "Energy Storage"
+      text: "Energy Storage",
+      link: '/services/energy-storage',
     },
     {
       img: RE,

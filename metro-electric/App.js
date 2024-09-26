@@ -19,6 +19,7 @@ import RenewableEnergy from "./components/RenewableEnergy";
 import ControlledAgriculture from "./components/ControlledAgriculture";
 import PowerInfrastructure from "./components/PowerInfrastructure";
 import TestingMaintenance from "./components/TestingMaintenance";
+import EnergyStorage from "./components/EnergyStorage";
 import EmergencyResponse from "./components/EmergencyResponse";
 import PortfolioRenewable from "./components/PortfolioRenewable";
 import PortfolioCEA from "./components/PortfolioCEA";
@@ -47,6 +48,11 @@ function App() {
           <Route path='/work' exact element={<FeaturedWork />} />
           <Route path='/about' exact element={<About />} />
           <Route path='/contact' exact element={<Contact />} />
+          <Route
+            path='/services/energy-storage'
+            exact
+            element={<EnergyStorage />}
+          />
           <Route
             path='/services/power-infrastructure'
             exact
