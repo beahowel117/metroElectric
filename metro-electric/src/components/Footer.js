@@ -175,7 +175,7 @@ function Footer() {
             </Typography>
             <br></br>
 
-            <Typography fontSize='15px' textAlign='center' paddingBottom="15px">
+            <Typography fontSize='16px' textAlign='center' paddingBottom="15px">
               <strong><em>Headquarters:</em></strong>
               <br></br>
               <a
