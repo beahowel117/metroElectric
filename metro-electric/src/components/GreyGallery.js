@@ -12,6 +12,9 @@ import TandM from "../images/ServicesDropDown/T&M(1024x768).JPG";
 import ER from "../images/ServicesDropDown/ER(1024x768).jpg";
 import CEA from "../images/ServicesDropDown/CEA(1024x768).JPG";
 import RE from "../images/ServicesDropDown/RE(1024x768).jpg";
+import TERM from "../images/ServicesDropDown/A- Termination.jpg";
+import ES from "../images/ServicesDropDown/B- Engineering Services.jpg";
+import BAT from "../images/ServicesDropDown/C- Battery Storage.jpg";
 import MainContainer from "./MainContainer";
 import InnerContainer from "./InnerContainer";
 
@@ -33,19 +36,32 @@ function GreyGallery() {
       link: "/services/emergency-response",
     },
     {
-      img: CEA,
-      text: "Controlled Environment Agriculture",
-      link: "/services/controlled-environment-agriculture",
+      img: TERM,
+      text: "Termination & Splicing Specialists"
     },
     {
       text: "POWERING AMERICA’S INFRASTRUCTURE",
       link: "/",
     },
     {
+      img: ES,
+      text: "Engineering Services"
+    },
+    {
+      img: CEA,
+      text: "Controlled Environment Agriculture",
+      link: "/services/controlled-environment-agriculture",
+    },
+    {
+      img: BAT,
+      text: "Energy Storage"
+    },
+    {
       img: RE,
       text: "Renewable Energy",
       link: "/services/renewable-energy",
     },
+
   ];
 
   return (
