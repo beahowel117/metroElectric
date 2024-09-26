@@ -53,23 +53,48 @@ function TerminationSplice() {
         </Typography>
       </Box>
       <MainContainer>
-        {/*logos*/}
+        {/*description */}
         <InnerContainer>
+        <Box
+        display='flex'
+        // justifyContent='center'
+        // alignItems='center'
+        flexDirection='column'
+        maxWidth='800px'
+        margin='0 auto'
+      >
+        <Box position='relative' mb='50px'>
+        <Typography
+            fontSize='22px'
+            color='#244ba6'
+            fontWeight='900'
+            fontFamily='Lato'
+            // textAlign='center'
+            mt='50px'
+          >
+            TERMINATION & SPLICING SPECIALISTS
+          </Typography>
+          <Typography fontSize='19px' fontFamily='Lato'>
+            MetroTek's team is certified by the industry's premier suppliers of splicing & termination materials.
+          </Typography>
+        </Box>
+      </Box>
+        {/*logos*/}
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
-            <img src={richards} alt='richards' width='100%' />
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
+            <img src={richards} alt='richards' style={{width:'100%', height: 'auto' }} />
             </Box>
             <Box
               flex='1'
               alignSelf='center'
               ml='40px'
               py='20px'
-              order={useMobile ? "1" : "2"}
+              order={useMobile ? "2" : "2"}
               minWidth='350px'
             >
               <Typography
-                fontSize='17px'
-                fontWeight='600'
+                fontSize={useMobile ? '20px' : '17px'}
+                fontWeight={useMobile ? '800':'600'}
                 fontFamily='Lato'
                 maxWidth='800px'
                 mb='30px'
@@ -80,20 +105,20 @@ function TerminationSplice() {
           </Box>
 
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
-            <img src={prysmian} alt='richards' width='100%' />
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
+            <img src={prysmian} alt='prysmian' style={{width:'100%', height: 'auto' }} />
             </Box>
             <Box
               flex='1'
               alignSelf='center'
               ml='40px'
               py='20px'
-              order={useMobile ? "1" : "2"}
+              order={useMobile ? "2" : "2"}
               minWidth='350px'
             >
               <Typography
-                fontSize='17px'
-                fontWeight='600'
+                fontSize={useMobile ? '20px' : '17px'}
+                fontWeight={useMobile ? '800':'600'}
                 fontFamily='Lato'
                 maxWidth='800px'
                 mb='30px'
@@ -103,20 +128,20 @@ function TerminationSplice() {
             </Box>
           </Box>
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
-            <img src={threeM} alt='richards' width='100%' />
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
+            <img src={threeM} alt='threeM' width='100%' style={{width:'100%', height: 'auto' }}/>
             </Box>
             <Box
               flex='1'
               alignSelf='center'
               ml='40px'
               py='20px'
-              order={useMobile ? "1" : "2"}
+              order={useMobile ? "2" : "2"}
               minWidth='350px'
             >
               <Typography
-                fontSize='17px'
-                fontWeight='600'
+                fontSize={useMobile ? '20px' : '17px'}
+                fontWeight={useMobile ? '800':'600'}
                 fontFamily='Lato'
                 maxWidth='800px'
                 mb='30px'
@@ -126,20 +151,20 @@ function TerminationSplice() {
             </Box>
           </Box>
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
-            <img src={raychem} alt='richards' width='100%' />
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
+            <img src={raychem} alt='raychem' width='100%' style={{width:'100%', height: 'auto' }}/>
             </Box>
             <Box
               flex='1'
               alignSelf='center'
               ml='40px'
               py='20px'
-              order={useMobile ? "1" : "2"}
+              order={useMobile ? "2" : "2"}
               minWidth='350px'
             >
               <Typography
-                fontSize='17px'
-                fontWeight='600'
+                fontSize={useMobile ? '20px' : '17px'}
+                fontWeight={useMobile ? '800':'600'}
                 fontFamily='Lato'
                 maxWidth='800px'
                 mb='30px'
@@ -149,20 +174,20 @@ function TerminationSplice() {
             </Box>
           </Box>
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
-            <img src={ncscb} alt='richards' width='100%' />
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'} >
+            <img src={ncscb} alt='ncscb' width='100%' style={{width:'100%', height: 'auto' }}/>
             </Box>
             <Box
               flex='1'
               alignSelf='center'
               ml='40px'
               py='20px'
-              order={useMobile ? "1" : "2"}
+              order={useMobile ? "2" : "2"}
               minWidth='350px'
             >
               <Typography
-                fontSize='17px'
-                fontWeight='600'
+                fontSize={useMobile ? '20px' : '17px'}
+                fontWeight={useMobile ? '800':'600'}
                 fontFamily='Lato'
                 maxWidth='800px'
                 mb='30px'
