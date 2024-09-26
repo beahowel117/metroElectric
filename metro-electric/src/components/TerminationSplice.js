@@ -60,9 +60,7 @@ function TerminationSplice() {
         // justifyContent='center'
         // alignItems='center'
         flexDirection='column'
-        maxWidth='800px'
-        margin='0 auto'
-      >
+        >
         <Box position='relative' mb='50px'>
         <Typography
             fontSize='22px'
@@ -80,9 +78,9 @@ function TerminationSplice() {
         </Box>
       </Box>
         {/*logos*/}
-          <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
-            <img src={richards} alt='richards' style={{width:'100%', height: 'auto' }} />
+          <Box display='flex' flexWrap='wrap'>
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' >
+            <img src={richards} alt='richards' style={{width:'100%', height: 'auto', maxWidth: '400px' }} />
             </Box>
             <Box
               flex='1'
@@ -105,8 +103,8 @@ function TerminationSplice() {
           </Box>
 
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
-            <img src={prysmian} alt='prysmian' style={{width:'100%', height: 'auto' }} />
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' >
+            <img src={prysmian} alt='prysmian' style={{width:'100%', height: 'auto', maxWidth: '400px' }} />
             </Box>
             <Box
               flex='1'
@@ -128,8 +126,8 @@ function TerminationSplice() {
             </Box>
           </Box>
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
-            <img src={threeM} alt='threeM' width='100%' style={{width:'100%', height: 'auto' }}/>
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' >
+            <img src={threeM} alt='threeM' width='100%' style={{width:'100%', height: 'auto', maxWidth: '400px' }}/>
             </Box>
             <Box
               flex='1'
@@ -151,8 +149,8 @@ function TerminationSplice() {
             </Box>
           </Box>
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'}>
-            <img src={raychem} alt='raychem' width='100%' style={{width:'100%', height: 'auto' }}/>
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' >
+            <img src={raychem} alt='raychem' width='100%' style={{width:'100%', height: 'auto', maxWidth: '400px' }}/>
             </Box>
             <Box
               flex='1'
@@ -174,8 +172,8 @@ function TerminationSplice() {
             </Box>
           </Box>
           <Box display='flex' flexWrap='wrap' my='40px'>
-            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' maxWidth={useMobile ? '300px' : 'none'} >
-            <img src={ncscb} alt='ncscb' width='100%' style={{width:'100%', height: 'auto' }}/>
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' >
+            <img src={ncscb} alt='ncscb' width='100%' style={{width:'100%', height: 'auto', maxWidth: '400px' }}/>
             </Box>
             <Box
               flex='1'
