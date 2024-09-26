@@ -7,8 +7,8 @@ import GreyGallery from "./GreyGallery";
 import MainContainer from "./MainContainer";
 import InnerContainer from "./InnerContainer";
 
-import pi_cover from "../images/Services/pi-cover(2000x1000).jpg";
-import first_image from "../images/Services/pi-1(2000x1000).jpg";
+import pi_cover from "../images/Services/construction.jpg";
+import first_image from "../images/Services/pi-cover(2000x1000).jpg";
 import second_image from "../images/Services/pi-2(1024x768).jpg";
 import third_image from "../images/Services/pi-3(2000x1000).jpg";
 import slider_1 from "../images/Services/pi-slider1(2000x1000).jpg";
