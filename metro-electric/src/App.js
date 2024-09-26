@@ -30,6 +30,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import TermsWorkPDF from "./components/pdf/TermsWorkPDF";
 import TermsSalesPDF from "./components/pdf/TermsSalesPDF";
 import Terms from "./components/pdf/Terms";
+import TerminationSplice from "./components/TerminationSplice";
+
+
 function App() {
   let location = useLocation();
 
@@ -48,6 +51,11 @@ function App() {
           <Route path='/work' exact element={<FeaturedWork />} />
           <Route path='/about' exact element={<About />} />
           <Route path='/contact' exact element={<Contact />} />
+          <Route
+            path='/services/termination-splicing'
+            exact
+            element={<TerminationSplice />}
+          />
           <Route
             path='/services/energy-storage'
             exact

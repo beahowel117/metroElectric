@@ -131,6 +131,11 @@ const Nav = () => {
       link: '/services/energy-storage',
     },
     {
+      // img: BAT,
+      text: "Termination & Splicing",
+      link: '/services/termination-splicing',
+    },
+    {
       img: RE,
       text: "Renewable Energy",
       link: "/services/renewable-energy",

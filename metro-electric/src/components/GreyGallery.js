@@ -37,7 +37,8 @@ function GreyGallery() {
     },
     {
       img: TERM,
-      text: "Termination & Splicing Specialists"
+      text: "Termination & Splicing Specialists",
+      link: "/services/termination-splicing",
     },
     {
       text: "POWERING AMERICA’S INFRASTRUCTURE",
