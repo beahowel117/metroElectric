@@ -170,25 +170,38 @@ function Footer() {
           paddingRight='15px'
           paddingLeft={matches ? "15px": "10px"}
         >
-          <Typography fontSize='16px' textAlign='center'>
+          <Typography fontSize='16px' textAlign='center'  color= "#244ba6">
             <strong>MetroTek Electrical Services Company</strong>
+            </Typography>
             <br></br>
-            <Box
-              fontSize='16px'
-              sx={{
-                color: "#244ba6",
-              }}
-            >
+
+            <Typography fontSize='16px' textAlign='center' paddingBottom="15px">
+              <strong><em>Headquarters:</em></strong>
+              <br></br>
               <a
                 href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
                 target='_blank'
                 rel='noreferrer'
+                style={{ color: 'inherit', textDecoration: 'none' }}
               >
                 2200 Northwood Avenue, Unit 2<br></br>
                 Easton, PA 18045
               </a>
-            </Box>
-          </Typography>
+            </Typography>
+
+          <Typography fontSize='16px' textAlign='center'>
+              <strong><em>Logistics / Operations:</em></strong>
+              <br></br>
+              <a
+                href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
+                target='_blank'
+                rel='noreferrer'
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                164 State Route 173<br></br>
+                Stewartsville, NJ 08886
+              </a>
+            </Typography>
 
           <Typography fontSize='16px' textAlign='center'>
             <Box
@@ -197,8 +210,10 @@ function Footer() {
               justifyContent='center'
               mt='6px'
             >
-              EMERGENCY:
-              <a href='tel:8882494684'> 888.249.4684</a>
+              <Box width='100px'>
+                   Toll Free:
+               </Box>
+              <a href='tel:8882494684' style={{ color: 'inherit', textDecoration: 'none', marginLeft: '5px' }}> 888.249.4684</a>
             </Box>
 
             <Box
@@ -207,8 +222,10 @@ function Footer() {
               justifyContent='center'
               mt='6px'
             >
-              OFFICE:
-              <a href='tel:6103652390'> 610.365.2390</a>
+              <Box width='100px'>
+                   Office:
+               </Box>
+              <a href='tel:6103652390' style={{ color: 'inherit', textDecoration: 'none', marginLeft: '5px' }}> 610.365.2390</a>
             </Box>
 
             <Box
@@ -220,7 +237,8 @@ function Footer() {
                 (window.location = "mailto:operations@metroelectrical.com")
               }
             >
-              <RouterLink to='mailto:operations@metroelectrical.com'>
+              Email:
+              <RouterLink to='mailto:operations@metroelectrical.com' style={{ color: 'inherit', textDecoration: 'none', marginLeft: '5px' }}>
                 operations@metroelectrical.com
               </RouterLink>
             </Box>

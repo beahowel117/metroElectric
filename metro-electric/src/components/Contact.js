@@ -125,7 +125,7 @@ const Contact = () => {
             minWidth={matches ? "100%" : undefined}
             px={matches ? undefined : "15px"}
           >
-            <Typography color="#4666F1" fontSize="20px" paddingBottom="15px">
+            <Typography color="#244ba6" fontSize="20px" paddingBottom="15px">
             <strong>MetroTek Electrical Services Company</strong>
             </Typography>
             <Typography fontSize='20px' textAlign='center' paddingBottom="15px">
