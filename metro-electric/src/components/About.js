@@ -127,7 +127,7 @@ function About() {
         >
           <Box maxWidth='700px'>
             <Typography fontWeight='900' margin='50px 0'>
-              We are proud of our deep 45 year history providing value to our
+              We are proud of our deep 50 year history providing value to our
               diverse customer base. We consider ourselves to be among the best
               in the business and take pride in our work product being delivered
               on-time, within budget and with a continuous focus on safety.
@@ -338,7 +338,7 @@ function About() {
             {/* <Box width='683px'> */}
             <h1 id='align_center'>careers</h1>
             <Typography fontWeight='600' fontFamily='Lato' fontSize='17px'>
-              We've been in continuous operation for over 45 years. We promote
+              We've been in continuous operation for over 50 years. We promote
               an exciting, challenging and safe work environment, empowering
               workers to grow and evolve with our business.
             </Typography>

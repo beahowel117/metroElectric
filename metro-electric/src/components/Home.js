@@ -20,7 +20,7 @@ function Home() {
   const moveDots = useMediaQuery("(min-width:1100px)");
 
   const carouselContent = [
-    { img: HOME, text: "Over 45 Years of Exceptional Electrical Solutions" },
+    { img: HOME, text: "Over 50 Years of Exceptional Electrical Solutions" },
     { img: EIS, text: "Electrical Infrastructure Specialists" },
     { img: POWER, text: "Distributing Power Wherever It Is Needed" },
     { img: SOLUTIONS, text: "Delivering Infrastructure Solutions Nationwide" },
