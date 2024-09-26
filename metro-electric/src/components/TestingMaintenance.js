@@ -9,7 +9,7 @@ import InnerContainer from "./InnerContainer";
 import testing_cover from "../images/Services/tm_cover(2000x1000).jpg";
 import first_image from "../images/Services/tm-1.jpg";
 import second_image from "../images/Services/tm-2(2000x1000).jpg";
-import third_image from "../images/Services/tm-3(1024X768).jpg";
+import third_image from "../images/Services/Testing.jpg";
 import fourth_image from "../images/Services/tm-4(1024X768).jpg";
 import fifth_image from "../images/Services/tm-5(1024X768).jpg";
 import sixth_image from "../images/Services/tm-6(2000x1000).jpg";
@@ -195,7 +195,7 @@ function TestingMaintenance() {
             alignItems='center'
             mb='20px'
           >
-            <Typography
+            {/* <Typography
               color='#244ba6'
               textAlign='center'
               fontSize='27px'
@@ -206,7 +206,7 @@ function TestingMaintenance() {
               textTransform='uppercase'
             >
               electrical testing
-            </Typography>
+            </Typography> */}
             <Box
               height='3px'
               backgroundColor='#244ba6'
@@ -216,34 +216,7 @@ function TestingMaintenance() {
               mt='15px'
             />
           </Box>
-          <Typography
-            fontSize='17px'
-            fontWeight='600'
-            fontFamily='Lato'
-            maxWidth='800px'
-            mb='30px'
-          >
-           <li>Commissioning & Maintenance Testing:</li>
-            <ul style={styles.circle}>
-              <li>Very Low Frequency (VLF)</li>
-              <li>Tan-Delta</li>
-              <li>Turns Ratio</li>
-              <li>Winding Resistance</li>
-              <li>Insulation Resistance</li>
-              <li>Contact Resistance</li>
-            </ul>
 
-              <li>
-                Protective Relay Calibration, Metering, Testing & Programming
-              </li>
-              <li>Grounding & Bonding Testing - Commercial Pools</li>
-              <li>Circuit Breaker Testing, Repair & Retrofit</li>
-              <li>Motor Testing</li>
-              <li>Motor Control (MMC) Boards</li>
-              <li>Switch Boards</li>
-              <li>Battery Testing and Maintenance</li>
-       
-          </Typography>
         </InnerContainer>
 
         <InnerContainer>
@@ -274,9 +247,9 @@ function TestingMaintenance() {
                 mb='15px'
                 textTransform='uppercase'
               >
-                engineering services
+                electrical testing
               </Typography>
-              <Typography fontWeight='600'>
+              {/* <Typography fontWeight='600'>
                 <ul>
                   <li>Power Quality Testing</li>
                   <li>Short Circuit & Coordination Studies</li>
@@ -287,7 +260,35 @@ function TestingMaintenance() {
                   <li>Underground Cable/Pipe Locating Marketing & Mapping</li>
                   <li>Infrared Inspections</li>
                 </ul>
-              </Typography>
+              </Typography> */}
+          <Typography
+            fontSize='17px'
+            fontWeight='600'
+            fontFamily='Lato'
+            maxWidth='800px'
+            mb='30px'
+          >
+           <li>Commissioning & Maintenance Testing:</li>
+            <ul style={styles.circle}>
+              <li>Very Low Frequency (VLF)</li>
+              <li>Tan-Delta</li>
+              <li>Turns Ratio</li>
+              <li>Winding Resistance</li>
+              <li>Insulation Resistance</li>
+              <li>Contact Resistance</li>
+            </ul>
+
+              <li>
+                Protective Relay Calibration, Metering, Testing & Programming
+              </li>
+              <li>Grounding & Bonding Testing - Commercial Pools</li>
+              <li>Circuit Breaker Testing, Repair & Retrofit</li>
+              <li>Motor Testing</li>
+              <li>Motor Control (MMC) Boards</li>
+              <li>Switch Boards</li>
+              <li>Battery Testing and Maintenance</li>
+
+          </Typography>
             </Box>
           </Box>
         </InnerContainer>
