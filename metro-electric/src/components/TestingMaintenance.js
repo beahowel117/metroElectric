@@ -184,7 +184,7 @@ function TestingMaintenance() {
           </Box>
         </InnerContainer>
         {/* second typography  section */}
-        <InnerContainer
+        {/* <InnerContainer
           display='flex'
           justifyContent='center'
           flexDirection='column'
@@ -195,7 +195,7 @@ function TestingMaintenance() {
             alignItems='center'
             mb='20px'
           >
-            {/* <Typography
+            <Typography
               color='#244ba6'
               textAlign='center'
               fontSize='27px'
@@ -206,7 +206,7 @@ function TestingMaintenance() {
               textTransform='uppercase'
             >
               electrical testing
-            </Typography> */}
+            </Typography>
             <Box
               height='3px'
               backgroundColor='#244ba6'
@@ -217,7 +217,7 @@ function TestingMaintenance() {
             />
           </Box>
 
-        </InnerContainer>
+        </InnerContainer> */}
 
         <InnerContainer>
           <Box
@@ -225,7 +225,7 @@ function TestingMaintenance() {
             flexWrap='wrap'
             justifyContent='center'
             columnGap='20px'
-            // my='40px'
+            my='40px'
           >
             <Box flex='1' order={useMobile ? "2" : "1"} minWidth='350px'>
               <img src={third_image} alt='three trucks' width='100%' />
