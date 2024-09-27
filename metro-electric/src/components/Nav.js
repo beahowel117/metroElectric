@@ -125,25 +125,25 @@ const Nav = () => {
       text: "Controlled Environment Agriculture",
       link: "/services/controlled-environment-agriculture",
     },
-    {
-      // img: BAT,
-      text: "Energy Storage",
-      link: '/services/energy-storage',
-    },
-    {
-      // img: BAT,
-      text: "Termination & Splicing",
-      link: '/services/termination-splicing',
-    },
+    // {
+    //   // img: BAT,
+    //   text: "Energy Storage",
+    //   link: '/services/energy-storage',
+    // },
+    // {
+    //   // img: BAT,
+    //   text: "Termination & Splicing",
+    //   link: '/services/termination-splicing',
+    // },
     {
       img: RE,
       text: "Renewable Energy",
       link: "/services/renewable-energy",
     },
-    {
-      text: "Engineering Services",
-      link: "/services/engineering-services",
-    }
+    // {
+    //   text: "Engineering Services",
+    //   link: "/services/engineering-services",
+    // }
   ];
 
   const navButtons = [
