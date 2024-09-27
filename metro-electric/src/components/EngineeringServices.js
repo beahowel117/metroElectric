@@ -179,6 +179,68 @@ function EngineeringServices() {
                   <li>Isolation Points Check</li>
                 </ul>
               </Typography>
+              <br></br>
+              <Typography
+                color='#244ba6'
+                textAlign='left'
+                fontSize='27px'
+                fontFamily='Lato'
+                fontWeight='900'
+                mb='15px'
+                textTransform='uppercase'
+              >
+                engineer of record (EOR) services
+              </Typography>
+              <Typography
+                fontSize='17px'
+                fontWeight='600'
+                fontFamily='Lato'
+                maxWidth='800px'
+                mb='30px'
+              >
+                <ul>
+                  <li>Site Surveys</li>
+                  <li>Review One-line and Three-Line Drawings</li>
+                  <li>Review Calculations</li>
+                  <li>Review IFP and IFC Drawings</li>
+                  <li>Stamp the IFP and IFC Drawing Packages</li>
+                  <li>Equipment Specification Preparation</li>
+                  <li>EOR service avaiable in 7 different states</li>
+                </ul>
+              </Typography>
+              <br></br>
+              <Typography
+                color='#244ba6'
+                textAlign='left'
+                fontSize='27px'
+                fontFamily='Lato'
+                fontWeight='900'
+                mb='15px'
+                textTransform='uppercase'
+              >
+                other engineering services
+              </Typography>
+              <Typography
+                fontSize='17px'
+                fontWeight='600'
+                fontFamily='Lato'
+                maxWidth='800px'
+                mb='30px'
+              >
+                <ul>
+                  <li>Project Engineering</li>
+                  <li>Contractor and Subcontractor Management</li>
+                  <li>Small and Medium Scale Project Management</li>
+                  <li>Electrical Safety Program andn Training</li>
+                  <li>Hazardous Area Classification</li>
+                  <li>End User Representation</li>
+                  <li>Field Service Consulting</li>
+                  <li>Equipment Evaluation and Replacement</li>
+                  <li>Site Audit; Site Surveys</li>
+                  <li>Long-Lead Item Recommendation</li>
+                </ul>
+              </Typography>
+
            </Box>
         </InnerContainer>
      </MainContainer>
