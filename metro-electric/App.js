@@ -19,6 +19,7 @@ import RenewableEnergy from "./components/RenewableEnergy";
 import ControlledAgriculture from "./components/ControlledAgriculture";
 import PowerInfrastructure from "./components/PowerInfrastructure";
 import TestingMaintenance from "./components/TestingMaintenance";
+import EngineeringServices from "./src/components/EngineeringServices";
 import EnergyStorage from "./components/EnergyStorage";
 import TerminationSplice from "./src/components/TerminationSplice";
 import EmergencyResponse from "./components/EmergencyResponse";
@@ -53,6 +54,11 @@ function App() {
             path='/services/termination-splicing'
             exact
             element={<TerminationSplice />}
+          />
+          <Route
+            path="/services/engineering-services"
+            exact
+            element={<EngineeringServices />}
           />
           <Route
             path='/services/energy-storage'

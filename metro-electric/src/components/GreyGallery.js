@@ -46,7 +46,8 @@ function GreyGallery() {
     },
     {
       img: ES,
-      text: "Engineering Services"
+      text: "Engineering Services",
+      link: "/services/engineering-services",
     },
     {
       img: CEA,

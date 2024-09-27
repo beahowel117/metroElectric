@@ -140,6 +140,10 @@ const Nav = () => {
       text: "Renewable Energy",
       link: "/services/renewable-energy",
     },
+    {
+      text: "Engineering Services",
+      link: "/services/engineering-services",
+    }
   ];
 
   const navButtons = [

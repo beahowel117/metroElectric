@@ -31,6 +31,7 @@ import TermsWorkPDF from "./components/pdf/TermsWorkPDF";
 import TermsSalesPDF from "./components/pdf/TermsSalesPDF";
 import Terms from "./components/pdf/Terms";
 import TerminationSplice from "./components/TerminationSplice";
+import EngineeringServices from "./components/EngineeringServices";
 
 
 function App() {
@@ -55,6 +56,11 @@ function App() {
             path='/services/termination-splicing'
             exact
             element={<TerminationSplice />}
+          />
+          <Route
+            path="/services/engineering-services"
+            exact
+            element={<EngineeringServices />}
           />
           <Route
             path='/services/energy-storage'
