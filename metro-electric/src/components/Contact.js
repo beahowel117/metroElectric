@@ -6,6 +6,7 @@ import MetroTekLogo from "../images/logos/MetroTekLogo.jpg";
 import NECALogo from "../images/logos/NECA-logo.jpg";
 import BrewLogo2 from "../images/logos/Bew2_logo.png";
 import contact from "../images/Contact/contact(2000x1000).jpg";
+import newContact from "../images/Contact/NewContact.jpg";
 import "../index.css";
 import MainContainer from "./MainContainer";
 import MailOutlineTwoToneIcon from "@mui/icons-material/MailOutlineTwoTone";
@@ -85,7 +86,7 @@ const Contact = () => {
     <>
       <Box className='image-container'>
         <Box className='image-wrap'>
-          <img src={contact} alt='Contact' style={styles.responsiveHero} />
+          <img src={newContact} alt='Contact' style={styles.responsiveHero} />
         </Box>
         <Typography
           className='lineUp'
