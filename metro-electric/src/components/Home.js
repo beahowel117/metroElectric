@@ -7,6 +7,7 @@ import SOLUTIONS from "../images/HomeCarousel/solutions-4 (2x1).jpg";
 import COMMUNITY from "../images/HomeCarousel/community-5(2x1).jpg";
 // import Video from "../Videos/Metrotek.mov";
 import Video from "../Videos/MetrotekWeb.mp4";
+import Video2 from "../Videos/MetroTek_Promo_Foul_Rift.MP4";
 // import { Carousel } from "react-responsive-carousel";
 import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -235,6 +236,21 @@ function Home() {
               playsInline={true}
             >
               <source src={Video + "#t=2"} type='video/mp4' />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </Box>
+          <br></br>
+          <Box padding='10px'>
+            <video
+              controls
+              width='100%'
+              autoplay={false}
+              muted
+              loop={true}
+              preload='metadata'
+              playsInline={true}
+            >
+              <source src={Video2 + "#t=2"} type='video/mp4' />
               Sorry, your browser doesn't support embedded videos.
             </video>
           </Box>
