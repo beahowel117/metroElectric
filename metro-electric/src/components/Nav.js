@@ -239,16 +239,17 @@ const Nav = () => {
             transformOrigin={{ vertical: "top", horizontal: "center" }}
             sx={{
               display: "flex",
-              alignSelf: "flex-start",
+              // alignSelf: "flex-start",
               marginTop: "60px",
+              flexDirection: "column",
             }}
             MenuListProps={{
               "aria-labelledby": "basic-button",
-              sx: { py: 0 },
+              sx: { py: 0, display: "flex", flexDirection: "column" },
               onMouseLeave: handleCloseServices,
             }}
           >
-            {console.log("handleOpenServicesMobile", openServices)}
+
             <Box display='flex' gap='2px'>
               {services.map(({ img, text, link }) => (
                 <ClickAwayListener onClickAway={handleCloseServices}>

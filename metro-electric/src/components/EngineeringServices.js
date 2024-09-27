@@ -92,7 +92,7 @@ function EngineeringServices() {
                 maxWidth='800px'
                 mb='30px'
               >
-              MetroTek offers solutions to complex problems that occur in power systems. Our Engineers have proven field experience andn are trained hands-on to solve complex power system problems and provide recommendations that will improve the reliability and sustainabiity of the power system. WE have proven experience industry-wide including solar, commercial, industria, Oil & Gas, Cement, Steel Healthcare, Substations, etc.
+              MetroTek offers solutions to complex problems that occur in power systems. Our Engineers have proven field experience and are trained hands-on to solve complex power system problems and provide recommendations that will improve the reliability and sustainability of the power system. We have proven experience industry-wide including solar plants, commercial & industrial facilities, oil & gas plants, cement plants, steel mills, healthcare facilities, substations, etc.
               </Typography>
             </Box>
           </Box>

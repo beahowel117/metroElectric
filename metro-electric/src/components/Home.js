@@ -163,7 +163,7 @@ function Home() {
               textAlign='center'
               mb='50px'
             >
-              For over four decades, MetroTek has delivered electricity
+              For over fifty years, MetroTek has delivered electricity
               infrastructure solutions to hundreds of industrial, commercial &
               utility clients of all sizes.
             </Typography>
