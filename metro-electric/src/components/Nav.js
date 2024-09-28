@@ -85,22 +85,18 @@ const Nav = () => {
 
    const menuStyles = useMemo(() => {
     let leftPosition = '40%';
-    let transformValue = 'translateX(-50%)';
     if(isMediumScreen){
       leftPosition = '50%'
     }
     else if (isLargeScreen) {
       leftPosition = '61%';
-      transformValue = 'translateX(-40%)';
     } else if (isXLargeScreen) {
       leftPosition = '57%';
-      transformValue = 'translateX(-35%)';
     }
     return {
-      leftPosition,
-      transformValue,
+      leftPosition
     };
-  }, [isLargeScreen, isXLargeScreen]);
+  }, [isMediumScreen, isLargeScreen, isXLargeScreen]);
 
   const styles = {
     imgText: {
