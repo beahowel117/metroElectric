@@ -93,11 +93,40 @@ const Nav = () => {
       boxShadow: "none",
       underline: "none",
     },
+    // menuItem: {
+    //   backgroundColor: '#fdfdfd',
+    //   color: 'blue',
+    //   display: 'flex',
+    //   justifyContent: 'center',
+    //   textAlign: 'center',
+    //   alignItems: 'center',
+    //   padding: '10px',
+    //   borderBottom: '1px solid #ccc',
+    //   // width: '178px',
+    //   minWidth: '200px',
+    //   height: '100px',
+    //   whiteSpace: 'normal',
+    //   '&:hover': {
+    //     backgroundColor: '#f0f0f0',
+    //   },
+    // },
     menuItem: {
-      width: "178px",
-      height: "145px",
-      whiteSpace: "normal",
-      padding: 0,
+      display: 'flex',  // Flexbox for alignment
+      justifyContent: 'center',  // Center horizontally
+      alignItems: 'center',  // Center vertically
+      flexDirection: 'column',  // Ensure content stacks in a column (just in case)
+      padding: '10px',  // Internal padding
+      backgroundColor: '#fdfdfd',
+      color: 'blue',
+      borderBottom: '1px solid #ccc',
+      width: "178px",  // Fixed width to match layout
+      height: "100px",  // Fixed height
+      whiteSpace: 'normal',  // Allow wrapping
+      overflow: 'hidden',  // Hide overflow if necessary
+      textAlign: 'center',  // Ensure text is centered inside
+      '&:hover': {
+        backgroundColor: '#f0f0f0',
+      },
     },
     navHover: {
       "&:hover": {},
@@ -125,25 +154,25 @@ const Nav = () => {
       text: "Controlled Environment Agriculture",
       link: "/services/controlled-environment-agriculture",
     },
-    // {
-    //   // img: BAT,
-    //   text: "Energy Storage",
-    //   link: '/services/energy-storage',
-    // },
-    // {
-    //   // img: BAT,
-    //   text: "Termination & Splicing",
-    //   link: '/services/termination-splicing',
-    // },
+    {
+      // img: BAT,
+      text: "Energy Storage",
+      link: '/services/energy-storage',
+    },
+    {
+      // img: BAT,
+      text: "Termination & Splicing",
+      link: '/services/termination-splicing',
+    },
     {
       img: RE,
       text: "Renewable Energy",
       link: "/services/renewable-energy",
     },
-    // {
-    //   text: "Engineering Services",
-    //   link: "/services/engineering-services",
-    // }
+    {
+      text: "Engineering Services",
+      link: "/services/engineering-services",
+    }
   ];
 
   const navButtons = [
@@ -231,17 +260,15 @@ const Nav = () => {
             id='basic-menu'
             anchorEl={anchorEl}
             open={openServices}
-            // open={anchorEl?.innerText === "SERVICES" ? open : null}
             onClose={handleClose}
-            // onMouseLeave={handleClose}
             getContentAnchorEl={null}
-            anchorOrigin={{ vertical: "top", horizontal: "center" }}
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
             transformOrigin={{ vertical: "top", horizontal: "center" }}
             sx={{
-              display: "flex",
-              // alignSelf: "flex-start",
-              marginTop: "60px",
-              flexDirection: "column",
+              marginTop: '20px',  // Adjust based on your layout needs
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
             MenuListProps={{
               "aria-labelledby": "basic-button",
@@ -250,19 +277,19 @@ const Nav = () => {
             }}
           >
 
-            <Box display='flex' gap='2px'>
-              {services.map(({ img, text, link }) => (
+            <Box display='flex' gap='2px' flexDirection='column'>
+              {services.map(({ text, link }) => (
                 <ClickAwayListener onClickAway={handleCloseServices}>
-                  <Box position='relative'>
-                    <Card
+                  {/* <Box position='relative'> */}
+                    {/* <Card
                       sx={{
                         padding: 0,
                         "--Card-radius": "0px",
                       }}
                       square={true}
-                    >
+                    > */}
                       <MenuItem onClose={handleClose} sx={styles.menuItem}>
-                        <>
+                        {/* <>
                           <CardCover
                             sx={{
                               borderRadius: "0px",
@@ -277,21 +304,30 @@ const Nav = () => {
                               borderRadius: "0px",
                             }}
                           />
-                        </>
+                        </> */}
 
                         <Typography
                           {...styles.imgText}
                           component={NavLink}
                           to={link}
                           sx={{
-                            textDecoration: "none",
+                            textDecoration: 'none',
+                            color: 'inherit',
+                            fontWeight: 'bold',
+                            fontSize: '1rem',
+                            textAlign: 'center',  // Center text inside its container
+                            whiteSpace: 'normal',  // Allow multi-line text wrapping
+                            wordWrap: 'break-word',  // Ensure long words break correctly
+                            padding: '5px',  // Add padding for spacing
+                            maxWidth: '100%',  // Limit width to avoid overflow
+                            boxSizing: 'border-box',  // Include padding within the width
                           }}
                         >
                           {text}
                         </Typography>
                       </MenuItem>
-                    </Card>
-                  </Box>
+                    {/* </Card> */}
+                  {/* </Box> */}
                 </ClickAwayListener>
               ))}
             </Box>
