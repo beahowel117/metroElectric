@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { NavLink, Link as RouterLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ClickAwayListener from "@mui/base/ClickAwayListener";
@@ -42,8 +42,6 @@ const Nav = () => {
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
-    console.log({ event });
-
     setAnchorEl(event.currentTarget);
   };
 
@@ -80,6 +78,27 @@ const Nav = () => {
   };
 
   const useMobileMenu = useMediaQuery("(max-width:900px)");
+  const isMediumScreen = useMediaQuery("(min-width: 960px)");
+  const isLargeScreen = useMediaQuery("(min-width: 1500px)");
+  const isXLargeScreen = useMediaQuery("(min-width: 1920px)");
+
+
+   const menuStyles = useMemo(() => {
+    let leftPosition = '40%';
+    let transformValue = 'translateX(-50%)';
+    if (isLargeScreen) {
+      leftPosition = '61%';
+      transformValue = 'translateX(-40%)';
+    } else if (isXLargeScreen) {
+      leftPosition = '57%';
+      transformValue = 'translateX(-35%)';
+    }
+    return {
+      leftPosition,
+      transformValue,
+    };
+  }, [isLargeScreen, isXLargeScreen]);
+
   const styles = {
     imgText: {
       position: "absolute",
@@ -246,13 +265,16 @@ const Nav = () => {
             open={openServices}
             onClose={handleClose}
             getContentAnchorEl={null}
-            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-            transformOrigin={{ vertical: "top", horizontal: "center" }}
-            sx={{
-              marginTop: '20px',  // Adjust based on your layout needs
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+            disablePortal={true}
+            anchorReference="anchorPosition" // Manual positioning control
+            anchorPosition={{ top: 60, left: isLargeScreen ? 400 : 350 }}
+            PaperProps={{
+              sx: {
+                top: '60px !important',
+                left: `${menuStyles.leftPosition} !important`,
+                transform: 'none !important',
+                position: 'absolute !important',
+              },
             }}
             MenuListProps={{
               "aria-labelledby": "basic-button",
