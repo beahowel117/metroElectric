@@ -146,7 +146,6 @@ const Contact = () => {
               <a
                 href='https://www.google.com/maps/search/?api=1&query=164+State+Route+173,+Stewartsville,+NJ+08886'
                 target='_blank'
-                target='_blank'
                 rel='noreferrer'
                 style={{ color: 'inherit', textDecoration: 'none' }}
               >

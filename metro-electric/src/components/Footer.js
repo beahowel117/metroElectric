@@ -193,7 +193,7 @@ function Footer() {
               <strong><em>Logistics / Operations:</em></strong>
               <br></br>
               <a
-                href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
+                href='https://www.google.com/maps/search/?api=1&query=164+State+Route+173,+Stewartsville,+NJ+08886'
                 target='_blank'
                 rel='noreferrer'
                 style={{ color: 'inherit', textDecoration: 'none' }}
