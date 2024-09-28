@@ -93,23 +93,6 @@ const Nav = () => {
       boxShadow: "none",
       underline: "none",
     },
-    // menuItem: {
-    //   backgroundColor: '#fdfdfd',
-    //   color: 'blue',
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    //   textAlign: 'center',
-    //   alignItems: 'center',
-    //   padding: '10px',
-    //   borderBottom: '1px solid #ccc',
-    //   // width: '178px',
-    //   minWidth: '200px',
-    //   height: '100px',
-    //   whiteSpace: 'normal',
-    //   '&:hover': {
-    //     backgroundColor: '#f0f0f0',
-    //   },
-    // },
     menuItem: {
       display: 'flex',  // Flexbox for alignment
       justifyContent: 'center',  // Center horizontally
@@ -122,8 +105,9 @@ const Nav = () => {
       width: "178px",  // Fixed width to match layout
       height: "100px",  // Fixed height
       whiteSpace: 'normal',  // Allow wrapping
-      overflow: 'hidden',  // Hide overflow if necessary
-      textAlign: 'center',  // Ensure text is centered inside
+      wordBreak: 'break-word',  // Handle long words by breaking them
+      textAlign: 'left',  // Left-align text
+      overflowWrap: 'break-word',  // Prevent words from overflowing/ Ensure text is centered inside
       '&:hover': {
         backgroundColor: '#f0f0f0',
       },
@@ -315,11 +299,11 @@ const Nav = () => {
                             color: 'inherit',
                             fontWeight: 'bold',
                             fontSize: '1rem',
-                            textAlign: 'center',  // Center text inside its container
-                            whiteSpace: 'normal',  // Allow multi-line text wrapping
+                            textAlign: 'left',  // Align text to the left
+                            whiteSpace: 'normal',  // Allow text to wrap onto multiple lines
                             wordWrap: 'break-word',  // Ensure long words break correctly
-                            padding: '5px',  // Add padding for spacing
-                            maxWidth: '100%',  // Limit width to avoid overflow
+                            padding: '0 40px 0px 0px',  // Add padding for spacing
+                            width: '100%',  // Take full width of the container
                             boxSizing: 'border-box',  // Include padding within the width
                           }}
                         >
@@ -452,10 +436,34 @@ const Nav = () => {
                     <ListItemButton
                       sx={{ pl: 4 }}
                       component={RouterLink}
+                      to='/services/energy-storage'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Energy Storage' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
+                      to='/services/termination-splicing'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Termination & Splicing' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
                       to='/services/renewable-energy'
                       onClick={handleDrawerClose}
                     >
                       <ListItemText primary='Renewable Energy' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
+                      to='/services/engineering-services'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Engineering Services' />
                     </ListItemButton>
                   </List>
                 </Collapse>
