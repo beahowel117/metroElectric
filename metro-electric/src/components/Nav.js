@@ -85,13 +85,13 @@ const Nav = () => {
 
    const menuStyles = useMemo(() => {
     let leftPosition = '40%';
-    if(isMediumScreen){
-      leftPosition = '50%'
+    if(isXLargeScreen){
+      leftPosition = '57%'
     }
     else if (isLargeScreen) {
       leftPosition = '61%';
-    } else if (isXLargeScreen) {
-      leftPosition = '57%';
+    } else if (isMediumScreen) {
+      leftPosition = '50%';
     }
     return {
       leftPosition
