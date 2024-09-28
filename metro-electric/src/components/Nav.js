@@ -78,7 +78,7 @@ const Nav = () => {
   };
 
   const useMobileMenu = useMediaQuery("(max-width:900px)");
-  const isMediumScreen = useMediaQuery("(min-width: 960px)");
+  const isMediumScreen = useMediaQuery("(min-width: 1400px)");
   const isLargeScreen = useMediaQuery("(min-width: 1500px)");
   const isXLargeScreen = useMediaQuery("(min-width: 1920px)");
 
@@ -86,7 +86,10 @@ const Nav = () => {
    const menuStyles = useMemo(() => {
     let leftPosition = '40%';
     let transformValue = 'translateX(-50%)';
-    if (isLargeScreen) {
+    if(isMediumScreen){
+      leftPosition = '50%'
+    }
+    else if (isLargeScreen) {
       leftPosition = '61%';
       transformValue = 'translateX(-40%)';
     } else if (isXLargeScreen) {
@@ -116,7 +119,7 @@ const Nav = () => {
       display: 'flex',  // Flexbox for alignment
       justifyContent: 'center',  // Center horizontally
       alignItems: 'center',  // Center vertically
-      flexDirection: 'column',  // Ensure content stacks in a column (just in case)
+      flexDirection: 'column',
       padding: '10px',  // Internal padding
       backgroundColor: '#fdfdfd',
       color: 'blue',
