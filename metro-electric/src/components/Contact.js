@@ -9,8 +9,6 @@ import contact from "../images/Contact/contact(2000x1000).jpg";
 import newContact from "../images/Contact/NewContact.jpg";
 import "../index.css";
 import MainContainer from "./MainContainer";
-import MailOutlineTwoToneIcon from "@mui/icons-material/MailOutlineTwoTone";
-import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
 
 const Contact = () => {
   const styles = {
@@ -146,7 +144,8 @@ const Contact = () => {
               <strong><em>Logistics / Operations:</em></strong>
               <br></br>
               <a
-                href='https://goo.gl/maps/osx1xEArwyzn9zDo8'
+                href='https://www.google.com/maps/search/?api=1&query=164+State+Route+173,+Stewartsville,+NJ+08886'
+                target='_blank'
                 target='_blank'
                 rel='noreferrer'
                 style={{ color: 'inherit', textDecoration: 'none' }}
