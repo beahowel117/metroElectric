@@ -78,18 +78,18 @@ const Nav = () => {
   };
 
   const useMobileMenu = useMediaQuery("(max-width:900px)");
-  const isMediumScreen = useMediaQuery("(min-width: 1400px)");
-  const isLargeScreen = useMediaQuery("(min-width: 1500px)");
-  const isXLargeScreen = useMediaQuery("(min-width: 1920px)");
+  const isMediumScreen = useMediaQuery("(min-width: 1440px)");
+  const isLargeScreen = useMediaQuery("(min-width: 2160px)");
+  const isXLargeScreen = useMediaQuery("(min-width: 2880px)");
 
 
    const menuStyles = useMemo(() => {
     let leftPosition = '40%';
     if(isXLargeScreen){
-      leftPosition = '57%'
+      leftPosition = '61%'
     }
     else if (isLargeScreen) {
-      leftPosition = '61%';
+      leftPosition = '58%';
     } else if (isMediumScreen) {
       leftPosition = '50%';
     }
