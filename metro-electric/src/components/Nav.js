@@ -147,24 +147,18 @@ const Nav = () => {
       link: "/services/testing-maintenance",
     },
     {
+      // img: BAT,
+      text: "Termination & Splicing",
+      link: '/services/termination-splicing',
+    },
+    {
       img: ER,
       text: "Emergency Response",
       link: "/services/emergency-response",
     },
     {
-      img: CEA,
-      text: "Controlled Environment Agriculture",
-      link: "/services/controlled-environment-agriculture",
-    },
-    {
-      // img: BAT,
-      text: "Energy Storage",
-      link: '/services/energy-storage',
-    },
-    {
-      // img: BAT,
-      text: "Termination & Splicing",
-      link: '/services/termination-splicing',
+      text: "Engineering Services",
+      link: "/services/engineering-services",
     },
     {
       img: RE,
@@ -172,9 +166,15 @@ const Nav = () => {
       link: "/services/renewable-energy",
     },
     {
-      text: "Engineering Services",
-      link: "/services/engineering-services",
-    }
+      // img: BAT,
+      text: "Energy Storage",
+      link: '/services/energy-storage',
+    },
+    {
+      img: CEA,
+      text: "Controlled Environment Agriculture",
+      link: "/services/controlled-environment-agriculture",
+    },
   ];
 
   const navButtons = [
@@ -441,6 +441,14 @@ const Nav = () => {
                     <ListItemButton
                       sx={{ pl: 4 }}
                       component={RouterLink}
+                      to='/services/termination-splicing'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Termination & Splicing' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
                       to='/services/emergency-response'
                       onClick={handleDrawerClose}
                     >
@@ -449,26 +457,10 @@ const Nav = () => {
                     <ListItemButton
                       sx={{ pl: 4 }}
                       component={RouterLink}
-                      to='/services/controlled-environment-agriculture'
+                      to='/services/engineering-services'
                       onClick={handleDrawerClose}
                     >
-                      <ListItemText primary='Controlled Environment Agriculture' />
-                    </ListItemButton>
-                    <ListItemButton
-                      sx={{ pl: 4 }}
-                      component={RouterLink}
-                      to='/services/energy-storage'
-                      onClick={handleDrawerClose}
-                    >
-                      <ListItemText primary='Energy Storage' />
-                    </ListItemButton>
-                    <ListItemButton
-                      sx={{ pl: 4 }}
-                      component={RouterLink}
-                      to='/services/termination-splicing'
-                      onClick={handleDrawerClose}
-                    >
-                      <ListItemText primary='Termination & Splicing' />
+                      <ListItemText primary='Engineering Services' />
                     </ListItemButton>
                     <ListItemButton
                       sx={{ pl: 4 }}
@@ -481,10 +473,18 @@ const Nav = () => {
                     <ListItemButton
                       sx={{ pl: 4 }}
                       component={RouterLink}
-                      to='/services/engineering-services'
+                      to='/services/energy-storage'
                       onClick={handleDrawerClose}
                     >
-                      <ListItemText primary='Engineering Services' />
+                      <ListItemText primary='Energy Storage' />
+                    </ListItemButton>
+                    <ListItemButton
+                      sx={{ pl: 4 }}
+                      component={RouterLink}
+                      to='/services/controlled-environment-agriculture'
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary='Controlled Environment Agriculture' />
                     </ListItemButton>
                   </List>
                 </Collapse>
