@@ -170,7 +170,7 @@ function Footer() {
           paddingRight='15px'
           paddingLeft={matches ? "15px": "10px"}
         >
-          <Typography fontSize='16px' textAlign='center'  color= "#244ba6">
+          <Typography fontSize='20px' textAlign='center'  color= "#244ba6">
             <strong><em>MetroTek Electrical Services Company</em></strong>
             </Typography>
             <br></br>
@@ -189,7 +189,7 @@ function Footer() {
               </a>
             </Typography>
 
-          <Typography fontSize='16px' textAlign='center'>
+          <Typography fontSize='16px' textAlign='center' paddingBottom="15px">
               <strong><em>Logistics / Operations:</em></strong>
               <br></br>
               <a
