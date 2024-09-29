@@ -205,7 +205,7 @@ function EngineeringServices() {
                   <li>Review IFP and IFC Drawings</li>
                   <li>Stamp the IFP and IFC Drawing Packages</li>
                   <li>Equipment Specification Preparation</li>
-                  <li>EOR service avaiable in 7 different states</li>
+                  <li>EOR service available in 7 different states</li>
                 </ul>
               </Typography>
               <br></br>
@@ -231,7 +231,7 @@ function EngineeringServices() {
                   <li>Project Engineering</li>
                   <li>Contractor and Subcontractor Management</li>
                   <li>Small and Medium Scale Project Management</li>
-                  <li>Electrical Safety Program andn Training</li>
+                  <li>Electrical Safety Program and Training</li>
                   <li>Hazardous Area Classification</li>
                   <li>End User Representation</li>
                   <li>Field Service Consulting</li>
