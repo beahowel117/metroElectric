@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Box, Typography } from "@mui/material";
-import HOME from "../images/HomeCarousel/home-1(2x1).jpg";
+import HOME from "../images/Services/construction.jpg";
 import EIS from "../images/HomeCarousel/EIS-2(2x1).jpg";
 import POWER from "../images/HomeCarousel/power-3(2x1).jpg";
 import SOLUTIONS from "../images/HomeCarousel/solutions-4 (2x1).jpg";
