@@ -171,7 +171,7 @@ function Footer() {
           paddingLeft={matches ? "15px": "10px"}
         >
           <Typography fontSize='20px' textAlign='center'  color= "#244ba6">
-            <strong><em>MetroTek Electrical Services Company</em></strong>
+            <strong>MetroTek Electrical Services Company</strong>
             </Typography>
             <br></br>
 
