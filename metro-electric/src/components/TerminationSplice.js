@@ -12,6 +12,7 @@ import prysmian from '../images/logos/BLogo2- Prysmian.jpg';
 import threeM from '../images/logos/BLogo3- 3M.jpg';
 import raychem from '../images/logos/BLogo4- Raychem.jpg';
 import ncscb from '../images/logos/BLogo5- NCSCB.jpg';
+import pfisterer from '../images/logos/Pfisterer.jpg'
 
 import GreyGallery from './GreyGallery';
 import MainContainer from './MainContainer';
@@ -168,6 +169,29 @@ function TerminationSplice() {
                 mb='30px'
               >
               Raychem Certified Installer
+            </Typography>
+            </Box>
+          </Box>
+          <Box display='flex' flexWrap='wrap' my='40px'>
+            <Box flex='1' order={useMobile ? "1" : "1"} minWidth='350px' >
+            <img src={pfisterer} alt='pfisterer' width='100%' style={{width:'100%', height: 'auto', maxWidth: '400px' }}/>
+            </Box>
+            <Box
+              flex='1'
+              alignSelf='center'
+              ml='40px'
+              py='20px'
+              order={useMobile ? "2" : "2"}
+              minWidth='350px'
+            >
+              <Typography
+                fontSize={useMobile ? '20px' : '17px'}
+                fontWeight={useMobile ? '800':'600'}
+                fontFamily='Lato'
+                maxWidth='800px'
+                mb='30px'
+              >
+              Certified Installer for CONNEX Medium Voltage Plug-In System
             </Typography>
             </Box>
           </Box>
