@@ -101,7 +101,7 @@ const Contact = () => {
       </Box>
 
       <MainContainer>
-        <Box
+        {/* <Box
           display='flex'
           justifyContent='space-around'
           alignItems='center'
@@ -198,14 +198,33 @@ const Contact = () => {
           <Box order={matches ? "2" : "3"} marginTop='25px' marginLeft='10px'>
             <img src={NECALogo} alt='Footer Logos' width='140px' />
           </Box>
+        </Box> */}
+        <Box margin="40px 10px 0">
+        <Typography sx={{ textTransform: 'uppercase', textDecoration: 'underline'}}>
+            <strong>terms of Services:</strong>
+          </Typography>
+          <Typography>
+            Metrotek Electrical Services Company does not share any of your information with third party services, vendors or other service providers.
+          </Typography>
+          <br></br>
+          <Typography>
+            For more information regarding this policy, please reach out to us at   <a href="mailto:metro.sms@metroelectrical.com" style={{ textDecoration: 'underline', color: '#244ba6' }}>
+            metro.sms@metroelectrical.com
+  </a>{' '}or call us at 610.365.2390.
+          </Typography>
+          <br></br>
+          <Typography>
+            By opting in to SMS with us, you agree to recieve informational messages from Metrotek Electrical Services Company. Message frequency varies. Message and data rates may apply. For help, reply HELP or email us at <a href="mailto:metro.sms@metroelectrical.com" style={{ textDecoration: 'underline', color: '#244ba6' }}>
+            metro.sms@metroelectrical.com
+  </a>{' '}. You can opt out at any time by replying STOP.
+          </Typography>
         </Box>
         <Box
           backgroundColor='#244ba6'
           height='14px'
-          margin='10px auto 0'
           borderRadius='5px'
           width='100%'
-          mt='80px'
+          mt='40px'
         />
         <Box maxWidth='797px' margin='0 auto '>
           <Box display='flex' justifyContent='center' marginTop='20px'>
@@ -253,7 +272,7 @@ const Contact = () => {
               <Box
                 display='flex'
                 justifyContent='space-around'
-                margin='10px 0 30px'
+                margin='0px 0 30px'
               >
                 {navButtons.map((el, index) => (
                   <Button
