@@ -32,6 +32,7 @@ import TermsSalesPDF from "./components/pdf/TermsSalesPDF";
 import Terms from "./components/pdf/Terms";
 import TerminationSplice from "./components/TerminationSplice";
 import EngineeringServices from "./components/EngineeringServices";
+import SMSPrivacyPolicy from "./components/SMSPrivacyPolicy";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <Route path='/work' exact element={<FeaturedWork />} />
           <Route path='/about' exact element={<About />} />
           <Route path='/contact' exact element={<Contact />} />
+          <Route path='/smsprivacypolicy' exact element={<SMSPrivacyPolicy />} />
           <Route
             path='/services/termination-splicing'
             exact
@@ -124,7 +126,7 @@ function App() {
         </Routes>
         {location.pathname === "/terms" || location.pathname === "/items/equipsales" ||
         location.pathname === "/items/work" ||
-        location.pathname === "/contact" ? null : (
+        location.pathname === "/contact" || location.pathname === "/smsprivacypolicy"? null : (
           <Footer />
         )}
       </Box>
